@@ -1,0 +1,177 @@
+{
+  "schemaVersion": 1,
+  "qualityVersion": "2026-08-16.1",
+  "date": "2026-07-27",
+  "generatedAt": "2026-07-28 13:09:38 Asia/Shanghai",
+  "status": "published",
+  "counts": {
+    "collected": 84,
+    "oldAccepted": 16,
+    "published": 4,
+    "features": 1,
+    "editorial": 3,
+    "rejected": 80
+  },
+  "failedSources": [
+    {
+      "source": "Reddit r/SideProject",
+      "status": "failed_or_rate_limited",
+      "detail": "Reddit 公开 JSON/API 被 403 拦截；本次未取得可安全访问结果。"
+    },
+    {
+      "source": "Reddit r/somebodymakethis",
+      "status": "failed_or_rate_limited",
+      "detail": "Reddit 公开 JSON/API 被 403 拦截；本次未取得可安全访问结果。"
+    },
+    {
+      "source": "Reddit r/SaaS",
+      "status": "failed_or_rate_limited",
+      "detail": "Reddit 公开 JSON/API 被 403 拦截；本次未取得可安全访问结果。"
+    },
+    {
+      "source": "Reddit r/indiehackers",
+      "status": "failed_or_rate_limited",
+      "detail": "Reddit 公开 JSON/API 被 403 拦截；本次未取得可安全访问结果。"
+    },
+    {
+      "source": "Stack Exchange",
+      "status": "empty_for_date",
+      "detail": "目标日期窗口内没有找到匹配问题。"
+    },
+    {
+      "source": "Product Hunt API",
+      "status": "not_configured",
+      "detail": "未配置 Product Hunt 官方 API 凭证；已跳过，不抓取容易 403 的公开页。"
+    },
+    {
+      "source": "小红书",
+      "status": "failed_or_rate_limited",
+      "detail": "本地社媒采集脚本启动后未返回可用结果；通常是登录态、平台风控或脚本适配问题。"
+    },
+    {
+      "source": "微博",
+      "status": "failed_or_rate_limited",
+      "detail": "本地社媒采集脚本启动后未返回可用结果；通常是登录态、平台风控或脚本适配问题。"
+    }
+  ],
+  "entries": [
+    {
+      "id": "entry-e4d5257519af",
+      "seriesId": "series-3d4d023e9b2b",
+      "kind": "opportunity",
+      "quality": "feature",
+      "title": "本地开发服务的可读名称与连错检测",
+      "plain": "作者在本地环境浪费数小时，最后发现浏览器前端连到了错误版本的后端，于是尝试用可读名称替代固定端口号来连接服务。",
+      "audience": "本地同时运行多个前后端、分支或微服务，经常切换环境的开发者。",
+      "pain": "端口号不表达服务身份，前端即使连接成功也可能接错版本。机会是为本地服务提供名称、版本标识和连接校验，让错连尽早暴露。",
+      "why": "事故后果、出错原因和可验证解法都很具体，适合当成本地开发体验的小工具方向。",
+      "validation": "在一个同时跑两套后端的项目里复现错连，比较固定端口和命名发现方案能否在启动或首次请求时直接报出版本不一致。",
+      "risk": "起点是单个事故；HN 15 分、12 条评论说明有讨论，仍不能证明这是高频或付费问题。额外发现层也可能增加配置复杂度。",
+      "topics": [
+        "浏览器",
+        "本地工具",
+        "产品验证"
+      ],
+      "evidence": [
+        {
+          "source": "Hacker News",
+          "sourceType": "需求信号",
+          "originalTitle": "Show HN: Port Zero – how I learned to stop worrying and love PORT=0",
+          "url": "https://portzero.net/",
+          "observedAt": "2026-07-27",
+          "metrics": {},
+          "strength": "强",
+          "boundary": "证据支持具体需求方向，但不等于已经证明付费规模或长期留存。"
+        }
+      ]
+    },
+    {
+      "id": "entry-ce7f8c4f4b78",
+      "seriesId": "series-11c68005c812",
+      "kind": "case",
+      "quality": "editorial",
+      "title": "AI 编程的调试与上线前验收",
+      "plain": "一名开发者用了一个月 Claude Code：简单功能生成很快，但调试仍要自己看终端，AI 生成的代码有时要到上线后才暴露问题。",
+      "audience": "用 AI 编程做真实产品、需要把“代码写出来”推进到稳定上线的开发者和技术团队。",
+      "pain": "AI 能缩短初稿时间，却没有自动消除调试、审查和边界条件验证。机会是把终端错误、已知缺陷测试和上线前回归接进同一条可核对流程。",
+      "why": "作者说清了“写得快、调得慢、上线后暴雷”的完整失败链，和 AI 编程的真实交付验收直接相关。",
+      "validation": "复盘最近 3 个 AI 生成的功能，分别记录生成、调试、审查和返工耗时；再加入固定缺陷样本和上线前检查，比较暴雷数量是否下降。",
+      "risk": "只有一名用户、一个月经验和 3 条回复；项目复杂度、技术栈和使用方法都会影响结果，不能据此判断所有 AI 编程工具都存在同样问题。",
+      "topics": [
+        "AI 编程",
+        "本地工具",
+        "产品验证"
+      ],
+      "evidence": [
+        {
+          "source": "V2EX 职场话题",
+          "sourceType": "中文开发者论坛",
+          "originalTitle": "Claude Code 真的能替代 VS Code 吗？用了一个月的真实感受",
+          "url": "https://www.v2ex.com/t/1230398",
+          "observedAt": "2026-07-27",
+          "metrics": {},
+          "strength": "中",
+          "boundary": "这是一个可复核的实战案例，不能据此推断市场已经验证。"
+        }
+      ]
+    },
+    {
+      "id": "entry-f9acc01077c2",
+      "seriesId": "series-ce6866149a83",
+      "kind": "opportunity",
+      "quality": "editorial",
+      "title": "低频批量邮箱验证的小额替代",
+      "plain": "作者觉得现有邮箱验证服务的批量操作不顺手，或需要付费 API，于是做了一个支持单次与批量检查的网站，登录后每天可查 50 次。",
+      "audience": "偶尔要清洗一批联系邮箱、用量达不到企业 API 套餐的独立开发者和小型增长团队。",
+      "pain": "成熟服务覆盖了邮箱验证，但低频用户仍会被批量入口、免费额度和 API 定价卡住。机会可能是轻量上传、按次付费或本地清洗。",
+      "why": "痛点和现有替代品都很具体，可以用访谈和一批真实名单快速验证，但当前只能放观察池。",
+      "validation": "找 5 名近期清洗过邮箱名单的人，核对每批数量、当前工具、愿意付多少钱，以及真正需要的是语法、域名还是投递风险判断。",
+      "risk": "证据只有作者自述和 4 条回复；他可能只是想省钱，无法证明同类用户很多。第一版还没有完整防刷，邮件验证准确率也未提供。",
+      "topics": [
+        "本地工具",
+        "增长",
+        "产品验证"
+      ],
+      "evidence": [
+        {
+          "source": "V2EX 分享创造",
+          "sourceType": "中文开发者论坛",
+          "originalTitle": "做了一个邮箱地址批量检查的网站",
+          "url": "https://www.v2ex.com/t/1230381",
+          "observedAt": "2026-07-27",
+          "metrics": {},
+          "strength": "中",
+          "boundary": "证据支持具体需求方向，但不等于已经证明付费规模或长期留存。"
+        }
+      ]
+    },
+    {
+      "id": "entry-b4410bcb5f8b",
+      "seriesId": "series-8a500901e8fc",
+      "kind": "case",
+      "quality": "editorial",
+      "title": "富文本编辑器的中文输入法回归测试",
+      "plain": "Markra 作者发现，在粗体边界继续用中文输入法输入时，文字会落错位置或继承错误格式，而且不同浏览器和系统 WebView 表现不一致，最后不得不更换编辑器内核。",
+      "audience": "开发 Markdown、富文本、评论框或网页编辑器，需要支持中文输入的产品团队。",
+      "pain": "中文输入法使用组合输入事件，格式边界、光标和跨平台实现叠在一起时很容易出现隐蔽错误。机会是把常见 IME 场景做成跨平台回归测试。",
+      "why": "复现步骤、跨平台差异和维护代价都很具体，能直接转成编辑器测试清单或专项工具。",
+      "validation": "整理粗体边界、链接边界、撤销和粘贴等 10 个中文输入场景，在 macOS、Windows 和主要浏览器逐项回放，记录错位与格式继承。",
+      "risk": "这是单个编辑器的工程案例，帖子 0 回复；更换内核是作者选择，不代表其他产品也必须重写。",
+      "topics": [
+        "浏览器"
+      ],
+      "evidence": [
+        {
+          "source": "V2EX 分享创造",
+          "sourceType": "中文开发者论坛",
+          "originalTitle": "Markra 2.0.0 发布了：为了修一个中文输入法问题，我把编辑器内核从 Milkdown 换成了 CodeMirror",
+          "url": "https://www.v2ex.com/t/1230382",
+          "observedAt": "2026-07-27",
+          "metrics": {},
+          "strength": "中",
+          "boundary": "这是一个可复核的实战案例，不能据此推断市场已经验证。"
+        }
+      ]
+    }
+  ]
+}

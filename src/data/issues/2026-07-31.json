@@ -1,0 +1,294 @@
+{
+  "schemaVersion": 1,
+  "qualityVersion": "2026-08-16.1",
+  "date": "2026-07-31",
+  "generatedAt": "2026-08-01 13:12:53 Asia/Shanghai",
+  "status": "published",
+  "counts": {
+    "collected": 82,
+    "oldAccepted": 19,
+    "published": 8,
+    "features": 0,
+    "editorial": 8,
+    "rejected": 74
+  },
+  "failedSources": [
+    {
+      "source": "Reddit r/SideProject",
+      "status": "failed_or_rate_limited",
+      "detail": "Reddit 公开 JSON/API 被 403 拦截；本次未取得可安全访问结果。"
+    },
+    {
+      "source": "Reddit r/somebodymakethis",
+      "status": "failed_or_rate_limited",
+      "detail": "Reddit 公开 JSON/API 被 403 拦截；本次未取得可安全访问结果。"
+    },
+    {
+      "source": "Reddit r/SaaS",
+      "status": "failed_or_rate_limited",
+      "detail": "Reddit 公开 JSON/API 被 403 拦截；本次未取得可安全访问结果。"
+    },
+    {
+      "source": "Reddit r/indiehackers",
+      "status": "failed_or_rate_limited",
+      "detail": "Reddit 公开 JSON/API 被 403 拦截；本次未取得可安全访问结果。"
+    },
+    {
+      "source": "Stack Exchange",
+      "status": "empty_for_date",
+      "detail": "目标日期窗口内没有找到匹配问题。"
+    },
+    {
+      "source": "Product Hunt API",
+      "status": "not_configured",
+      "detail": "未配置 Product Hunt 官方 API 凭证；已跳过，不抓取容易 403 的公开页。"
+    },
+    {
+      "source": "小红书",
+      "status": "failed_or_rate_limited",
+      "detail": "本地社媒采集脚本启动后未返回可用结果；通常是登录态、平台风控或脚本适配问题。"
+    },
+    {
+      "source": "微博",
+      "status": "failed_or_rate_limited",
+      "detail": "本地社媒采集脚本启动后未返回可用结果；通常是登录态、平台风控或脚本适配问题。"
+    }
+  ],
+  "entries": [
+    {
+      "id": "entry-0ae834cdec37",
+      "seriesId": "series-a285158eea86",
+      "kind": "case",
+      "quality": "editorial",
+      "title": "团队共用的长任务智能体门户",
+      "plain": "xAgent 让管理员统一配置模型、技能、工具、连接器和安全策略；用户提交目标与材料，任务在服务器持续运行，关键动作再确认。",
+      "audience": "希望集中管理多名员工的智能体任务，又不想依赖个人电脑常开的团队。",
+      "pain": "多人使用时，文件类型、上下文体积、工具权限和长任务状态容易各自失控。机会是把这些边界收进统一入口，并让高风险动作等待确认。",
+      "why": "文件处理、持续运行和确认点描述得很具体，但市场证据弱，因此只保留观察。",
+      "validation": "找 3 名同事各提交一个只读、低风险长任务，连续跑一周，记录中断、权限错误、人工确认次数和交付是否完整。",
+      "risk": "V2EX 帖子 0 回复，当前是 beta 版本，没有生产使用或稳定性数据；集中运行也会放大权限配置错误。",
+      "topics": [
+        "安全与权限"
+      ],
+      "evidence": [
+        {
+          "source": "V2EX 推广",
+          "sourceType": "中文开发者论坛",
+          "originalTitle": "xAgent 0.0.6.beta 已发布",
+          "url": "https://www.v2ex.com/t/1231405",
+          "observedAt": "2026-07-31",
+          "metrics": {},
+          "strength": "中",
+          "boundary": "这是一个可复核的实战案例，不能据此推断市场已经验证。"
+        }
+      ]
+    },
+    {
+      "id": "entry-c412f5a9b409",
+      "seriesId": "series-cdec4228574c",
+      "kind": "opportunity",
+      "quality": "editorial",
+      "title": "在本地清理提示词和回复中的个人信息",
+      "plain": "Prompt-scrub 想在内容发给大模型前，先在本机识别并遮掉姓名、电话等个人身份信息，也检查模型回复。",
+      "audience": "需要用大模型处理客户、员工或研究材料，又不能随意外传个人信息的团队。",
+      "pain": "提示词和回复可能混入个人信息，人工检查慢且容易漏。机会是本地预处理，并把漏检、误杀和可恢复替换做成可测指标。",
+      "why": "隐私需求明确，但实现证据不足，先用模拟数据验证，不碰真实敏感资料。",
+      "validation": "准备 20 条只含模拟信息的提示词，覆盖姓名、电话、地址和混合格式；人工核对漏检、误杀及上下文是否仍可理解。",
+      "risk": "HN 当天 4 分、2 条评论，证据只有标题，没有支持类型、准确率或本地处理细节。",
+      "topics": [
+        "本地工具",
+        "增长",
+        "内容工作流",
+        "产品验证"
+      ],
+      "evidence": [
+        {
+          "source": "Hacker News",
+          "sourceType": "新产品信号",
+          "originalTitle": "Show HN: Prompt-scrub – local-first PII redaction for LLM prompts and responses",
+          "url": "https://nanocollective.org/blog/prompt-scrub-v100-a-local-first-scrubber-for-prompts-and-their-responses-76",
+          "observedAt": "2026-07-31",
+          "metrics": {},
+          "strength": "中",
+          "boundary": "证据支持具体需求方向，但不等于已经证明付费规模或长期留存。"
+        }
+      ]
+    },
+    {
+      "id": "entry-8975bf61861e",
+      "seriesId": "series-52562f8b01e9",
+      "kind": "opportunity",
+      "quality": "editorial",
+      "title": "多个 AI 助手共用的记忆图",
+      "plain": "这个项目想通过 MCP（一种让 AI 调用外部能力的接口）让 Claude 和 ChatGPT 读取同一张记忆关系图，减少换工具后重新交代背景。",
+      "audience": "同时使用多个 AI 助手、经常跨工具继续同一项目的人。",
+      "pain": "上下文分散在不同客户端，重复说明成本高，也容易出现互相矛盾的旧记忆。机会是做带来源、更新时间和冲突处理的共享记忆层。",
+      "why": "讨论量说明方向有人关心，但现有证据不足以判断实现质量，因此只放观察池。",
+      "validation": "用两款 AI 客户端完成 3 次跨工具交接，检查 20 条记忆的召回、误记和冲突情况，并记录额外上下文成本。",
+      "risk": "HN 当天 17 分、12 条评论，但证据只有标题，没有记忆结构、权限或冲突处理细节。",
+      "topics": [
+        "增长",
+        "安全与权限"
+      ],
+      "evidence": [
+        {
+          "source": "Hacker News",
+          "sourceType": "新产品信号",
+          "originalTitle": "Show HN: Shared memory graph for Claude and ChatGPT, over MCP",
+          "url": "https://uml.gpmai.workers.dev",
+          "observedAt": "2026-07-31",
+          "metrics": {},
+          "strength": "中",
+          "boundary": "证据支持具体需求方向，但不等于已经证明付费规模或长期留存。"
+        }
+      ]
+    },
+    {
+      "id": "entry-f9684903a636",
+      "seriesId": "series-9ae8ef1fd9cf",
+      "kind": "opportunity",
+      "quality": "editorial",
+      "title": "小产品组合的渠道、流量与收入对账",
+      "plain": "这名独立开发者同时维护几个产品：Figma 插件流量下滑但当月有 259 美元收入，Uwarp 流量上升并带来 60 美元广告收入，另一个站点几乎没流量。",
+      "audience": "同时运营多个插件、网站或小工具的独立开发者。",
+      "pain": "不同产品的流量、渠道和收入变化分散，容易继续投入在下滑或没有回报的项目上。机会是把每周趋势和投入时间放在一张可比较的账上。",
+      "why": "这里有具体收入和相反的流量走势，能直接检验一个轻量经营看板是否帮助做取舍。",
+      "validation": "先用一周手工汇总每个产品的访问、来源、收入和投入时间，再看哪些指标真正改变了下一周的取舍。",
+      "risk": "帖子只有 3 条回复，收入数字是单个开发者自报；渠道归因不完整时，看板也可能把相关性当成原因。",
+      "topics": [
+        "其他"
+      ],
+      "evidence": [
+        {
+          "source": "V2EX 程序员",
+          "sourceType": "中文开发者论坛",
+          "originalTitle": "7 月份独立开发复盘",
+          "url": "https://www.v2ex.com/t/1231403",
+          "observedAt": "2026-07-31",
+          "metrics": {},
+          "strength": "中",
+          "boundary": "证据支持具体需求方向，但不等于已经证明付费规模或长期留存。"
+        }
+      ]
+    },
+    {
+      "id": "entry-81dc3d3290e3",
+      "seriesId": "series-ef5303cd0645",
+      "kind": "case",
+      "quality": "editorial",
+      "title": "把一堆失败测试按根因和优先级整理",
+      "plain": "夜间批量测试一次冒出多条红灯时，先把可能属于同一根因的失败归堆，再告诉测试人员先查哪一组。",
+      "audience": "测试开发工程师（SDET）、质量保障人员（QA）和维护持续集成流水线的团队。",
+      "pain": "失败测试多时，每个人靠自己的经验排查，重复劳动多，也容易先处理噪声。机会是把共同根因、影响范围和优先级整理成人能处理的队列。",
+      "why": "这是高频工程动作，问题和结果都能用真实失败日志直接测量。",
+      "validation": "拿最近一周的夜间测试失败记录做人工根因标注，再让原型自动分组；比较分组一致率、首次定位时间和误合并数量。",
+      "risk": "文章有 5 条评论、12 个点赞，但没有工具效果或节省时间的数据；自动分组可能把不同根因错误合并。",
+      "topics": [
+        "自动化",
+        "内容工作流"
+      ],
+      "evidence": [
+        {
+          "source": "DEV.to #automation",
+          "sourceType": "开发者内容",
+          "originalTitle": "Nine Red Tests and No Way to Tell Which Ones Matter",
+          "url": "https://dev.to/henry_messiahtmt_099ca84/nine-red-tests-and-no-way-to-tell-which-ones-matter-2kmf",
+          "observedAt": "2026-07-31",
+          "metrics": {},
+          "strength": "中",
+          "boundary": "这是一个可复核的实战案例，不能据此推断市场已经验证。"
+        }
+      ]
+    },
+    {
+      "id": "entry-1d3e1892e0e6",
+      "seriesId": "series-0d83a8750699",
+      "kind": "case",
+      "quality": "editorial",
+      "title": "本地分析编程智能体的会话记录",
+      "plain": "Tuneloop 用本地 CLI 分析 Claude Code 和 Codex 会话，查看最终 PR 之前的决策、错误和工具调用。",
+      "audience": "重度使用编程智能体、需要复盘失败和交付质量的开发者或团队。",
+      "pain": "最终代码看不到智能体中途走过的弯路，也难比较不同提示、模型和工具为什么成功或失败。机会是把会话记录变成可搜索的复盘证据。",
+      "why": "输入、使用场景和可验证结果都清楚，适合先用于自己的智能体工作流。",
+      "validation": "拿最近 10 次会话本地分析，检查能否稳定找出错误决策、重复读文件和验收遗漏，并和最终 PR 的问题对照。",
+      "risk": "HN 当天 5 分、0 条评论，没有用户效果数据；会话记录可能包含敏感路径或内容，分析和存储要留在本地。",
+      "topics": [
+        "AI 编程",
+        "本地工具",
+        "内容工作流",
+        "产品验证"
+      ],
+      "evidence": [
+        {
+          "source": "Hacker News",
+          "sourceType": "需求信号",
+          "originalTitle": "Show HN: Tuneloop – a local CLI for analyzing coding agent session transcripts",
+          "url": "https://github.com/tuneloop/tuneloop",
+          "observedAt": "2026-07-31",
+          "metrics": {},
+          "strength": "中",
+          "boundary": "这是一个可复核的实战案例，不能据此推断市场已经验证。"
+        }
+      ]
+    },
+    {
+      "id": "entry-4819e931b19f",
+      "seriesId": "series-d41cb562d8d5",
+      "kind": "opportunity",
+      "quality": "editorial",
+      "title": "让 AI 回答后直接完成知识整理",
+      "plain": "Flexnote 想把 AI 回答后的手工活接走：整理成笔记、放到白板、建标签和待办，再补知识之间的连接。",
+      "audience": "经常用 AI 问问题，又要把答案沉淀到笔记系统的人。",
+      "pain": "回答只是中间产物，用户还要反复复制、分类和建任务。机会是让整理动作可预览、可撤销，再由用户确认写入。",
+      "why": "后续动作、目标用户和失败方式都很具体，比单纯再做一个 AI 聊天框更容易验证。",
+      "validation": "找 5 名高频使用 AI 笔记的用户，各记录 10 次问答后的整理步骤和耗时；再用原型代做其中一个动作，比较人工修改量。",
+      "risk": "帖子 0 回复，证据只有作者自己的产品判断；没有活跃、留存或付费数据，自动整理也可能放错位置。",
+      "topics": [
+        "内容工作流",
+        "产品验证"
+      ],
+      "evidence": [
+        {
+          "source": "V2EX 分享创造",
+          "sourceType": "中文开发者论坛",
+          "originalTitle": "Flexnote 支持 AI 了",
+          "url": "https://www.v2ex.com/t/1231396",
+          "observedAt": "2026-07-31",
+          "metrics": {},
+          "strength": "中",
+          "boundary": "证据支持具体需求方向，但不等于已经证明付费规模或长期留存。"
+        }
+      ]
+    },
+    {
+      "id": "entry-9d9b55adc2c7",
+      "seriesId": "series-638def1ce0b3",
+      "kind": "opportunity",
+      "quality": "editorial",
+      "title": "语音智能体的回头客低摩擦付款",
+      "plain": "电话点单或预约时，回头客不必再找银行卡、念卡号和 CVV；系统先识别来电号码，再完成明确授权后的付款。",
+      "audience": "做语音点单、电话预约或防爽约收款的产品团队。",
+      "pain": "语音流程需要先收款才能减少取消和爽约，但报卡号的摩擦会让用户中途退出。机会是为回头客缩短付款步骤，同时保留身份确认和授权。",
+      "why": "谁被什么步骤卡住、失败后果和验证指标都很具体，适合先测一条窄流程。",
+      "validation": "找一个现有语音下单流程，先统计报卡号时的掉单率；再用电话号码识别加二次确认的脚本做 20 通模拟电话，比较完成率和误认风险。",
+      "risk": "HN 当天只有 2 分、0 条评论，没有转化或付费数据；电话号码不能单独充当付款授权，安全和合规仍需单独设计。",
+      "topics": [
+        "增长",
+        "安全与权限",
+        "产品验证"
+      ],
+      "evidence": [
+        {
+          "source": "Hacker News",
+          "sourceType": "新产品信号",
+          "originalTitle": "Show HN: How I built Remembered checkout for Voice",
+          "url": "https://ringup.dev/",
+          "observedAt": "2026-07-31",
+          "metrics": {},
+          "strength": "中",
+          "boundary": "证据支持具体需求方向，但不等于已经证明付费规模或长期留存。"
+        }
+      ]
+    }
+  ]
+}

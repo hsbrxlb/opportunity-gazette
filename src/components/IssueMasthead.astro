@@ -1,0 +1,30 @@
+---
+import type { Issue } from '../lib/data';
+import { formatDate } from '../lib/data';
+
+interface Props { issue: Issue; compact?: boolean; }
+const { issue, compact = false } = Astro.props;
+const lead = issue.entries[0];
+const hasFeature = issue.counts.features > 0;
+const coverSrc = `/opportunity-gazette/covers/${issue.date}.webp`;
+const coverFiles = import.meta.glob('../../public/covers/*.webp', { eager: true, query: '?url', import: 'default' });
+const hasImage = Object.keys(coverFiles).some((path) => path.endsWith(`/${issue.date}.webp`));
+---
+
+<section class:list={['issue-masthead', compact && 'is-compact', hasFeature && 'is-feature', !issue.entries.length && 'is-empty']}>
+  {hasImage && hasFeature && <img class="issue-cover" src={coverSrc} alt="" aria-hidden="true" loading="eager" />}
+  <div class="masthead-wash" aria-hidden="true"></div>
+  <div class="masthead-inner">
+    <p class="eyebrow">第 {issue.date.replaceAll('-', '·')} 期</p>
+    <p class="issue-date">{formatDate(issue.date)}</p>
+    <h1>{lead?.title ?? '当天没有值得发布的内容'}</h1>
+    <p class="masthead-deck">
+      {lead?.plain ?? '这一天没有条目达到精品发布线。宁缺毋滥，不用弱信号填版面。'}
+    </p>
+    <div class="masthead-meta" aria-label="本期数量">
+      <span>{issue.counts.published} 条精品</span>
+      <span>{issue.counts.features} 条封面级</span>
+      <span>从 {issue.counts.collected} 条信号中筛出</span>
+    </div>
+  </div>
+</section>

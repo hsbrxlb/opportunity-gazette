@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 1,
+  "qualityVersion": "2026-08-16.1",
+  "date": "2026-05-28",
+  "generatedAt": "2026-05-29 13:06:23 Asia/Shanghai",
+  "status": "published",
+  "counts": {
+    "collected": 85,
+    "oldAccepted": 5,
+    "published": 1,
+    "features": 0,
+    "editorial": 1,
+    "rejected": 84
+  },
+  "failedSources": [
+    {
+      "source": "Reddit r/SideProject",
+      "status": "failed_or_rate_limited",
+      "detail": "Reddit 公开 JSON/API 被 403 拦截；本次未取得可安全访问结果。"
+    },
+    {
+      "source": "Reddit r/somebodymakethis",
+      "status": "failed_or_rate_limited",
+      "detail": "Reddit 公开 JSON/API 被 403 拦截；本次未取得可安全访问结果。"
+    },
+    {
+      "source": "Reddit r/SaaS",
+      "status": "failed_or_rate_limited",
+      "detail": "Reddit 公开 JSON/API 被 403 拦截；本次未取得可安全访问结果。"
+    },
+    {
+      "source": "Reddit r/indiehackers",
+      "status": "failed_or_rate_limited",
+      "detail": "Reddit 公开 JSON/API 被 403 拦截；本次未取得可安全访问结果。"
+    },
+    {
+      "source": "Product Hunt API",
+      "status": "not_configured",
+      "detail": "No PRODUCTHUNT_TOKEN configured; skipped instead of scraping the 403-prone public page."
+    },
+    {
+      "source": "小红书",
+      "status": "failed_or_rate_limited",
+      "detail": "本地社媒采集脚本启动后未返回可用结果；通常是登录态、平台风控或脚本适配问题。"
+    },
+    {
+      "source": "微博",
+      "status": "failed_or_rate_limited",
+      "detail": "本地社媒采集脚本启动后未返回可用结果；通常是登录态、平台风控或脚本适配问题。"
+    }
+  ],
+  "entries": [
+    {
+      "id": "entry-80700c48702b",
+      "seriesId": "series-3302c139349d",
+      "kind": "opportunity",
+      "quality": "editorial",
+      "title": "AI Coding Harness 打包迁移",
+      "plain": "有人做 VAEN，是因为 AI coding-agent 的好用配置很难从一个项目搬到另一个项目，也很难分享给别人。",
+      "audience": "重度使用 Codex/Claude Code/Gemini CLI 的开发者、维护团队 agent 流程的人、做内部工程平台的小团队。",
+      "pain": "一个可用的 agent 工作流不只是 prompt，还包括 skills、MCP server、工具配置和验收习惯。机会是把这些打包成可迁移、可版本化、可复用的 harness。",
+      "why": "这个信号能落到具体的人和具体流程，不只是泛 AI 热点；可以用很小的验证动作判断有没有需求。",
+      "validation": "把一个真实开发流程打成包：说明、skills、MCP 配置、验证命令；换到另一个 repo 试跑，看准备时间和失败次数是否下降。",
+      "risk": "过度打包会变成另一套配置负担；第一版应只覆盖一个高频场景，例如 bug 修复或前端验收。",
+      "topics": [
+        "AI 编程",
+        "本地工具",
+        "产品验证"
+      ],
+      "evidence": [
+        {
+          "source": "Hacker News",
+          "sourceType": "需求信号",
+          "originalTitle": "Show HN: VAEN – Package and import portable AI coding-agent Harnesses",
+          "url": "https://github.com/sjhalani7/vaen",
+          "observedAt": "2026-05-28",
+          "metrics": {},
+          "strength": "中",
+          "boundary": "证据支持具体需求方向，但不等于已经证明付费规模或长期留存。"
+        }
+      ]
+    }
+  ]
+}

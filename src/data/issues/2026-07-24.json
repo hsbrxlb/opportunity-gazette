@@ -1,0 +1,237 @@
+{
+  "schemaVersion": 1,
+  "qualityVersion": "2026-08-16.1",
+  "date": "2026-07-24",
+  "generatedAt": "2026-07-25 13:09:15 Asia/Shanghai",
+  "status": "published",
+  "counts": {
+    "collected": 81,
+    "oldAccepted": 14,
+    "published": 6,
+    "features": 0,
+    "editorial": 6,
+    "rejected": 75
+  },
+  "failedSources": [
+    {
+      "source": "Reddit r/SideProject",
+      "status": "failed_or_rate_limited",
+      "detail": "Reddit 公开 JSON/API 被 403 拦截；本次未取得可安全访问结果。"
+    },
+    {
+      "source": "Reddit r/somebodymakethis",
+      "status": "failed_or_rate_limited",
+      "detail": "Reddit 公开 JSON/API 被 403 拦截；本次未取得可安全访问结果。"
+    },
+    {
+      "source": "Reddit r/SaaS",
+      "status": "failed_or_rate_limited",
+      "detail": "Reddit 公开 JSON/API 被 403 拦截；本次未取得可安全访问结果。"
+    },
+    {
+      "source": "Reddit r/indiehackers",
+      "status": "failed_or_rate_limited",
+      "detail": "Reddit 公开 JSON/API 被 403 拦截；本次未取得可安全访问结果。"
+    },
+    {
+      "source": "Stack Exchange",
+      "status": "empty_for_date",
+      "detail": "No matching questions found in the target date window."
+    },
+    {
+      "source": "Product Hunt API",
+      "status": "not_configured",
+      "detail": "未配置 Product Hunt 官方 API 凭证；已跳过，不抓取容易 403 的公开页。"
+    },
+    {
+      "source": "小红书",
+      "status": "failed_or_rate_limited",
+      "detail": "本地社媒采集脚本启动后未返回可用结果；通常是登录态、平台风控或脚本适配问题。"
+    },
+    {
+      "source": "微博",
+      "status": "failed_or_rate_limited",
+      "detail": "本地社媒采集脚本启动后未返回可用结果；通常是登录态、平台风控或脚本适配问题。"
+    }
+  ],
+  "entries": [
+    {
+      "id": "entry-3136b5615b91",
+      "seriesId": "series-8ff40f60224a",
+      "kind": "opportunity",
+      "quality": "editorial",
+      "title": "为停更软件用户做一次性付费替代",
+      "plain": "Life Tile 是一款 iPhone 被动时间追踪器，用色块展示一天；作者因为原来使用的 Life Cycle 长期停更，做了一个一次性付费、提供 7 天试用的替代品。",
+      "audience": "依赖某款小工具，但原产品停更、订阅变贵或不再符合当前系统的个人用户。",
+      "pain": "小工具停更后，老用户的习惯和历史需求仍在，却未必愿意迁移到功能更重的订阅产品。机会是针对明确的停更产品做轻量替代和数据迁移。",
+      "why": "“停更产品的老用户”是可定位的人群，一次性付费也给出了明确的定价假设。",
+      "validation": "找 10 名仍在使用或曾使用 Life Cycle 的用户，测试自动追踪准确率、迁移意愿，以及一次性付费能否覆盖他们最在意的功能。",
+      "risk": "目前只有作者自己的替代动机和定价方式，没有购买、留存或迁移数据；被动时间追踪还涉及定位与隐私边界。",
+      "topics": [
+        "产品验证"
+      ],
+      "evidence": [
+        {
+          "source": "Hacker News",
+          "sourceType": "需求信号",
+          "originalTitle": "Show HN: Life Tile – Passive time tracker that shows your day as a Mondrian grid",
+          "url": "https://apps.apple.com/us/app/life-tile-auto-tracker/id6767332648",
+          "observedAt": "2026-07-24",
+          "metrics": {},
+          "strength": "中",
+          "boundary": "证据支持具体需求方向，但不等于已经证明付费规模或长期留存。"
+        }
+      ]
+    },
+    {
+      "id": "entry-148759ebcf48",
+      "seriesId": "series-0fa73296ef9e",
+      "kind": "case",
+      "quality": "editorial",
+      "title": "多智能体流水线的静默重试与输出量监控",
+      "plain": "作者用调用链追踪发现，5 个智能体中有一个发生静默重试，耗时 22.6 秒，输出量还是其他工具的 7 倍。",
+      "audience": "运行多智能体或多工具流水线、遇到速度忽快忽慢和模型用量异常的开发团队。",
+      "pain": "流水线只看总耗时，很难发现具体是哪一步重试、输出膨胀或拖慢后续任务。机会是按智能体记录耗时、重试、输入输出量和预算越界，并把异常定位到一次调用。",
+      "why": "问题和修复都能量化，适合做成智能体流水线的轻量诊断层，而不是再靠人工翻长日志。",
+      "validation": "给一条现有流水线加逐步追踪，连续跑 30 次，找出耗时和输出量异常点，再加入分页与输出预算做前后对照。",
+      "risk": "输出减少 42%、速度提高 21% 都是作者在自己系统里的自测，没有独立复现；监控本身也会增加接入和存储成本。",
+      "topics": [
+        "自动化",
+        "内容工作流"
+      ],
+      "evidence": [
+        {
+          "source": "DEV.to #ai",
+          "sourceType": "开发者内容",
+          "originalTitle": "Sentry's Span Hierarchy Exposed a Silent Retry in My 5-Agent Pipeline. One Agent Took 22.6s, the Others Took 5.",
+          "url": "https://dev.to/sarvar_04/sentrys-span-hierarchy-exposed-a-silent-retry-in-my-5-agent-pipeline-one-agent-took-226s-the-fb4",
+          "observedAt": "2026-07-24",
+          "metrics": {},
+          "strength": "中",
+          "boundary": "这是一个可复核的实战案例，不能据此推断市场已经验证。"
+        }
+      ]
+    },
+    {
+      "id": "entry-8255d9b29500",
+      "seriesId": "series-7ecadfd48178",
+      "kind": "opportunity",
+      "quality": "editorial",
+      "title": "把客户反复问的问题变成可搜索内容",
+      "plain": "GlossaryPage 把散落在客服和销售沟通里的长尾问题，整理成词汇表、学习中心或帮助页面。",
+      "audience": "积累了大量客户问答，但博客、官网和帮助中心一直覆盖不全的市场与客服团队。",
+      "pain": "很多问题被客户反复提出，却小到不值得单独写博客，又不属于正式产品文档。机会是从真实问答中筛出高频主题，生成可审核、可搜索、可继续更新的页面。",
+      "why": "它把客户问题、帮助内容和长尾搜索连接成一条具体工作流，验证指标也比较清楚。",
+      "validation": "挑 10 个近期真实问题做一组页面，记录客服是否减少重复回答、页面是否被搜索访问，以及生成内容需要多少人工校正。",
+      "risk": "证据只有作者的 HN 产品介绍，没有流量、转化、客户数量或内容准确率数据；自动生成页面也可能制造低质量搜索内容。",
+      "topics": [
+        "增长",
+        "内容工作流",
+        "产品验证"
+      ],
+      "evidence": [
+        {
+          "source": "Hacker News",
+          "sourceType": "需求信号",
+          "originalTitle": "Show HN: GlossaryPage – Turn customer questions into knowledge pages",
+          "url": "https://glossarypage.com/",
+          "observedAt": "2026-07-24",
+          "metrics": {},
+          "strength": "中",
+          "boundary": "证据支持具体需求方向，但不等于已经证明付费规模或长期留存。"
+        }
+      ]
+    },
+    {
+      "id": "entry-16eea3c59d41",
+      "seriesId": "series-e885c0b09719",
+      "kind": "opportunity",
+      "quality": "editorial",
+      "title": "无粉丝门槛的付费文档销售工具",
+      "plain": "一名已有文档教程的创作者想做付费专栏，但小报童约 3000 粉丝、掘金 L5 等门槛把无粉丝基础的新手挡在外面。",
+      "audience": "已经有教程、模板或行业经验，但没有平台等级和粉丝积累的个人创作者。",
+      "pain": "作者有现成内容和付费意愿，却在上架前就被平台准入挡住。机会是提供简单托管、支付、权限控制和基础防盗，不把粉丝数当作开通条件。",
+      "why": "这是一条明确的“已有内容却无法上架”信号，最小方案可以很轻，适合先验证成交而不是先做内容平台。",
+      "validation": "找 10 名有现成教程但未上架的创作者访谈，先用支付链接加受限文档完成 3 次真实成交，记录获客来源、退款和转发泄露。",
+      "risk": "目前只有一篇求助帖，无法证明需求规模；没有粉丝门槛也不等于能获客，支付合规、内容盗版和售后都会增加成本。",
+      "topics": [
+        "增长",
+        "内容工作流",
+        "安全与权限",
+        "产品验证"
+      ],
+      "evidence": [
+        {
+          "source": "V2EX 程序员",
+          "sourceType": "中文开发者论坛",
+          "originalTitle": "如何制作付费文档课程",
+          "url": "https://www.v2ex.com/t/1229708",
+          "observedAt": "2026-07-24",
+          "metrics": {},
+          "strength": "中",
+          "boundary": "证据支持具体需求方向，但不等于已经证明付费规模或长期留存。"
+        }
+      ]
+    },
+    {
+      "id": "entry-e55e874eec13",
+      "seriesId": "series-75975ead9c82",
+      "kind": "opportunity",
+      "quality": "editorial",
+      "title": "本地优先的健身数据整合工具",
+      "plain": "Kilo 把训练、体重和卡路里记录放在一起，并优先保存在本地；作者减重 40 公斤时因数据分散，只能自己写脚本看趋势。",
+      "audience": "同时记录饮食、体重和力量训练，又不想把数据分散在多个订阅应用里的健身用户。",
+      "pain": "现有工具各管一段数据，跨应用看长期变化麻烦，部分功能又被付费墙隔开。机会是把三类记录统一起来，允许导入导出，并用简单趋势回答“最近哪里出了问题”。",
+      "why": "用户、数据类型和替代方案都很具体，适合用小样本快速验证，不需要先做完整健身平台。",
+      "validation": "请 5 名正在减重或增肌的用户导入两周数据，观察录入负担、趋势图是否改变决策，以及他们愿不愿意为跨应用导入和本地备份付费。",
+      "risk": "痛点来自作者个人经历，现有竞品的具体限制和其他用户需求没有独立核对；健康数据同步和计算准确性也会增加维护成本。",
+      "topics": [
+        "本地工具",
+        "产品验证"
+      ],
+      "evidence": [
+        {
+          "source": "Hacker News",
+          "sourceType": "需求信号",
+          "originalTitle": "Show HN: Kilo – Open-source, local-first workout, weight and calorie tracker",
+          "url": "https://news.ycombinator.com/item?id=49036332",
+          "observedAt": "2026-07-24",
+          "metrics": {},
+          "strength": "中",
+          "boundary": "证据支持具体需求方向，但不等于已经证明付费规模或长期留存。"
+        }
+      ]
+    },
+    {
+      "id": "entry-f6bfb0bc8581",
+      "seriesId": "series-d91d0c141ecb",
+      "kind": "opportunity",
+      "quality": "editorial",
+      "title": "浏览器智能体的提示词注入回归测试",
+      "plain": "这篇文章提供一个本地实验环境，把浏览器智能体暴露给网页里的隐藏恶意指令，记录动作，再比较加限制前后的表现。",
+      "audience": "开发浏览器自动化智能体，或准备让智能体接触登录页面和后台系统的团队。",
+      "pain": "智能体会把网页内容当作上下文，可能把页面里的恶意文字误当成任务指令。机会是把常见注入手法做成可重复测试集，每次改权限或提示词后自动回归。",
+      "why": "它把抽象的浏览器智能体安全问题变成了能复现、能比较、能进持续测试的具体动作。",
+      "validation": "在隔离环境放入 5 类隐藏指令，让智能体执行同一组只读任务，记录越权动作、阻断率和误伤正常页面的比例。",
+      "risk": "它是教程和实验方法，不是客户或付费需求证明；本地样例也覆盖不了真实网页里不断变化的攻击方式。",
+      "topics": [
+        "自动化",
+        "浏览器",
+        "本地工具",
+        "增长"
+      ],
+      "evidence": [
+        {
+          "source": "DEV.to #automation",
+          "sourceType": "开发者内容",
+          "originalTitle": "Hidden Prompt Injection: Hacking a Browser Agent and Testing Its Defenses",
+          "url": "https://dev.to/_862f933aa9477a9d2d/hidden-prompt-injection-hacking-a-browser-agent-and-testing-its-defenses-64l",
+          "observedAt": "2026-07-24",
+          "metrics": {},
+          "strength": "中",
+          "boundary": "证据支持具体需求方向，但不等于已经证明付费规模或长期留存。"
+        }
+      ]
+    }
+  ]
+}

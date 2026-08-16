@@ -1,0 +1,1236 @@
+{
+  "schemaVersion": 1,
+  "qualityVersion": "2026-08-16.1",
+  "generatedAt": "2026-08-17T00:04:05.540093+08:00",
+  "issues": [
+    {
+      "date": "2026-08-15",
+      "status": "published",
+      "counts": {
+        "collected": 83,
+        "oldAccepted": 36,
+        "published": 7,
+        "features": 1,
+        "editorial": 6,
+        "rejected": 76
+      },
+      "leadTitle": "一个带预算限制的终端深度研究代理，本地数据去向需要验证",
+      "leadKind": "case",
+      "hasCover": true
+    },
+    {
+      "date": "2026-08-14",
+      "status": "published",
+      "counts": {
+        "collected": 86,
+        "oldAccepted": 29,
+        "published": 8,
+        "features": 0,
+        "editorial": 8,
+        "rejected": 78
+      },
+      "leadTitle": "63 行 Python 遮掉 PDF 里的 PAN 和 Aadhaar 身份信息",
+      "leadKind": "opportunity",
+      "hasCover": false
+    },
+    {
+      "date": "2026-08-13",
+      "status": "published",
+      "counts": {
+        "collected": 83,
+        "oldAccepted": 31,
+        "published": 9,
+        "features": 5,
+        "editorial": 4,
+        "rejected": 74
+      },
+      "leadTitle": "把 Kubernetes 工具收成有明确取舍的自托管平台",
+      "leadKind": "case",
+      "hasCover": true
+    },
+    {
+      "date": "2026-08-12",
+      "status": "published",
+      "counts": {
+        "collected": 86,
+        "oldAccepted": 22,
+        "published": 7,
+        "features": 5,
+        "editorial": 2,
+        "rejected": 79
+      },
+      "leadTitle": "半导体材料研发的 AI 辅助筛选工具",
+      "leadKind": "opportunity",
+      "hasCover": true
+    },
+    {
+      "date": "2026-08-11",
+      "status": "published",
+      "counts": {
+        "collected": 90,
+        "oldAccepted": 33,
+        "published": 6,
+        "features": 3,
+        "editorial": 3,
+        "rejected": 84
+      },
+      "leadTitle": "把 AI 课程从一次性答案做成短视频和练习序列",
+      "leadKind": "case",
+      "hasCover": true
+    },
+    {
+      "date": "2026-08-10",
+      "status": "published",
+      "counts": {
+        "collected": 85,
+        "oldAccepted": 25,
+        "published": 11,
+        "features": 3,
+        "editorial": 8,
+        "rejected": 74
+      },
+      "leadTitle": "单文件部署的离线编程智能体",
+      "leadKind": "case",
+      "hasCover": true
+    },
+    {
+      "date": "2026-08-09",
+      "status": "published",
+      "counts": {
+        "collected": 79,
+        "oldAccepted": 26,
+        "published": 7,
+        "features": 4,
+        "editorial": 3,
+        "rejected": 72
+      },
+      "leadTitle": "先算贷后生活余量的借款辅助工具",
+      "leadKind": "opportunity",
+      "hasCover": true
+    },
+    {
+      "date": "2026-08-08",
+      "status": "published",
+      "counts": {
+        "collected": 80,
+        "oldAccepted": 16,
+        "published": 6,
+        "features": 1,
+        "editorial": 5,
+        "rejected": 74
+      },
+      "leadTitle": "多 DNS、多运营商的解析和可达性证据工具",
+      "leadKind": "opportunity",
+      "hasCover": true
+    },
+    {
+      "date": "2026-08-05",
+      "status": "published",
+      "counts": {
+        "collected": 81,
+        "oldAccepted": 30,
+        "published": 7,
+        "features": 2,
+        "editorial": 5,
+        "rejected": 74
+      },
+      "leadTitle": "TestFlight 订阅测试状态的可视化排查工具",
+      "leadKind": "opportunity",
+      "hasCover": true
+    },
+    {
+      "date": "2026-08-04",
+      "status": "published",
+      "counts": {
+        "collected": 90,
+        "oldAccepted": 18,
+        "published": 7,
+        "features": 1,
+        "editorial": 6,
+        "rejected": 83
+      },
+      "leadTitle": "把 MCP 智能体会话还原成可检查记录",
+      "leadKind": "opportunity",
+      "hasCover": true
+    },
+    {
+      "date": "2026-08-03",
+      "status": "published",
+      "counts": {
+        "collected": 84,
+        "oldAccepted": 25,
+        "published": 7,
+        "features": 0,
+        "editorial": 7,
+        "rejected": 77
+      },
+      "leadTitle": "Claude Code 的安全跨电脑迁移包",
+      "leadKind": "opportunity",
+      "hasCover": false
+    },
+    {
+      "date": "2026-08-02",
+      "status": "published",
+      "counts": {
+        "collected": 86,
+        "oldAccepted": 26,
+        "published": 10,
+        "features": 0,
+        "editorial": 10,
+        "rejected": 76
+      },
+      "leadTitle": "别让表面匹配冒充 AI 产品完成",
+      "leadKind": "case",
+      "hasCover": false
+    },
+    {
+      "date": "2026-07-31",
+      "status": "published",
+      "counts": {
+        "collected": 82,
+        "oldAccepted": 19,
+        "published": 8,
+        "features": 0,
+        "editorial": 8,
+        "rejected": 74
+      },
+      "leadTitle": "团队共用的长任务智能体门户",
+      "leadKind": "case",
+      "hasCover": false
+    },
+    {
+      "date": "2026-07-30",
+      "status": "published",
+      "counts": {
+        "collected": 81,
+        "oldAccepted": 10,
+        "published": 3,
+        "features": 1,
+        "editorial": 2,
+        "rejected": 78
+      },
+      "leadTitle": "把口述录屏变成问题草稿",
+      "leadKind": "opportunity",
+      "hasCover": true
+    },
+    {
+      "date": "2026-07-29",
+      "status": "published",
+      "counts": {
+        "collected": 85,
+        "oldAccepted": 12,
+        "published": 9,
+        "features": 1,
+        "editorial": 8,
+        "rejected": 76
+      },
+      "leadTitle": "按任务难度自动切换模型，降低智能体成本",
+      "leadKind": "opportunity",
+      "hasCover": true
+    },
+    {
+      "date": "2026-07-28",
+      "status": "published",
+      "counts": {
+        "collected": 84,
+        "oldAccepted": 3,
+        "published": 1,
+        "features": 0,
+        "editorial": 1,
+        "rejected": 83
+      },
+      "leadTitle": "给 AI 编程准备可复用上下文包",
+      "leadKind": "opportunity",
+      "hasCover": false
+    },
+    {
+      "date": "2026-07-27",
+      "status": "published",
+      "counts": {
+        "collected": 84,
+        "oldAccepted": 16,
+        "published": 4,
+        "features": 1,
+        "editorial": 3,
+        "rejected": 80
+      },
+      "leadTitle": "本地开发服务的可读名称与连错检测",
+      "leadKind": "opportunity",
+      "hasCover": true
+    },
+    {
+      "date": "2026-07-26",
+      "status": "no精品",
+      "counts": {
+        "collected": 83,
+        "oldAccepted": 3,
+        "published": 0,
+        "features": 0,
+        "editorial": 0,
+        "rejected": 83
+      },
+      "leadTitle": "当天没有值得发布的内容",
+      "leadKind": null,
+      "hasCover": false
+    },
+    {
+      "date": "2026-07-25",
+      "status": "published",
+      "counts": {
+        "collected": 87,
+        "oldAccepted": 20,
+        "published": 4,
+        "features": 0,
+        "editorial": 4,
+        "rejected": 83
+      },
+      "leadTitle": "不给智能体原始凭证的终端协作层",
+      "leadKind": "opportunity",
+      "hasCover": false
+    },
+    {
+      "date": "2026-07-24",
+      "status": "published",
+      "counts": {
+        "collected": 81,
+        "oldAccepted": 14,
+        "published": 6,
+        "features": 0,
+        "editorial": 6,
+        "rejected": 75
+      },
+      "leadTitle": "为停更软件用户做一次性付费替代",
+      "leadKind": "opportunity",
+      "hasCover": false
+    },
+    {
+      "date": "2026-07-23",
+      "status": "published",
+      "counts": {
+        "collected": 86,
+        "oldAccepted": 17,
+        "published": 8,
+        "features": 0,
+        "editorial": 8,
+        "rejected": 78
+      },
+      "leadTitle": "不露脸视频从选题到发布的整套流水线",
+      "leadKind": "opportunity",
+      "hasCover": false
+    },
+    {
+      "date": "2026-07-22",
+      "status": "published",
+      "counts": {
+        "collected": 88,
+        "oldAccepted": 14,
+        "published": 6,
+        "features": 0,
+        "editorial": 6,
+        "rejected": 82
+      },
+      "leadTitle": "从代码生成数据流图，提前做隐私和安全评估",
+      "leadKind": "opportunity",
+      "hasCover": false
+    },
+    {
+      "date": "2026-07-21",
+      "status": "published",
+      "counts": {
+        "collected": 87,
+        "oldAccepted": 11,
+        "published": 5,
+        "features": 1,
+        "editorial": 4,
+        "rejected": 82
+      },
+      "leadTitle": "AI 编程助手的跨会话记忆层",
+      "leadKind": "opportunity",
+      "hasCover": true
+    },
+    {
+      "date": "2026-07-20",
+      "status": "published",
+      "counts": {
+        "collected": 89,
+        "oldAccepted": 3,
+        "published": 2,
+        "features": 0,
+        "editorial": 2,
+        "rejected": 87
+      },
+      "leadTitle": "帮应用开发者自动准备退款申诉材料",
+      "leadKind": "opportunity",
+      "hasCover": false
+    },
+    {
+      "date": "2026-07-19",
+      "status": "no精品",
+      "counts": {
+        "collected": 84,
+        "oldAccepted": 1,
+        "published": 0,
+        "features": 0,
+        "editorial": 0,
+        "rejected": 84
+      },
+      "leadTitle": "当天没有值得发布的内容",
+      "leadKind": null,
+      "hasCover": false
+    },
+    {
+      "date": "2026-07-18",
+      "status": "no精品",
+      "counts": {
+        "collected": 80,
+        "oldAccepted": 1,
+        "published": 0,
+        "features": 0,
+        "editorial": 0,
+        "rejected": 80
+      },
+      "leadTitle": "当天没有值得发布的内容",
+      "leadKind": null,
+      "hasCover": false
+    },
+    {
+      "date": "2026-07-17",
+      "status": "no精品",
+      "counts": {
+        "collected": 85,
+        "oldAccepted": 2,
+        "published": 0,
+        "features": 0,
+        "editorial": 0,
+        "rejected": 85
+      },
+      "leadTitle": "当天没有值得发布的内容",
+      "leadKind": null,
+      "hasCover": false
+    },
+    {
+      "date": "2026-07-16",
+      "status": "published",
+      "counts": {
+        "collected": 86,
+        "oldAccepted": 9,
+        "published": 1,
+        "features": 0,
+        "editorial": 1,
+        "rejected": 85
+      },
+      "leadTitle": "跨 AI 编程工具的工作流同步",
+      "leadKind": "opportunity",
+      "hasCover": false
+    },
+    {
+      "date": "2026-07-15",
+      "status": "published",
+      "counts": {
+        "collected": 83,
+        "oldAccepted": 6,
+        "published": 2,
+        "features": 0,
+        "editorial": 2,
+        "rejected": 81
+      },
+      "leadTitle": "从智能体对话里提取失败信号",
+      "leadKind": "opportunity",
+      "hasCover": false
+    },
+    {
+      "date": "2026-07-14",
+      "status": "published",
+      "counts": {
+        "collected": 82,
+        "oldAccepted": 2,
+        "published": 2,
+        "features": 0,
+        "editorial": 2,
+        "rejected": 80
+      },
+      "leadTitle": "AI 编程助手的外联安全代理",
+      "leadKind": "opportunity",
+      "hasCover": false
+    },
+    {
+      "date": "2026-07-13",
+      "status": "published",
+      "counts": {
+        "collected": 80,
+        "oldAccepted": 2,
+        "published": 1,
+        "features": 0,
+        "editorial": 1,
+        "rejected": 79
+      },
+      "leadTitle": "智能体失败链路可视化诊断",
+      "leadKind": "case",
+      "hasCover": false
+    },
+    {
+      "date": "2026-07-12",
+      "status": "no精品",
+      "counts": {
+        "collected": 61,
+        "oldAccepted": 0,
+        "published": 0,
+        "features": 0,
+        "editorial": 0,
+        "rejected": 61
+      },
+      "leadTitle": "当天没有值得发布的内容",
+      "leadKind": null,
+      "hasCover": false
+    },
+    {
+      "date": "2026-07-11",
+      "status": "no精品",
+      "counts": {
+        "collected": 86,
+        "oldAccepted": 0,
+        "published": 0,
+        "features": 0,
+        "editorial": 0,
+        "rejected": 86
+      },
+      "leadTitle": "当天没有值得发布的内容",
+      "leadKind": null,
+      "hasCover": false
+    },
+    {
+      "date": "2026-07-10",
+      "status": "no精品",
+      "counts": {
+        "collected": 86,
+        "oldAccepted": 1,
+        "published": 0,
+        "features": 0,
+        "editorial": 0,
+        "rejected": 86
+      },
+      "leadTitle": "当天没有值得发布的内容",
+      "leadKind": null,
+      "hasCover": false
+    },
+    {
+      "date": "2026-07-09",
+      "status": "no精品",
+      "counts": {
+        "collected": 83,
+        "oldAccepted": 1,
+        "published": 0,
+        "features": 0,
+        "editorial": 0,
+        "rejected": 83
+      },
+      "leadTitle": "当天没有值得发布的内容",
+      "leadKind": null,
+      "hasCover": false
+    },
+    {
+      "date": "2026-07-08",
+      "status": "published",
+      "counts": {
+        "collected": 86,
+        "oldAccepted": 2,
+        "published": 1,
+        "features": 0,
+        "editorial": 1,
+        "rejected": 85
+      },
+      "leadTitle": "AI 代理日志和测试结果验真",
+      "leadKind": "opportunity",
+      "hasCover": false
+    },
+    {
+      "date": "2026-07-07",
+      "status": "no精品",
+      "counts": {
+        "collected": 84,
+        "oldAccepted": 0,
+        "published": 0,
+        "features": 0,
+        "editorial": 0,
+        "rejected": 84
+      },
+      "leadTitle": "当天没有值得发布的内容",
+      "leadKind": null,
+      "hasCover": false
+    },
+    {
+      "date": "2026-07-06",
+      "status": "no精品",
+      "counts": {
+        "collected": 83,
+        "oldAccepted": 1,
+        "published": 0,
+        "features": 0,
+        "editorial": 0,
+        "rejected": 83
+      },
+      "leadTitle": "当天没有值得发布的内容",
+      "leadKind": null,
+      "hasCover": false
+    },
+    {
+      "date": "2026-07-05",
+      "status": "no精品",
+      "counts": {
+        "collected": 91,
+        "oldAccepted": 1,
+        "published": 0,
+        "features": 0,
+        "editorial": 0,
+        "rejected": 91
+      },
+      "leadTitle": "当天没有值得发布的内容",
+      "leadKind": null,
+      "hasCover": false
+    },
+    {
+      "date": "2026-07-04",
+      "status": "no精品",
+      "counts": {
+        "collected": 88,
+        "oldAccepted": 2,
+        "published": 0,
+        "features": 0,
+        "editorial": 0,
+        "rejected": 88
+      },
+      "leadTitle": "当天没有值得发布的内容",
+      "leadKind": null,
+      "hasCover": false
+    },
+    {
+      "date": "2026-07-03",
+      "status": "no精品",
+      "counts": {
+        "collected": 83,
+        "oldAccepted": 2,
+        "published": 0,
+        "features": 0,
+        "editorial": 0,
+        "rejected": 83
+      },
+      "leadTitle": "当天没有值得发布的内容",
+      "leadKind": null,
+      "hasCover": false
+    },
+    {
+      "date": "2026-07-02",
+      "status": "no精品",
+      "counts": {
+        "collected": 88,
+        "oldAccepted": 2,
+        "published": 0,
+        "features": 0,
+        "editorial": 0,
+        "rejected": 88
+      },
+      "leadTitle": "当天没有值得发布的内容",
+      "leadKind": null,
+      "hasCover": false
+    },
+    {
+      "date": "2026-07-01",
+      "status": "no精品",
+      "counts": {
+        "collected": 87,
+        "oldAccepted": 1,
+        "published": 0,
+        "features": 0,
+        "editorial": 0,
+        "rejected": 87
+      },
+      "leadTitle": "当天没有值得发布的内容",
+      "leadKind": null,
+      "hasCover": false
+    },
+    {
+      "date": "2026-06-30",
+      "status": "no精品",
+      "counts": {
+        "collected": 88,
+        "oldAccepted": 1,
+        "published": 0,
+        "features": 0,
+        "editorial": 0,
+        "rejected": 88
+      },
+      "leadTitle": "当天没有值得发布的内容",
+      "leadKind": null,
+      "hasCover": false
+    },
+    {
+      "date": "2026-06-29",
+      "status": "no精品",
+      "counts": {
+        "collected": 80,
+        "oldAccepted": 0,
+        "published": 0,
+        "features": 0,
+        "editorial": 0,
+        "rejected": 80
+      },
+      "leadTitle": "当天没有值得发布的内容",
+      "leadKind": null,
+      "hasCover": false
+    },
+    {
+      "date": "2026-06-28",
+      "status": "no精品",
+      "counts": {
+        "collected": 83,
+        "oldAccepted": 0,
+        "published": 0,
+        "features": 0,
+        "editorial": 0,
+        "rejected": 83
+      },
+      "leadTitle": "当天没有值得发布的内容",
+      "leadKind": null,
+      "hasCover": false
+    },
+    {
+      "date": "2026-06-25",
+      "status": "no精品",
+      "counts": {
+        "collected": 86,
+        "oldAccepted": 0,
+        "published": 0,
+        "features": 0,
+        "editorial": 0,
+        "rejected": 86
+      },
+      "leadTitle": "当天没有值得发布的内容",
+      "leadKind": null,
+      "hasCover": false
+    },
+    {
+      "date": "2026-06-24",
+      "status": "no精品",
+      "counts": {
+        "collected": 83,
+        "oldAccepted": 1,
+        "published": 0,
+        "features": 0,
+        "editorial": 0,
+        "rejected": 83
+      },
+      "leadTitle": "当天没有值得发布的内容",
+      "leadKind": null,
+      "hasCover": false
+    },
+    {
+      "date": "2026-06-23",
+      "status": "no精品",
+      "counts": {
+        "collected": 86,
+        "oldAccepted": 1,
+        "published": 0,
+        "features": 0,
+        "editorial": 0,
+        "rejected": 86
+      },
+      "leadTitle": "当天没有值得发布的内容",
+      "leadKind": null,
+      "hasCover": false
+    },
+    {
+      "date": "2026-06-22",
+      "status": "no精品",
+      "counts": {
+        "collected": 86,
+        "oldAccepted": 0,
+        "published": 0,
+        "features": 0,
+        "editorial": 0,
+        "rejected": 86
+      },
+      "leadTitle": "当天没有值得发布的内容",
+      "leadKind": null,
+      "hasCover": false
+    },
+    {
+      "date": "2026-06-21",
+      "status": "no精品",
+      "counts": {
+        "collected": 89,
+        "oldAccepted": 1,
+        "published": 0,
+        "features": 0,
+        "editorial": 0,
+        "rejected": 89
+      },
+      "leadTitle": "当天没有值得发布的内容",
+      "leadKind": null,
+      "hasCover": false
+    },
+    {
+      "date": "2026-06-19",
+      "status": "no精品",
+      "counts": {
+        "collected": 79,
+        "oldAccepted": 2,
+        "published": 0,
+        "features": 0,
+        "editorial": 0,
+        "rejected": 79
+      },
+      "leadTitle": "当天没有值得发布的内容",
+      "leadKind": null,
+      "hasCover": false
+    },
+    {
+      "date": "2026-06-18",
+      "status": "no精品",
+      "counts": {
+        "collected": 87,
+        "oldAccepted": 2,
+        "published": 0,
+        "features": 0,
+        "editorial": 0,
+        "rejected": 87
+      },
+      "leadTitle": "当天没有值得发布的内容",
+      "leadKind": null,
+      "hasCover": false
+    },
+    {
+      "date": "2026-06-17",
+      "status": "no精品",
+      "counts": {
+        "collected": 86,
+        "oldAccepted": 1,
+        "published": 0,
+        "features": 0,
+        "editorial": 0,
+        "rejected": 86
+      },
+      "leadTitle": "当天没有值得发布的内容",
+      "leadKind": null,
+      "hasCover": false
+    },
+    {
+      "date": "2026-06-16",
+      "status": "no精品",
+      "counts": {
+        "collected": 84,
+        "oldAccepted": 1,
+        "published": 0,
+        "features": 0,
+        "editorial": 0,
+        "rejected": 84
+      },
+      "leadTitle": "当天没有值得发布的内容",
+      "leadKind": null,
+      "hasCover": false
+    },
+    {
+      "date": "2026-06-15",
+      "status": "no精品",
+      "counts": {
+        "collected": 83,
+        "oldAccepted": 0,
+        "published": 0,
+        "features": 0,
+        "editorial": 0,
+        "rejected": 83
+      },
+      "leadTitle": "当天没有值得发布的内容",
+      "leadKind": null,
+      "hasCover": false
+    },
+    {
+      "date": "2026-06-14",
+      "status": "no精品",
+      "counts": {
+        "collected": 84,
+        "oldAccepted": 0,
+        "published": 0,
+        "features": 0,
+        "editorial": 0,
+        "rejected": 84
+      },
+      "leadTitle": "当天没有值得发布的内容",
+      "leadKind": null,
+      "hasCover": false
+    },
+    {
+      "date": "2026-06-13",
+      "status": "no精品",
+      "counts": {
+        "collected": 79,
+        "oldAccepted": 1,
+        "published": 0,
+        "features": 0,
+        "editorial": 0,
+        "rejected": 79
+      },
+      "leadTitle": "当天没有值得发布的内容",
+      "leadKind": null,
+      "hasCover": false
+    },
+    {
+      "date": "2026-06-12",
+      "status": "no精品",
+      "counts": {
+        "collected": 80,
+        "oldAccepted": 1,
+        "published": 0,
+        "features": 0,
+        "editorial": 0,
+        "rejected": 80
+      },
+      "leadTitle": "当天没有值得发布的内容",
+      "leadKind": null,
+      "hasCover": false
+    },
+    {
+      "date": "2026-06-11",
+      "status": "no精品",
+      "counts": {
+        "collected": 83,
+        "oldAccepted": 1,
+        "published": 0,
+        "features": 0,
+        "editorial": 0,
+        "rejected": 83
+      },
+      "leadTitle": "当天没有值得发布的内容",
+      "leadKind": null,
+      "hasCover": false
+    },
+    {
+      "date": "2026-06-10",
+      "status": "no精品",
+      "counts": {
+        "collected": 85,
+        "oldAccepted": 3,
+        "published": 0,
+        "features": 0,
+        "editorial": 0,
+        "rejected": 85
+      },
+      "leadTitle": "当天没有值得发布的内容",
+      "leadKind": null,
+      "hasCover": false
+    },
+    {
+      "date": "2026-06-09",
+      "status": "no精品",
+      "counts": {
+        "collected": 84,
+        "oldAccepted": 0,
+        "published": 0,
+        "features": 0,
+        "editorial": 0,
+        "rejected": 84
+      },
+      "leadTitle": "当天没有值得发布的内容",
+      "leadKind": null,
+      "hasCover": false
+    },
+    {
+      "date": "2026-06-08",
+      "status": "no精品",
+      "counts": {
+        "collected": 82,
+        "oldAccepted": 0,
+        "published": 0,
+        "features": 0,
+        "editorial": 0,
+        "rejected": 82
+      },
+      "leadTitle": "当天没有值得发布的内容",
+      "leadKind": null,
+      "hasCover": false
+    },
+    {
+      "date": "2026-06-07",
+      "status": "no精品",
+      "counts": {
+        "collected": 87,
+        "oldAccepted": 2,
+        "published": 0,
+        "features": 0,
+        "editorial": 0,
+        "rejected": 87
+      },
+      "leadTitle": "当天没有值得发布的内容",
+      "leadKind": null,
+      "hasCover": false
+    },
+    {
+      "date": "2026-06-06",
+      "status": "no精品",
+      "counts": {
+        "collected": 86,
+        "oldAccepted": 1,
+        "published": 0,
+        "features": 0,
+        "editorial": 0,
+        "rejected": 86
+      },
+      "leadTitle": "当天没有值得发布的内容",
+      "leadKind": null,
+      "hasCover": false
+    },
+    {
+      "date": "2026-06-05",
+      "status": "no精品",
+      "counts": {
+        "collected": 82,
+        "oldAccepted": 0,
+        "published": 0,
+        "features": 0,
+        "editorial": 0,
+        "rejected": 82
+      },
+      "leadTitle": "当天没有值得发布的内容",
+      "leadKind": null,
+      "hasCover": false
+    },
+    {
+      "date": "2026-06-04",
+      "status": "no精品",
+      "counts": {
+        "collected": 81,
+        "oldAccepted": 3,
+        "published": 0,
+        "features": 0,
+        "editorial": 0,
+        "rejected": 81
+      },
+      "leadTitle": "当天没有值得发布的内容",
+      "leadKind": null,
+      "hasCover": false
+    },
+    {
+      "date": "2026-06-03",
+      "status": "no精品",
+      "counts": {
+        "collected": 82,
+        "oldAccepted": 2,
+        "published": 0,
+        "features": 0,
+        "editorial": 0,
+        "rejected": 82
+      },
+      "leadTitle": "当天没有值得发布的内容",
+      "leadKind": null,
+      "hasCover": false
+    },
+    {
+      "date": "2026-06-02",
+      "status": "published",
+      "counts": {
+        "collected": 79,
+        "oldAccepted": 7,
+        "published": 2,
+        "features": 0,
+        "editorial": 2,
+        "rejected": 77
+      },
+      "leadTitle": "Excel 批量导入前的校验助手",
+      "leadKind": "opportunity",
+      "hasCover": false
+    },
+    {
+      "date": "2026-06-01",
+      "status": "no精品",
+      "counts": {
+        "collected": 83,
+        "oldAccepted": 7,
+        "published": 0,
+        "features": 0,
+        "editorial": 0,
+        "rejected": 83
+      },
+      "leadTitle": "当天没有值得发布的内容",
+      "leadKind": null,
+      "hasCover": false
+    },
+    {
+      "date": "2026-05-31",
+      "status": "published",
+      "counts": {
+        "collected": 86,
+        "oldAccepted": 10,
+        "published": 2,
+        "features": 0,
+        "editorial": 2,
+        "rejected": 84
+      },
+      "leadTitle": "容器化前端调试工作流",
+      "leadKind": "opportunity",
+      "hasCover": false
+    },
+    {
+      "date": "2026-05-28",
+      "status": "published",
+      "counts": {
+        "collected": 85,
+        "oldAccepted": 5,
+        "published": 1,
+        "features": 0,
+        "editorial": 1,
+        "rejected": 84
+      },
+      "leadTitle": "AI Coding Harness 打包迁移",
+      "leadKind": "opportunity",
+      "hasCover": false
+    },
+    {
+      "date": "2026-05-27",
+      "status": "no精品",
+      "counts": {
+        "collected": 113,
+        "oldAccepted": 6,
+        "published": 0,
+        "features": 0,
+        "editorial": 0,
+        "rejected": 113
+      },
+      "leadTitle": "当天没有值得发布的内容",
+      "leadKind": null,
+      "hasCover": false
+    },
+    {
+      "date": "2026-05-26",
+      "status": "published",
+      "counts": {
+        "collected": 99,
+        "oldAccepted": 7,
+        "published": 1,
+        "features": 0,
+        "editorial": 1,
+        "rejected": 98
+      },
+      "leadTitle": "AI 代码进 CI 前的本地验证层",
+      "leadKind": "opportunity",
+      "hasCover": false
+    },
+    {
+      "date": "2026-05-25",
+      "status": "no精品",
+      "counts": {
+        "collected": 88,
+        "oldAccepted": 1,
+        "published": 0,
+        "features": 0,
+        "editorial": 0,
+        "rejected": 88
+      },
+      "leadTitle": "当天没有值得发布的内容",
+      "leadKind": null,
+      "hasCover": false
+    },
+    {
+      "date": "2026-05-24",
+      "status": "no精品",
+      "counts": {
+        "collected": 89,
+        "oldAccepted": 2,
+        "published": 0,
+        "features": 0,
+        "editorial": 0,
+        "rejected": 89
+      },
+      "leadTitle": "当天没有值得发布的内容",
+      "leadKind": null,
+      "hasCover": false
+    },
+    {
+      "date": "2026-05-23",
+      "status": "no精品",
+      "counts": {
+        "collected": 85,
+        "oldAccepted": 2,
+        "published": 0,
+        "features": 0,
+        "editorial": 0,
+        "rejected": 85
+      },
+      "leadTitle": "当天没有值得发布的内容",
+      "leadKind": null,
+      "hasCover": false
+    },
+    {
+      "date": "2026-05-22",
+      "status": "no精品",
+      "counts": {
+        "collected": 49,
+        "oldAccepted": 3,
+        "published": 0,
+        "features": 0,
+        "editorial": 0,
+        "rejected": 49
+      },
+      "leadTitle": "当天没有值得发布的内容",
+      "leadKind": null,
+      "hasCover": false
+    },
+    {
+      "date": "2026-05-21",
+      "status": "published",
+      "counts": {
+        "collected": 60,
+        "oldAccepted": 25,
+        "published": 1,
+        "features": 0,
+        "editorial": 1,
+        "rejected": 59
+      },
+      "leadTitle": "Agent 记忆搜索",
+      "leadKind": "opportunity",
+      "hasCover": false
+    },
+    {
+      "date": "2026-05-20",
+      "status": "published",
+      "counts": {
+        "collected": 60,
+        "oldAccepted": 23,
+        "published": 2,
+        "features": 0,
+        "editorial": 2,
+        "rejected": 58
+      },
+      "leadTitle": "Show HN: ClassKeep – Booking, credits, and smart waitlists for boutique studios",
+      "leadKind": "opportunity",
+      "hasCover": false
+    }
+  ],
+  "series": [
+    {
+      "id": "series-c518d551880a",
+      "title": "跨线下和多种视频会议生成统一纪要",
+      "kind": "opportunity",
+      "topics": [
+        "自动化",
+        "增长",
+        "内容工作流",
+        "产品验证"
+      ],
+      "dates": [
+        "2026-08-12",
+        "2026-08-13"
+      ],
+      "entryIds": [
+        "entry-7dd0f10dc0f9",
+        "entry-f2afa4a164ad"
+      ]
+    }
+  ],
+  "stats": {
+    "reportDays": 80,
+    "historicalCandidates": 617,
+    "publishedEntries": 164,
+    "featureEntries": 29,
+    "editorialEntries": 135,
+    "excludedEntries": 453
+  }
+}

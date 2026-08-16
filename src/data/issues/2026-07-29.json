@@ -1,0 +1,316 @@
+{
+  "schemaVersion": 1,
+  "qualityVersion": "2026-08-16.1",
+  "date": "2026-07-29",
+  "generatedAt": "2026-07-30 13:08:09 Asia/Shanghai",
+  "status": "published",
+  "counts": {
+    "collected": 85,
+    "oldAccepted": 12,
+    "published": 9,
+    "features": 1,
+    "editorial": 8,
+    "rejected": 76
+  },
+  "failedSources": [
+    {
+      "source": "Reddit r/SideProject",
+      "status": "failed_or_rate_limited",
+      "detail": "Reddit 公开 JSON/API 被 403 拦截；本次未取得可安全访问结果。"
+    },
+    {
+      "source": "Reddit r/somebodymakethis",
+      "status": "failed_or_rate_limited",
+      "detail": "Reddit 公开 JSON/API 被 403 拦截；本次未取得可安全访问结果。"
+    },
+    {
+      "source": "Reddit r/SaaS",
+      "status": "failed_or_rate_limited",
+      "detail": "Reddit 公开 JSON/API 被 403 拦截；本次未取得可安全访问结果。"
+    },
+    {
+      "source": "Reddit r/indiehackers",
+      "status": "failed_or_rate_limited",
+      "detail": "Reddit 公开 JSON/API 被 403 拦截；本次未取得可安全访问结果。"
+    },
+    {
+      "source": "Product Hunt API",
+      "status": "not_configured",
+      "detail": "未配置 Product Hunt 官方 API 凭证；已跳过，不抓取容易 403 的公开页。"
+    },
+    {
+      "source": "小红书",
+      "status": "failed_or_rate_limited",
+      "detail": "本地社媒采集脚本启动后未返回可用结果；通常是登录态、平台风控或脚本适配问题。"
+    },
+    {
+      "source": "微博",
+      "status": "failed_or_rate_limited",
+      "detail": "本地社媒采集脚本启动后未返回可用结果；通常是登录态、平台风控或脚本适配问题。"
+    }
+  ],
+  "entries": [
+    {
+      "id": "entry-bcd284b71293",
+      "seriesId": "series-7f5b1953630a",
+      "kind": "opportunity",
+      "quality": "feature",
+      "title": "按任务难度自动切换模型，降低智能体成本",
+      "plain": "Tokenless 是一个 API 网关，按每一步任务的难度动态选模型：简单步骤走便宜模型，难步骤再用强模型，目标是降低智能体的 token 花费。",
+      "audience": "调用量较大、同时受模型费用和任务成功率约束的智能体产品团队。",
+      "pain": "整条流程统一使用最强模型会浪费成本，手工给每一步配模型又难维护。机会是自动路由，同时保留失败回退、质量对照和成本记录。",
+      "why": "成本、成功率和延迟都能直接做对照测试，这比只讨论“便宜模型能不能用”更容易得出可执行结论。",
+      "validation": "选一条有明确验收结果的非生产流程，用固定任务集比较单一强模型和自动路由的成功率、延迟与真实账单，再访谈团队是否愿意为稳定节省付费。",
+      "risk": "HN 56 分和 50 条评论只说明讨论度；实际节省比例、误路由造成的失败和第三方网关的数据隐私都要独立验证。",
+      "topics": [
+        "产品验证"
+      ],
+      "evidence": [
+        {
+          "source": "Hacker News",
+          "sourceType": "需求信号",
+          "originalTitle": "Launch HN: Tokenless (YC S26) – Automatic model switching to save money",
+          "url": "https://usetokenless.com/",
+          "observedAt": "2026-07-29",
+          "metrics": {},
+          "strength": "强",
+          "boundary": "证据支持具体需求方向，但不等于已经证明付费规模或长期留存。"
+        }
+      ]
+    },
+    {
+      "id": "entry-e9eaadafd7de",
+      "seriesId": "series-5ada8d6a72dc",
+      "kind": "opportunity",
+      "quality": "editorial",
+      "title": "App 限免渠道的收录监测与下载归因",
+      "plain": "一名独立开发者给 App 做限免时发现：有些网站不回复，有些直接收录，有一家要求付费；他还观察到 Reddit 帖子数小时后会被该站自动收录。",
+      "audience": "需要为 App 限免或促销找渠道、又不知道哪些渠道真的带来下载的独立开发者。",
+      "pain": "渠道收录方式、收费和真实效果不透明，开发者只能逐个提交和猜测来源。机会是记录渠道是否自动抓取、何时收录、是否收费，并与下载变化做时间对照。",
+      "why": "这是一个具体的增长运营摩擦，最小验证可以先是一次活动的渠道记录，不需要先做新平台。",
+      "validation": "跟踪一次限免活动：给每个渠道使用独立链接或时间标记，记录收录时间、点击和下载变化，再整理成一份可复查的渠道表。",
+      "risk": "证据只有一次经历和 4 条回复；无法确认网站是否自动抓取、收费推广是否有效，App Store 的下载归因也可能不完整。",
+      "topics": [
+        "增长",
+        "产品验证"
+      ],
+      "evidence": [
+        {
+          "source": "V2EX 分享发现",
+          "sourceType": "中文开发者论坛",
+          "originalTitle": "这限免网站是什么逻辑！",
+          "url": "https://www.v2ex.com/t/1230946",
+          "observedAt": "2026-07-29",
+          "metrics": {},
+          "strength": "中",
+          "boundary": "证据支持具体需求方向，但不等于已经证明付费规模或长期留存。"
+        }
+      ]
+    },
+    {
+      "id": "entry-81d4b5763b40",
+      "seriesId": "series-2c386eab174b",
+      "kind": "opportunity",
+      "quality": "editorial",
+      "title": "不上传云端的本地会议纪要",
+      "plain": "Minute 在 Mac 本地录制麦克风和可选系统音频，用 Whisper 转写，再用 llama.cpp 生成摘要、决策和行动项；首次下载模型后可在设备上运行。",
+      "audience": "会议内容敏感、不愿把录音或转写发送给云端服务的个人和小团队。",
+      "pain": "云端会议纪要省事，但会增加录音上传和数据留存顾虑。机会是把录制、转写、摘要和检索都留在本机，并让用户清楚管理原始音频。",
+      "why": "隐私动机、处理链路和可运行产品都很具体，可以用真实会议直接判断本地方案是否够用。",
+      "validation": "用 5 场已获同意的真实会议测试，抽查转写准确率、行动项遗漏、耗时、耗电和磁盘占用，再访谈用户是否愿意为本地处理付费。",
+      "risk": "HN 12 分和 6 条评论不足以证明需求规模；说话人区分、长会稳定性、敏感文件保护和会议录音合规仍需验证。",
+      "topics": [
+        "本地工具",
+        "内容工作流",
+        "产品验证"
+      ],
+      "evidence": [
+        {
+          "source": "Hacker News",
+          "sourceType": "需求信号",
+          "originalTitle": "Show HN: Minute – Offline meeting notes on macOS with Whisper and llama.cpp",
+          "url": "https://github.com/mraza007/minute",
+          "observedAt": "2026-07-29",
+          "metrics": {},
+          "strength": "中",
+          "boundary": "证据支持具体需求方向，但不等于已经证明付费规模或长期留存。"
+        }
+      ]
+    },
+    {
+      "id": "entry-8ec3699aaa9b",
+      "seriesId": "series-22c9e1a77450",
+      "kind": "opportunity",
+      "quality": "editorial",
+      "title": "可重复测量 AI 是否推荐某个企业",
+      "plain": "作者想判断 AI 助手会不会推荐某家企业，却发现模型每次回答都不同，单次查询无法代表真实情况，因此做了控制波动的测量方法。",
+      "audience": "依赖 AI 搜索或推荐获得曝光、需要持续观察品牌出现情况的增长与市场团队。",
+      "pain": "模型输出有随机性，换模型、问题或时间都可能改变结果。机会是固定问题集、模型和时间窗口，做多次采样并保留原始回答。",
+      "why": "它把模糊的“AI 有没有提到我”变成可重复采样的问题，对增长归因和品牌监测有直接启发。",
+      "validation": "选一个自己熟悉的行业，固定 10 个问题，在两个模型上各重复 20 次；比较推荐频率、答案波动和人工核对成本，再让 5 家企业判断报告是否有用。",
+      "risk": "文章只有 2 个 reactions、0 评论；当前证据不能证明作者的方法科学，也不能证明企业愿意为持续监测付费。",
+      "topics": [
+        "增长",
+        "内容工作流",
+        "产品验证"
+      ],
+      "evidence": [
+        {
+          "source": "DEV.to #ai",
+          "sourceType": "开发者内容",
+          "originalTitle": "How do you measure something that gives a different answer every time?",
+          "url": "https://dev.to/agustaon/how-do-you-measure-something-that-gives-a-different-answer-every-time-55m5",
+          "observedAt": "2026-07-29",
+          "metrics": {},
+          "strength": "中",
+          "boundary": "证据支持具体需求方向，但不等于已经证明付费规模或长期留存。"
+        }
+      ]
+    },
+    {
+      "id": "entry-dbb6a2701497",
+      "seriesId": "series-e2665fecb4d6",
+      "kind": "opportunity",
+      "quality": "editorial",
+      "title": "并行编程智能体的隔离与去重",
+      "plain": "一名开发者同时运行多个编程智能体，常在同一个代码库里工作；他遇到两类问题：共享状态被破坏，以及不同智能体重复做同一件事。",
+      "audience": "在同一代码库并行运行多个编程智能体的开发者和小型工程团队。",
+      "pain": "并行能缩短等待时间，但缺少工作区隔离、任务占用和合并检查时，冲突与重复劳动会抵消收益。机会是把分支、工作树、任务锁和变更汇总做成轻量控制层。",
+      "why": "失败模式很具体，而且可以用同一组任务做前后对照，适合验证现有 Git 隔离方案还缺哪一层体验。",
+      "validation": "选一个可拆成两个子任务的代码库，比较共享工作区和隔离工作区的冲突数、重复修改、合并耗时和最终测试结果。",
+      "risk": "证据只有作者经验、0 reaction 和 2 条评论；同时运行多个智能体的人群规模和独立付费需求都未知。",
+      "topics": [
+        "AI 编程",
+        "内容工作流",
+        "产品验证"
+      ],
+      "evidence": [
+        {
+          "source": "DEV.to #productivity",
+          "sourceType": "开发者内容",
+          "originalTitle": "Running parallel agent sessions without them stepping on each other",
+          "url": "https://dev.to/olund/running-parallel-agent-sessions-without-them-stepping-on-each-other-441o",
+          "observedAt": "2026-07-29",
+          "metrics": {},
+          "strength": "中",
+          "boundary": "证据支持具体需求方向，但不等于已经证明付费规模或长期留存。"
+        }
+      ]
+    },
+    {
+      "id": "entry-ceb721d9a0fb",
+      "seriesId": "series-9c58e63401c7",
+      "kind": "opportunity",
+      "quality": "editorial",
+      "title": "废弃项目资产的人工撮合交易",
+      "plain": "RepoInPeace 想让开发者出售停止维护的项目资产，包括代码、域名，甚至已有客户，而不是让它们一直闲置。",
+      "audience": "手上有停更项目、仍保留代码或用户资产的独立开发者，以及想低成本接手现成项目的人。",
+      "pain": "卖方难判断资产还有没有价值，买方也缺少统一的尽调材料。机会是先做项目清单、权属核对、收入与用户证据整理和人工撮合。",
+      "why": "出售的资产类型和买卖双方都很清楚，但现有证据不足以证明一个公开市场能跑起来，适合先从人工服务验证。",
+      "validation": "先不做市场平台，手工征集 10 个停更项目并尝试撮合 3 次，记录买方最关心的证据、谈崩原因和成交所需手续。",
+      "risk": "HN 只有 6 分和 2 条评论；代码权属、客户数据转让、隐私合规和双边冷启动都可能让交易无法成立。",
+      "topics": [
+        "增长",
+        "产品验证"
+      ],
+      "evidence": [
+        {
+          "source": "Hacker News",
+          "sourceType": "新产品信号",
+          "originalTitle": "Show HN: RepoInPeace – A marketplace to buy and sell abandoned startup IP",
+          "url": "https://repoinpeace.app/",
+          "observedAt": "2026-07-29",
+          "metrics": {},
+          "strength": "中",
+          "boundary": "证据支持具体需求方向，但不等于已经证明付费规模或长期留存。"
+        }
+      ]
+    },
+    {
+      "id": "entry-5b8ec3cda644",
+      "seriesId": "series-7e221a440311",
+      "kind": "opportunity",
+      "quality": "editorial",
+      "title": "让指定 Mac 应用稳定绕过系统代理",
+      "plain": "一名 Mac 用户长期打开系统代理，但绕过规则经常失效，导致某些客户端不能用；他找不到能稳定让指定应用直连的工具。",
+      "audience": "需要长期打开系统代理，同时有个别应用必须直连的 Mac 用户。",
+      "pain": "现有工具按域名或规则绕过时可能失效，用户只能反复关代理或放弃使用某个客户端。机会是把“按应用直连”做成可见、可测试、可随时撤销的规则。",
+      "why": "痛点、受影响的软件场景和想要的结果都很具体，适合先做很窄的技术验证。",
+      "validation": "先在两三个已知会失效的客户端上验证技术可行性，再做一个只支持选择应用和开关直连的原型，发回原帖收集真实场景。",
+      "risk": "目前只有一个用户和 1 条回复；问题可能来自特定客户端或配置，Mac 网络栈也可能限制按应用稳定分流。",
+      "topics": [
+        "增长",
+        "产品验证"
+      ],
+      "evidence": [
+        {
+          "source": "V2EX 问与答",
+          "sourceType": "中文开发者论坛",
+          "originalTitle": "求推荐代理软件，可以设置客户端不走代理？",
+          "url": "https://www.v2ex.com/t/1230945",
+          "observedAt": "2026-07-29",
+          "metrics": {},
+          "strength": "中",
+          "boundary": "证据支持具体需求方向，但不等于已经证明付费规模或长期留存。"
+        }
+      ]
+    },
+    {
+      "id": "entry-2ba606ea8531",
+      "seriesId": "series-38c4b5eb18f0",
+      "kind": "opportunity",
+      "quality": "editorial",
+      "title": "语音优先的本地 AI 日记",
+      "plain": "一个多次尝试写日记都没坚持下来的人，给自己做了语音优先、隐私优先的 AI 日记：自动打标签、提取含义，在本地做语义检索，还能导出给其他模型。",
+      "audience": "想记录日记但不愿长时间打字，同时在意隐私和后续检索的人。",
+      "pain": "传统日记的输入和整理成本容易让人中断；云端 AI 日记又会带来隐私顾虑。机会是把语音记录、本地存储和可检索回顾放进一个短流程。",
+      "why": "作者把坚持不下去的具体问题做成了可运行产品，语音、本地存储和语义回顾也与个人记录工作流直接相关。",
+      "validation": "找 5 个有日记意愿但经常中断的人试用一周，记录实际记录天数、回看次数、语音转写错误和愿意接受的付费方式。",
+      "risk": "证据只有作者自述、HN 29 分和 13 条评论；不能证明其他人能长期坚持、本地隐私实现可靠或存在付费需求。",
+      "topics": [
+        "本地工具",
+        "产品验证"
+      ],
+      "evidence": [
+        {
+          "source": "Hacker News",
+          "sourceType": "需求信号",
+          "originalTitle": "Show HN: Echologue – the private AI voice journal I built for myself",
+          "url": "https://echologue.com/",
+          "observedAt": "2026-07-29",
+          "metrics": {},
+          "strength": "中",
+          "boundary": "证据支持具体需求方向，但不等于已经证明付费规模或长期留存。"
+        }
+      ]
+    },
+    {
+      "id": "entry-39acae6fb4f4",
+      "seriesId": "series-a463be2c3288",
+      "kind": "opportunity",
+      "quality": "editorial",
+      "title": "非工程背景用户的 AI 开发进阶路线",
+      "plain": "一名主要使用 SQL、Excel 和数据分析工具的管理者，已经靠 ChatGPT 和 Claude 做过应用与脚本，但现在想系统补齐 AI 辅助开发能力。",
+      "audience": "能借助 AI 写出小工具，却缺少代码结构、调试、测试和部署基础的非工程背景用户。",
+      "pain": "零散教程能帮人快速做出第一个版本，却很少覆盖怎样把它维护好。机会是围绕真实小项目，把调试、版本控制、测试和部署连成一条可验收路线。",
+      "why": "提问者已经跨过“完全不会写”的阶段，暴露的是从能生成到能维护之间的具体学习断层。",
+      "validation": "先做一篇从 SQL 或 Excel 使用者出发的短教程，带 5 名目标用户完成同一项目，记录卡住的位置、独立完成率和后续付费意愿。",
+      "risk": "HN 只有 6 分和 6 条评论，当前只证明一个具体学习者和少量讨论；不能据此判断课程需求规模或付费意愿。",
+      "topics": [
+        "产品验证"
+      ],
+      "evidence": [
+        {
+          "source": "Hacker News",
+          "sourceType": "需求信号",
+          "originalTitle": "Ask HN: How would you learn AI-assisted development from the ground up?",
+          "url": "https://news.ycombinator.com/item?id=49098829",
+          "observedAt": "2026-07-29",
+          "metrics": {},
+          "strength": "中",
+          "boundary": "证据支持具体需求方向，但不等于已经证明付费规模或长期留存。"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "qualityVersion": "2026-08-16.1",
+  "date": "2026-07-08",
+  "generatedAt": "2026-07-09 13:02:44 Asia/Shanghai",
+  "status": "published",
+  "counts": {
+    "collected": 86,
+    "oldAccepted": 2,
+    "published": 1,
+    "features": 0,
+    "editorial": 1,
+    "rejected": 85
+  },
+  "failedSources": [
+    {
+      "source": "Reddit r/SideProject",
+      "status": "failed_or_rate_limited",
+      "detail": "Reddit 公开 JSON/API 被 403 拦截；本次未取得可安全访问结果。"
+    },
+    {
+      "source": "Reddit r/somebodymakethis",
+      "status": "failed_or_rate_limited",
+      "detail": "Reddit 公开 JSON/API 被 403 拦截；本次未取得可安全访问结果。"
+    },
+    {
+      "source": "Reddit r/SaaS",
+      "status": "failed_or_rate_limited",
+      "detail": "Reddit 公开 JSON/API 被 403 拦截；本次未取得可安全访问结果。"
+    },
+    {
+      "source": "Reddit r/indiehackers",
+      "status": "failed_or_rate_limited",
+      "detail": "Reddit 公开 JSON/API 被 403 拦截；本次未取得可安全访问结果。"
+    },
+    {
+      "source": "Stack Exchange",
+      "status": "empty_for_date",
+      "detail": "No matching questions found in the target date window."
+    },
+    {
+      "source": "Product Hunt API",
+      "status": "not_configured",
+      "detail": "未配置 Product Hunt 官方 API 凭证；已跳过，不抓取容易 403 的公开页。"
+    },
+    {
+      "source": "小红书",
+      "status": "failed_or_rate_limited",
+      "detail": "本地社媒采集脚本启动后未返回可用结果；通常是登录态、平台风控或脚本适配问题。"
+    },
+    {
+      "source": "微博",
+      "status": "failed_or_rate_limited",
+      "detail": "本地社媒采集脚本启动后未返回可用结果；通常是登录态、平台风控或脚本适配问题。"
+    }
+  ],
+  "entries": [
+    {
+      "id": "entry-ac5a6f844d62",
+      "seriesId": "series-99b273e6ca30",
+      "kind": "opportunity",
+      "quality": "editorial",
+      "title": "AI 代理日志和测试结果验真",
+      "plain": "让 AI 自己改代码、跑测试时，最怕它把没有真实发生过的测试日志当成证据继续往下做。",
+      "audience": "用 Coding Agent 做开发的个人开发者、工程团队、可靠性工程师",
+      "pain": "Agent 如果会生成、改写或误信测试日志，开发者就很难判断“它真的跑过”还是“它写得像跑过”。机会是做一层轻量的来源追踪、命令回放和结果校验。",
+      "why": "这和本地 Agent 开发工作流直接相关，而且问题足够具体：不是泛泛说“AI 不可靠”，而是测试日志、来源链、回放证据这些可以做成工具或规则。",
+      "validation": "挑 3 个真实 Coding Agent 任务，要求保存命令、退出码、测试输出和文件 diff；看人工复核时能不能更快发现“没跑测试却声称跑了”的情况。",
+      "risk": "目前主要是开发者文章和讨论热度，还不是明确付费需求；如果实现太重，会变成 CI 平台功能而不是小工具。",
+      "topics": [
+        "AI 编程",
+        "本地工具",
+        "内容工作流",
+        "产品验证"
+      ],
+      "evidence": [
+        {
+          "source": "DEV.to #ai",
+          "sourceType": "开发者内容",
+          "originalTitle": "The Agent Faked a Test Log, Then Believed It. Self-Editing Harnesses Have a Provenance Problem.",
+          "url": "https://dev.to/p0rt/the-agent-faked-a-test-log-then-believed-it-self-editing-harnesses-have-a-provenance-problem-3id6",
+          "observedAt": "2026-07-08",
+          "metrics": {},
+          "strength": "中",
+          "boundary": "证据支持具体需求方向，但不等于已经证明付费规模或长期留存。"
+        }
+      ]
+    }
+  ]
+}

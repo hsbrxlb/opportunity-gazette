@@ -1,0 +1,70 @@
+---
+import type { Entry } from '../lib/data';
+import { topicHref } from '../lib/data';
+
+interface Props { entry: Entry; index: number; featured?: boolean; showTopic?: boolean; }
+const { entry, index, featured = false, showTopic = false } = Astro.props;
+const evidence = entry.evidence[0];
+const metricText = Object.entries(evidence.metrics)
+  .map(([key, value]) => `${key} ${value.toLocaleString('zh-CN')}`)
+  .join(' · ');
+---
+
+<article class:list={['story', featured && 'story-featured']} data-pagefind-body data-kind={entry.kind} data-quality={entry.quality}>
+  <div class="story-rail">
+    <span class="story-number">{String(index).padStart(2, '0')}</span>
+    <span class:list={['quality-mark', entry.quality]}>{entry.quality === 'feature' ? '封面级' : '编辑精选'}</span>
+    <span class="kind-mark">{entry.kind === 'opportunity' ? '机会' : '实战案例'}</span>
+  </div>
+  <div class="story-body">
+    <header>
+      <h2 data-pagefind-meta="title">{entry.title}</h2>
+      <p class="story-plain">{entry.plain}</p>
+    </header>
+
+    <div class="quick-read">
+      <section>
+        <h3>谁会需要</h3>
+        <p>{entry.audience}</p>
+      </section>
+      <section>
+        <h3>卡在哪里</h3>
+        <p>{entry.pain}</p>
+      </section>
+      <section class="evidence-glance">
+        <h3>证据强度</h3>
+        <p><strong>{evidence.strength}</strong> · {evidence.source}</p>
+        {metricText && <p class="metric-line">{metricText}</p>}
+      </section>
+    </div>
+
+    <details class="story-details">
+      <summary>看证据与怎么试</summary>
+      <div class="detail-grid">
+        <section>
+          <h3>原始证据</h3>
+          <p>{evidence.originalTitle}</p>
+          <a class="source-link" href={evidence.url} target="_blank" rel="noreferrer">打开原始来源 ↗</a>
+          <p class="boundary">{evidence.boundary}</p>
+        </section>
+        <section>
+          <h3>为什么值得看</h3>
+          <p>{entry.why}</p>
+        </section>
+        <section>
+          <h3>最小验证动作</h3>
+          <p>{entry.validation}</p>
+        </section>
+        <section class="risk-block">
+          <h3>风险</h3>
+          <p>{entry.risk}</p>
+        </section>
+      </div>
+    </details>
+
+    <footer class="story-topics">
+      {entry.topics.map((topic) => <a href={`/opportunity-gazette/search/?q=${encodeURIComponent(topic)}`}>{topic}</a>)}
+      {showTopic && <a href={topicHref(entry.seriesId)}>查看专题时间线</a>}
+    </footer>
+  </div>
+</article>

@@ -1,0 +1,9 @@
+{
+  "name": "机会画报 · Opportunity Gazette",
+  "short_name": "机会画报",
+  "start_url": "/opportunity-gazette/",
+  "display": "standalone",
+  "background_color": "#f2ede2",
+  "theme_color": "#bf2e24",
+  "lang": "zh-CN"
+}

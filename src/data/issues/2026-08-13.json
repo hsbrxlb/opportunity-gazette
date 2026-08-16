@@ -1,0 +1,357 @@
+{
+  "schemaVersion": 1,
+  "qualityVersion": "2026-08-16.1",
+  "date": "2026-08-13",
+  "generatedAt": "2026-08-14 13:13:20 Asia/Shanghai",
+  "status": "published",
+  "counts": {
+    "collected": 83,
+    "oldAccepted": 31,
+    "published": 9,
+    "features": 5,
+    "editorial": 4,
+    "rejected": 74
+  },
+  "failedSources": [
+    {
+      "source": "Reddit r/SideProject",
+      "status": "failed_or_rate_limited",
+      "detail": "Reddit 公开 JSON/API 被 403 拦截；本次未取得可安全访问结果。"
+    },
+    {
+      "source": "Reddit r/somebodymakethis",
+      "status": "failed_or_rate_limited",
+      "detail": "Reddit 公开 JSON/API 被 403 拦截；本次未取得可安全访问结果。"
+    },
+    {
+      "source": "Reddit r/SaaS",
+      "status": "failed_or_rate_limited",
+      "detail": "Reddit 公开 JSON/API 被 403 拦截；本次未取得可安全访问结果。"
+    },
+    {
+      "source": "Reddit r/indiehackers",
+      "status": "failed_or_rate_limited",
+      "detail": "Reddit 公开 JSON/API 被 403 拦截；本次未取得可安全访问结果。"
+    },
+    {
+      "source": "Stack Exchange",
+      "status": "empty_for_date",
+      "detail": "目标日期窗口内没有找到匹配问题。"
+    },
+    {
+      "source": "Product Hunt API",
+      "status": "not_configured",
+      "detail": "未配置 Product Hunt 官方 API 凭证；已跳过，不抓取容易 403 的公开页。"
+    },
+    {
+      "source": "X public search",
+      "status": "empty",
+      "detail": "脚本运行成功，但没有解析到可用的公开候选结果。"
+    },
+    {
+      "source": "小红书",
+      "status": "failed_or_rate_limited",
+      "detail": "本地社媒采集脚本启动后未返回可用结果；通常是登录态、平台风控或脚本适配问题。"
+    },
+    {
+      "source": "微博",
+      "status": "failed_or_rate_limited",
+      "detail": "本地社媒采集脚本启动后未返回可用结果；通常是登录态、平台风控或脚本适配问题。"
+    }
+  ],
+  "entries": [
+    {
+      "id": "entry-f06a9dfc6b98",
+      "seriesId": "series-3efb35a23030",
+      "kind": "case",
+      "quality": "feature",
+      "title": "把 Kubernetes 工具收成有明确取舍的自托管平台",
+      "plain": "作者把 CNCF 和 Kubernetes 生态的工具打包成自托管平台，希望提供接近 Railway 的使用体验。",
+      "audience": "需要自托管，又不想从零拼 Kubernetes 工具链的小团队",
+      "pain": "托管平台省事但控制力有限；自己搭 Kubernetes 又耗时。机会是把常见部署能力收成可维护的默认配置。",
+      "why": "产品边界和取舍清楚，讨论量足以支持一次隔离环境复测。",
+      "validation": "只在本地或测试集群部署一个自有小应用，记录从零到可用的步骤、空闲资源和失败恢复难度。",
+      "risk": "HN 讨论不能证明生产可用；自托管会把升级、安全和故障处理重新交给使用者。",
+      "topics": [
+        "本地工具",
+        "安全与权限"
+      ],
+      "evidence": [
+        {
+          "source": "Hacker News",
+          "sourceType": "需求信号",
+          "originalTitle": "Show HN: Stackdome – An open source self-hostable Railway alternative on K8s",
+          "url": "https://stackdome.com",
+          "observedAt": "2026-08-13",
+          "metrics": {
+            "points": 21.0,
+            "comments": 6.0
+          },
+          "strength": "强",
+          "boundary": "这是一个可复核的实战案例，不能据此推断市场已经验证。"
+        }
+      ]
+    },
+    {
+      "id": "entry-1bf1fb24f42f",
+      "seriesId": "series-f1f0651620f6",
+      "kind": "case",
+      "quality": "feature",
+      "title": "独立复测编程智能体的速度和结果质量",
+      "plain": "创始人把 Bullet 定位为更快的编程智能体；这次 HN 讨论量较高，但速度和结果仍只有发布方主张，不能直接当成产品结论。",
+      "audience": "等待编程智能体输出已经影响开发节奏的团队和个人",
+      "pain": "编程智能体若等待时间长、重试多，即使能完成任务也难进入高频工作流。机会是把完成时间、返工量和最终质量放进同一套对比。",
+      "why": "关注度高，且能用很小的基准任务把宣传口径变成可复核结果。",
+      "validation": "固定模型、机器、仓库和验收条件，用 5 个小任务对比 Bullet 与现有工具，记录耗时、成功率、改动范围和人工返工。",
+      "risk": "HN 热度只代表讨论；发布方没有在本次证据里提供可独立复核的速度或质量数据。",
+      "topics": [
+        "AI 编程"
+      ],
+      "evidence": [
+        {
+          "source": "Hacker News",
+          "sourceType": "需求信号",
+          "originalTitle": "Launch HN: Bullet (YC S26) – A Faster Coding Agent",
+          "url": "https://www.codewithbullet.com",
+          "observedAt": "2026-08-13",
+          "metrics": {
+            "points": 92.0,
+            "comments": 66.0
+          },
+          "strength": "强",
+          "boundary": "这是一个可复核的实战案例，不能据此推断市场已经验证。"
+        }
+      ]
+    },
+    {
+      "id": "entry-872f1c80e122",
+      "seriesId": "series-52c6ded8d8f8",
+      "kind": "case",
+      "quality": "feature",
+      "title": "给测试全过的 AI 代码再做边界验真",
+      "plain": "作者遇到过 AI 代码编译、测试和合并检查都通过，却在几天后暴露问题的情况。",
+      "audience": "用 AI 辅助写代码，并把测试通过当成主要质量门槛的团队",
+      "pain": "现有测试可能漏掉边界条件、副作用或长期运行问题。机会是为 AI 改动增加面向真实失败模式的独立检查。",
+      "why": "讨论互动不低，且检查动作能直接加进日常代码审查。",
+      "validation": "回看最近 3 个 AI 生成的合并请求，列出测试覆盖不到的输入、状态和外部依赖，再补一个最小失败用例。",
+      "risk": "这是作者经验，没有系统数据；不能推断所有 AI 代码都有延迟缺陷。",
+      "topics": [
+        "内容工作流"
+      ],
+      "evidence": [
+        {
+          "source": "DEV.to #ai",
+          "sourceType": "开发者内容",
+          "originalTitle": "The Most Dangerous AI-Generated Code Is the Code That Passes All Tests",
+          "url": "https://dev.to/harsh2644/the-most-dangerous-ai-generated-code-is-the-code-that-passes-all-tests-10nd",
+          "observedAt": "2026-08-13",
+          "metrics": {
+            "comments": 10.0,
+            "reactions": 12.0
+          },
+          "strength": "强",
+          "boundary": "这是一个可复核的实战案例，不能据此推断市场已经验证。"
+        }
+      ]
+    },
+    {
+      "id": "entry-e68850e41171",
+      "seriesId": "series-6347b4f10770",
+      "kind": "case",
+      "quality": "feature",
+      "title": "让智能体任务状态绑定真实执行证据",
+      "plain": "作者发现项目记录里的完成状态与实际结果对不上，质疑只依赖智能体自报的任务追踪。",
+      "audience": "用智能体管理开发任务、依赖状态更新判断进度的团队",
+      "pain": "智能体说完成却没有真实结果，后续流程会建立在错误状态上。机会是把每种完成状态绑定可检查产物或命令结果。",
+      "why": "问题直接影响自动化可信度，验证成本低，也能马上暴露流程缺口。",
+      "validation": "抽查 10 个最近标记完成的任务，对比口头状态、文件改动和验证结果，统计不一致并补完成条件。",
+      "risk": "现有证据来自作者个人观察，不能证明所有追踪工具都不可靠。",
+      "topics": [
+        "AI 编程",
+        "自动化",
+        "内容工作流",
+        "产品验证"
+      ],
+      "evidence": [
+        {
+          "source": "DEV.to #ai",
+          "sourceType": "开发者内容",
+          "originalTitle": "Every AI coding agent tracker is a self-report system",
+          "url": "https://dev.to/albertoclemente/every-ai-coding-agent-tracker-is-a-self-report-system-53nm",
+          "observedAt": "2026-08-13",
+          "metrics": {
+            "comments": 11.0,
+            "reactions": 1.0
+          },
+          "strength": "强",
+          "boundary": "这是一个可复核的实战案例，不能据此推断市场已经验证。"
+        }
+      ]
+    },
+    {
+      "id": "entry-cec50aff127e",
+      "seriesId": "series-90e6d7da9597",
+      "kind": "case",
+      "quality": "feature",
+      "title": "让智能体的工具调用先过门禁",
+      "plain": "作者不再让智能体直接调用工具，而是在中间加一道检查层；公开摘要只能支持工具调用门禁这个方向。",
+      "audience": "让智能体操作文件、数据库或外部服务，又担心误操作的团队",
+      "pain": "工具调用一旦写错，后果可能比回答错误更大。机会是按动作、参数和数据范围检查，再决定放行或要求人工批准。",
+      "why": "互动在本次 DEV.to 样本里较高，且安全缺口能直接落到现有智能体工具链里测试。",
+      "validation": "在隔离环境列出 5 类允许动作和 5 类危险动作，模拟调用后检查门禁是否正确放行、拒绝并留记录。",
+      "risk": "现有证据没有验证具体实现；门禁会增加延迟，也可能误拦正常操作。",
+      "topics": [
+        "内容工作流",
+        "安全与权限",
+        "产品验证"
+      ],
+      "evidence": [
+        {
+          "source": "DEV.to #ai",
+          "sourceType": "开发者内容",
+          "originalTitle": "I Stopped Trusting AI Agents With Tools. So I Built a Gatekeeper.",
+          "url": "https://dev.to/debashish_ghosal/i-stopped-trusting-ai-agents-with-tools-so-i-built-a-gatekeeper-26fb",
+          "observedAt": "2026-08-13",
+          "metrics": {
+            "comments": 21.0,
+            "reactions": 25.0
+          },
+          "strength": "强",
+          "boundary": "这是一个可复核的实战案例，不能据此推断市场已经验证。"
+        }
+      ]
+    },
+    {
+      "id": "entry-eca8b6d5b311",
+      "seriesId": "series-81e8666c09f2",
+      "kind": "opportunity",
+      "quality": "editorial",
+      "title": "把表格数据直接变成可交付客户报告",
+      "plain": "作者认为整理客户报告不该和分析本身一样耗时，产品支持导入 CSV、Excel、JSON，再组合文字、表格和图表。",
+      "audience": "经常把分析结果整理成客户报告的咨询、数据和运营人员",
+      "pain": "分析完成后还要重复排版、更新图表和核对数字。机会是把结构化数据与报告版式绑定，减少手工搬运。",
+      "why": "数据输入、报告产物和节省排版时间的诉求都很具体，适合拿一份脱敏表格直接试。",
+      "validation": "用一份脱敏数据做 3 页报告，检查数字更新、图表排版、文字编辑和导出后还需多少人工修正。",
+      "risk": "HN 互动极低，只有作者自述；复杂版式、多人协作和数据准确性仍未验证。",
+      "topics": [
+        "本地工具",
+        "增长",
+        "产品验证"
+      ],
+      "evidence": [
+        {
+          "source": "Hacker News",
+          "sourceType": "需求信号",
+          "originalTitle": "Show HN: Pressentable – turn a spreadsheet into a typeset client report",
+          "url": "https://pressentable.com/",
+          "observedAt": "2026-08-13",
+          "metrics": {
+            "points": 2.0,
+            "comments": 0.0
+          },
+          "strength": "中",
+          "boundary": "证据支持具体需求方向，但不等于已经证明付费规模或长期留存。"
+        }
+      ]
+    },
+    {
+      "id": "entry-956ec2d10d08",
+      "seriesId": "series-a650ed10f771",
+      "kind": "opportunity",
+      "quality": "editorial",
+      "title": "给敏感素材做本地图片压缩",
+      "plain": "作者因为公司素材不敢上传在线压缩服务，又觉得现有本地工具久未更新且缺少 HEIC 支持，做了默认本地处理、不覆盖原图的 Mac 工具。",
+      "audience": "需要压缩公司或客户图片，又不能把素材上传第三方服务的 Mac 用户",
+      "pain": "在线压缩有数据外传顾虑，旧本地工具又可能缺格式支持。机会是把离线处理、原图保护和常用格式放在一起。",
+      "why": "用户、隐私约束和格式缺口都很具体，能马上用自有素材验证。",
+      "validation": "用 20 张自有或脱敏图片测试 JPEG、PNG、HEIC 的体积、画质、速度和原图保留，记录失败文件。",
+      "risk": "V2EX 互动很低，工具成熟度和长期维护未知；公测免费不代表以后免费。",
+      "topics": [
+        "本地工具",
+        "增长",
+        "产品验证"
+      ],
+      "evidence": [
+        {
+          "source": "V2EX 分享创造",
+          "sourceType": "中文开发者论坛",
+          "originalTitle": "做了个 Mac 上的本地图片压缩工具，不上传、不覆盖原图，公测免费",
+          "url": "https://www.v2ex.com/t/1234325",
+          "observedAt": "2026-08-13",
+          "metrics": {
+            "replies": 1.0
+          },
+          "strength": "中",
+          "boundary": "证据支持具体需求方向，但不等于已经证明付费规模或长期留存。"
+        }
+      ]
+    },
+    {
+      "id": "entry-f2afa4a164ad",
+      "seriesId": "series-c518d551880a",
+      "kind": "opportunity",
+      "quality": "editorial",
+      "title": "跨线下和多种视频会议生成统一纪要",
+      "plain": "产品自述支持线下会议、Zoom、Teams、Google Meet 和音频导入，并生成转写与结构化纪要。",
+      "audience": "需要会议纪要自动化的销售、咨询和项目管理人员",
+      "pain": "跨平台会议内容分散，会后整理纪要和待办耗时。机会是把不同来源收进同一种纪要流程。",
+      "why": "跨平台范围和纪要动作清楚，但市场证据仍弱，先放观察池。",
+      "validation": "用一段 10 分钟公开或模拟会议录音测试专有名词、说话人、行动项和整理时间，不接真实客户会议。",
+      "risk": "App Store 评分样本小，产品自述的准确率不能当独立验证；免费应用的数据边界需要确认。",
+      "topics": [
+        "自动化",
+        "增长",
+        "内容工作流",
+        "产品验证"
+      ],
+      "evidence": [
+        {
+          "source": "App Store Search US",
+          "sourceType": "应用市场信号",
+          "originalTitle": "Upmeet - Transcript & Summary",
+          "url": "https://apps.apple.com/us/app/upmeet-transcript-summary/id6450359736?uo=4",
+          "observedAt": "2026-08-13",
+          "metrics": {
+            "ratings": 4.0,
+            "rating": 4.96154
+          },
+          "strength": "中",
+          "boundary": "证据支持具体需求方向，但不等于已经证明付费规模或长期留存。"
+        }
+      ]
+    },
+    {
+      "id": "entry-58ffe3f9c4b5",
+      "seriesId": "series-c2aeba99d80a",
+      "kind": "opportunity",
+      "quality": "editorial",
+      "title": "重新计算一次性内部工具的自建成本",
+      "plain": "作者认为 AI 降低了临时工具的构建成本，过去不值得做的小工具现在可能可以快速自建。",
+      "audience": "经常遇到短期内部需求，又不想为完整 SaaS 付费的小团队",
+      "pain": "手工处理浪费时间，买软件又可能过重。机会是用 AI 做窄工具，但要把后续维护和数据风险算进去。",
+      "why": "互动不高，但这个判断能直接用于现实的小工具决策。",
+      "validation": "挑最近 3 个一次性需求，分别估算手工、购买和 AI 自建的首日成本与一月维护成本，再只实现最小的一项。",
+      "risk": "作者观点没有系统数据；临时工具可能很快变成无人维护的长期负担。",
+      "topics": [
+        "自动化",
+        "内容工作流",
+        "产品验证"
+      ],
+      "evidence": [
+        {
+          "source": "DEV.to #automation",
+          "sourceType": "开发者内容",
+          "originalTitle": "AI changed the build-vs-buy threshold",
+          "url": "https://dev.to/michaeltruong/build-looked-absurd-under-a-recruiter-deadline-1145",
+          "observedAt": "2026-08-13",
+          "metrics": {
+            "comments": 0.0,
+            "reactions": 7.0
+          },
+          "strength": "中",
+          "boundary": "证据支持具体需求方向，但不等于已经证明付费规模或长期留存。"
+        }
+      ]
+    }
+  ]
+}

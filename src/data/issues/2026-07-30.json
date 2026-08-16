@@ -1,0 +1,150 @@
+{
+  "schemaVersion": 1,
+  "qualityVersion": "2026-08-16.1",
+  "date": "2026-07-30",
+  "generatedAt": "2026-07-31 13:08:24 Asia/Shanghai",
+  "status": "published",
+  "counts": {
+    "collected": 81,
+    "oldAccepted": 10,
+    "published": 3,
+    "features": 1,
+    "editorial": 2,
+    "rejected": 78
+  },
+  "failedSources": [
+    {
+      "source": "Reddit r/SideProject",
+      "status": "failed_or_rate_limited",
+      "detail": "Reddit 公开 JSON/API 被 403 拦截；本次未取得可安全访问结果。"
+    },
+    {
+      "source": "Reddit r/somebodymakethis",
+      "status": "failed_or_rate_limited",
+      "detail": "Reddit 公开 JSON/API 被 403 拦截；本次未取得可安全访问结果。"
+    },
+    {
+      "source": "Reddit r/SaaS",
+      "status": "failed_or_rate_limited",
+      "detail": "Reddit 公开 JSON/API 被 403 拦截；本次未取得可安全访问结果。"
+    },
+    {
+      "source": "Reddit r/indiehackers",
+      "status": "failed_or_rate_limited",
+      "detail": "Reddit 公开 JSON/API 被 403 拦截；本次未取得可安全访问结果。"
+    },
+    {
+      "source": "Stack Exchange",
+      "status": "empty_for_date",
+      "detail": "目标日期窗口内没有找到匹配问题。"
+    },
+    {
+      "source": "Product Hunt API",
+      "status": "not_configured",
+      "detail": "未配置 Product Hunt 官方 API 凭证；已跳过，不抓取容易 403 的公开页。"
+    },
+    {
+      "source": "小红书",
+      "status": "failed_or_rate_limited",
+      "detail": "本地社媒采集脚本启动后未返回可用结果；通常是登录态、平台风控或脚本适配问题。"
+    },
+    {
+      "source": "微博",
+      "status": "failed_or_rate_limited",
+      "detail": "本地社媒采集脚本启动后未返回可用结果；通常是登录态、平台风控或脚本适配问题。"
+    }
+  ],
+  "entries": [
+    {
+      "id": "entry-fc4cbdb0cee9",
+      "seriesId": "series-a26b987b251c",
+      "kind": "opportunity",
+      "quality": "feature",
+      "title": "把口述录屏变成问题草稿",
+      "plain": "一个本地优先的 Claude Code MCP，把用户边操作边口述的屏幕录制，整理成带证据的问题草稿。",
+      "audience": "经常复现网页或桌面问题、需要提交清楚问题记录的开发者和测试人员。",
+      "pain": "发现问题时，现象和操作步骤都在屏幕上；事后再写容易漏细节。机会是把当时的录屏、口述和问题草稿接成一个低摩擦流程。",
+      "why": "输入、输出和使用时机都很明确，可以用一个已知问题快速验收。",
+      "validation": "复现一个已知问题并录下口述过程，检查生成草稿是否包含正确步骤、实际现象和必要证据，再统计人工修改量。",
+      "risk": "DEV.to 当天 2 个 reactions、0 条评论，没有用户效果或付费数据；转录错误和敏感画面也可能进入草稿。",
+      "topics": [
+        "AI 编程",
+        "本地工具",
+        "内容工作流",
+        "产品验证"
+      ],
+      "evidence": [
+        {
+          "source": "DEV.to #ai",
+          "sourceType": "开发者内容",
+          "originalTitle": "I stopped writing bug reports. Now I complain at my screen.",
+          "url": "https://dev.to/korovinaa97/i-stopped-writing-bug-reports-now-i-complain-at-my-screen-845",
+          "observedAt": "2026-07-30",
+          "metrics": {},
+          "strength": "强",
+          "boundary": "证据支持具体需求方向，但不等于已经证明付费规模或长期留存。"
+        }
+      ]
+    },
+    {
+      "id": "entry-5f155867f18a",
+      "seriesId": "series-dfca1d625970",
+      "kind": "case",
+      "quality": "editorial",
+      "title": "不抢当前操作的 Mac 后台智能体",
+      "plain": "Hunch 是一个本地 MCP，让大模型在后台操作 Mac，不占用用户当前正在操作的界面。",
+      "audience": "想把重复的本地 Mac 操作交给智能体、又要继续使用电脑的开发者和重度用户。",
+      "pain": "桌面自动化如果占住当前界面，人和智能体就不能同时工作。机会是把本地操作放进后台执行，并保留可检查、可停止的任务状态。",
+      "why": "后台执行和不抢焦点是可直接体验的差异，作者还给出了可以复测的任务成功率与成本基线。",
+      "validation": "选 5 个低风险本地任务，在隔离测试目录中跑一遍；记录成功率、实际费用、是否干扰当前操作，以及失败后能否安全停止。",
+      "risk": "作者自测 54 个任务成功 53 个、花费 6.03 美元；HN 当天 2 分、0 条评论，数据没有独立复现，也不能代表复杂真实任务。",
+      "topics": [
+        "自动化",
+        "本地工具",
+        "安全与权限"
+      ],
+      "evidence": [
+        {
+          "source": "Hacker News",
+          "sourceType": "需求信号",
+          "originalTitle": "Show HN: Hunch – A local MCP that lets your LLM use your Mac in the background",
+          "url": "https://github.com/PrithviSeran/hunch-mcp",
+          "observedAt": "2026-07-30",
+          "metrics": {},
+          "strength": "中",
+          "boundary": "这是一个可复核的实战案例，不能据此推断市场已经验证。"
+        }
+      ]
+    },
+    {
+      "id": "entry-9926701e3c82",
+      "seriesId": "series-246d02db05ec",
+      "kind": "opportunity",
+      "quality": "editorial",
+      "title": "让非技术同事直接生成内部工具",
+      "plain": "Prized 让非工程员工描述自己要的内部工具，再生成能连接公司数据、放在公司登录后的应用，不用让员工自己处理 API key 或连接器。",
+      "audience": "内部工具需求多、开发排期紧，同时又要管好数据权限的公司。",
+      "pain": "非技术团队想自己解决小需求，但一碰公司数据就涉及连接、登录和权限。机会是把生成应用与企业数据边界放进同一条受控流程。",
+      "why": "产品流程、目标用户和安全约束都很具体，适合先验证一个窄内部场景。",
+      "validation": "挑一个只读、低敏感的内部查询需求，让非技术同事独立描述并生成原型；由工程和安全人员检查数据范围、权限和错误处理。",
+      "risk": "HN 当天 69 分、48 条评论只说明获得讨论；没有客户、留存或安全审计数据，自动生成的应用也可能把权限错误放大。",
+      "topics": [
+        "增长",
+        "安全与权限",
+        "产品验证"
+      ],
+      "evidence": [
+        {
+          "source": "Hacker News",
+          "sourceType": "需求信号",
+          "originalTitle": "Launch HN: Prized (YC S26) – Let non-engineer staff build secure internal tools",
+          "url": "https://prized.dev",
+          "observedAt": "2026-07-30",
+          "metrics": {},
+          "strength": "中",
+          "boundary": "证据支持具体需求方向，但不等于已经证明付费规模或长期留存。"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import IssueMasthead from '../components/IssueMasthead.astro';
+import EntryStory from '../components/EntryStory.astro';
+import { formatDate, getCatalog, getIssues, issueHref } from '../lib/data';
+
+const issues = getIssues();
+const latest = issues[0];
+const catalog = await getCatalog();
+const topicIds = new Set(catalog.series.map((series) => series.id));
+const recent = issues.slice(1, 7);
+---
+
+<BaseLayout pageClass="home-page">
+  <IssueMasthead issue={latest} />
+
+  <section class="editor-note" aria-label="编辑说明">
+    <p class="section-kicker">THE EDIT</p>
+    <h2>今天只看真正过关的。</h2>
+    <p>旧报告里的等级已经作废。这里把市场机会和实战案例分开，证据薄的内容不会因为标题热闹就占据版面。</p>
+    <dl class="audit-stats">
+      <div><dt>历史候选</dt><dd>{catalog.stats.historicalCandidates}</dd></div>
+      <div><dt>公开精品</dt><dd>{catalog.stats.publishedEntries}</dd></div>
+      <div><dt>淘汰</dt><dd>{catalog.stats.excludedEntries}</dd></div>
+    </dl>
+  </section>
+
+  <section class="issue-stories" aria-labelledby="latest-heading">
+    <header class="section-header">
+      <p class="section-kicker">LATEST ISSUE</p>
+      <h2 id="latest-heading">本期全部精品</h2>
+      <p>先读大白话；证据、验证动作和风险按需展开。</p>
+    </header>
+    {latest.entries.length ? latest.entries.map((entry, index) => (
+      <EntryStory entry={entry} index={index + 1} featured={entry.quality === 'feature'} showTopic={topicIds.has(entry.seriesId)} />
+    )) : (
+      <p class="empty-note">这一天没有内容达到精品线。</p>
+    )}
+  </section>
+
+  <section class="recent-issues" aria-labelledby="recent-heading">
+    <header class="section-header">
+      <p class="section-kicker">RECENT EDITIONS</p>
+      <h2 id="recent-heading">最近几期</h2>
+    </header>
+    <div class="issue-list">
+      {recent.map((issue, index) => (
+        <a class:list={['issue-row', issue.status === 'no精品' && 'is-empty']} href={issueHref(issue.date)}>
+          <span class="issue-row-index">{String(index + 1).padStart(2, '0')}</span>
+          <span class="issue-row-date">{formatDate(issue.date, false)}</span>
+          <strong>{issue.entries[0]?.title ?? '当天没有值得发布的内容'}</strong>
+          <span>{issue.counts.published} 条</span>
+        </a>
+      ))}
+    </div>
+    <a class="text-link" href="/opportunity-gazette/archive/">打开全部日期归档 →</a>
+  </section>
+</BaseLayout>

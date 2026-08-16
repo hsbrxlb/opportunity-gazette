@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "qualityVersion": "2026-08-16.1",
+  "date": "2026-07-16",
+  "generatedAt": "2026-07-17 13:07:46 Asia/Shanghai",
+  "status": "published",
+  "counts": {
+    "collected": 86,
+    "oldAccepted": 9,
+    "published": 1,
+    "features": 0,
+    "editorial": 1,
+    "rejected": 85
+  },
+  "failedSources": [
+    {
+      "source": "Reddit r/SideProject",
+      "status": "failed_or_rate_limited",
+      "detail": "Reddit 公开 JSON/API 被 403 拦截；本次未取得可安全访问结果。"
+    },
+    {
+      "source": "Reddit r/somebodymakethis",
+      "status": "failed_or_rate_limited",
+      "detail": "Reddit 公开 JSON/API 被 403 拦截；本次未取得可安全访问结果。"
+    },
+    {
+      "source": "Reddit r/SaaS",
+      "status": "failed_or_rate_limited",
+      "detail": "Reddit 公开 JSON/API 被 403 拦截；本次未取得可安全访问结果。"
+    },
+    {
+      "source": "Reddit r/indiehackers",
+      "status": "failed_or_rate_limited",
+      "detail": "Reddit 公开 JSON/API 被 403 拦截；本次未取得可安全访问结果。"
+    },
+    {
+      "source": "Stack Exchange",
+      "status": "empty_for_date",
+      "detail": "No matching questions found in the target date window."
+    },
+    {
+      "source": "Product Hunt API",
+      "status": "not_configured",
+      "detail": "未配置 Product Hunt 官方 API 凭证；已跳过，不抓取容易 403 的公开页。"
+    },
+    {
+      "source": "小红书",
+      "status": "failed_or_rate_limited",
+      "detail": "本地社媒采集脚本启动后未返回可用结果；通常是登录态、平台风控或脚本适配问题。"
+    },
+    {
+      "source": "微博",
+      "status": "failed_or_rate_limited",
+      "detail": "本地社媒采集脚本启动后未返回可用结果；通常是登录态、平台风控或脚本适配问题。"
+    }
+  ],
+  "entries": [
+    {
+      "id": "entry-bc3a01e12269",
+      "seriesId": "series-569ef9d853e4",
+      "kind": "opportunity",
+      "quality": "editorial",
+      "title": "跨 AI 编程工具的工作流同步",
+      "plain": "同一套工作流分别放在 Claude Code、Codex 等工具里，每次改一处还得记得同步其他副本。作者先用 dotfiles 和符号链接，后来做了统一管理工具。",
+      "audience": "同时使用多个 AI 编程工具、需要维护团队规则和技能包的开发者。",
+      "pain": "不同工具各有自己的配置位置和格式，重复工作流很容易漂移。机会是把共享规则集中管理，再为各工具生成或同步适配版本。",
+      "why": "问题定义很具体，也和多工具用户的日常维护直接相关；它是工具演进信号，不代表已有付费意愿。",
+      "validation": "选 3 个 AI 编程工具和 2 条重复工作流，记录一次手工同步需要改哪些文件；再做一个只读差异检查，看能否及时发现配置漂移。",
+      "risk": "HN 当天只有 2 分、0 条评论，没有外部需求验证；各工具原生格式变化快，统一层可能长期追着兼容。",
+      "topics": [
+        "AI 编程",
+        "自动化",
+        "产品验证"
+      ],
+      "evidence": [
+        {
+          "source": "Hacker News",
+          "sourceType": "需求信号",
+          "originalTitle": "Show HN: Skillful, stop maintaining the same AI workflow in five places",
+          "url": "https://skillful.md/",
+          "observedAt": "2026-07-16",
+          "metrics": {},
+          "strength": "中",
+          "boundary": "证据支持具体需求方向，但不等于已经证明付费规模或长期留存。"
+        }
+      ]
+    }
+  ]
+}

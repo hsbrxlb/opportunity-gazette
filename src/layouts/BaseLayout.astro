@@ -1,0 +1,62 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+  canonicalPath?: string;
+  pageClass?: string;
+}
+
+const {
+  title = '机会画报 · Opportunity Gazette',
+  description = '把每天公开信号里真正有用的机会和实战案例，整理成通勤时也能看懂的中文画报。',
+  canonicalPath = '/',
+  pageClass = '',
+} = Astro.props;
+const canonical = new URL(`/opportunity-gazette${canonicalPath}`, 'https://hsbrxlb.github.io');
+---
+
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#bf2e24" />
+    <link rel="icon" href="/opportunity-gazette/favicon.svg" type="image/svg+xml" />
+    <meta name="robots" content="noindex, nofollow, noarchive" />
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <link rel="manifest" href="/opportunity-gazette/site.webmanifest" />
+    <title>{title}</title>
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="zh_CN" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+  </head>
+  <body class={pageClass}>
+    <a class="skip-link" href="#main">跳到正文</a>
+    <header class="site-header">
+      <a class="brand" href="/opportunity-gazette/" aria-label="机会画报首页">
+        <span class="brand-cn">机会画报</span>
+        <span class="brand-en">Opportunity Gazette</span>
+      </a>
+      <nav class="site-nav" aria-label="主导航">
+        <a href="/opportunity-gazette/archive/">日期</a>
+        <a href="/opportunity-gazette/topics/">专题</a>
+        <a href="/opportunity-gazette/search/">搜索</a>
+      </nav>
+    </header>
+    <main id="main">
+      <slot />
+    </main>
+    <footer class="site-footer">
+      <p>公开但不主动宣传 · 只收录经过复核的精品</p>
+      <p>证据仍有边界，决定前请打开原始来源。</p>
+    </footer>
+  </body>
+</html>

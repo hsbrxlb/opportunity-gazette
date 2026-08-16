@@ -1,0 +1,355 @@
+{
+  "schemaVersion": 1,
+  "qualityVersion": "2026-08-16.1",
+  "date": "2026-08-02",
+  "generatedAt": "2026-08-03 01:29:35 Asia/Shanghai",
+  "status": "published",
+  "counts": {
+    "collected": 86,
+    "oldAccepted": 26,
+    "published": 10,
+    "features": 0,
+    "editorial": 10,
+    "rejected": 76
+  },
+  "failedSources": [
+    {
+      "source": "Reddit r/SideProject",
+      "status": "failed_or_rate_limited",
+      "detail": "Reddit 公开 JSON/API 被 403 拦截；本次未取得可安全访问结果。"
+    },
+    {
+      "source": "Reddit r/somebodymakethis",
+      "status": "failed_or_rate_limited",
+      "detail": "Reddit 公开 JSON/API 被 403 拦截；本次未取得可安全访问结果。"
+    },
+    {
+      "source": "Reddit r/SaaS",
+      "status": "failed_or_rate_limited",
+      "detail": "Reddit 公开 JSON/API 被 403 拦截；本次未取得可安全访问结果。"
+    },
+    {
+      "source": "Reddit r/indiehackers",
+      "status": "failed_or_rate_limited",
+      "detail": "Reddit 公开 JSON/API 被 403 拦截；本次未取得可安全访问结果。"
+    },
+    {
+      "source": "Stack Exchange",
+      "status": "empty_for_date",
+      "detail": "目标日期窗口内没有找到匹配问题。"
+    },
+    {
+      "source": "Product Hunt API",
+      "status": "not_configured",
+      "detail": "未配置 Product Hunt 官方 API 凭证；已跳过，不抓取容易 403 的公开页。"
+    },
+    {
+      "source": "小红书",
+      "status": "failed_or_rate_limited",
+      "detail": "本地社媒采集脚本启动后未返回可用结果；通常是登录态、平台风控或脚本适配问题。"
+    },
+    {
+      "source": "微博",
+      "status": "failed_or_rate_limited",
+      "detail": "本地社媒采集脚本启动后未返回可用结果；通常是登录态、平台风控或脚本适配问题。"
+    }
+  ],
+  "entries": [
+    {
+      "id": "entry-acb54df46131",
+      "seriesId": "series-7d969feaf426",
+      "kind": "case",
+      "quality": "editorial",
+      "title": "别让表面匹配冒充 AI 产品完成",
+      "plain": "Zugo 把一句话变成可运行应用，但作者发现系统曾因为输出符合正则表达式就判定“完成”，实际验收条件太窄。",
+      "audience": "做 AI 代码生成、网站生成或自动交付产品的团队。",
+      "pain": "系统容易把格式正确当成功能完成。机会是把运行结果、关键行为和用户目标变成分层验收，而不是只检查字符串。",
+      "why": "它把智能体“虚假完成”落成了一个可复现的验收漏洞，和 AI 产品交付直接相关。",
+      "validation": "给一个生成任务列出 5 个功能验收点，再故意构造一个能通过正则但功能错误的输出，检查验收流程能否拦住。",
+      "risk": "文章当天 1 个点赞、0 条评论，没有披露问题规模；单个案例不能证明所有生成器都有同样缺陷。",
+      "topics": [
+        "内容工作流"
+      ],
+      "evidence": [
+        {
+          "source": "DEV.to #ai",
+          "sourceType": "开发者内容",
+          "originalTitle": "Our AI builder said \"done\" when the output matched a regex",
+          "url": "https://dev.to/zugodev/our-ai-builder-said-done-when-the-output-matched-a-regex-agi",
+          "observedAt": "2026-08-02",
+          "metrics": {},
+          "strength": "中",
+          "boundary": "这是一个可复核的实战案例，不能据此推断市场已经验证。"
+        }
+      ]
+    },
+    {
+      "id": "entry-29796050b956",
+      "seriesId": "series-05eebed29795",
+      "kind": "opportunity",
+      "quality": "editorial",
+      "title": "把 YouTube 播放列表改成专注课程界面",
+      "plain": "Adept 把 YouTube 播放列表整理成能记录进度、减少干扰的课程界面，也支持从 YouTube 直接转换。",
+      "audience": "用 YouTube 系统学习教程、又容易被推荐内容打断的人。",
+      "pain": "播放列表能排序，却缺少课程进度和专注界面。机会是给已有公开视频补一个轻量学习层。",
+      "why": "用户和动作很清楚，但外部需求证据太薄。",
+      "validation": "选一个 10 集播放列表连续使用一周，记录实际完成率、返回学习次数和最常被打断的位置。",
+      "risk": "HN 当天 1 分、0 条评论，没有留存或付费证据；产品依赖 YouTube 条款、嵌入能力和内容可用性。",
+      "topics": [
+        "内容工作流",
+        "产品验证"
+      ],
+      "evidence": [
+        {
+          "source": "Hacker News",
+          "sourceType": "需求信号",
+          "originalTitle": "Show HN: Adept – convert any YouTube playlist into a Udemy-like course",
+          "url": "https://withadept.com",
+          "observedAt": "2026-08-02",
+          "metrics": {},
+          "strength": "中",
+          "boundary": "证据支持具体需求方向，但不等于已经证明付费规模或长期留存。"
+        }
+      ]
+    },
+    {
+      "id": "entry-8c1e255ae8df",
+      "seriesId": "series-5f9848a59208",
+      "kind": "case",
+      "quality": "editorial",
+      "title": "把上下文膨胀纳入智能体长任务测试",
+      "plain": "文章指出，多步智能体的上下文持续变长时，输出可能逐渐退化，却不一定报错。",
+      "audience": "运行多步、长时间智能体流水线的开发者和平台团队。",
+      "pain": "短测试通过不代表长任务稳定。机会是记录上下文体积、压缩点和质量变化，把隐性退化变成可观测指标。",
+      "why": "问题会直接影响生产智能体，但验证可以从现有任务开始。",
+      "validation": "选一条可重复任务，分别在短上下文和累积长上下文下运行 10 次，对比准确率、漏步、延迟和 token 用量。",
+      "risk": "文章当天 2 个点赞、1 条评论，属于作者经验，没有公开基准；不同模型和任务的退化点可能差异很大。",
+      "topics": [
+        "自动化",
+        "增长",
+        "内容工作流",
+        "产品验证"
+      ],
+      "evidence": [
+        {
+          "source": "DEV.to #ai",
+          "sourceType": "开发者内容",
+          "originalTitle": "Context window growth is the silent failure mode in agentic pipelines",
+          "url": "https://dev.to/hannune/context-window-growth-is-the-silent-failure-mode-in-agentic-pipelines-30o8",
+          "observedAt": "2026-08-02",
+          "metrics": {},
+          "strength": "中",
+          "boundary": "这是一个可复核的实战案例，不能据此推断市场已经验证。"
+        }
+      ]
+    },
+    {
+      "id": "entry-3826904dc97b",
+      "seriesId": "series-0a92f5fe316f",
+      "kind": "case",
+      "quality": "editorial",
+      "title": "把智能体验收拆成六类工程护栏",
+      "plain": "这篇文章把状态机、审批关卡、最小权限、沙箱、先测后做和对照真实来源，整理成六类智能体验收方法。",
+      "audience": "把智能体放进生产流程、又需要明确验收和权限边界的团队。",
+      "pain": "智能体说“做完了”时，团队仍要确认状态、权限和最终结果。机会是把这些检查做成可复用的流程或验收组件。",
+      "why": "方法能直接映射到现有智能体流程，适合用一个真实动作快速验证。",
+      "validation": "从现有智能体流程挑一个高风险动作，补上审批、最小权限和真实结果核对，再做一次故意失败测试。",
+      "risk": "文章当天 3 个点赞、6 条评论，是经验总结，没有事故率或效果数据；六种方法也不能替代具体系统的威胁建模。",
+      "topics": [
+        "内容工作流",
+        "安全与权限",
+        "产品验证"
+      ],
+      "evidence": [
+        {
+          "source": "DEV.to #ai",
+          "sourceType": "开发者内容",
+          "originalTitle": "How to Verify AI Agent Work: State Machines, Approval Gates, and Least-Privilege Access",
+          "url": "https://dev.to/ctrotech/how-to-verify-ai-agent-work-state-machines-approval-gates-and-least-privilege-access-1bl3",
+          "observedAt": "2026-08-02",
+          "metrics": {},
+          "strength": "中",
+          "boundary": "这是一个可复核的实战案例，不能据此推断市场已经验证。"
+        }
+      ]
+    },
+    {
+      "id": "entry-0016bdcc4d27",
+      "seriesId": "series-0ace7e628321",
+      "kind": "opportunity",
+      "quality": "editorial",
+      "title": "把魔尺视频教程改成可旋转的分步工具",
+      "plain": "作者陪孩子折魔尺时，觉得视频要反复暂停和拖动，于是做了能旋转视角、调速和逐步播放的 3D 网页。",
+      "audience": "跟视频学折魔尺的家长、孩子和爱好者。",
+      "pain": "视频把视角和节奏锁死，用户经常停下来找步骤。机会是把教程改成可旋转、可逐步执行、能保存当前进度的小工具。",
+      "why": "它把一个很具体的学习麻烦变成了纯前端微工具，适合观察“视频教程转可执行步骤”的模式。",
+      "validation": "找 5 名第一次折同一造型的人，分别用视频和分步工具完成，比较暂停次数、出错位置和完成时间。",
+      "risk": "帖子只有 1 条回复，没有使用量或付费证据；魔尺场景较窄，迁移到其他教程前要先确认执行阶段确实容易出错。",
+      "topics": [
+        "内容工作流",
+        "产品验证"
+      ],
+      "evidence": [
+        {
+          "source": "V2EX 程序员",
+          "sourceType": "中文开发者论坛",
+          "originalTitle": "做了一个可以分步查看魔尺折叠过程的网页工具",
+          "url": "https://www.v2ex.com/t/1231574",
+          "observedAt": "2026-08-02",
+          "metrics": {},
+          "strength": "中",
+          "boundary": "证据支持具体需求方向，但不等于已经证明付费规模或长期留存。"
+        }
+      ]
+    },
+    {
+      "id": "entry-9c4642ee0de0",
+      "seriesId": "series-cdcb2eeae080",
+      "kind": "opportunity",
+      "quality": "editorial",
+      "title": "无人值守 AI 公司先过收入闭环这一关",
+      "plain": "作者自述让 Claude Code 在服务器上无人值守经营一家公司 39 天，消耗 4.87 亿 token 和 1117 美元模型费，收入为 0。",
+      "audience": "想用智能体运行一人公司、自动化业务或长期后台任务的人。",
+      "pain": "智能体可以持续执行，却不一定解决获客、付款和交付。机会是把经营结果、人工接管点和成本账本放在自动化之前。",
+      "why": "这是当天少见的负面经营数据，能防止只看运行时间和 token 规模而忽略收入结果。",
+      "validation": "把作者的 39 天按获客、付款、交付和复购拆开，再给自己的一个智能体项目建 7 天账本，记录费用、有效线索和真实收入。",
+      "risk": "数据来自作者自述，文章当天 1 个点赞、0 条评论，而且作者更正过数字；单个实验不能代表所有智能体公司。",
+      "topics": [
+        "AI 编程",
+        "自动化",
+        "内容工作流"
+      ],
+      "evidence": [
+        {
+          "source": "DEV.to #ai",
+          "sourceType": "开发者内容",
+          "originalTitle": "39 days of an autonomous AI company: 487M tokens, $1,117 of model spend, $0 in revenue",
+          "url": "https://dev.to/autocomp/39-days-of-an-autonomous-ai-company-487m-tokens-1117-of-model-spend-0-in-revenue-2dof",
+          "observedAt": "2026-08-02",
+          "metrics": {},
+          "strength": "中",
+          "boundary": "证据支持具体需求方向，但不等于已经证明付费规模或长期留存。"
+        }
+      ]
+    },
+    {
+      "id": "entry-d041849d53d2",
+      "seriesId": "series-92717daeceab",
+      "kind": "opportunity",
+      "quality": "editorial",
+      "title": "模型升级前给旧智能体流程做回归测试",
+      "plain": "作者遇到过新模型拒绝执行已经批准的实现计划，说明模型变更可能让旧提示和审批流程出现新行为。",
+      "audience": "维护长期智能体工作流、会升级底层模型或客户端版本的团队。",
+      "pain": "工作流可能把模型行为当成固定接口，一升级就出现拒绝、漏步或重复确认。机会是保存任务基线并做版本回归。",
+      "why": "它提醒团队把模型升级当成行为变更，而不是只看基准分数。",
+      "validation": "选 10 个常用任务，在旧版和新版模型各跑一次，比较开始执行率、审批次数、漏步和最终验收结果。",
+      "risk": "文章当天 1 个点赞、1 条评论，只是单个案例；问题可能来自提示写法、模型版本或客户端，而非普遍退化。",
+      "topics": [
+        "自动化",
+        "增长",
+        "内容工作流"
+      ],
+      "evidence": [
+        {
+          "source": "DEV.to #ai",
+          "sourceType": "开发者内容",
+          "originalTitle": "When Better Models Make Old Agent Workflows Worse",
+          "url": "https://dev.to/shinpr/when-better-models-make-old-agent-workflows-worse-1o7m",
+          "observedAt": "2026-08-02",
+          "metrics": {},
+          "strength": "中",
+          "boundary": "证据支持具体需求方向，但不等于已经证明付费规模或长期留存。"
+        }
+      ]
+    },
+    {
+      "id": "entry-c730810287e6",
+      "seriesId": "series-91dd649057a7",
+      "kind": "case",
+      "quality": "editorial",
+      "title": "用历史事故回放评估基础设施智能体",
+      "plain": "Replaybook 原本用来回放事故训练人员，作者开始把它用作基础设施智能体的评估框架。",
+      "audience": "开发运维智能体、需要在非生产环境验证处置能力的团队。",
+      "pain": "基础设施智能体犯错代价高，普通问答基准又不像真实事故。机会是把历史故障变成可重复、可打分的隔离测试。",
+      "why": "场景足够具体，适合先作为基础设施智能体验收的观察方向。",
+      "validation": "选一个已经解决的低风险故障，在隔离环境重放，检查智能体的诊断顺序、禁止动作和最终恢复结果。",
+      "risk": "HN 当天 1 分、0 条评论，摘要没有评测指标或效果数据；事故回放也不能覆盖生产环境的全部依赖。",
+      "topics": [
+        "产品验证"
+      ],
+      "evidence": [
+        {
+          "source": "Hacker News",
+          "sourceType": "新产品信号",
+          "originalTitle": "Show HN: Replaybook, an Infrastructure Agent Evaluation Framework",
+          "url": "https://github.com/ducks/replaybook",
+          "observedAt": "2026-08-02",
+          "metrics": {},
+          "strength": "中",
+          "boundary": "这是一个可复核的实战案例，不能据此推断市场已经验证。"
+        }
+      ]
+    },
+    {
+      "id": "entry-add8d04d2294",
+      "seriesId": "series-80610b9467ab",
+      "kind": "opportunity",
+      "quality": "editorial",
+      "title": "用户自发增长的 Patreon 批量保存扩展",
+      "plain": "作者做了一个 Chrome 扩展，帮助订阅者批量保存自己已经解锁的 Patreon 文章和资源，并自述两个月后已有 1000 多名用户。",
+      "audience": "订阅多个 Patreon 创作者、需要整理自己已解锁内容的人。",
+      "pain": "逐篇保存已解锁内容很耗时间。这个信号说明，围绕特定付费平台补一个窄而直接的批量动作，可能自然获得用户。",
+      "why": "这是当天少数带具体用户量和明确动作的微工具信号，也适合反推其他平台的窄功能缺口。",
+      "validation": "先访谈 5 名 Patreon 订阅者，确认他们是否需要批量保存、整理还是离线阅读；只用本人已解锁内容测试完整性和失败率。",
+      "risk": "1000 多名用户来自作者后台自述，帖子只有 3 条回复；批量保存还涉及 Patreon 条款、授权范围和版权，不能把已解锁等同于可任意复制传播。",
+      "topics": [
+        "浏览器",
+        "增长",
+        "内容工作流",
+        "产品验证"
+      ],
+      "evidence": [
+        {
+          "source": "V2EX 分享创造",
+          "sourceType": "中文开发者论坛",
+          "originalTitle": "🎉[分享后台数据]第一次 Vibe Chrome 扩展，有 1000+ 用户了",
+          "url": "https://www.v2ex.com/t/1231579",
+          "observedAt": "2026-08-02",
+          "metrics": {},
+          "strength": "中",
+          "boundary": "证据支持具体需求方向，但不等于已经证明付费规模或长期留存。"
+        }
+      ]
+    },
+    {
+      "id": "entry-5d96d3cdb66c",
+      "seriesId": "series-4b8f206b4530",
+      "kind": "opportunity",
+      "quality": "editorial",
+      "title": "给家庭本地动画库做简单点播入口",
+      "plain": "作者把本地简易服务、在线播放器和播放列表组合起来，让孩子用平板看家长选好的动画，也方便老人操作。",
+      "audience": "已经在硬盘保存儿童内容、又不想部署复杂 NAS 的家庭。",
+      "pain": "文件层级深、平板传输麻烦，老人也不熟悉复杂媒体库。机会是把选片、播放和进度做成家庭能直接用的窄入口。",
+      "why": "用户、场景和操作障碍都很具体，但目前只是单个家庭方案。",
+      "validation": "找 5 个有本地动画资源的家庭，观察他们从孩子点名到开始播放的步骤，再用现有方案跑一次对照。",
+      "risk": "帖子只有 1 条回复，没有实际使用和付费数据；本地版权、儿童使用时长和家庭网络配置仍需单独处理。",
+      "topics": [
+        "本地工具",
+        "内容工作流",
+        "产品验证"
+      ],
+      "evidence": [
+        {
+          "source": "V2EX 分享创造",
+          "sourceType": "中文开发者论坛",
+          "originalTitle": "[分享] 暑假带娃太费妈？分享一套零成本给神兽搭建专属“本地动画点播台”的极简方案",
+          "url": "https://www.v2ex.com/t/1231570",
+          "observedAt": "2026-08-02",
+          "metrics": {},
+          "strength": "中",
+          "boundary": "证据支持具体需求方向，但不等于已经证明付费规模或长期留存。"
+        }
+      ]
+    }
+  ]
+}

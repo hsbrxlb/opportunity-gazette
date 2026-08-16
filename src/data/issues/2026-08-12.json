@@ -1,0 +1,289 @@
+{
+  "schemaVersion": 1,
+  "qualityVersion": "2026-08-16.1",
+  "date": "2026-08-12",
+  "generatedAt": "2026-08-13 13:14:14 Asia/Shanghai",
+  "status": "published",
+  "counts": {
+    "collected": 86,
+    "oldAccepted": 22,
+    "published": 7,
+    "features": 5,
+    "editorial": 2,
+    "rejected": 79
+  },
+  "failedSources": [
+    {
+      "source": "Reddit r/SideProject",
+      "status": "failed_or_rate_limited",
+      "detail": "Reddit 公开 JSON/API 被 403 拦截；本次未取得可安全访问结果。"
+    },
+    {
+      "source": "Reddit r/somebodymakethis",
+      "status": "failed_or_rate_limited",
+      "detail": "Reddit 公开 JSON/API 被 403 拦截；本次未取得可安全访问结果。"
+    },
+    {
+      "source": "Reddit r/SaaS",
+      "status": "failed_or_rate_limited",
+      "detail": "Reddit 公开 JSON/API 被 403 拦截；本次未取得可安全访问结果。"
+    },
+    {
+      "source": "Reddit r/indiehackers",
+      "status": "failed_or_rate_limited",
+      "detail": "Reddit 公开 JSON/API 被 403 拦截；本次未取得可安全访问结果。"
+    },
+    {
+      "source": "Product Hunt API",
+      "status": "not_configured",
+      "detail": "未配置 Product Hunt 官方 API 凭证；已跳过，不抓取容易 403 的公开页。"
+    },
+    {
+      "source": "X public search",
+      "status": "empty",
+      "detail": "脚本运行成功，但没有解析到可用的公开候选结果。"
+    },
+    {
+      "source": "小红书",
+      "status": "failed_or_rate_limited",
+      "detail": "本地社媒采集脚本启动后未返回可用结果；通常是登录态、平台风控或脚本适配问题。"
+    },
+    {
+      "source": "微博",
+      "status": "failed_or_rate_limited",
+      "detail": "本地社媒采集脚本启动后未返回可用结果；通常是登录态、平台风控或脚本适配问题。"
+    }
+  ],
+  "entries": [
+    {
+      "id": "entry-1169d7c9d856",
+      "seriesId": "series-4d8a55153bb7",
+      "kind": "opportunity",
+      "quality": "feature",
+      "title": "半导体材料研发的 AI 辅助筛选工具",
+      "plain": "两位创始人称，他们在为半导体行业做 AI 辅助材料发现工具；Hacker News 获得 128 points、28 comments，摘要提到 GPU 发热与设计功耗（TDP）增长。",
+      "audience": "关注半导体材料、材料信息学或 AI 辅助科研的团队。",
+      "pain": "芯片功耗和发热上升，材料研发周期又长。机会是先找出文献、候选方向或研发协作里最耗时、最适合机器辅助的环节。",
+      "why": "讨论量足以支持进一步核查，但当前证据仍只有创始人自述和社区讨论。",
+      "validation": "先读研究页和 HN 讨论，整理产品声称处理的输入、输出与验证方式；再访谈 2 至 3 名材料研发从业者，确认最耗时环节是否匹配。",
+      "risk": "证据弱：没有客户、实验数据或独立验证，不能把创始人自述当成已验证市场需求。",
+      "topics": [
+        "增长",
+        "产品验证"
+      ],
+      "evidence": [
+        {
+          "source": "Hacker News",
+          "sourceType": "需求信号",
+          "originalTitle": "Launch HN: Discovered Materials (YC P26) – AI agents to discover new materials",
+          "url": "https://discoveredmaterials.com/research/",
+          "observedAt": "2026-08-12",
+          "metrics": {
+            "points": 128.0,
+            "comments": 28.0
+          },
+          "strength": "强",
+          "boundary": "证据支持具体需求方向，但不等于已经证明付费规模或长期留存。"
+        }
+      ]
+    },
+    {
+      "id": "entry-ec29af8f45df",
+      "seriesId": "series-d74fdfa08b9b",
+      "kind": "case",
+      "quality": "feature",
+      "title": "把开源 Wolfram 兼容层接进命令行和笔记本",
+      "plain": "Hacker News 271 points、40 comments。作者称 Woxi 是 Rust 写的 Wolfram Language 解释器，带类似 Mathematica 的 GUI，也可通过 CLI、Jupyter、Python、npm、WASM 使用；差异包括开源、启动快。",
+      "audience": "需要 Wolfram Language 计算环境，并希望接入命令行、Jupyter 或程序接口的研究者和教育者。",
+      "pain": "研究者若要把 Wolfram Language 接进命令行、Jupyter、Python、npm 或 WASM，需要替代实现同时处理多入口、兼容性和计算正确性。",
+      "why": "271 points、40 comments 说明这个开源兼容层获得较多讨论；开源、启动快和多入口仍是作者自述，需要独立复测。",
+      "validation": "用官方文档里 5-10 个基础计算示例跑一遍，对比输出和报错；再测试 Jupyter 或 CLI 入口是否稳定。",
+      "risk": "不能假设兼容性或计算正确性已全面验证；作者自述的性能和兼容性需要独立测试。",
+      "topics": [
+        "本地工具",
+        "内容工作流",
+        "产品验证"
+      ],
+      "evidence": [
+        {
+          "source": "Hacker News",
+          "sourceType": "需求信号",
+          "originalTitle": "Show HN: Woxi - Open-source Mathematica / Wolfram Language reimplementation",
+          "url": "https://woxi.ad-si.com",
+          "observedAt": "2026-08-12",
+          "metrics": {
+            "points": 271.0,
+            "comments": 40.0
+          },
+          "strength": "强",
+          "boundary": "这是一个可复核的实战案例，不能据此推断市场已经验证。"
+        }
+      ]
+    },
+    {
+      "id": "entry-2f4abfaf5756",
+      "seriesId": "series-5e760d44acf3",
+      "kind": "opportunity",
+      "quality": "feature",
+      "title": "把本地检索原型的 API 成本降下来",
+      "plain": "DEV.to 文章有 13 reactions、1 comment。作者称测试新想法时 API 账单持续增长，因此做了本地检索增强生成原型；现有摘要只能支持成本动机和本地原型。",
+      "audience": "想减少大模型 API 试验成本、能接受本地部署和维护的独立开发者。",
+      "pain": "频繁测试新想法时 API 账单增长快，本地原型可以避免持续付费。",
+      "why": "成本动机真实，文章提供了一条本地 RAG 的路径。但互动弱，不能证明稳定性、质量或普遍需求。",
+      "validation": "按文章思路在本地搭一个最小检索问答原型，用 10 个文档测试检索质量；记录与付费 API 方案的差异和硬件要求。",
+      "risk": "证据弱：13 reactions、1 comment，不能证明本地 RAG 的稳定性或质量；作者自述不代表普遍需求。",
+      "topics": [
+        "本地工具",
+        "增长",
+        "内容工作流",
+        "产品验证"
+      ],
+      "evidence": [
+        {
+          "source": "DEV.to #ai",
+          "sourceType": "开发者内容",
+          "originalTitle": "I Built a RAG App on My Laptop Without Paying OpenAI a Single Rupee Here's How",
+          "url": "https://dev.to/speaklouder/i-built-a-rag-app-on-my-laptop-without-paying-openai-a-single-rupee-heres-how-4dpc",
+          "observedAt": "2026-08-12",
+          "metrics": {
+            "comments": 1.0,
+            "reactions": 13.0
+          },
+          "strength": "强",
+          "boundary": "证据支持具体需求方向，但不等于已经证明付费规模或长期留存。"
+        }
+      ]
+    },
+    {
+      "id": "entry-614f099f673e",
+      "seriesId": "series-c23b019f27d5",
+      "kind": "case",
+      "quality": "feature",
+      "title": "无需注册就能分享不走样的会议笔记",
+      "plain": "DEV.to 19 reactions、2 comments、约 14 分钟阅读。作者描述把会议 Markdown 粘进 Slack 后格式被破坏，因此做了无需注册即可分享笔记的工具。",
+      "audience": "经常在 Slack 或聊天工具里分享会议笔记的团队",
+      "pain": "Markdown 粘贴到 Slack 后格式被破坏，分享笔记需要注册或登录，增加摩擦。",
+      "why": "具体分享摩擦来自作者真实体验，19 reactions 说明有一定共鸣。但不代表企业协作或权限需求已解决。",
+      "validation": "用一份虚构或脱敏的会议 Markdown 测试分享链接的排版和访问权限；再问 3 个潜在用户是否愿意在无注册情况下分享笔记。",
+      "risk": "证据弱：19 reactions、2 comments，不能证明企业协作或权限需求；无注册分享可能带来链接泄露风险。",
+      "topics": [
+        "内容工作流",
+        "安全与权限"
+      ],
+      "evidence": [
+        {
+          "source": "DEV.to #ai",
+          "sourceType": "开发者内容",
+          "originalTitle": "I Built a Notebook for Sharing Notes That Doesn't Ask You to Sign Up First",
+          "url": "https://dev.to/varshithvhegde/i-built-a-notebook-for-sharing-notes-that-doesnt-ask-you-to-sign-up-first-2ldd",
+          "observedAt": "2026-08-12",
+          "metrics": {
+            "comments": 2.0,
+            "reactions": 19.0
+          },
+          "strength": "强",
+          "boundary": "这是一个可复核的实战案例，不能据此推断市场已经验证。"
+        }
+      ]
+    },
+    {
+      "id": "entry-5d94ea27c9dc",
+      "seriesId": "series-cff75c14aa74",
+      "kind": "case",
+      "quality": "feature",
+      "title": "给智能体插件加运行时授权层",
+      "plain": "DEV.to 文章有 8 reactions、6 comments。作者看到新的智能体技能与 MCP 打包标准后，追问能力被安装后，运行时到底由谁授权。",
+      "audience": "开发智能体插件、工具调用权限或运行时安全控制的团队。",
+      "pain": "安装时声明能力不等于每次运行都应该获得同样权限。机会是按任务、数据范围和动作风险做运行时批准与审计。",
+      "why": "它指出了能力打包之后的具体安全缺口；互动不算强，但问题能落到现有插件系统里做最小验证。",
+      "validation": "选一个只读插件和一个有写入能力的插件，分别列出运行时权限、数据范围和批准条件；模拟越权请求，确认系统会拒绝并留下审计记录。",
+      "risk": "只能支持“能力打包与运行时授权分离”的问题，不能证明某种标准或产品已被广泛采用。",
+      "topics": [
+        "内容工作流",
+        "安全与权限",
+        "产品验证"
+      ],
+      "evidence": [
+        {
+          "source": "DEV.to #ai",
+          "sourceType": "开发者内容",
+          "originalTitle": "Agent Plugins Package Capabilities. IRC-A Asks: Who Authorizes Them at Runtime?",
+          "url": "https://dev.to/sandrog/agent-plugins-package-capabilities-irc-a-asks-who-authorizes-them-at-runtime-33gg",
+          "observedAt": "2026-08-12",
+          "metrics": {
+            "comments": 6.0,
+            "reactions": 8.0
+          },
+          "strength": "强",
+          "boundary": "这是一个可复核的实战案例，不能据此推断市场已经验证。"
+        }
+      ]
+    },
+    {
+      "id": "entry-776d1ec2bae1",
+      "seriesId": "series-d643ab43df1e",
+      "kind": "case",
+      "quality": "editorial",
+      "title": "给 AI 编程任务做需求完整度与成本对照",
+      "plain": "V2EX 运行时可见，10 replies。发帖人认为把目标、限制和验收规则写得像正式需求文档，可以减少高能力模型 token 消耗；甚至实现细节越清楚越省。",
+      "audience": "需要控制 AI 编程成本，又经常反复补充需求的开发者和小团队。",
+      "pain": "需求不清会让模型追问、返工和重复读上下文。机会是检查目标、限制和验收规则是否齐全，并用同一任务测量 token 与结果差异。",
+      "why": "帖子有 10 replies，且验证成本很低；当前只能支持一名用户的经验，不能直接证明因果或通用节省比例。",
+      "validation": "用同一任务分别用口语化提示和正式需求文档式提示各跑 5 次，记录 token 消耗和输出质量；只做成本对比，不涉及生产数据。",
+      "risk": "只能证明一个用户的经验，10 replies 不代表普遍有效；节省比例可能因模型和任务差异很大。",
+      "topics": [
+        "AI 编程",
+        "内容工作流",
+        "产品验证"
+      ],
+      "evidence": [
+        {
+          "source": "V2EX OpenAI",
+          "sourceType": "中文开发者论坛",
+          "originalTitle": "我好像发现了省 tokens 的方法",
+          "url": "https://www.v2ex.com/t/1234061",
+          "observedAt": "2026-08-12",
+          "metrics": {
+            "replies": 10.0
+          },
+          "strength": "中",
+          "boundary": "这是一个可复核的实战案例，不能据此推断市场已经验证。"
+        }
+      ]
+    },
+    {
+      "id": "entry-7dd0f10dc0f9",
+      "seriesId": "series-c518d551880a",
+      "kind": "opportunity",
+      "quality": "editorial",
+      "title": "跨线下和多种视频会议生成统一纪要",
+      "plain": "美国 App Store 上的 Upmeet 有 26 个评分，当前评分 4.96154。产品自述支持线下会议、Zoom、Teams、Google Meet 和音频导入，并生成转写与结构化纪要。",
+      "audience": "需要会议纪要自动化的销售、咨询、项目管理者",
+      "pain": "跨平台会议内容分散，会后整理纪要和待办耗时。",
+      "why": "26 个评分下得分高，可以视为早期市场信号；样本仍小，不能据此判断普遍满意度或转写质量。",
+      "validation": "下载免费版，用一段 10 分钟公开或模拟会议录音测试转写和纪要质量，重点看专有名词、行动项和说话人区分；再对比手动整理时间。",
+      "risk": "26 个评分样本小，95% 准确率等自述不能当独立验证；免费应用可能有数据上传或隐私边界需要确认。",
+      "topics": [
+        "自动化",
+        "增长",
+        "内容工作流",
+        "产品验证"
+      ],
+      "evidence": [
+        {
+          "source": "App Store Search US",
+          "sourceType": "应用市场信号",
+          "originalTitle": "Upmeet - Transcript & Summary",
+          "url": "https://apps.apple.com/us/app/upmeet-transcript-summary/id6450359736?uo=4",
+          "observedAt": "2026-08-12",
+          "metrics": {
+            "ratings": 4.0,
+            "rating": 4.96154
+          },
+          "strength": "中",
+          "boundary": "证据支持具体需求方向，但不等于已经证明付费规模或长期留存。"
+        }
+      ]
+    }
+  ]
+}

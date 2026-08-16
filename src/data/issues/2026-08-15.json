@@ -1,0 +1,290 @@
+{
+  "schemaVersion": 1,
+  "qualityVersion": "2026-08-16.1",
+  "date": "2026-08-15",
+  "generatedAt": "2026-08-16 13:13:09 Asia/Shanghai",
+  "status": "published",
+  "counts": {
+    "collected": 83,
+    "oldAccepted": 36,
+    "published": 7,
+    "features": 1,
+    "editorial": 6,
+    "rejected": 76
+  },
+  "failedSources": [
+    {
+      "source": "Reddit r/SideProject",
+      "status": "failed_or_rate_limited",
+      "detail": "Reddit 公开 JSON/API 被 403 拦截；本次未取得可安全访问结果。"
+    },
+    {
+      "source": "Reddit r/somebodymakethis",
+      "status": "failed_or_rate_limited",
+      "detail": "Reddit 公开 JSON/API 被 403 拦截；本次未取得可安全访问结果。"
+    },
+    {
+      "source": "Reddit r/SaaS",
+      "status": "failed_or_rate_limited",
+      "detail": "Reddit 公开 JSON/API 被 403 拦截；本次未取得可安全访问结果。"
+    },
+    {
+      "source": "Reddit r/indiehackers",
+      "status": "failed_or_rate_limited",
+      "detail": "Reddit 公开 JSON/API 被 403 拦截；本次未取得可安全访问结果。"
+    },
+    {
+      "source": "Stack Exchange",
+      "status": "empty_for_date",
+      "detail": "目标日期窗口内没有找到匹配问题。"
+    },
+    {
+      "source": "Product Hunt API",
+      "status": "not_configured",
+      "detail": "未配置 Product Hunt 官方 API 凭证；已跳过，不抓取容易 403 的公开页。"
+    },
+    {
+      "source": "X public search",
+      "status": "empty",
+      "detail": "脚本运行成功，但没有解析到可用的公开候选结果。"
+    },
+    {
+      "source": "小红书",
+      "status": "failed_or_rate_limited",
+      "detail": "本地社媒采集脚本启动后未返回可用结果；通常是登录态、平台风控或脚本适配问题。"
+    },
+    {
+      "source": "微博",
+      "status": "failed_or_rate_limited",
+      "detail": "本地社媒采集脚本启动后未返回可用结果；通常是登录态、平台风控或脚本适配问题。"
+    }
+  ],
+  "entries": [
+    {
+      "id": "entry-aa007aa5560f",
+      "seriesId": "series-16ea20e630b9",
+      "kind": "case",
+      "quality": "feature",
+      "title": "一个带预算限制的终端深度研究代理，本地数据去向需要验证",
+      "plain": "Mole 是一个跑在终端里的深度研究代理，针对 agent 超预算、来源混乱和本地数据去向不明。作者提到强制预算；本地内容是否发送给远程模型仍需独立检查。",
+      "audience": "需要在本地数据上跑研究任务、又担心 prompt 把数据带出去的开发者。",
+      "pain": "研究 agent 容易烧钱、乱拼来源，而且你不知道本地数据被 prompt 吃掉后去了哪里。",
+      "why": "预算上限、来源整理和本地数据去向都是研究智能体可审计的问题，这个项目把三者放进同一个终端流程。",
+      "validation": "可执行验证：在断网或限制外联的环境下运行一次带本地文件的研究任务，观察是否仍会尝试向远程模型发送本地内容，并检查预算限制是否在超限前生效。",
+      "risk": "当前只有作者自述、单一案例、低互动、摘要截断。",
+      "topics": [
+        "本地工具",
+        "内容工作流",
+        "产品验证"
+      ],
+      "evidence": [
+        {
+          "source": "Hacker News",
+          "sourceType": "需求信号",
+          "originalTitle": "Show HN: Mole – Deep research agent for your terminal",
+          "url": "https://github.com/lajosdeme/mole",
+          "observedAt": "2026-08-15",
+          "metrics": {
+            "points": 95.0,
+            "comments": 14.0
+          },
+          "strength": "强",
+          "boundary": "这是一个可复核的实战案例，不能据此推断市场已经验证。"
+        }
+      ]
+    },
+    {
+      "id": "entry-ce5525ac824e",
+      "seriesId": "series-6ce117fed77a",
+      "kind": "case",
+      "quality": "editorial",
+      "title": "CLAUDE.md 的 @ 导入可能没加载，但不会报错",
+      "plain": "文章讲 CLAUDE.md 拆分成多个文件后用 @ 导入时，路径怎么解析、能嵌套多深，以及为什么你的导入可能静默失败。",
+      "audience": "用 CLAUDE.md 管理 Claude Code 项目规则、并且拆过文件的开发者。",
+      "pain": "你以为规则都加载了，实际有一半没进去，Claude 的行为跟你预期不一致。",
+      "why": "规则静默不加载会让智能体行为难以解释；用一个故意失效的导入就能判断自己的项目是否有同类风险。",
+      "validation": "可执行验证：在 CLAUDE.md 中写一个带 @ 导入的规则文件，故意使用错误路径或过深嵌套，运行 Claude Code 并检查它是否会提示加载失败，还是静默忽略。",
+      "risk": "当前只有作者自述、单一案例、低互动、摘要截断。",
+      "topics": [
+        "AI 编程",
+        "内容工作流",
+        "产品验证"
+      ],
+      "evidence": [
+        {
+          "source": "DEV.to #productivity",
+          "sourceType": "开发者内容",
+          "originalTitle": "CLAUDE.md @-imports: how paths resolve, how deep they go, and why yours silently did not load",
+          "url": "https://dev.to/rulestack/claudemd-imports-how-paths-resolve-how-deep-they-go-and-why-yours-silently-did-not-load-2mgf",
+          "observedAt": "2026-08-15",
+          "metrics": {
+            "comments": 0.0,
+            "reactions": 0.0
+          },
+          "strength": "中",
+          "boundary": "这是一个可复核的实战案例，不能据此推断市场已经验证。"
+        }
+      ]
+    },
+    {
+      "id": "entry-4e8102dc300d",
+      "seriesId": "series-24fae20acb93",
+      "kind": "case",
+      "quality": "editorial",
+      "title": "一个人跑 agent 流水线，两周踩了三个没报警的坑",
+      "plain": "作者记录了自己流水线里三个静默故障：损坏视频被所有工具判成有效、备份停了但定时器看着正常、API 账户余额归零却没有告警。最后给了一条监控规则。",
+      "audience": "自己维护 agent 流水线或自动化任务的开发者。",
+      "pain": "工具都显示正常，实际任务已经挂了，等发现时已经造成生产事故。",
+      "why": "三个故障都属于表面正常、实际结果已经坏掉，能直接转成反向探针、心跳和余额告警。",
+      "validation": "可执行验证：对照文中三类静默故障，在自己的流水线里分别模拟一次损坏文件、停止备份和余额归零，检查现有监控是否会产生告警。",
+      "risk": "当前只有作者自述、单一案例、低互动、摘要截断。",
+      "topics": [
+        "自动化",
+        "内容工作流",
+        "产品验证"
+      ],
+      "evidence": [
+        {
+          "source": "DEV.to #automation",
+          "sourceType": "开发者内容",
+          "originalTitle": "Three Silent Failures in Two Weeks: What My Agent Pipeline Never Told Me",
+          "url": "https://dev.to/robswierk/three-silent-failures-in-two-weeks-what-my-agent-pipeline-never-told-me-443m",
+          "observedAt": "2026-08-15",
+          "metrics": {
+            "comments": 0.0,
+            "reactions": 1.0
+          },
+          "strength": "中",
+          "boundary": "这是一个可复核的实战案例，不能据此推断市场已经验证。"
+        }
+      ]
+    },
+    {
+      "id": "entry-c491af6e6e9e",
+      "seriesId": "series-3559bb8fc6ae",
+      "kind": "opportunity",
+      "quality": "editorial",
+      "title": "一个把会议录音、YouTube 和网页文章统一转成笔记的 AI 应用",
+      "plain": "Autonote 主打从多个来源导入内容，再用 AI 生成结构化笔记。不只是录音转写，还支持导入音频文件和 YouTube 视频。",
+      "audience": "需要把零散音视频和文章集中整理成笔记的人。",
+      "pain": "多数转录应用只负责录音，导入和整理还得自己手动拼。",
+      "why": "它把录音、YouTube 和网页文章放进同一条整理链路，用一次导入就能判断是否真的减少内容搬运。",
+      "validation": "可执行验证：导入一段已知内容的 YouTube 视频或音频文件，对比生成笔记中的关键信息和原文是否一致，检查是否存在漏项或错误归纳。",
+      "risk": "当前只有作者自述、单一案例、低互动、摘要截断。",
+      "topics": [
+        "内容工作流",
+        "产品验证"
+      ],
+      "evidence": [
+        {
+          "source": "App Store Search US",
+          "sourceType": "应用市场信号",
+          "originalTitle": "Autonote: AI Voice & Summary",
+          "url": "https://apps.apple.com/us/app/autonote-ai-voice-summary/id6756772503?uo=4",
+          "observedAt": "2026-08-15",
+          "metrics": {
+            "ratings": 5.0,
+            "rating": 5.0
+          },
+          "strength": "中",
+          "boundary": "证据支持具体需求方向，但不等于已经证明付费规模或长期留存。"
+        }
+      ]
+    },
+    {
+      "id": "entry-b6a30e4190ff",
+      "seriesId": "series-968555e95eb2",
+      "kind": "opportunity",
+      "quality": "editorial",
+      "title": "中文 AI 语音笔记应用，把录音直接转成可执行的行动项",
+      "plain": "闪念贝壳做语音转文字、会议记录和灵感捕捉，强调 AI 自动去口头禅、生成标题摘要和标签。也提到 Apple Watch 快速记录入口。",
+      "audience": "主要用中文做语音记录、会议整理和碎片想法捕捉的人。",
+      "pain": "语音记完还得自己删废话、排版、想标题，整理成本高。",
+      "why": "当次 App Store 有较大的评分样本，中文语音记录需求并不陌生；更值得测的是从转写到标题、标签和行动项的完整链路。",
+      "validation": "可执行验证：用一段含口头禅和重复内容的中文会议录音测试，检查生成标题、摘要、标签和行动项是否准确，并对比原文是否存在遗漏。",
+      "risk": "当前只有作者自述、单一案例、低互动、摘要截断。",
+      "topics": [
+        "内容工作流",
+        "产品验证"
+      ],
+      "evidence": [
+        {
+          "source": "App Store Search CN",
+          "sourceType": "应用市场信号",
+          "originalTitle": "闪念贝壳 - AI 语音笔记、日记、会议",
+          "url": "https://apps.apple.com/cn/app/%E9%97%AA%E5%BF%B5%E8%B4%9D%E5%A3%B3-ai-%E8%AF%AD%E9%9F%B3%E7%AC%94%E8%AE%B0-%E6%97%A5%E8%AE%B0-%E4%BC%9A%E8%AE%AE/id6476344403?uo=4",
+          "observedAt": "2026-08-15",
+          "metrics": {
+            "ratings": 4.0,
+            "rating": 4.91209
+          },
+          "strength": "中",
+          "boundary": "证据支持具体需求方向，但不等于已经证明付费规模或长期留存。"
+        }
+      ]
+    },
+    {
+      "id": "entry-fc6941cb58c8",
+      "seriesId": "series-b97c9975da74",
+      "kind": "case",
+      "quality": "editorial",
+      "title": "用 Sentry 抓到一个零报错的静默数据丢失 bug",
+      "plain": "作者用 Sentry 发现了一个没有任何错误日志的静默数据丢失问题，文章是 DEV.to 的 Summer Bug Smash 投稿。",
+      "audience": "做应用监控和调试的开发者。",
+      "pain": "静默数据丢失没有报错，很难被发现和定位。",
+      "why": "可以看作者怎么用 Sentry 的哪些功能定位到零报错的数据丢失，这种排查思路可以参考。",
+      "validation": "可以检查自己的 Sentry 项目是否开启了事务追踪和自定义指标，尝试复现一个无报错但数据未写入的场景，看 Sentry 是否能捕获异常。",
+      "risk": "单一作者案例，没有讨论互动，排查方法是否通用未经验证。",
+      "topics": [
+        "内容工作流",
+        "产品验证"
+      ],
+      "evidence": [
+        {
+          "source": "DEV.to #ai",
+          "sourceType": "开发者内容",
+          "originalTitle": "I Used Sentry to Expose a Silent Data-Loss Bug with Zero Errors",
+          "url": "https://dev.to/mirshah12/i-used-sentry-to-expose-a-silent-data-loss-bug-with-zero-errors-hmi",
+          "observedAt": "2026-08-15",
+          "metrics": {
+            "comments": 0.0,
+            "reactions": 2.0
+          },
+          "strength": "中",
+          "boundary": "这是一个可复核的实战案例，不能据此推断市场已经验证。"
+        }
+      ]
+    },
+    {
+      "id": "entry-f92be337a41d",
+      "seriesId": "series-d756d87a6178",
+      "kind": "opportunity",
+      "quality": "editorial",
+      "title": "给 Vue2、PgSQL12、.NET6 这类 EOL 软件做持续 CVE 补丁服务",
+      "plain": "V2EX 用户提出一个方向：对已经 EOL 的软件和包提供持续 CVE 补丁支持，类似 HeroDevs 和 TuxCare。举例包括 Vue2、PgSQL12、.NET6，并提到一年支持报价约 4 万刀。",
+      "audience": "有底层技术能力、想找可持续产品化方向的个人或小团队。",
+      "pain": "很多公司还在跑 EOL 软件，但官方不再出安全补丁，CVE 风险没人接。",
+      "why": "买方痛点、收费方向和可选技术栈都很具体，适合先从一个停止维护的技术栈核实付费与交付成本。",
+      "validation": "可执行验证：选一个你熟悉的 EOL 技术栈，查 HeroDevs 或 TuxCare 的公开定价与交付方式，并尝试为一个已知 CVE 写出补丁方案，评估交付成本是否可行。",
+      "risk": "当前只有作者自述、单一案例、低互动、摘要截断。",
+      "topics": [
+        "安全与权限",
+        "产品验证"
+      ],
+      "evidence": [
+        {
+          "source": "V2EX 奇思妙想",
+          "sourceType": "中文开发者论坛",
+          "originalTitle": "借助 Coding 加持，对 EOL 软件提供支持，类似 HeroDevs、TuxCare",
+          "url": "https://www.v2ex.com/t/1234723",
+          "observedAt": "2026-08-15",
+          "metrics": {
+            "replies": 0.0
+          },
+          "strength": "中",
+          "boundary": "证据支持具体需求方向，但不等于已经证明付费规模或长期留存。"
+        }
+      ]
+    }
+  ]
+}

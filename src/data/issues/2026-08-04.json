@@ -1,0 +1,265 @@
+{
+  "schemaVersion": 1,
+  "qualityVersion": "2026-08-16.1",
+  "date": "2026-08-04",
+  "generatedAt": "2026-08-05 13:37:56 Asia/Shanghai",
+  "status": "published",
+  "counts": {
+    "collected": 90,
+    "oldAccepted": 18,
+    "published": 7,
+    "features": 1,
+    "editorial": 6,
+    "rejected": 83
+  },
+  "failedSources": [
+    {
+      "source": "Reddit r/SideProject",
+      "status": "failed_or_rate_limited",
+      "detail": "Reddit 公开 JSON/API 被 403 拦截；本次未取得可安全访问结果。"
+    },
+    {
+      "source": "Reddit r/somebodymakethis",
+      "status": "failed_or_rate_limited",
+      "detail": "Reddit 公开 JSON/API 被 403 拦截；本次未取得可安全访问结果。"
+    },
+    {
+      "source": "Reddit r/SaaS",
+      "status": "failed_or_rate_limited",
+      "detail": "Reddit 公开 JSON/API 被 403 拦截；本次未取得可安全访问结果。"
+    },
+    {
+      "source": "Reddit r/indiehackers",
+      "status": "failed_or_rate_limited",
+      "detail": "Reddit 公开 JSON/API 被 403 拦截；本次未取得可安全访问结果。"
+    },
+    {
+      "source": "Stack Exchange",
+      "status": "empty_for_date",
+      "detail": "目标日期窗口内没有找到匹配问题。"
+    },
+    {
+      "source": "Product Hunt API",
+      "status": "not_configured",
+      "detail": "未配置 Product Hunt 官方 API 凭证；已跳过，不抓取容易 403 的公开页。"
+    },
+    {
+      "source": "X public search",
+      "status": "empty",
+      "detail": "脚本运行成功，但没有解析到可用的公开候选结果。"
+    },
+    {
+      "source": "小红书",
+      "status": "failed_or_rate_limited",
+      "detail": "本地社媒采集脚本启动后未返回可用结果；通常是登录态、平台风控或脚本适配问题。"
+    },
+    {
+      "source": "微博",
+      "status": "failed_or_rate_limited",
+      "detail": "本地社媒采集脚本启动后未返回可用结果；通常是登录态、平台风控或脚本适配问题。"
+    }
+  ],
+  "entries": [
+    {
+      "id": "entry-508089b352f4",
+      "seriesId": "series-086df7abe347",
+      "kind": "opportunity",
+      "quality": "feature",
+      "title": "把 MCP 智能体会话还原成可检查记录",
+      "plain": "Armature 自述只需给 MCP 服务加少量代码，就能还原工具调用背后的完整会话，查看用户要求、智能体过程和工具使用；原帖当天 41 分、3 条评论。",
+      "audience": "开发或运营 MCP 工具、需要排查智能体失败和真实用法的团队。",
+      "pain": "服务端通常只看到一次工具调用，看不到它来自什么任务、前面发生了什么，也难判断失败源头。机会是把会话还原、评估和产品分析放到同一条可追溯记录里。",
+      "why": "它直接解决 MCP 工具只见结果、不见上下文的调试盲区，且能用现有测试任务快速验收。",
+      "validation": "用一个只含测试数据的 MCP 服务接入，预设 5 个成功和 5 个失败任务；核对它能否还原关键步骤、定位失败原因，并检查是否收集了不必要内容。",
+      "risk": "功能来自厂商自述，3 条评论不足以证明效果；完整会话记录还可能包含代码、客户数据或内部推理，隐私和最小采集边界必须先审计。",
+      "topics": [
+        "增长",
+        "内容工作流"
+      ],
+      "evidence": [
+        {
+          "source": "Hacker News",
+          "sourceType": "需求信号",
+          "originalTitle": "Show HN: Product analytics (and evals) for agent sessions on your MCP",
+          "url": "https://armature.tech/",
+          "observedAt": "2026-08-04",
+          "metrics": {},
+          "strength": "强",
+          "boundary": "证据支持具体需求方向，但不等于已经证明付费规模或长期留存。"
+        }
+      ]
+    },
+    {
+      "id": "entry-7fdbfc282d1d",
+      "seriesId": "series-308e5ae563d3",
+      "kind": "opportunity",
+      "quality": "editorial",
+      "title": "为数字人物生成可信且多样的肤色组",
+      "plain": "作者在数字艺术和游戏开发中难以快速挑出可信且有差异的肤色，于是做了专用颜色空间、选色器和生成算法；原帖当天 487 分、90 条评论。",
+      "audience": "设计角色、游戏人物、虚拟人或插画人物的数字艺术家和开发者。",
+      "pain": "普通取色器适合选单个颜色，却不能直接给出一组自然、有区分度的人物肤色。机会是把专用生成与现有设计工具、角色生成器或调色流程连接起来。",
+      "why": "这是当天互动最强、痛点也很具体的创作工具信号，适合验证专用选色流程。",
+      "validation": "让 5 名角色设计者分别用普通取色器和该工具完成同一组人物配色，比较完成时间、人工修改和对结果自然度的评价。",
+      "risk": "高互动可能同时包含话题讨论，不能直接等同于持续使用或付费；不同光照和渲染风格也会改变肤色表现。",
+      "topics": [
+        "产品验证"
+      ],
+      "evidence": [
+        {
+          "source": "Hacker News",
+          "sourceType": "需求信号",
+          "originalTitle": "Show HN: Simple algorithm and color space to generate diverse skin tones",
+          "url": "https://toneyalexander.github.io/inclusive-color-space/",
+          "observedAt": "2026-08-04",
+          "metrics": {},
+          "strength": "中",
+          "boundary": "证据支持具体需求方向，但不等于已经证明付费规模或长期留存。"
+        }
+      ]
+    },
+    {
+      "id": "entry-97769bdd11c3",
+      "seriesId": "series-e5e0d8929866",
+      "kind": "case",
+      "quality": "editorial",
+      "title": "开发工具误扫大目录的边界检查",
+      "plain": "一名用户把 go.mod 留在主目录后，VS Code 的 gopls 把整个主目录识别成 Go 模块，大量扫描耗尽 vnode，最终触发系统自动重启。",
+      "audience": "使用语言服务器、工作区和多 worktree 并行开发的开发者。",
+      "pain": "一个放错位置的项目标记文件，可能让开发工具扫描远超预期的目录。机会是在启动前检查工作区根目录、扫描范围和资源异常。",
+      "why": "故障后果明确，最小检查成本也很低，适合作为开发环境护栏观察。",
+      "validation": "在隔离测试目录故意放置错误模块文件，观察编辑器实际扫描范围；做一个只读检查，发现主目录级项目根时明确告警。",
+      "risk": "帖子 0 回复，是单个排障记录；具体故障还受 gopls、VS Code 和系统版本影响。",
+      "topics": [
+        "其他"
+      ],
+      "evidence": [
+        {
+          "source": "V2EX 分享发现",
+          "sourceType": "中文开发者论坛",
+          "originalTitle": "记录下 gopls 导致系统自动重启的问题",
+          "url": "https://www.v2ex.com/t/1232225",
+          "observedAt": "2026-08-04",
+          "metrics": {},
+          "strength": "中",
+          "boundary": "这是一个可复核的实战案例，不能据此推断市场已经验证。"
+        }
+      ]
+    },
+    {
+      "id": "entry-567534faadc2",
+      "seriesId": "series-aedafcf22185",
+      "kind": "opportunity",
+      "quality": "editorial",
+      "title": "更轻的 macOS 原生数据库客户端",
+      "plain": "CroDB 的作者觉得现有数据库客户端过重、非原生或价格高，于是做了一个支持 MySQL 和 PostgreSQL 的轻量 macOS 原生客户端。",
+      "audience": "只需要浏览、查询和少量管理数据库，不想启动大型客户端的 macOS 开发者。",
+      "pain": "成熟数据库工具功能多，但启动、界面和定价可能超过轻量使用需求。机会是围绕高频只读操作做快启动和原生交互。",
+      "why": "用户抱怨和产品形态都具体，但是否能留住用户要靠真实任务对比。",
+      "validation": "找 5 名 macOS 开发者，让他们用现有工具和 CroDB 完成连接、查表、执行只读 SQL、导出四个任务，记录耗时和缺失功能。",
+      "risk": "帖子只有 3 条回复，数据库客户端竞品很多；连接凭据存储、安全更新和长期维护的成本也不低。",
+      "topics": [
+        "增长",
+        "安全与权限",
+        "产品验证"
+      ],
+      "evidence": [
+        {
+          "source": "V2EX 分享创造",
+          "sourceType": "中文开发者论坛",
+          "originalTitle": "Vibe 了一款轻量的 macOS 原生的数据库客户端 CroDB，支持 MySQL 和 PostgreSQL",
+          "url": "https://www.v2ex.com/t/1232213",
+          "observedAt": "2026-08-04",
+          "metrics": {},
+          "strength": "中",
+          "boundary": "证据支持具体需求方向，但不等于已经证明付费规模或长期留存。"
+        }
+      ]
+    },
+    {
+      "id": "entry-a1a946bcc90c",
+      "seriesId": "series-43e0fcbf7e4e",
+      "kind": "opportunity",
+      "quality": "editorial",
+      "title": "给技术信息流加一键 AI 降噪",
+      "plain": "hcker.news 给 Hacker News 加了 AI 内容过滤。作者说不少读者已经厌倦首页被 AI 话题占满，原帖当天得到 52 分和 11 条评论。",
+      "audience": "每天浏览技术社区、又想控制 AI 内容比例的开发者和研究人员。",
+      "pain": "固定信息流越来越容易被单一热点挤占，用户需要按主题降噪，同时保留随时恢复和调整的权利。机会是把过滤做成透明、可调、可撤销的个人信息层。",
+      "why": "这条信号有明确抱怨和当天互动，适合验证更可控的信息过滤。",
+      "validation": "先读完 11 条评论，归纳用户想屏蔽的内容边界；再做一个只在本地生效的关键词与来源过滤原型，连续使用一周记录误杀和找回次数。",
+      "risk": "互动证明有人共鸣，但不代表付费需求；关键词过滤也可能把真正重要的 AI 研究一并隐藏。",
+      "topics": [
+        "本地工具",
+        "内容工作流",
+        "产品验证"
+      ],
+      "evidence": [
+        {
+          "source": "Hacker News",
+          "sourceType": "需求信号",
+          "originalTitle": "Show HN: Hacker News with AI stories filtered out",
+          "url": "https://hcker.news/?view=frontpage&ai=exclude",
+          "observedAt": "2026-08-04",
+          "metrics": {},
+          "strength": "中",
+          "boundary": "证据支持具体需求方向，但不等于已经证明付费规模或长期留存。"
+        }
+      ]
+    },
+    {
+      "id": "entry-d2860eca0c96",
+      "seriesId": "series-a2c6a87e2087",
+      "kind": "case",
+      "quality": "editorial",
+      "title": "给长时间 AI 编程任务加独立复核",
+      "plain": "Neal 的作者在大型前端迁移中发现，要求智能体没遇到阻塞就继续仍无法稳定长时间自治，于是做了一个由 Codex 编写、Claude 复核的命令行流程。",
+      "audience": "尝试把迁移、批量修改等长任务交给编程智能体的开发者。",
+      "pain": "长任务容易中途停下、偏离目标或把错误带到后续步骤。机会是把执行、复核、继续条件和阻塞证据明确分开。",
+      "why": "作者给出了真实失败场景，适合观察独立复核是否能改善长任务可靠性。",
+      "validation": "选一个可回滚的小迁移，分别用单智能体和编写加复核流程运行；比较中断次数、错误发现时间、总耗时和模型成本。",
+      "risk": "原帖只有 1 分、0 条评论，尚无通用效果证据；双模型也可能重复同一种错误，并显著增加费用。",
+      "topics": [
+        "AI 编程"
+      ],
+      "evidence": [
+        {
+          "source": "Hacker News",
+          "sourceType": "需求信号",
+          "originalTitle": "Show HN: Neal – Codex writes the code, Claude reviews it",
+          "url": "https://github.com/navels/neal",
+          "observedAt": "2026-08-04",
+          "metrics": {},
+          "strength": "中",
+          "boundary": "这是一个可复核的实战案例，不能据此推断市场已经验证。"
+        }
+      ]
+    },
+    {
+      "id": "entry-52cdccc0ce8d",
+      "seriesId": "series-9ef6aed6b376",
+      "kind": "case",
+      "quality": "editorial",
+      "title": "让非网络专家也能做弱网测试",
+      "plain": "Bean Network Tester 让开发和测试人员主动制造延迟、丢包等差网络条件，作者强调没有网络经验的人也能使用。",
+      "audience": "需要检查应用或游戏在弱网下表现、但不熟悉底层网络命令的开发者和测试人员。",
+      "pain": "弱网问题常到线上才暴露，现有模拟方式对非专业人员门槛较高。机会是把常见网络故障做成可重复场景和清晰结果。",
+      "why": "用户和测试动作很明确，适合先验证易用性是否真的降低弱网测试门槛。",
+      "validation": "为一个测试应用设置三档网络条件，检查安装、复现、恢复网络和结果记录是否能由非网络专业的测试人员独立完成。",
+      "risk": "原帖只有 2 分、0 条评论；易用是作者自述，复杂移动网络、VPN 和多设备场景也可能覆盖不了。",
+      "topics": [
+        "产品验证"
+      ],
+      "evidence": [
+        {
+          "source": "Hacker News",
+          "sourceType": "新产品信号",
+          "originalTitle": "Show HN: Bean Network Tester – open-source bad network simulator",
+          "url": "https://github.com/donislawdev/BeanNetworkTester",
+          "observedAt": "2026-08-04",
+          "metrics": {},
+          "strength": "中",
+          "boundary": "这是一个可复核的实战案例，不能据此推断市场已经验证。"
+        }
+      ]
+    }
+  ]
+}

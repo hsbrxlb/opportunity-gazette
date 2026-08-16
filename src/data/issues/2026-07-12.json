@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "qualityVersion": "2026-08-16.1",
+  "date": "2026-07-12",
+  "generatedAt": "2026-07-13 13:07:15 Asia/Shanghai",
+  "status": "no精品",
+  "counts": {
+    "collected": 61,
+    "oldAccepted": 0,
+    "published": 0,
+    "features": 0,
+    "editorial": 0,
+    "rejected": 61
+  },
+  "failedSources": [
+    {
+      "source": "Hacker News / Ask HN: looking for tool",
+      "status": "failed",
+      "detail": "HTTPSConnectionPool(host='hn.algolia.com', port=443): Max retries exceeded with url: /api/v1/search_by_date?query=Ask+HN%3A+looking+for+tool&tags=story&hitsPerPage=12&numericFilters=created_at_i%3E%3D1783785600%2Ccreated_at_i%3C1783872000 (Caused by SSLError(…"
+    },
+    {
+      "source": "Hacker News / Show HN",
+      "status": "failed",
+      "detail": "HTTPSConnectionPool(host='hn.algolia.com', port=443): Max retries exceeded with url: /api/v1/search_by_date?query=Show+HN&tags=story&hitsPerPage=12&numericFilters=created_at_i%3E%3D1783785600%2Ccreated_at_i%3C1783872000 (Caused by SSLError(SSLEOFError(8, 'EOF…"
+    },
+    {
+      "source": "Reddit r/SideProject",
+      "status": "failed_or_rate_limited",
+      "detail": "Reddit 公开 JSON/API 被 403 拦截；本次未取得可安全访问结果。"
+    },
+    {
+      "source": "Reddit r/somebodymakethis",
+      "status": "failed_or_rate_limited",
+      "detail": "Reddit 公开 JSON/API 被 403 拦截；本次未取得可安全访问结果。"
+    },
+    {
+      "source": "Reddit r/SaaS",
+      "status": "failed_or_rate_limited",
+      "detail": "Reddit 公开 JSON/API 被 403 拦截；本次未取得可安全访问结果。"
+    },
+    {
+      "source": "Reddit r/indiehackers",
+      "status": "failed_or_rate_limited",
+      "detail": "HTTPSConnectionPool(host='www.reddit.com', port=443): Max retries exceeded with url: /r/indiehackers/search.json?q=MRR+OR+revenue+OR+customers&restrict_sr=on&sort=new&t=week&limit=12 (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_…"
+    },
+    {
+      "source": "GitHub Trending",
+      "status": "failed",
+      "detail": "HTTPSConnectionPool(host='github.com', port=443): Max retries exceeded with url: /trending?since=daily (Caused by SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:1129)')))"
+    },
+    {
+      "source": "Stack Exchange superuser",
+      "status": "failed_or_rate_limited",
+      "detail": "HTTPSConnectionPool(host='api.stackexchange.com', port=443): Max retries exceeded with url: /2.3/search/advanced?site=superuser&order=desc&sort=creation&pagesize=10&filter=default&tagged=automation&fromdate=1783785600&todate=1783872000 (Caused by SSLError(SSL…"
+    },
+    {
+      "source": "Stack Exchange",
+      "status": "empty_for_date",
+      "detail": "No matching questions found in the target date window."
+    },
+    {
+      "source": "Product Hunt API",
+      "status": "not_configured",
+      "detail": "未配置 Product Hunt 官方 API 凭证；已跳过，不抓取容易 403 的公开页。"
+    },
+    {
+      "source": "小红书",
+      "status": "failed_or_rate_limited",
+      "detail": "本地社媒采集脚本启动后未返回可用结果；通常是登录态、平台风控或脚本适配问题。"
+    },
+    {
+      "source": "微博",
+      "status": "failed_or_rate_limited",
+      "detail": "本地社媒采集脚本启动后未返回可用结果；通常是登录态、平台风控或脚本适配问题。"
+    }
+  ],
+  "entries": []
+}

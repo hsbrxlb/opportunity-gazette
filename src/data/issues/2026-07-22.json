@@ -1,0 +1,239 @@
+{
+  "schemaVersion": 1,
+  "qualityVersion": "2026-08-16.1",
+  "date": "2026-07-22",
+  "generatedAt": "2026-07-23 13:06:55 Asia/Shanghai",
+  "status": "published",
+  "counts": {
+    "collected": 88,
+    "oldAccepted": 14,
+    "published": 6,
+    "features": 0,
+    "editorial": 6,
+    "rejected": 82
+  },
+  "failedSources": [
+    {
+      "source": "Reddit r/SideProject",
+      "status": "failed_or_rate_limited",
+      "detail": "Reddit 公开 JSON/API 被 403 拦截；本次未取得可安全访问结果。"
+    },
+    {
+      "source": "Reddit r/somebodymakethis",
+      "status": "failed_or_rate_limited",
+      "detail": "Reddit 公开 JSON/API 被 403 拦截；本次未取得可安全访问结果。"
+    },
+    {
+      "source": "Reddit r/SaaS",
+      "status": "failed_or_rate_limited",
+      "detail": "Reddit 公开 JSON/API 被 403 拦截；本次未取得可安全访问结果。"
+    },
+    {
+      "source": "Reddit r/indiehackers",
+      "status": "failed_or_rate_limited",
+      "detail": "Reddit 公开 JSON/API 被 403 拦截；本次未取得可安全访问结果。"
+    },
+    {
+      "source": "Stack Exchange",
+      "status": "empty_for_date",
+      "detail": "No matching questions found in the target date window."
+    },
+    {
+      "source": "Product Hunt API",
+      "status": "not_configured",
+      "detail": "未配置 Product Hunt 官方 API 凭证；已跳过，不抓取容易 403 的公开页。"
+    },
+    {
+      "source": "小红书",
+      "status": "failed_or_rate_limited",
+      "detail": "本地社媒采集脚本启动后未返回可用结果；通常是登录态、平台风控或脚本适配问题。"
+    },
+    {
+      "source": "微博",
+      "status": "failed_or_rate_limited",
+      "detail": "本地社媒采集脚本启动后未返回可用结果；通常是登录态、平台风控或脚本适配问题。"
+    }
+  ],
+  "entries": [
+    {
+      "id": "entry-16f36c087fc1",
+      "seriesId": "series-38360a750463",
+      "kind": "opportunity",
+      "quality": "editorial",
+      "title": "从代码生成数据流图，提前做隐私和安全评估",
+      "plain": "隐私与安全评估常靠问卷和人工追问，真正的问题又容易拖到上线前才发现。DataParade 想直接从代码生成数据流图，让评估更早进入开发流程。",
+      "audience": "需要频繁做隐私、安全或供应商风险评估的安全工程师、合规团队和产品研发团队。",
+      "pain": "问卷很难准确还原数据从哪里来、经过什么服务、最后流向哪里；临上线才补评估，整改成本会很高。机会是从代码和配置里提取可核对的数据流，再让专业人员审阅。",
+      "why": "作者有 9 年从业经历，并称做过近 1000 次风险评估，痛点和工作步骤都很具体。这个数字仍是作者自述，需要通过真实项目回放验证。",
+      "validation": "找 3 个做过真实风险评估的团队，拿 10 个已完成项目做回放；比较自动生成的数据流图与最终评估记录，统计漏项、误报和节省的访谈时间。",
+      "risk": "当天只有 4 分、0 条评论，市场需求和付费意愿未经验证；代码分析也无法识别所有线下流程、第三方操作和真实数据用途，不能替代专业评估。",
+      "topics": [
+        "本地工具",
+        "安全与权限",
+        "产品验证"
+      ],
+      "evidence": [
+        {
+          "source": "Hacker News",
+          "sourceType": "需求信号",
+          "originalTitle": "Show HN: DataParade – generate dataflow diagrams from code for risk assessments",
+          "url": "https://github.com/DataParade-io/dataparade-cli",
+          "observedAt": "2026-07-22",
+          "metrics": {},
+          "strength": "中",
+          "boundary": "证据支持具体需求方向，但不等于已经证明付费规模或长期留存。"
+        }
+      ]
+    },
+    {
+      "id": "entry-f3a2e9e7b87c",
+      "seriesId": "series-5c75893d6ee8",
+      "kind": "opportunity",
+      "quality": "editorial",
+      "title": "减少 AI 界面设计的模板感",
+      "plain": "一名前 Figma 从业者认为大语言模型生成的界面太相似，难以贴合品牌，于是尝试用扩散模型生成更有变化的视觉方案。",
+      "audience": "需要快速做品牌化界面探索、但对现有 AI 生成页面模板感不满意的设计师和产品团队。",
+      "pain": "文字模型擅长结构和代码，却容易重复常见布局与视觉套路。机会是把品牌素材、视觉探索和可编辑设计结构接在一起，而不只生成一张图。",
+      "why": "讨论量高于当天多数样本，且痛点与解法边界明确，适合做设计流程对照测试；还没有客户或付费证据。",
+      "validation": "选 5 个有明确品牌规范的页面，分别用纯文字模型和扩散方案生成；让设计师盲评品牌贴合度、可编辑性和返工时间。",
+      "risk": "HN 当天有 20 分、7 条评论，但产品效果主要来自作者展示；扩散结果可能好看却难编辑、难转成稳定前端代码。",
+      "topics": [
+        "增长",
+        "产品验证"
+      ],
+      "evidence": [
+        {
+          "source": "Hacker News",
+          "sourceType": "需求信号",
+          "originalTitle": "Show HN: I left Figma to build a diffusion-based UI design tool",
+          "url": "https://diffui.ai/blog/show-hn",
+          "observedAt": "2026-07-22",
+          "metrics": {},
+          "strength": "中",
+          "boundary": "证据支持具体需求方向，但不等于已经证明付费规模或长期留存。"
+        }
+      ]
+    },
+    {
+      "id": "entry-c81a1cf6c37a",
+      "seriesId": "series-5c38556adee6",
+      "kind": "opportunity",
+      "quality": "editorial",
+      "title": "多个 AI 编程工具的用量预警",
+      "plain": "作者做了一个 macOS 菜单栏工具，集中显示 Claude Code、Codex 和 OpenCode 的 token 用量，并在接近额度时提醒。",
+      "audience": "同时使用多个按额度或订阅限制运行的 AI 编程工具、需要控制消耗的开发者。",
+      "pain": "各工具的用量入口分散，长任务运行时很难及时看到消耗异常。机会是把多工具用量、会话和预警放在一个低打扰入口里。",
+      "why": "产品已上架并提供试用码，说明方向有实际样本；仍没有留存、付费或预警准确性证据，所以只放观察池。",
+      "validation": "找 5 名多工具用户连续使用一周，记录他们真正关心的是 token、费用、剩余额度还是任务返工，并核对预警数据和官方账单是否一致。",
+      "risk": "帖子只有 2 条回复，需求强度有限；不同工具的用量口径和接口可能变化，错误预警也会误导用户。",
+      "topics": [
+        "AI 编程",
+        "产品验证"
+      ],
+      "evidence": [
+        {
+          "source": "V2EX 分享创造",
+          "sourceType": "中文开发者论坛",
+          "originalTitle": "Agent Token 用量统计小工具（macos）",
+          "url": "https://www.v2ex.com/t/1229248",
+          "observedAt": "2026-07-22",
+          "metrics": {},
+          "strength": "中",
+          "boundary": "证据支持具体需求方向，但不等于已经证明付费规模或长期留存。"
+        }
+      ]
+    },
+    {
+      "id": "entry-d8f6eef1ae90",
+      "seriesId": "series-a15d0add0a40",
+      "kind": "opportunity",
+      "quality": "editorial",
+      "title": "把邮件变成可持续运行的智能体任务入口",
+      "plain": "Housecat 把邮箱接到独立智能体电脑、持久工作流和沙箱环境里，想让日常邮件触发的整理、查询和跨应用任务可以继续运行，不必每次从头开始。",
+      "audience": "大量工作从邮件进入、又需要跨附件和多个应用处理的小团队、运营人员和管理者。",
+      "pain": "邮件里的请求常要经过多步处理，普通自动回复很难保存长期状态，也不适合直接执行不受控代码。机会是把收件、持久任务状态和隔离执行接成一条工作流。",
+      "why": "产品把邮箱、持久工作流和独立沙箱放在一起，架构取舍有启发；当前证据只能说明有人在做和讨论，不能证明需求规模。",
+      "validation": "选 3 类高频邮件任务，例如附件归档、信息核对和跨系统跟进，先用人工加半自动流程跑 30 封；记录完成时间、需要人工接管的位置和误操作风险。",
+      "risk": "HN 当天有 14 分、6 条评论，但没有给出客户使用、完成率或付费数据；邮件权限很高，隔离、审计和误触发是核心风险。",
+      "topics": [
+        "自动化",
+        "增长",
+        "安全与权限",
+        "产品验证"
+      ],
+      "evidence": [
+        {
+          "source": "Hacker News",
+          "sourceType": "需求信号",
+          "originalTitle": "Show HN: Housecat.com – Gmail + durable workflows + sandbox VM",
+          "url": "https://housecat.com/",
+          "observedAt": "2026-07-22",
+          "metrics": {},
+          "strength": "中",
+          "boundary": "证据支持具体需求方向，但不等于已经证明付费规模或长期留存。"
+        }
+      ]
+    },
+    {
+      "id": "entry-64c69e6a2047",
+      "seriesId": "series-49a984a24278",
+      "kind": "case",
+      "quality": "editorial",
+      "title": "敏感凭证不离开浏览器的本地调试工具",
+      "plain": "在线 JWT 调试器一边让用户粘贴令牌，一边又提醒不要粘贴真实令牌。作者尝试把解析过程完全留在浏览器本地，减少凭证上传风险。",
+      "audience": "需要排查 JWT 内容、又会接触测试或生产凭证的开发者和运维人员。",
+      "pain": "普通在线工具使用方便，但用户很难确认输入是否被发送或记录。机会是提供可验证的纯本地解析、离线运行和网络请求审计。",
+      "why": "安全矛盾和验证动作都很具体，适合作为本地工具样本；证据不足，只放观察池。",
+      "validation": "做一个断网可用的最小版本，用浏览器开发者工具和自动测试确认解析时没有网络请求；再让 5 名开发者比较它与现有工具的信任和使用成本。",
+      "risk": "DEV.to 当天只有 4 条评论、3 个 reaction，需求规模很弱；纯前端实现仍可能受第三方脚本、扩展或构建供应链影响。",
+      "topics": [
+        "浏览器",
+        "本地工具",
+        "内容工作流",
+        "安全与权限"
+      ],
+      "evidence": [
+        {
+          "source": "DEV.to #webdev",
+          "sourceType": "开发者内容",
+          "originalTitle": "Every JWT debugger tells you not to paste real tokens. So I built one where it doesn't matter.",
+          "url": "https://dev.to/mike_0f35516d33902a0d2546/every-jwt-debugger-tells-you-not-to-paste-real-tokens-so-i-built-one-where-it-doesnt-matter-3cf3",
+          "observedAt": "2026-07-22",
+          "metrics": {},
+          "strength": "中",
+          "boundary": "这是一个可复核的实战案例，不能据此推断市场已经验证。"
+        }
+      ]
+    },
+    {
+      "id": "entry-606158cff39e",
+      "seriesId": "series-b532f3c2e97c",
+      "kind": "opportunity",
+      "quality": "editorial",
+      "title": "给 AI 生成的技术方案做事实核对",
+      "plain": "产品经理用 AI 写出十几页技术方案，但里面会出现不存在的接口、和现有数据结构冲突的设计，还会给出脱离实际的排期。开发者要先花时间拆穿这些内容，老板却容易把篇幅当成专业度。",
+      "audience": "允许产品、运营或非技术同事用 AI 写需求和技术方案的研发团队。",
+      "pain": "AI 把信息不足包装成长文后，错误接口、错误数据结构和假排期会混进正式协作流程。机会是让方案先对照真实代码库、接口文档和项目约束，逐条标出可验证事实、未知项和冲突项。",
+      "why": "原帖列出了不存在的功能与接口、数据结构冲突和失真排期三类具体问题，且有 12 条回复。它适合先做团队内只读验真，不足以证明外部付费市场。",
+      "validation": "收集 10 份真实但已脱敏的 AI 技术方案，由资深开发者标注错误和缺口；再做只读检查原型，比较发现率、误报率和评审耗时。",
+      "risk": "帖子有 12 条回复，但不代表所有团队都愿意引入检查工具；接入代码库和内部文档会带来权限、保密和上下文过期风险。",
+      "topics": [
+        "内容工作流",
+        "安全与权限",
+        "产品验证"
+      ],
+      "evidence": [
+        {
+          "source": "V2EX 程序员",
+          "sourceType": "中文开发者论坛",
+          "originalTitle": "产品经理开始用 ai 做\"技术方案\"了,感觉要死了= =",
+          "url": "https://www.v2ex.com/t/1229246",
+          "observedAt": "2026-07-22",
+          "metrics": {},
+          "strength": "中",
+          "boundary": "证据支持具体需求方向，但不等于已经证明付费规模或长期留存。"
+        }
+      ]
+    }
+  ]
+}

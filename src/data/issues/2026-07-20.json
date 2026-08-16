@@ -1,0 +1,119 @@
+{
+  "schemaVersion": 1,
+  "qualityVersion": "2026-08-16.1",
+  "date": "2026-07-20",
+  "generatedAt": "2026-07-21 13:05:46 Asia/Shanghai",
+  "status": "published",
+  "counts": {
+    "collected": 89,
+    "oldAccepted": 3,
+    "published": 2,
+    "features": 0,
+    "editorial": 2,
+    "rejected": 87
+  },
+  "failedSources": [
+    {
+      "source": "Reddit r/SideProject",
+      "status": "failed_or_rate_limited",
+      "detail": "Reddit 公开 JSON/API 被 403 拦截；本次未取得可安全访问结果。"
+    },
+    {
+      "source": "Reddit r/somebodymakethis",
+      "status": "failed_or_rate_limited",
+      "detail": "Reddit 公开 JSON/API 被 403 拦截；本次未取得可安全访问结果。"
+    },
+    {
+      "source": "Reddit r/SaaS",
+      "status": "failed_or_rate_limited",
+      "detail": "Reddit 公开 JSON/API 被 403 拦截；本次未取得可安全访问结果。"
+    },
+    {
+      "source": "Reddit r/indiehackers",
+      "status": "failed_or_rate_limited",
+      "detail": "Reddit 公开 JSON/API 被 403 拦截；本次未取得可安全访问结果。"
+    },
+    {
+      "source": "Stack Exchange",
+      "status": "empty_for_date",
+      "detail": "No matching questions found in the target date window."
+    },
+    {
+      "source": "Product Hunt API",
+      "status": "not_configured",
+      "detail": "未配置 Product Hunt 官方 API 凭证；已跳过，不抓取容易 403 的公开页。"
+    },
+    {
+      "source": "小红书",
+      "status": "failed_or_rate_limited",
+      "detail": "本地社媒采集脚本启动后未返回可用结果；通常是登录态、平台风控或脚本适配问题。"
+    },
+    {
+      "source": "微博",
+      "status": "failed_or_rate_limited",
+      "detail": "本地社媒采集脚本启动后未返回可用结果；通常是登录态、平台风控或脚本适配问题。"
+    }
+  ],
+  "entries": [
+    {
+      "id": "entry-69f3f9ab66cb",
+      "seriesId": "series-7869a59ee6d1",
+      "kind": "opportunity",
+      "quality": "editorial",
+      "title": "帮应用开发者自动准备退款申诉材料",
+      "plain": "应用用户向 Apple 或 Google 申请退款时，开发者常常来不及提交使用和消费记录，退款就直接变成损失。RefundHalt 想把证据整理和申诉提交自动化。",
+      "audience": "有订阅、虚拟内容或应用内购买收入的独立开发者和小型移动应用团队。",
+      "pain": "退款和拒付处理分散在平台后台、订单记录与用户使用数据里，金额小但频率高时很难逐笔人工处理。机会是自动匹配订单、整理可提交证据，并提醒或完成申诉流程。",
+      "why": "用户、损失来源和可自动化步骤都很具体，适合先做人工服务验证；当前证据不足以证明退款规模、成功率或付费意愿。",
+      "validation": "先访谈 5 个有应用内购买的开发者，核对每月退款笔数、平均损失和当前申诉步骤；再手工替其中一人处理 10 笔，比较追回金额、耗时和平台接受率。",
+      "risk": "证据主要来自产品创始人的 Show HN 自述，当天只有 1 分、3 条评论；平台允许提交哪些数据、自动化是否合规、申诉成功率都需要逐项核实。",
+      "topics": [
+        "自动化",
+        "内容工作流",
+        "产品验证"
+      ],
+      "evidence": [
+        {
+          "source": "Hacker News",
+          "sourceType": "需求信号",
+          "originalTitle": "Show HN: RefundHalt, contest App Store and Google Play refunds automatically",
+          "url": "https://refundhalt.com",
+          "observedAt": "2026-07-20",
+          "metrics": {},
+          "strength": "中",
+          "boundary": "证据支持具体需求方向，但不等于已经证明付费规模或长期留存。"
+        }
+      ]
+    },
+    {
+      "id": "entry-21acd5b42ea0",
+      "seriesId": "series-39e7d4a651b9",
+      "kind": "opportunity",
+      "quality": "editorial",
+      "title": "适合中英混输和代码术语的免手打字工具",
+      "plain": "作者右手骨折后不得不改用语音输入，真正写消息和代码时却经常因为中英文混合、标点、项目名和代码术语识别不准，又退回键盘修改。",
+      "audience": "手部受伤、腕部劳损或需要长时间写代码的人，以及想减少键鼠操作的 AI 编程重度用户。",
+      "pain": "通用语音输入能转普通口语，但进入代码和专业词汇场景后，纠错成本会抵消免手输入的好处。机会是利用个人词表和修改记录，逐步适配项目名、术语与常用表达。",
+      "why": "这是一个直接来自真实使用障碍的信号，具体失败点也已列出；现阶段只支持低成本验证，不能当成普遍需求或付费证明。",
+      "validation": "找 5 名正在用语音写代码或有手部不适的用户，各完成 10 段中英混合、代码术语和标点输入；记录首次识别正确率、手动改字次数，以及连续使用一周后是否改善。",
+      "risk": "帖子只有 2 条回复，且来自作者个人受伤经历；不同口音、隐私处理、系统级输入权限和代码标点识别都会提高实现难度。",
+      "topics": [
+        "AI 编程",
+        "安全与权限",
+        "产品验证"
+      ],
+      "evidence": [
+        {
+          "source": "V2EX 分享创造",
+          "sourceType": "中文开发者论坛",
+          "originalTitle": "手骨折后 🦴 做了个 macOS 语音转文字输入工具",
+          "url": "https://www.v2ex.com/t/1228780",
+          "observedAt": "2026-07-20",
+          "metrics": {},
+          "strength": "中",
+          "boundary": "证据支持具体需求方向，但不等于已经证明付费规模或长期留存。"
+        }
+      ]
+    }
+  ]
+}

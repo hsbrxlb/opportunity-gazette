@@ -1,0 +1,23 @@
+{
+  "name": "opportunity-gazette",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build && pagefind --site dist",
+    "preview": "astro preview",
+    "check": "astro check",
+    "audit:content": "python3 scripts/validate-content.py",
+    "audit:secrets": "python3 scripts/scan-public-output.py"
+  },
+  "dependencies": {
+    "@astrojs/sitemap": "^3.7.3",
+    "astro": "^7.2.2"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.6",
+    "pagefind": "^1.5.2",
+    "typescript": "^5.9.3"
+  }
+}

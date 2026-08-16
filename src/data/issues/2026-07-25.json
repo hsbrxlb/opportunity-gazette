@@ -1,0 +1,177 @@
+{
+  "schemaVersion": 1,
+  "qualityVersion": "2026-08-16.1",
+  "date": "2026-07-25",
+  "generatedAt": "2026-07-26 13:28:20 Asia/Shanghai",
+  "status": "published",
+  "counts": {
+    "collected": 87,
+    "oldAccepted": 20,
+    "published": 4,
+    "features": 0,
+    "editorial": 4,
+    "rejected": 83
+  },
+  "failedSources": [
+    {
+      "source": "Reddit r/SideProject",
+      "status": "failed_or_rate_limited",
+      "detail": "Reddit 公开 JSON/API 被 403 拦截；本次未取得可安全访问结果。"
+    },
+    {
+      "source": "Reddit r/somebodymakethis",
+      "status": "failed_or_rate_limited",
+      "detail": "Reddit 公开 JSON/API 被 403 拦截；本次未取得可安全访问结果。"
+    },
+    {
+      "source": "Reddit r/SaaS",
+      "status": "failed_or_rate_limited",
+      "detail": "Reddit 公开 JSON/API 被 403 拦截；本次未取得可安全访问结果。"
+    },
+    {
+      "source": "Reddit r/indiehackers",
+      "status": "failed_or_rate_limited",
+      "detail": "Reddit 公开 JSON/API 被 403 拦截；本次未取得可安全访问结果。"
+    },
+    {
+      "source": "Stack Exchange",
+      "status": "empty_for_date",
+      "detail": "No matching questions found in the target date window."
+    },
+    {
+      "source": "Product Hunt API",
+      "status": "not_configured",
+      "detail": "未配置 Product Hunt 官方 API 凭证；已跳过，不抓取容易 403 的公开页。"
+    },
+    {
+      "source": "小红书",
+      "status": "failed_or_rate_limited",
+      "detail": "本地社媒采集脚本启动后未返回可用结果；通常是登录态、平台风控或脚本适配问题。"
+    },
+    {
+      "source": "微博",
+      "status": "failed_or_rate_limited",
+      "detail": "本地社媒采集脚本启动后未返回可用结果；通常是登录态、平台风控或脚本适配问题。"
+    }
+  ],
+  "entries": [
+    {
+      "id": "entry-dede2fae5159",
+      "seriesId": "series-cc71b5cae95c",
+      "kind": "opportunity",
+      "quality": "editorial",
+      "title": "不给智能体原始凭证的终端协作层",
+      "plain": "有人想让 AI 帮忙操作终端，但不想把密钥或密码交给它，也不想反复复制粘贴终端内容。",
+      "audience": "用 SecureCRT、PuTTY 等终端，希望引入 AI 辅助又重视凭证安全的运维和开发者。",
+      "pain": "现在要么手工把终端输出贴给 AI，来回很慢；要么让智能体直接进入终端，权限边界又太宽。机会是在两者之间加一层命令审阅、输出脱敏和受控执行。",
+      "why": "用户把使用边界、手工麻烦和安全顾虑都说得很清楚，最小原型也能在非生产环境验证。",
+      "validation": "先做只读原型：由人选择并脱敏一段终端输出，让 AI 给出候选命令，确认后才执行；找 3 名同类用户记录复制次数、审阅耗时和误操作。",
+      "risk": "只有一名用户和 2 条回复，需求范围和付费意愿未验证；终端内容与凭证处理一旦做错，后果可能比手工操作更严重。",
+      "topics": [
+        "本地工具",
+        "内容工作流",
+        "安全与权限",
+        "产品验证"
+      ],
+      "evidence": [
+        {
+          "source": "V2EX 问与答",
+          "sourceType": "中文开发者论坛",
+          "originalTitle": "现在有没有融合 AI Agent 的 SecureCRT、Putty? (类似这样的)",
+          "url": "https://www.v2ex.com/t/1229861",
+          "observedAt": "2026-07-25",
+          "metrics": {},
+          "strength": "中",
+          "boundary": "证据支持具体需求方向，但不等于已经证明付费规模或长期留存。"
+        }
+      ]
+    },
+    {
+      "id": "entry-83758432ab98",
+      "seriesId": "series-ced63753a1d4",
+      "kind": "case",
+      "quality": "editorial",
+      "title": "单云单供应商依赖审计与最小灾备演练",
+      "plain": "一名用户的海外业务全部放在同一云上，供应商故障后服务整体中断，告警还一度显示为欠费。",
+      "audience": "核心服务集中在单一云或单一上游、还没有灾备演练的小团队。",
+      "pain": "团队知道自己没有备份，却往往到事故时才发现告警、联系人和恢复路径也不可靠。机会是先列出单点，再为最关键服务设计最小恢复方案。",
+      "why": "事故链里同时出现单点、告警误导和联系失败，适合转成可执行的依赖审计与演练清单。",
+      "validation": "列出当前服务和上游依赖，挑一个核心服务做一次切换演练，记录恢复时间、数据缺口和联系路径是否有效。",
+      "risk": "证据只有一次事故自述和 1 条回复，不能推断华为云或其他供应商的故障频率；多云方案也会增加成本和维护复杂度。",
+      "topics": [
+        "其他"
+      ],
+      "evidence": [
+        {
+          "source": "V2EX 云计算",
+          "sourceType": "中文开发者论坛",
+          "originalTitle": "华为云海外业务挂了，到现在都还没好，",
+          "url": "https://www.v2ex.com/t/1229863",
+          "observedAt": "2026-07-25",
+          "metrics": {},
+          "strength": "中",
+          "boundary": "这是一个可复核的实战案例，不能据此推断市场已经验证。"
+        }
+      ]
+    },
+    {
+      "id": "entry-ace19c2944f3",
+      "seriesId": "series-a438e6748b6a",
+      "kind": "case",
+      "quality": "editorial",
+      "title": "给 AI 工具测试补独立基准和变异输入",
+      "plain": "一个给智能体使用的计算器通过 389 项测试后，仍被 NIST 的独立参考数据抓出问题。",
+      "audience": "测试 AI 工具、智能体插件或高精度计算能力的开发者和 QA 团队。",
+      "pain": "自建测试集可能和实现共享同一套错误假设，数量再多也会一起漏错。机会是引入独立参考数据和变异输入，检查原有测试的盲区。",
+      "why": "它给出了可复现的测试补强动作，能直接用于判断“测试很多”是否真的覆盖关键错误。",
+      "validation": "拿一个已有测试套件，加入一组独立参考数据和 20 个变异输入，比较新增缺陷数、误报和维护成本。",
+      "risk": "证据是一篇 DEV.to 文章，6 条评论、4 reactions；摘要只说明一个案例，不能证明方法适合所有 AI 工具。",
+      "topics": [
+        "内容工作流"
+      ],
+      "evidence": [
+        {
+          "source": "DEV.to #ai",
+          "sourceType": "开发者内容",
+          "originalTitle": "389 Tests Passed. NIST Still Caught the Bug.",
+          "url": "https://dev.to/copyleftdev/389-tests-passed-nist-still-caught-the-bug-37jh",
+          "observedAt": "2026-07-25",
+          "metrics": {},
+          "strength": "中",
+          "boundary": "这是一个可复核的实战案例，不能据此推断市场已经验证。"
+        }
+      ]
+    },
+    {
+      "id": "entry-077a9e57b0c5",
+      "seriesId": "series-8b0321734169",
+      "kind": "case",
+      "quality": "editorial",
+      "title": "营销文案与产品事实自动对账",
+      "plain": "作者维护 100 个免费浏览器工具时，连续三周发现营销资料与产品实际状态对不上，于是把文档检查放进 CI。",
+      "audience": "功能多、更新快，官网和营销文案容易滞后的独立开发者及小团队。",
+      "pain": "功能改了，落地页和介绍文案却可能还写着旧事实。机会是把可核对的产品声明变成自动检查，发布前先找出不一致。",
+      "why": "它把增长内容准确性落到了发布流程，适合工具型产品用很小成本复现。",
+      "validation": "选一个产品页面，把 10 条功能声明对应到当前配置、接口或页面；每次发布自动检查，记录一周内抓到多少真实错误。",
+      "risk": "证据来自作者个人项目，文章 0 评论、0 reactions；不能据此证明外部需求，自动检查也只适合能机器核对的事实。",
+      "topics": [
+        "自动化",
+        "浏览器",
+        "增长",
+        "内容工作流"
+      ],
+      "evidence": [
+        {
+          "source": "DEV.to #automation",
+          "sourceType": "开发者内容",
+          "originalTitle": "My marketing docs kept lying, so I put them in CI",
+          "url": "https://dev.to/lans-cloud/my-marketing-docs-kept-lying-so-i-put-them-in-ci-0",
+          "observedAt": "2026-07-25",
+          "metrics": {},
+          "strength": "中",
+          "boundary": "这是一个可复核的实战案例，不能据此推断市场已经验证。"
+        }
+      ]
+    }
+  ]
+}

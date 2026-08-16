@@ -1,0 +1,250 @@
+{
+  "schemaVersion": 1,
+  "qualityVersion": "2026-08-16.1",
+  "date": "2026-08-11",
+  "generatedAt": "2026-08-12 13:13:54 Asia/Shanghai",
+  "status": "published",
+  "counts": {
+    "collected": 90,
+    "oldAccepted": 33,
+    "published": 6,
+    "features": 3,
+    "editorial": 3,
+    "rejected": 84
+  },
+  "failedSources": [
+    {
+      "source": "Reddit r/SideProject",
+      "status": "failed_or_rate_limited",
+      "detail": "Reddit 公开 JSON/API 被 403 拦截；本次未取得可安全访问结果。"
+    },
+    {
+      "source": "Reddit r/somebodymakethis",
+      "status": "failed_or_rate_limited",
+      "detail": "Reddit 公开 JSON/API 被 403 拦截；本次未取得可安全访问结果。"
+    },
+    {
+      "source": "Reddit r/SaaS",
+      "status": "failed_or_rate_limited",
+      "detail": "Reddit 公开 JSON/API 被 403 拦截；本次未取得可安全访问结果。"
+    },
+    {
+      "source": "Reddit r/indiehackers",
+      "status": "failed_or_rate_limited",
+      "detail": "Reddit 公开 JSON/API 被 403 拦截；本次未取得可安全访问结果。"
+    },
+    {
+      "source": "Product Hunt API",
+      "status": "not_configured",
+      "detail": "未配置 Product Hunt 官方 API 凭证；已跳过，不抓取容易 403 的公开页。"
+    },
+    {
+      "source": "X public search",
+      "status": "empty",
+      "detail": "脚本运行成功，但没有解析到可用的公开候选结果。"
+    },
+    {
+      "source": "小红书",
+      "status": "failed_or_rate_limited",
+      "detail": "本地社媒采集脚本启动后未返回可用结果；通常是登录态、平台风控或脚本适配问题。"
+    },
+    {
+      "source": "微博",
+      "status": "failed_or_rate_limited",
+      "detail": "本地社媒采集脚本启动后未返回可用结果；通常是登录态、平台风控或脚本适配问题。"
+    }
+  ],
+  "entries": [
+    {
+      "id": "entry-9918f17add21",
+      "seriesId": "series-d7a8f794f14a",
+      "kind": "case",
+      "quality": "feature",
+      "title": "把 AI 课程从一次性答案做成短视频和练习序列",
+      "plain": "Keet 自述可以按主题生成移动课程，用短视频解释并穿插小游戏强化，希望让学习持续一段时间，而非只给一段答案。",
+      "audience": "想用碎片时间系统学习一个主题，又不愿只读长文本的移动端用户。",
+      "pain": "很多 AI 学习工具擅长即时回答，却缺少课程顺序、复习和练习反馈。机会是把生成内容放进持续学习节奏。",
+      "why": "短视频、小游戏和持续课程三部分组合清楚，适合拆成可测的学习流程。",
+      "validation": "选一个有公开大纲的主题完成三天课程，检查知识顺序、事实错误、练习是否对应视频，以及第二天能否回忆关键内容。",
+      "risk": "HN 43 points、45 comments 只能说明讨论较多，不能证明留存、课程质量或学习效果。",
+      "topics": [
+        "内容工作流",
+        "产品验证"
+      ],
+      "evidence": [
+        {
+          "source": "Hacker News",
+          "sourceType": "需求信号",
+          "originalTitle": "Launch HN: Keet (YC S24) – An app to create video courses on anything",
+          "url": "https://www.trykeet.com/",
+          "observedAt": "2026-08-11",
+          "metrics": {
+            "points": 43.0,
+            "comments": 45.0
+          },
+          "strength": "强",
+          "boundary": "这是一个可复核的实战案例，不能据此推断市场已经验证。"
+        }
+      ]
+    },
+    {
+      "id": "entry-f60cf83a6dd3",
+      "seriesId": "series-ad662a871906",
+      "kind": "case",
+      "quality": "feature",
+      "title": "用拦截、人工批准和签名日志验收企业智能体",
+      "plain": "作者演示智能体调查 P1 事故时，危险命令先被拦截，人工批准后才继续修复；文中称使用 8 层控制、137 条拒绝模式和签名审计日志。",
+      "audience": "准备让智能体接触生产环境，需要向安全团队证明可控和可追责的工程团队。",
+      "pain": "单靠提示词承诺“不会执行危险命令”无法审计。机会是把阻止、批准和操作记录做成独立控制层。",
+      "why": "控制点和验收方式都很具体，适合迁移到现有智能体安全测试。",
+      "validation": "在隔离环境准备 10 条允许动作和 10 条危险动作，检查拦截、人工放行、超时和日志验签是否按预期工作。",
+      "risk": "文章 2 comments、15 reactions，仍是作者演示；不能代表其他企业安全负责人会接受，也不能证明 137 条规则覆盖完整。",
+      "topics": [
+        "内容工作流",
+        "安全与权限"
+      ],
+      "evidence": [
+        {
+          "source": "DEV.to #ai",
+          "sourceType": "开发者内容",
+          "originalTitle": "I Showed My CISO Kiro Crew: Here's the Security Model That Got It Approved",
+          "url": "https://dev.to/aws-builders/i-showed-my-ciso-kiro-crew-heres-the-security-model-that-got-it-approved-423j",
+          "observedAt": "2026-08-11",
+          "metrics": {
+            "comments": 2.0,
+            "reactions": 15.0
+          },
+          "strength": "强",
+          "boundary": "这是一个可复核的实战案例，不能据此推断市场已经验证。"
+        }
+      ]
+    },
+    {
+      "id": "entry-fc501f4bf2f3",
+      "seriesId": "series-3112e71bfbe2",
+      "kind": "case",
+      "quality": "feature",
+      "title": "阻止智能体把执行过误报成做成功",
+      "plain": "文章指出，智能体可能做过一个动作就报告完成，却没有确认目标结果真的出现。",
+      "audience": "把智能体接进代码、内容或运营流程，需要相信完成状态的人。",
+      "pain": "一条错误的“已完成”会让后续步骤继续在坏结果上运行。机会是让每类完成状态绑定可机器检查的产物或结果。",
+      "why": "完成状态的验真能直接落到现有自动化里，不需要先换模型。",
+      "validation": "挑 5 个最近的智能体任务，分别写出可检查的完成条件，再对比智能体口头报告与真实产物是否一致。",
+      "risk": "文章只有 6 reactions、0 comments，摘要没有给出具体失败样本，不能据此推断所有智能体都会误报。",
+      "topics": [
+        "自动化",
+        "内容工作流"
+      ],
+      "evidence": [
+        {
+          "source": "DEV.to #ai",
+          "sourceType": "开发者内容",
+          "originalTitle": "Why AI Agents Say “Done” When the Task Actually Failed",
+          "url": "https://dev.to/safiyevmarat/why-ai-agents-say-done-when-the-task-actually-failed-5ck1",
+          "observedAt": "2026-08-11",
+          "metrics": {
+            "comments": 0.0,
+            "reactions": 6.0
+          },
+          "strength": "强",
+          "boundary": "这是一个可复核的实战案例，不能据此推断市场已经验证。"
+        }
+      ]
+    },
+    {
+      "id": "entry-71f184c603a7",
+      "seriesId": "series-2d77db98171b",
+      "kind": "opportunity",
+      "quality": "editorial",
+      "title": "给 AI 编程工具安装包做来源和告警溯源",
+      "plain": "一名用户连续测试多个 AI 编程工具后收到 Windows 木马告警，却无法判断是哪个安装包、进程或文件触发。",
+      "audience": "经常试装新 AI 命令行工具、桌面客户端和切换器的开发者。",
+      "pain": "工具来源多、安装方式杂，一旦安全软件告警，很难把文件哈希、签名、安装时间和运行进程对应起来。",
+      "why": "溯源困难是真实的，但原因完全未确认，只适合保留为安全检查方向。",
+      "validation": "不要在主机重装可疑工具；先保存现有告警路径、文件哈希和安装时间，在隔离虚拟机中逐个核对官方来源、签名与扫描结果。",
+      "risk": "V2EX 单个求助、1 reply；不能说任何被点名的工具带毒，也不能断言安全软件误报。",
+      "topics": [
+        "AI 编程",
+        "增长",
+        "安全与权限"
+      ],
+      "evidence": [
+        {
+          "source": "V2EX 问与答",
+          "sourceType": "中文开发者论坛",
+          "originalTitle": "Trojan:JS/ChatGPTStealer.GVA!MTB 新病毒吗",
+          "url": "https://www.v2ex.com/t/1233805",
+          "observedAt": "2026-08-11",
+          "metrics": {
+            "replies": 1.0
+          },
+          "strength": "中",
+          "boundary": "证据支持具体需求方向，但不等于已经证明付费规模或长期留存。"
+        }
+      ]
+    },
+    {
+      "id": "entry-75db31b48611",
+      "seriesId": "series-18c7b727b38c",
+      "kind": "opportunity",
+      "quality": "editorial",
+      "title": "给临时开发服务做轻量本地控制台",
+      "plain": "作者嫌 Docker 占内存、免费工具不好用、付费工具又贵，于是做了不依赖 Docker 或虚拟机的本地开发环境，用来管数据库、语言版本、端口和常用调试工具。",
+      "audience": "经常启动临时数据库和本地服务，又不想长期运行 Docker Desktop 的独立开发者。",
+      "pain": "零散安装虽然轻，但版本切换、进程状态、端口占用和清理都容易乱。机会是给原生进程增加统一管理和可回滚配置。",
+      "why": "作者给出的资源、价格和管理摩擦都很具体，适合做本地小工具验证。",
+      "validation": "用一个包含数据库、后端和 Mock API 的小项目替换现有环境，比较冷启动时间、空闲内存、切换版本和彻底清理的难度。",
+      "risk": "V2EX 自荐 0 replies；不使用容器会减弱隔离，服务冲突、残留进程和数据目录迁移仍需验证。",
+      "topics": [
+        "本地工具",
+        "产品验证"
+      ],
+      "evidence": [
+        {
+          "source": "V2EX 分享创造",
+          "sourceType": "中文开发者论坛",
+          "originalTitle": "分享一个 vibe coding 的自用轻量级本地开发环境，占用内存很小。",
+          "url": "https://www.v2ex.com/t/1233797",
+          "observedAt": "2026-08-11",
+          "metrics": {
+            "replies": 0.0
+          },
+          "strength": "中",
+          "boundary": "证据支持具体需求方向，但不等于已经证明付费规模或长期留存。"
+        }
+      ]
+    },
+    {
+      "id": "entry-eb521f6d58cb",
+      "seriesId": "series-c82072eb44fd",
+      "kind": "case",
+      "quality": "editorial",
+      "title": "给大模型质量门禁加活性检查",
+      "plain": "一个内容质量门禁连续几周把所有 PR 都判失败，看起来标准很严，实际是大模型接口一直返回 400，错误信息还没有说全。",
+      "audience": "把大模型接进内容审核、代码审查或发布门禁的工程团队。",
+      "pain": "接口坏掉和内容真的不合格如果共用同一种结果，团队会把系统故障当成质量判断。机会是把调用成功、解析成功和业务结论分开验收。",
+      "why": "这是一个很小但后果明确的自动化缺口，测试成本也低。",
+      "validation": "给现有门禁加入一个固定应通过样本和一个固定应拒绝样本，再模拟接口 400，确认三种状态会被明确区分。",
+      "risk": "文章只有 0 comments、0 reactions，是单个开发者的事故记录；不同接口的失败方式并不相同。",
+      "topics": [
+        "自动化",
+        "内容工作流"
+      ],
+      "evidence": [
+        {
+          "source": "DEV.to #automation",
+          "sourceType": "开发者内容",
+          "originalTitle": "My quality gate wasn't strict. It was dead.",
+          "url": "https://dev.to/mk023/my-quality-gate-wasnt-strict-it-was-dead-14lk",
+          "observedAt": "2026-08-11",
+          "metrics": {
+            "comments": 0.0,
+            "reactions": 0.0
+          },
+          "strength": "中",
+          "boundary": "这是一个可复核的实战案例，不能据此推断市场已经验证。"
+        }
+      ]
+    }
+  ]
+}

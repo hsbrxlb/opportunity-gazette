@@ -1,0 +1,86 @@
+{
+  "schemaVersion": 1,
+  "qualityVersion": "2026-08-16.1",
+  "date": "2026-05-20",
+  "generatedAt": "2026-05-21 18:20:49 Asia/Shanghai",
+  "status": "published",
+  "counts": {
+    "collected": 60,
+    "oldAccepted": 23,
+    "published": 2,
+    "features": 0,
+    "editorial": 2,
+    "rejected": 58
+  },
+  "failedSources": [
+    {
+      "source": "Product Hunt public page",
+      "status": "failed",
+      "detail": "403 Client Error: Forbidden for url: https://www.producthunt.com/"
+    }
+  ],
+  "entries": [
+    {
+      "id": "entry-396c2a878852",
+      "seriesId": "series-0d721f556ae9",
+      "kind": "opportunity",
+      "quality": "editorial",
+      "title": "Show HN: ClassKeep – Booking, credits, and smart waitlists for boutique studios",
+      "plain": "有人给小型工作室做预约、课时和候补名单工具，解决排课和名额管理麻烦。",
+      "audience": "正在找省时间工具的小团队、独立开发者或运营人员",
+      "pain": "小型工作室排课、课时、候补名单容易乱，需要一个更轻的管理工具。",
+      "why": "它可以先做成很小的工具或自动化流程。它和 AI 工具、增长、自动化或本地工作流有关。",
+      "validation": "点进评论区，找 5 条真实抱怨，写一个 1 页小方案，看是否有人愿意留下邮箱或继续聊。",
+      "risk": "还没有付费证据，需要先验证用户愿不愿意花钱或投入时间。",
+      "topics": [
+        "自动化",
+        "本地工具",
+        "增长",
+        "产品验证"
+      ],
+      "evidence": [
+        {
+          "source": "Hacker News",
+          "sourceType": "需求信号",
+          "originalTitle": "Show HN: ClassKeep – Booking, credits, and smart waitlists for boutique studios",
+          "url": "https://www.classkeep.app",
+          "observedAt": "2026-05-20",
+          "metrics": {},
+          "strength": "中",
+          "boundary": "证据支持具体需求方向，但不等于已经证明付费规模或长期留存。"
+        }
+      ]
+    },
+    {
+      "id": "entry-fa9203b8b900",
+      "seriesId": "series-1895e2042cf0",
+      "kind": "opportunity",
+      "quality": "editorial",
+      "title": "Show HN: atrium – a resumable, tiling workspace manager for Claude Code, Codex",
+      "plain": "这是一个关于“Show HN: atrium – a resumable, tiling workspace manager for Claude Code, Codex”的弱信号；先当作观察，不直接当成可做项目。",
+      "audience": "重度使用 AI 编程、自动化或命令行工具的人",
+      "pain": "开发者在用开源项目补现有工具的空缺，说明某类工作流还没被大产品吃干净。",
+      "why": "它带有付费、收入或客户线索。它可以先做成很小的工具或自动化流程。它和 AI 工具、增长、自动化或本地工作流有关。",
+      "validation": "点进评论区，找 5 条真实抱怨，写一个 1 页小方案，看是否有人愿意留下邮箱或继续聊。",
+      "risk": "可能已有强竞品，深挖前要先看替代方案和定价。",
+      "topics": [
+        "AI 编程",
+        "自动化",
+        "本地工具",
+        "增长"
+      ],
+      "evidence": [
+        {
+          "source": "Hacker News",
+          "sourceType": "新产品信号",
+          "originalTitle": "Show HN: atrium – a resumable, tiling workspace manager for Claude Code, Codex",
+          "url": "https://getatrium.dev",
+          "observedAt": "2026-05-20",
+          "metrics": {},
+          "strength": "中",
+          "boundary": "证据支持具体需求方向，但不等于已经证明付费规模或长期留存。"
+        }
+      ]
+    }
+  ]
+}

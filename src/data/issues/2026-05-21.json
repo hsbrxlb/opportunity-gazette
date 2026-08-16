@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "qualityVersion": "2026-08-16.1",
+  "date": "2026-05-21",
+  "generatedAt": "2026-05-22 14:01:25 Asia/Shanghai",
+  "status": "published",
+  "counts": {
+    "collected": 60,
+    "oldAccepted": 25,
+    "published": 1,
+    "features": 0,
+    "editorial": 1,
+    "rejected": 59
+  },
+  "failedSources": [
+    {
+      "source": "Product Hunt public page",
+      "status": "failed",
+      "detail": "403 Client Error: Forbidden for url: https://www.producthunt.com/"
+    }
+  ],
+  "entries": [
+    {
+      "id": "entry-db5d9a199edb",
+      "seriesId": "series-57a2c3dddd4a",
+      "kind": "opportunity",
+      "quality": "editorial",
+      "title": "Agent 记忆搜索",
+      "plain": "有人做了面向 coding agent 的共享记忆搜索：不是让模型自己记住，而是把历史会话建立索引后可检索。",
+      "audience": "长任务用户、多 agent 用户、需要从历史会话找证据的人。",
+      "pain": "长任务失败常因为历史决策找不到。机会是把会话、任务结果、错误原因变成可搜索证据层。",
+      "why": "这个信号能落到具体的人和具体流程，不只是泛 AI 热点；可以用很小的验证动作判断有没有需求。",
+      "validation": "用最近 30 个 Codex session 做本地检索实验：给 10 个问题，看能否比人工 rg 更快找到正确上下文。",
+      "risk": "隐私和噪声是核心风险；历史记录不能无脑进长期记忆，需要过滤和权限边界。",
+      "topics": [
+        "AI 编程",
+        "本地工具",
+        "安全与权限",
+        "产品验证"
+      ],
+      "evidence": [
+        {
+          "source": "Hacker News",
+          "sourceType": "需求信号",
+          "originalTitle": "Show HN: Darc – grep-like memory search tool for coding agents",
+          "url": "https://github.com/0xjunha/darc",
+          "observedAt": "2026-05-21",
+          "metrics": {},
+          "strength": "中",
+          "boundary": "证据支持具体需求方向，但不等于已经证明付费规模或长期留存。"
+        }
+      ]
+    }
+  ]
+}

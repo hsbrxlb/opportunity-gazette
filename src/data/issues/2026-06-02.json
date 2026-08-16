@@ -1,0 +1,119 @@
+{
+  "schemaVersion": 1,
+  "qualityVersion": "2026-08-16.1",
+  "date": "2026-06-02",
+  "generatedAt": "2026-06-03 13:41:39 Asia/Shanghai",
+  "status": "published",
+  "counts": {
+    "collected": 79,
+    "oldAccepted": 7,
+    "published": 2,
+    "features": 0,
+    "editorial": 2,
+    "rejected": 77
+  },
+  "failedSources": [
+    {
+      "source": "Reddit r/SideProject",
+      "status": "failed_or_rate_limited",
+      "detail": "Reddit 公开 JSON/API 被 403 拦截；本次未取得可安全访问结果。"
+    },
+    {
+      "source": "Reddit r/somebodymakethis",
+      "status": "failed_or_rate_limited",
+      "detail": "Reddit 公开 JSON/API 被 403 拦截；本次未取得可安全访问结果。"
+    },
+    {
+      "source": "Reddit r/SaaS",
+      "status": "failed_or_rate_limited",
+      "detail": "Reddit 公开 JSON/API 被 403 拦截；本次未取得可安全访问结果。"
+    },
+    {
+      "source": "Reddit r/indiehackers",
+      "status": "failed_or_rate_limited",
+      "detail": "Reddit 公开 JSON/API 被 403 拦截；本次未取得可安全访问结果。"
+    },
+    {
+      "source": "Stack Exchange",
+      "status": "empty_for_date",
+      "detail": "No matching questions found in the target date window."
+    },
+    {
+      "source": "Product Hunt API",
+      "status": "not_configured",
+      "detail": "No PRODUCTHUNT_TOKEN configured; skipped instead of scraping the 403-prone public page."
+    },
+    {
+      "source": "小红书",
+      "status": "failed_or_rate_limited",
+      "detail": "本地社媒采集脚本启动后未返回可用结果；通常是登录态、平台风控或脚本适配问题。"
+    },
+    {
+      "source": "微博",
+      "status": "failed_or_rate_limited",
+      "detail": "本地社媒采集脚本启动后未返回可用结果；通常是登录态、平台风控或脚本适配问题。"
+    }
+  ],
+  "entries": [
+    {
+      "id": "entry-681307485a73",
+      "seriesId": "series-7e665473e2a7",
+      "kind": "opportunity",
+      "quality": "editorial",
+      "title": "Excel 批量导入前的校验助手",
+      "plain": "开发者反复用 Excel 批量导入记录，说明很多内部系统仍靠临时表格搬数据，出错后再返工。",
+      "audience": "内部工具开发者、运营、客服后台、需要把 CSV/Excel 导入系统的小团队。",
+      "pain": "批量导入看起来简单，实际常卡在字段映射、重复记录、格式错误和回滚。机会是做一个导入前校验、预览、差异和回滚计划的小工具。",
+      "why": "这个信号能落到具体的人和具体流程，不只是泛 AI 热点；可以用很小的验证动作判断有没有需求。",
+      "validation": "找 3 个真实导入场景，手工整理最常见错误；做一个上传 Excel 后输出字段映射、异常行和确认清单的原型。",
+      "risk": "每个系统字段不同，泛化难；第一版应服务一个垂直系统或一类固定数据。",
+      "topics": [
+        "自动化",
+        "内容工作流",
+        "产品验证"
+      ],
+      "evidence": [
+        {
+          "source": "DEV.to #automation",
+          "sourceType": "开发者内容",
+          "originalTitle": "Recently, for the nth time, I had to bulk-import records using Excel.",
+          "url": "https://dev.to/canro91/recently-for-the-nth-time-i-had-to-bulk-import-records-using-excel-1lmm",
+          "observedAt": "2026-06-02",
+          "metrics": {},
+          "strength": "中",
+          "boundary": "证据支持具体需求方向，但不等于已经证明付费规模或长期留存。"
+        }
+      ]
+    },
+    {
+      "id": "entry-2ed3a22a5b9d",
+      "seriesId": "series-14242cb63fff",
+      "kind": "opportunity",
+      "quality": "editorial",
+      "title": "发票 Agent 的坏件回归测试",
+      "plain": "有人上线发票抽取 agent 后，被扫描 PDF 这种真实坏件打崩，说明文档自动化不缺 demo，缺上线前后的异常样本测试。",
+      "audience": "做发票、报销、合同、RAG 文档流水线的小团队和内部自动化负责人。",
+      "pain": "生产文档常有扫描件、倾斜、低清、缺页和奇怪表格。机会是给文档 agent 做一套坏件样本库、抽取对比和失败告警。",
+      "why": "这个信号能落到具体的人和具体流程，不只是泛 AI 热点；可以用很小的验证动作判断有没有需求。",
+      "validation": "收集 30 份真实低质量发票/账单，跑现有 OCR 和 LLM 抽取；输出失败类型和修复建议，看财务或运营团队是否愿意每周跑一次。",
+      "risk": "文档里可能有公司和个人隐私；必须脱敏、只读，并避免把错误抽取结果自动写进财务系统。",
+      "topics": [
+        "自动化",
+        "内容工作流",
+        "产品验证"
+      ],
+      "evidence": [
+        {
+          "source": "DEV.to #automation",
+          "sourceType": "开发者内容",
+          "originalTitle": "How a Scanned PDF Broke My Invoice Agent in Production",
+          "url": "https://dev.to/kimlike/how-a-scanned-pdf-broke-my-invoice-agent-in-production-4kni",
+          "observedAt": "2026-06-02",
+          "metrics": {},
+          "strength": "中",
+          "boundary": "证据支持具体需求方向，但不等于已经证明付费规模或长期留存。"
+        }
+      ]
+    }
+  ]
+}

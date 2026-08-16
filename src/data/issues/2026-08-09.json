@@ -1,0 +1,288 @@
+{
+  "schemaVersion": 1,
+  "qualityVersion": "2026-08-16.1",
+  "date": "2026-08-09",
+  "generatedAt": "2026-08-10 13:07:22 Asia/Shanghai",
+  "status": "published",
+  "counts": {
+    "collected": 79,
+    "oldAccepted": 26,
+    "published": 7,
+    "features": 4,
+    "editorial": 3,
+    "rejected": 72
+  },
+  "failedSources": [
+    {
+      "source": "Reddit r/SideProject",
+      "status": "failed_or_rate_limited",
+      "detail": "Reddit 公开 JSON/API 被 403 拦截；本次未取得可安全访问结果。"
+    },
+    {
+      "source": "Reddit r/somebodymakethis",
+      "status": "failed_or_rate_limited",
+      "detail": "Reddit 公开 JSON/API 被 403 拦截；本次未取得可安全访问结果。"
+    },
+    {
+      "source": "Reddit r/SaaS",
+      "status": "failed_or_rate_limited",
+      "detail": "Reddit 公开 JSON/API 被 403 拦截；本次未取得可安全访问结果。"
+    },
+    {
+      "source": "Reddit r/indiehackers",
+      "status": "failed_or_rate_limited",
+      "detail": "Reddit 公开 JSON/API 被 403 拦截；本次未取得可安全访问结果。"
+    },
+    {
+      "source": "Stack Exchange",
+      "status": "empty_for_date",
+      "detail": "目标日期窗口内没有找到匹配问题。"
+    },
+    {
+      "source": "Product Hunt API",
+      "status": "not_configured",
+      "detail": "未配置 Product Hunt 官方 API 凭证；已跳过，不抓取容易 403 的公开页。"
+    },
+    {
+      "source": "X public search",
+      "status": "empty",
+      "detail": "脚本运行成功，但没有解析到可用的公开候选结果。"
+    },
+    {
+      "source": "小红书",
+      "status": "failed_or_rate_limited",
+      "detail": "本地社媒采集脚本启动后未返回可用结果；通常是登录态、平台风控或脚本适配问题。"
+    },
+    {
+      "source": "微博",
+      "status": "failed_or_rate_limited",
+      "detail": "本地社媒采集脚本启动后未返回可用结果；通常是登录态、平台风控或脚本适配问题。"
+    }
+  ],
+  "entries": [
+    {
+      "id": "entry-2b899465715c",
+      "seriesId": "series-a11afdbcc759",
+      "kind": "opportunity",
+      "quality": "feature",
+      "title": "先算贷后生活余量的借款辅助工具",
+      "plain": "作者认为贷款比较只看利率不够，还应让用户看到月供后剩下多少生活预算。",
+      "audience": "想了解借款对现金流影响、但容易只盯最低利率的消费者。",
+      "pain": "利率最低并不自动等于个人负担最轻。机会是把收入、固定支出、缓冲金和情景变化做成可解释试算。",
+      "why": "“贷后还能否正常生活”是具体问题，但当前只有作者文章和少量 reactions。",
+      "validation": "只做教育型原型，用公开假设生成三种情景，并让持牌专业人士检查表述和风险提示。",
+      "risk": "金融高风险，不能代替持牌建议或偿付能力判断；输入数据敏感，模型建议也可能误导。",
+      "topics": [
+        "内容工作流"
+      ],
+      "evidence": [
+        {
+          "source": "DEV.to #ai",
+          "sourceType": "开发者内容",
+          "originalTitle": "🏦 Vaya: an AI loan advisor that asks whether you can still afford to live",
+          "url": "https://dev.to/minhlong2605/vaya-an-ai-loan-advisor-that-asks-whether-you-can-still-afford-to-live-gkc",
+          "observedAt": "2026-08-09",
+          "metrics": {
+            "comments": 1.0,
+            "reactions": 14.0
+          },
+          "strength": "强",
+          "boundary": "证据支持具体需求方向，但不等于已经证明付费规模或长期留存。"
+        }
+      ]
+    },
+    {
+      "id": "entry-e31ecdcb5929",
+      "seriesId": "series-830fb7abb4b7",
+      "kind": "case",
+      "quality": "feature",
+      "title": "让智能体的测试通过留下真实执行证据",
+      "plain": "智能体声称测试通过时，必须同时交出实际运行命令、退出码、产物和可独立复核的结果。",
+      "audience": "使用编程智能体自动写代码和自测、不能接受它只口头报告完成的开发者与团队。",
+      "pain": "文章标题描述了测试一直通过、代码却从未运行的失败。机会是把“执行过”做成机器可核验的完成条件，阻止自报结果冒充验证。",
+      "why": "失败后果和验收方法都非常具体，也贴近日常编程智能体最容易被忽略的验证缺口。",
+      "validation": "准备一个故意失败的测试任务，要求智能体保存命令、退出码和测试产物，再由独立进程复跑，检查它能否识别真实失败。",
+      "risk": "文章有 4 评论、2 反应，但仍是作者系列案例；不能据此推断所有智能体都会虚报，也不能只凭日志文本证明命令真的执行过。",
+      "topics": [
+        "AI 编程",
+        "内容工作流",
+        "产品验证"
+      ],
+      "evidence": [
+        {
+          "source": "DEV.to #ai",
+          "sourceType": "开发者内容",
+          "originalTitle": "My Self-Evolving AI Agent Kept Passing Its Own Tests. The Code Had Never Run",
+          "url": "https://dev.to/stefan_nitu/my-self-evolving-ai-agent-kept-passing-its-own-tests-the-code-had-never-run-3pn",
+          "observedAt": "2026-08-09",
+          "metrics": {
+            "comments": 4.0,
+            "reactions": 2.0
+          },
+          "strength": "强",
+          "boundary": "这是一个可复核的实战案例，不能据此推断市场已经验证。"
+        }
+      ]
+    },
+    {
+      "id": "entry-60bebaf6aaf6",
+      "seriesId": "series-f53c512dddb0",
+      "kind": "case",
+      "quality": "feature",
+      "title": "长期运行智能体的运行账本",
+      "plain": "持续记录智能体用哪个模型、缓存是否命中、记忆调用多少、响应有多慢，方便回看每次调整带来的变化。",
+      "audience": "长期维护客服机器人、个人助理或消息机器人，需要排查成本和稳定性的开发者。",
+      "pain": "智能体长期运行后，供应商切换、缓存、路由、记忆和延迟会互相影响，靠聊天记录很难解释一次变慢或变贵。机会是做统一的运行对照面板。",
+      "why": "摘要列出的运行变量具体且彼此相关，很适合先做成一张可复查的时间线。",
+      "validation": "给一个现有智能体连续记录一周的模型、延迟、缓存和记忆调用，再选一次配置调整，比较前后变化是否能被解释。",
+      "risk": "文章有 7 评论、10 反应，但作者明确说没有基准测试；这些维度只能作为观察起点，不能证明任何配置已经有效。",
+      "topics": [
+        "内容工作流"
+      ],
+      "evidence": [
+        {
+          "source": "DEV.to #ai",
+          "sourceType": "开发者内容",
+          "originalTitle": "What I learned building a long-lived AI agent (the boring version)",
+          "url": "https://dev.to/mansio/what-i-learned-building-a-long-lived-ai-agent-the-boring-version-32p8",
+          "observedAt": "2026-08-09",
+          "metrics": {
+            "comments": 7.0,
+            "reactions": 10.0
+          },
+          "strength": "强",
+          "boundary": "这是一个可复核的实战案例，不能据此推断市场已经验证。"
+        }
+      ]
+    },
+    {
+      "id": "entry-03a10bcf0b96",
+      "seriesId": "series-6208b75daf77",
+      "kind": "opportunity",
+      "quality": "feature",
+      "title": "非技术用户的软路由配置向导和安全检查",
+      "plain": "让不懂代码的人描述分流需求，再生成能回滚的软路由规则，并在应用前检查明显风险。",
+      "audience": "想在 Windows 环境配置软路由、但没有脚本经验的家庭用户和网络工具新手。",
+      "pain": "用户知道 AI 可能会写规则，却不知道选什么客户端、怎样检查脚本、出错后如何恢复。机会是把需求问答、规则预览和回滚放进一个引导流程。",
+      "why": "用户和操作场景很具体，但需求频率和付费意愿完全未知，所以只适合留在观察池。",
+      "validation": "只在隔离测试网络里做一个常见分流规则，先验证语法、DNS 泄露、默认路由和一键回滚，再考虑交给非技术用户试用。",
+      "risk": "证据只有一条运行时可见的提问和 1 个回复；错误规则可能导致断网、流量泄露或绕过原有安全策略，不能直接在主网络自动应用。",
+      "topics": [
+        "增长",
+        "安全与权限",
+        "产品验证"
+      ],
+      "evidence": [
+        {
+          "source": "V2EX 问与答",
+          "sourceType": "中文开发者论坛",
+          "originalTitle": "非码农如何在 Windows 上选择 Ai 帮忙配置软路由，写规则脚本呢？",
+          "url": "https://www.v2ex.com/t/1233213",
+          "observedAt": "2026-08-09",
+          "metrics": {
+            "replies": 1.0
+          },
+          "strength": "强",
+          "boundary": "证据支持具体需求方向，但不等于已经证明付费规模或长期留存。"
+        }
+      ]
+    },
+    {
+      "id": "entry-2bf0fd4bdc76",
+      "seriesId": "series-0fae239d4085",
+      "kind": "opportunity",
+      "quality": "editorial",
+      "title": "Gemini 对话的可移植增量备份",
+      "plain": "定期把 Gemini 对话导出成 Markdown，去掉重复记录，并检查每次备份有没有缺页或格式损坏。",
+      "audience": "重度使用 Gemini 做研究、写作或开发，希望自己保留可检索历史的人。",
+      "pain": "长期对话如果只留在单一平台，整理、搜索和迁移都不方便。机会是把导出、增量去重和内容校验做成一个稳定流程。",
+      "why": "自动导出到 Markdown 和 Drive 的形态明确，但目前没有足够互动或长期稳定性证据。",
+      "validation": "用不含敏感内容的 5 段测试对话跑两次导出，检查第二次是否只新增变化、附件和代码块是否完整、失败时能否重试。",
+      "risk": "文章 0 评论、0 反应，摘要很短；方案不是官方稳定接口，可能受页面、Apps Script 配额和平台规则变化影响。",
+      "topics": [
+        "自动化",
+        "内容工作流"
+      ],
+      "evidence": [
+        {
+          "source": "DEV.to #automation",
+          "sourceType": "开发者内容",
+          "originalTitle": "Auto-Export Gemini Chats to Markdown & Google Drive via GAS (Part 2)",
+          "url": "https://dev.to/maru0122/auto-export-gemini-chats-to-markdown-google-drive-via-gas-part-2-67l",
+          "observedAt": "2026-08-09",
+          "metrics": {
+            "comments": 0.0,
+            "reactions": 0.0
+          },
+          "strength": "中",
+          "boundary": "证据支持具体需求方向，但不等于已经证明付费规模或长期留存。"
+        }
+      ]
+    },
+    {
+      "id": "entry-ea89a0ae2c38",
+      "seriesId": "series-a0a7d607b3a2",
+      "kind": "case",
+      "quality": "editorial",
+      "title": "先验证条款页面完整，再做自动合规检查",
+      "plain": "抓取服务条款时先确认拿到的是正文，不把 HTTP 200 的空壳页面误当成可分析内容。",
+      "audience": "自动检查平台服务条款、发布者协议或合规页面的运营和开发团队。",
+      "pain": "只看状态码会让后续关键词检查在空内容上运行，并给出错误的“没有发现风险”。机会是增加正文完整性验证和人工复核队列。",
+      "why": "这是自动合规流程里一个窄而高后果的失败点，最小验证可以完全在自有测试页面完成。",
+      "validation": "在获准访问的测试页面准备正常正文、空壳和跳转三种情况，检查正文长度、关键标题和内容哈希，并让异常样本进入人工确认。",
+      "risk": "文章只有 1 评论、0 反应；长度和关键词只是启发式判断，抓取必须遵守 robots、网站条款和登录边界，不能绕过风控。",
+      "topics": [
+        "自动化",
+        "内容工作流",
+        "产品验证"
+      ],
+      "evidence": [
+        {
+          "source": "DEV.to #automation",
+          "sourceType": "开发者内容",
+          "originalTitle": "A 200 response is not a page, and your policy check is grepping an empty shell",
+          "url": "https://dev.to/jacksonxly/a-200-response-is-not-a-page-and-your-policy-check-is-grepping-an-empty-shell-3ah1",
+          "observedAt": "2026-08-09",
+          "metrics": {
+            "comments": 1.0,
+            "reactions": 0.0
+          },
+          "strength": "中",
+          "boundary": "这是一个可复核的实战案例，不能据此推断市场已经验证。"
+        }
+      ]
+    },
+    {
+      "id": "entry-37208bd01aa8",
+      "seriesId": "series-048198cb4a65",
+      "kind": "case",
+      "quality": "editorial",
+      "title": "盘活停更的技术内容资产",
+      "plain": "一个已有读者和自然流量的技术博客停更后，作者不知道该复活、转型、出售还是归档。",
+      "audience": "积累过博客、Newsletter、课程或社区受众，但已没有精力持续更新的创作者。",
+      "pain": "旧内容仍有搜索和订阅资产，处理决策却缺少流量衰减、更新成本和变现路径的比较。机会是做内容资产盘点与小规模复活实验。",
+      "why": "它给出了一项真实存量资产和明确决策问题，适合先做低成本恢复实验。",
+      "validation": "挑 10 篇仍有流量的旧文，更新其中 2 篇并加一个明确转化动作，观察四周的流量和订阅变化。",
+      "risk": "这是单个博客案例；粉丝数和历史阅读不等于当前活跃度或购买意愿。",
+      "topics": [
+        "增长",
+        "内容工作流"
+      ],
+      "evidence": [
+        {
+          "source": "Hacker News",
+          "sourceType": "需求信号",
+          "originalTitle": "Ask HN: My dev blog has 11k followers. I stopped writing it. What would you do?",
+          "url": "https://news.ycombinator.com/item?id=49231291",
+          "observedAt": "2026-08-09",
+          "metrics": {
+            "points": 6.0,
+            "comments": 6.0
+          },
+          "strength": "中",
+          "boundary": "这是一个可复核的实战案例，不能据此推断市场已经验证。"
+        }
+      ]
+    }
+  ]
+}

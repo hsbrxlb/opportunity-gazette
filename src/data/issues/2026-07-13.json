@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "qualityVersion": "2026-08-16.1",
+  "date": "2026-07-13",
+  "generatedAt": "2026-07-14 13:05:57 Asia/Shanghai",
+  "status": "published",
+  "counts": {
+    "collected": 80,
+    "oldAccepted": 2,
+    "published": 1,
+    "features": 0,
+    "editorial": 1,
+    "rejected": 79
+  },
+  "failedSources": [
+    {
+      "source": "Reddit r/SideProject",
+      "status": "failed_or_rate_limited",
+      "detail": "Reddit 公开 JSON/API 被 403 拦截；本次未取得可安全访问结果。"
+    },
+    {
+      "source": "Reddit r/somebodymakethis",
+      "status": "failed_or_rate_limited",
+      "detail": "Reddit 公开 JSON/API 被 403 拦截；本次未取得可安全访问结果。"
+    },
+    {
+      "source": "Reddit r/SaaS",
+      "status": "failed_or_rate_limited",
+      "detail": "Reddit 公开 JSON/API 被 403 拦截；本次未取得可安全访问结果。"
+    },
+    {
+      "source": "Reddit r/indiehackers",
+      "status": "failed_or_rate_limited",
+      "detail": "Reddit 公开 JSON/API 被 403 拦截；本次未取得可安全访问结果。"
+    },
+    {
+      "source": "Stack Exchange",
+      "status": "empty_for_date",
+      "detail": "No matching questions found in the target date window."
+    },
+    {
+      "source": "Product Hunt API",
+      "status": "not_configured",
+      "detail": "未配置 Product Hunt 官方 API 凭证；已跳过，不抓取容易 403 的公开页。"
+    },
+    {
+      "source": "小红书",
+      "status": "failed_or_rate_limited",
+      "detail": "本地社媒采集脚本启动后未返回可用结果；通常是登录态、平台风控或脚本适配问题。"
+    },
+    {
+      "source": "微博",
+      "status": "failed_or_rate_limited",
+      "detail": "本地社媒采集脚本启动后未返回可用结果；通常是登录态、平台风控或脚本适配问题。"
+    }
+  ],
+  "entries": [
+    {
+      "id": "entry-402d06b0c87e",
+      "seriesId": "series-adf3f6d73dfa",
+      "kind": "case",
+      "quality": "editorial",
+      "title": "智能体失败链路可视化诊断",
+      "plain": "Hiver 的作者说，智能体的难点常在排查失败原因：工具缺失、权限配错、技能无效或系统提示有问题，可能几步之后才暴露，普通日志很难定位。",
+      "audience": "在调试多步智能体工作流上花很多时间的开发者。",
+      "pain": "多步执行、工具调用、权限和提示配置缠在一起时，失败往往只在后续结果里出现。机会是把整条执行链串起来，让开发者看到错误从哪一步开始。",
+      "why": "作者给出了具体的失败原因和调试场景，适合做小范围工具验证；但证据很弱，所以只放入观察池。",
+      "validation": "搭一个故意在第三步出错的简单智能体工作流，用 Hiver 跑一次，记录它能否比直接看日志更快定位失败点。",
+      "risk": "当天只有 1 分、0 条评论，目前只有作者自述和产品发布，还不能证明市场需求。",
+      "topics": [
+        "浏览器",
+        "安全与权限",
+        "产品验证"
+      ],
+      "evidence": [
+        {
+          "source": "Hacker News",
+          "sourceType": "需求信号",
+          "originalTitle": "Show HN: Hiver – Chrome DevTools for AI Agents",
+          "url": "https://hiver.sh",
+          "observedAt": "2026-07-13",
+          "metrics": {},
+          "strength": "中",
+          "boundary": "这是一个可复核的实战案例，不能据此推断市场已经验证。"
+        }
+      ]
+    }
+  ]
+}

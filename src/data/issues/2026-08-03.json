@@ -1,0 +1,269 @@
+{
+  "schemaVersion": 1,
+  "qualityVersion": "2026-08-16.1",
+  "date": "2026-08-03",
+  "generatedAt": "2026-08-04 00:30:22 Asia/Shanghai",
+  "status": "published",
+  "counts": {
+    "collected": 84,
+    "oldAccepted": 25,
+    "published": 7,
+    "features": 0,
+    "editorial": 7,
+    "rejected": 77
+  },
+  "failedSources": [
+    {
+      "source": "Reddit r/SideProject",
+      "status": "failed_or_rate_limited",
+      "detail": "Reddit 公开 JSON/API 被 403 拦截；本次未取得可安全访问结果。"
+    },
+    {
+      "source": "Reddit r/somebodymakethis",
+      "status": "failed_or_rate_limited",
+      "detail": "Reddit 公开 JSON/API 被 403 拦截；本次未取得可安全访问结果。"
+    },
+    {
+      "source": "Reddit r/SaaS",
+      "status": "failed_or_rate_limited",
+      "detail": "Reddit 公开 JSON/API 被 403 拦截；本次未取得可安全访问结果。"
+    },
+    {
+      "source": "Reddit r/indiehackers",
+      "status": "failed_or_rate_limited",
+      "detail": "Reddit 公开 JSON/API 被 403 拦截；本次未取得可安全访问结果。"
+    },
+    {
+      "source": "Stack Exchange",
+      "status": "empty_for_date",
+      "detail": "目标日期窗口内没有找到匹配问题。"
+    },
+    {
+      "source": "Product Hunt API",
+      "status": "not_configured",
+      "detail": "未配置 Product Hunt 官方 API 凭证；已跳过，不抓取容易 403 的公开页。"
+    },
+    {
+      "source": "小红书",
+      "status": "failed_or_rate_limited",
+      "detail": "本地社媒采集脚本启动后未返回可用结果；通常是登录态、平台风控或脚本适配问题。"
+    },
+    {
+      "source": "微博",
+      "status": "failed_or_rate_limited",
+      "detail": "本地社媒采集脚本启动后未返回可用结果；通常是登录态、平台风控或脚本适配问题。"
+    }
+  ],
+  "entries": [
+    {
+      "id": "entry-2fd770a41850",
+      "seriesId": "series-9cd78e1df496",
+      "kind": "opportunity",
+      "quality": "editorial",
+      "title": "Claude Code 的安全跨电脑迁移包",
+      "plain": "一名用户在多台电脑之间迁移 Claude Code 时，发现全局与项目配置分散，官方也没有类似 GitHub 的同步方式。",
+      "audience": "经常换电脑、重装环境或同时使用多台机器的 Claude Code 用户。",
+      "pain": "配置、规则和项目上下文需要手工查找搬运，凭据又不能跟着复制。机会是生成可审查的迁移清单，只同步安全配置。",
+      "why": "它和跨设备 AI 开发直接相关，需求动作明确，最小版本可以先是一份可验证的迁移清单。",
+      "validation": "在两台测试机器间迁移一次，列出应同步、应重建和禁止同步的项目；验收规则、技能和项目设置是否完整，敏感值是否为零。",
+      "risk": "V2EX 当天只有 1 条回复，是单帖需求；路径可能随客户端版本变化，错误同步还可能泄露凭据或覆盖本地配置。",
+      "topics": [
+        "AI 编程",
+        "本地工具",
+        "增长",
+        "安全与权限"
+      ],
+      "evidence": [
+        {
+          "source": "V2EX Claude",
+          "sourceType": "中文开发者论坛",
+          "originalTitle": "claude code 有方便的在不同电脑间迁移的方法吗？",
+          "url": "https://www.v2ex.com/t/1231848",
+          "observedAt": "2026-08-03",
+          "metrics": {},
+          "strength": "中",
+          "boundary": "证据支持具体需求方向，但不等于已经证明付费规模或长期留存。"
+        }
+      ]
+    },
+    {
+      "id": "entry-4360204f3e2b",
+      "seriesId": "series-bd2b9e09e81b",
+      "kind": "opportunity",
+      "quality": "editorial",
+      "title": "低成本网站流量研究的合规替代",
+      "plain": "一名用户觉得 Similarweb API 太贵，用代理与无头浏览器做了约 2 美元每千次域名查询的方案，仍在寻找更便宜的路径。",
+      "audience": "预算有限、需要批量做竞品或网站流量研究的独立开发者和小团队。",
+      "pain": "商业流量数据对小团队偏贵，但自行抓取可能不准或违反条款。机会是比较合规公开来源的覆盖、误差和成本，不做绕过。",
+      "why": "帖子给出了明确预算压力，但可做的产品方向必须建立在合规和误差透明上。",
+      "validation": "选 20 个已知网站，对比两个允许使用的数据源，记录覆盖率、与公开事实的偏差和每千次成本，并逐条核对服务条款。",
+      "risk": "V2EX 当天 0 回复，成本是作者自报；不能鼓励逆向、绕过付费或反爬，低价结果也可能只是低质量估算。",
+      "topics": [
+        "浏览器",
+        "产品验证"
+      ],
+      "evidence": [
+        {
+          "source": "V2EX 问与答",
+          "sourceType": "中文开发者论坛",
+          "originalTitle": "similarweb 流量查询接口逆向",
+          "url": "https://www.v2ex.com/t/1231853",
+          "observedAt": "2026-08-03",
+          "metrics": {},
+          "strength": "中",
+          "boundary": "证据支持具体需求方向，但不等于已经证明付费规模或长期留存。"
+        }
+      ]
+    },
+    {
+      "id": "entry-1ff6ab084645",
+      "seriesId": "series-de6e343ce0e0",
+      "kind": "opportunity",
+      "quality": "editorial",
+      "title": "把 Shopify 移动端慢站做成批量诊断入口",
+      "plain": "作者称用 PageSpeed Insights API 扫描了 269 个 Shopify 和 DTC 商店，标题给出的移动端中位分数是 48。",
+      "audience": "服务 Shopify 店铺的建站、转化优化和性能顾问。",
+      "pain": "店主能拿到跑分，却未必知道先修什么。机会是把批量检测变成按影响和修复成本排序的诊断，而不是只报一个分数。",
+      "why": "数据提示了可批量发现的问题，但商业价值要靠店主是否愿意采取行动验证。",
+      "validation": "随机选 10 个 Shopify 站点复跑，核对样本和方法，再为其中 3 个做人工修复排序，访谈店主是否看得懂、愿不愿处理。",
+      "risk": "文章当天 0 反应、0 评论，269 个站的抽样方法和标题数字未独立复核，不能代表整个行业或直接证明付费需求。",
+      "topics": [
+        "自动化",
+        "增长",
+        "内容工作流",
+        "产品验证"
+      ],
+      "evidence": [
+        {
+          "source": "DEV.to #automation",
+          "sourceType": "开发者内容",
+          "originalTitle": "I ran Lighthouse on 269 Shopify stores. The median mobile score was 48.",
+          "url": "https://dev.to/bkocdur/i-ran-lighthouse-on-269-shopify-stores-the-median-mobile-score-was-48-3p3e",
+          "observedAt": "2026-08-03",
+          "metrics": {},
+          "strength": "中",
+          "boundary": "证据支持具体需求方向，但不等于已经证明付费规模或长期留存。"
+        }
+      ]
+    },
+    {
+      "id": "entry-ff51c8b11050",
+      "seriesId": "series-39eb2792fcfb",
+      "kind": "opportunity",
+      "quality": "editorial",
+      "title": "把肯尼亚 Odoo 运维和电子税务合规打包",
+      "plain": "文章介绍托管 Odoo 19 并对接肯尼亚 KRA eTIMs，目标是减少企业同时处理服务器和电子税务合规的摩擦。",
+      "audience": "在肯尼亚使用 Odoo 的企业，以及服务这些企业的实施和运维顾问。",
+      "pain": "ERP 运维与本地税务要求分开处理，容易重复配置和出错。机会是提供地域明确的托管与合规连接服务。",
+      "why": "它是一个用户、地域和法规都具体的垂直自动化方向，但需要当地验证。",
+      "validation": "访谈 3 家实际使用 Odoo 的肯尼亚企业，确认当前人工步骤、失败后果和预算，再由当地专业人士核对合规边界。",
+      "risk": "文章当天 6 个反应、0 条评论，没有客户或效果数据；这不是法律或税务建议，法规和接口变化也会带来持续维护成本。",
+      "topics": [
+        "自动化",
+        "本地工具",
+        "增长",
+        "内容工作流"
+      ],
+      "evidence": [
+        {
+          "source": "DEV.to #automation",
+          "sourceType": "开发者内容",
+          "originalTitle": "Engineering JengaStack: How We Built Managed Odoo 19 & Automated KRA eTIMs Compliance for Kenya",
+          "url": "https://dev.to/ken_mwaura1/engineering-jengastack-how-we-built-managed-odoo-19-automated-kra-etims-compliance-for-kenya-53g3",
+          "observedAt": "2026-08-03",
+          "metrics": {},
+          "strength": "中",
+          "boundary": "证据支持具体需求方向，但不等于已经证明付费规模或长期留存。"
+        }
+      ]
+    },
+    {
+      "id": "entry-0133bb2b8146",
+      "seriesId": "series-317e68388408",
+      "kind": "case",
+      "quality": "editorial",
+      "title": "给跨仓库自动合并加预算与紧急停止",
+      "plain": "一名独立开发者自述维护约 20 个生产和支持仓库，并让智能体夜间处理合并，同时设置预算上限和紧急停止开关。",
+      "audience": "独自维护多个仓库、想自动处理低风险更新的开发者和小团队。",
+      "pain": "夜间自动合并能省等待时间，但失败会跨仓库扩散。机会是按风险分级权限，把预算、CI、回滚和人工审批放进同一套规则。",
+      "why": "可复用的价值在控制面，而不是“自动合并”这个动作本身。",
+      "validation": "只在一个可回滚的低风险仓库做模拟：限制文件范围和费用，故意制造 CI 失败，检查是否停止、告警并保留回滚证据。",
+      "risk": "文章当天 2 条评论、0 反应，现有证据没有成功率或长期运行数据；标题里的安全措施也不代表实现可靠。",
+      "topics": [
+        "自动化",
+        "内容工作流",
+        "安全与权限"
+      ],
+      "evidence": [
+        {
+          "source": "DEV.to #automation",
+          "sourceType": "开发者内容",
+          "originalTitle": "I Gave an AI Agent Nightly Merge Rights to Every Repo I Own (With a Budget and a Kill Switch)",
+          "url": "https://dev.to/jenatechio/i-gave-an-ai-agent-nightly-merge-rights-to-every-repo-i-own-with-a-budget-and-a-kill-switch-5b6k",
+          "observedAt": "2026-08-03",
+          "metrics": {},
+          "strength": "中",
+          "boundary": "这是一个可复核的实战案例，不能据此推断市场已经验证。"
+        }
+      ]
+    },
+    {
+      "id": "entry-a8c6456b59c7",
+      "seriesId": "series-6ff1ad0c746e",
+      "kind": "opportunity",
+      "quality": "editorial",
+      "title": "给非 Stripe 优势市场组合本地付款方式",
+      "plain": "作者在 Skill Exchange 结账中同时处理美元与卢比，并分享 PayPal 和 UPI 组合带来的实现经验。",
+      "audience": "面向印度或其他本地支付习惯明显市场的独立开发者和小型 SaaS。",
+      "pain": "只接一种全球支付渠道，可能让目标用户无法付款。机会是按地区提供合适方式，并把税务、退款和失败处理做完整。",
+      "why": "它提醒小产品先按真实客户的付款环境设计结账，而不是默认所有市场都适合 Stripe。",
+      "validation": "先确认目标客户最常用的两种付款方式，再用沙盒走通成功、失败和退款流程，并请当地专业人士检查合规。",
+      "risk": "文章当天 19 个反应、0 条评论，是个人经验，没有收入或转化数据；地区资质、税务和退款规则不能照搬。",
+      "topics": [
+        "本地工具",
+        "增长",
+        "内容工作流"
+      ],
+      "evidence": [
+        {
+          "source": "DEV.to #ai",
+          "sourceType": "开发者内容",
+          "originalTitle": "Dollars and rupees without Stripe: what building Skill Exchange's checkout taught me (PayPal + UPI)",
+          "url": "https://dev.to/mohanvenkatakrishnan/dollars-and-rupees-without-stripe-what-building-skill-exchanges-checkout-taught-me-paypal-upi-3i8p",
+          "observedAt": "2026-08-03",
+          "metrics": {},
+          "strength": "中",
+          "boundary": "证据支持具体需求方向，但不等于已经证明付费规模或长期留存。"
+        }
+      ]
+    },
+    {
+      "id": "entry-95236670ba1e",
+      "seriesId": "series-535114a8db3c",
+      "kind": "case",
+      "quality": "editorial",
+      "title": "零依赖的跨语言任务队列",
+      "plain": "Zizq 自述是一个单二进制、零依赖的任务队列，可以嵌入不同技术栈，并让多种语言生产和消费任务。",
+      "audience": "不想额外维护 Redis 或 RabbitMQ、又需要跨语言后台任务的小团队和自托管项目。",
+      "pain": "为少量后台任务部署完整中间件可能过重。机会是用更轻的运行单元降低安装和运维成本。",
+      "why": "部署形态明确，但可靠性边界必须先用故障测试补齐。",
+      "validation": "在非生产环境跑一组跨语言任务，测试重启、重复投递、失败重试、持久化和并发压力。",
+      "risk": "HN 当天 1 分、2 条评论，项目还很早；现有证据没有负载、持久化或故障恢复数据，不能直接替换生产队列。",
+      "topics": [
+        "其他"
+      ],
+      "evidence": [
+        {
+          "source": "Hacker News",
+          "sourceType": "需求信号",
+          "originalTitle": "Show HN: Zizq is a fast, single-binary job queue that fits into any stack",
+          "url": "https://zizq.io",
+          "observedAt": "2026-08-03",
+          "metrics": {},
+          "strength": "中",
+          "boundary": "这是一个可复核的实战案例，不能据此推断市场已经验证。"
+        }
+      ]
+    }
+  ]
+}

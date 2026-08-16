@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "qualityVersion": "2026-08-16.1",
+  "date": "2026-05-22",
+  "generatedAt": "2026-05-23 13:03:35 Asia/Shanghai",
+  "status": "no精品",
+  "counts": {
+    "collected": 49,
+    "oldAccepted": 3,
+    "published": 0,
+    "features": 0,
+    "editorial": 0,
+    "rejected": 49
+  },
+  "failedSources": [
+    {
+      "source": "Product Hunt public page",
+      "status": "failed",
+      "detail": "403 Client Error: Forbidden for url: https://www.producthunt.com/"
+    }
+  ],
+  "entries": []
+}

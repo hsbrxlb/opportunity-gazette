@@ -1,0 +1,412 @@
+{
+  "schemaVersion": 1,
+  "qualityVersion": "2026-08-16.1",
+  "date": "2026-08-10",
+  "generatedAt": "2026-08-11 13:13:23 Asia/Shanghai",
+  "status": "published",
+  "counts": {
+    "collected": 85,
+    "oldAccepted": 25,
+    "published": 11,
+    "features": 3,
+    "editorial": 8,
+    "rejected": 74
+  },
+  "failedSources": [
+    {
+      "source": "Reddit r/SideProject",
+      "status": "failed_or_rate_limited",
+      "detail": "Reddit 公开 JSON/API 被 403 拦截；本次未取得可安全访问结果。"
+    },
+    {
+      "source": "Reddit r/somebodymakethis",
+      "status": "failed_or_rate_limited",
+      "detail": "Reddit 公开 JSON/API 被 403 拦截；本次未取得可安全访问结果。"
+    },
+    {
+      "source": "Reddit r/SaaS",
+      "status": "failed_or_rate_limited",
+      "detail": "Reddit 公开 JSON/API 被 403 拦截；本次未取得可安全访问结果。"
+    },
+    {
+      "source": "Reddit r/indiehackers",
+      "status": "failed_or_rate_limited",
+      "detail": "Reddit 公开 JSON/API 被 403 拦截；本次未取得可安全访问结果。"
+    },
+    {
+      "source": "Stack Exchange",
+      "status": "empty_for_date",
+      "detail": "目标日期窗口内没有找到匹配问题。"
+    },
+    {
+      "source": "Product Hunt API",
+      "status": "not_configured",
+      "detail": "未配置 Product Hunt 官方 API 凭证；已跳过，不抓取容易 403 的公开页。"
+    },
+    {
+      "source": "X public search",
+      "status": "empty",
+      "detail": "脚本运行成功，但没有解析到可用的公开候选结果。"
+    },
+    {
+      "source": "小红书",
+      "status": "failed_or_rate_limited",
+      "detail": "本地社媒采集脚本启动后未返回可用结果；通常是登录态、平台风控或脚本适配问题。"
+    },
+    {
+      "source": "微博",
+      "status": "failed_or_rate_limited",
+      "detail": "本地社媒采集脚本启动后未返回可用结果；通常是登录态、平台风控或脚本适配问题。"
+    }
+  ],
+  "entries": [
+    {
+      "id": "entry-b71230d1577d",
+      "seriesId": "series-c6be4bedd58b",
+      "kind": "case",
+      "quality": "feature",
+      "title": "单文件部署的离线编程智能体",
+      "plain": "Ante 的标题主张它是一个单二进制、可离线运行的编程智能体，HN 当次有 122 points 和 75 comments。",
+      "audience": "代码不能上传云端、网络受限，或想减少安装依赖的开发者与内网团队。",
+      "pain": "离线编程工具常卡在部署复杂、模型能力和项目兼容性。机会是把运行环境压成一个文件，再用真实任务验收。",
+      "why": "互动量说明这个标题方向引起了讨论，但产品能力仍需要从零核验。",
+      "validation": "断网后用一个熟悉的小仓库做 3 个有标准答案的修改，记录安装步骤、完成率、耗时和硬件占用。",
+      "risk": "本次证据没有功能摘要，除了标题和互动量外没有可核验细节；不能据此确认模型、性能、隐私实现或任务质量。",
+      "topics": [
+        "AI 编程"
+      ],
+      "evidence": [
+        {
+          "source": "Hacker News",
+          "sourceType": "新产品信号",
+          "originalTitle": "Show HN: Ante, a coding agent in a single binary that runs offline",
+          "url": "https://github.com/AntigmaLabs/ante",
+          "observedAt": "2026-08-10",
+          "metrics": {
+            "points": 122.0,
+            "comments": 75.0
+          },
+          "strength": "强",
+          "boundary": "这是一个可复核的实战案例，不能据此推断市场已经验证。"
+        }
+      ]
+    },
+    {
+      "id": "entry-4d7df209fcf0",
+      "seriesId": "series-09f7b585e0df",
+      "kind": "opportunity",
+      "quality": "feature",
+      "title": "自动化设备的完整周期时间计算器",
+      "plain": "作者指出只看直线执行器速度无法估算机器产出，并做了一个 Python 周期时间计算器。",
+      "audience": "需要快速估算自动化设备节拍的机械、制造和方案工程师。",
+      "pain": "单一速度参数会漏掉完整动作周期里的其他时间。机会是把必要输入、计算过程和实测偏差做成透明小工具。",
+      "why": "问题很窄，但输入、输出和验收方式都清楚，适合做轻量工具。",
+      "validation": "拿一个已知实测周期的工位输入参数，对比计算值与实测值，并记录偏差来自哪个未建模步骤。",
+      "risk": "DEV.to 当次 0 comments、5 reactions，没有用户访谈、付费证据或模型细节，不能确认适用哪些设备。",
+      "topics": [
+        "自动化",
+        "内容工作流",
+        "产品验证"
+      ],
+      "evidence": [
+        {
+          "source": "DEV.to #automation",
+          "sourceType": "开发者内容",
+          "originalTitle": "Build a Linear Actuator Cycle-Time Calculator in Python",
+          "url": "https://dev.to/orion_lc/build-a-linear-actuator-cycle-time-calculator-in-python-9ji",
+          "observedAt": "2026-08-10",
+          "metrics": {
+            "comments": 0.0,
+            "reactions": 5.0
+          },
+          "strength": "强",
+          "boundary": "证据支持具体需求方向，但不等于已经证明付费规模或长期留存。"
+        }
+      ]
+    },
+    {
+      "id": "entry-ebb2764266cf",
+      "seriesId": "series-8063476805b6",
+      "kind": "case",
+      "quality": "feature",
+      "title": "让智能体测试覆盖真实生产失败",
+      "plain": "一篇案例称智能体通过了 2,283 个测试，仍在生产环境出错，文章还讨论协议设计和密码学验证。",
+      "audience": "用大量测试验收智能体、自动化服务或工具调用协议的工程与测试团队。",
+      "pain": "测试数量很高仍可能漏掉生产环境的协议边界。机会是把已发生故障变成回归场景，并记录测试到底证明了什么。",
+      "why": "它提醒团队把注意力从测试数量转到生产故障能否被复现和拦住。",
+      "validation": "挑 5 个真实生产故障，逐个确认现有测试能否复现；不能复现的补成固定场景，并由独立环境重跑。",
+      "risk": "DEV.to 当次 6 comments、5 reactions；摘要没有披露具体故障和根因，不能凭标题推断是哪类测试缺口。",
+      "topics": [
+        "自动化",
+        "内容工作流",
+        "产品验证"
+      ],
+      "evidence": [
+        {
+          "source": "DEV.to #ai",
+          "sourceType": "开发者内容",
+          "originalTitle": "When Your AI Agent Passes 2,283 Tests — And Still Fails in Production",
+          "url": "https://dev.to/dengyier/when-your-ai-agent-passes-2283-tests-and-still-fails-in-production-2dga",
+          "observedAt": "2026-08-10",
+          "metrics": {
+            "comments": 6.0,
+            "reactions": 5.0
+          },
+          "strength": "强",
+          "boundary": "这是一个可复核的实战案例，不能据此推断市场已经验证。"
+        }
+      ]
+    },
+    {
+      "id": "entry-4b62b8ef214a",
+      "seriesId": "series-0723657b3eb8",
+      "kind": "case",
+      "quality": "editorial",
+      "title": "免注册汇率 API 的稳定性与替代源检查",
+      "plain": "作者因现有服务要注册、免费额度低或会停服，自建了免 key 的汇率 API，并自述运行两年、每月约 500 万次请求。",
+      "audience": "需要汇率数据的个人项目、跨境小工具和不想管理 API key 的开发者。",
+      "pain": "免费数据源接入简单，但停服和数据错误会直接影响产品。机会是把源切换、时效检查和异常告警一起做掉。",
+      "why": "自述用量和免 key 形态提供了可测试的真实入口，但必须先验证数据与稳定性。",
+      "validation": "连续一周对比它与两个公开基准源的更新时间、币种差异和可用率，再演练一次自动切换。",
+      "risk": "V2EX 当次 0 回复；两年、月 500 万次、170 多币种和维护十年的承诺均为作者自述，免费服务没有可依赖的服务保障。",
+      "topics": [
+        "产品验证"
+      ],
+      "evidence": [
+        {
+          "source": "V2EX 开源软件",
+          "sourceType": "中文开发者论坛",
+          "originalTitle": "分享一个免费汇率 API：已经稳定运行 2 年（每月 500 万次请求）",
+          "url": "https://www.v2ex.com/t/1233507",
+          "observedAt": "2026-08-10",
+          "metrics": {
+            "replies": 0.0
+          },
+          "strength": "中",
+          "boundary": "这是一个可复核的实战案例，不能据此推断市场已经验证。"
+        }
+      ]
+    },
+    {
+      "id": "entry-a0e61d18817a",
+      "seriesId": "series-49c5d5a07da9",
+      "kind": "opportunity",
+      "quality": "editorial",
+      "title": "在 VS Code 里追踪多个编程智能体的修改",
+      "plain": "这个扩展想在同一个 VS Code 界面运行支持 ACP（智能体客户端协议）的工具，并展示会话、调用、全部编辑和文件修改来源。",
+      "audience": "同时使用 Claude、Codex 或 OpenCode，需要回看谁改了什么的开发者。",
+      "pain": "多智能体并行后，工具调用和文件修改散在不同会话里，出错时难追责。机会是做统一会话视图和逐文件来源追踪。",
+      "why": "“哪次会话改了当前文件”是很具体的多智能体协作问题。",
+      "validation": "让两个智能体依次修改同一测试文件，检查扩展能否准确还原每次工具调用、差异和会话归属。",
+      "risk": "HN 当次 2 points、0 comments，协议兼容范围和追踪准确性未验证；统一界面也可能隐藏各工具的特有能力。",
+      "topics": [
+        "AI 编程",
+        "增长",
+        "产品验证"
+      ],
+      "evidence": [
+        {
+          "source": "Hacker News",
+          "sourceType": "新产品信号",
+          "originalTitle": "Show HN: Multicoder ACP – Run Claude/Codex/OpenCode from the same VS Code GUI",
+          "url": "https://marketplace.visualstudio.com/items?itemName=multicoder.multicoder",
+          "observedAt": "2026-08-10",
+          "metrics": {
+            "points": 2.0,
+            "comments": 0.0
+          },
+          "strength": "中",
+          "boundary": "证据支持具体需求方向，但不等于已经证明付费规模或长期留存。"
+        }
+      ]
+    },
+    {
+      "id": "entry-8d82008103f8",
+      "seriesId": "series-73d296671eb5",
+      "kind": "case",
+      "quality": "editorial",
+      "title": "多模型和智能体工作流的测试工具箱",
+      "plain": "一则 15K–25K 的远程岗位，要同时测试多模型 API、图像视频音频、工作流画布和智能体应用。",
+      "audience": "在做多模型平台、生成式内容工具或智能体产品质量保障的测试工程师和小团队。",
+      "pain": "模型、媒体类型和编排节点一多，回归用例、失败复现和结果比对会迅速变复杂。机会是把这些检查做成可重复的测试工具箱。",
+      "why": "招聘内容列出了具体测试对象和薪资区间，足以作为一条岗位需求信号。",
+      "validation": "从岗位描述挑 3 类接口和 2 条工作流，做一组固定输入、超时、错误返回和结果留档测试，看看能否稳定复跑。",
+      "risk": "帖子当次 0 回复，岗位和公司情况未独立核验；它只能证明一家公司公开提出了这类测试需求，不能代表行业规模。",
+      "topics": [
+        "内容工作流"
+      ],
+      "evidence": [
+        {
+          "source": "V2EX 远程工作",
+          "sourceType": "中文开发者论坛",
+          "originalTitle": "AIGC 创作平台测试工程师",
+          "url": "https://www.v2ex.com/t/1233493",
+          "observedAt": "2026-08-10",
+          "metrics": {
+            "replies": 0.0
+          },
+          "strength": "中",
+          "boundary": "这是一个可复核的实战案例，不能据此推断市场已经验证。"
+        }
+      ]
+    },
+    {
+      "id": "entry-d3bf47e7a9b4",
+      "seriesId": "series-212ee0901b6f",
+      "kind": "case",
+      "quality": "editorial",
+      "title": "没有公网地址时的家庭 NAS 连接测试",
+      "plain": "作者推荐 Realm 与 hysteria 的组合，让服务端无需公网地址也能从外部连接，并给出双 NAT4 下的单人测试结果。",
+      "audience": "没有公网地址、需要在外面访问家中 NAS 的个人用户和家庭自托管爱好者。",
+      "pain": "不同运营商和 NAT 类型下，穿透成功率、延迟和安全配置很难预判。机会是做连接诊断、配置检查和失败回退。",
+      "why": "用户场景和网络边界具体，但必须先验证安全和可复现性。",
+      "validation": "只开放一个测试服务，在两种外部网络下记录连接成功率、延迟、断线恢复，并检查认证和访问日志。",
+      "risk": "V2EX 当次 0 回复；约 1 秒穿透和丢包下稳定访问是作者单人自测，不同网络未必复现，配置错误还可能暴露内网服务。",
+      "topics": [
+        "安全与权限",
+        "产品验证"
+      ],
+      "evidence": [
+        {
+          "source": "V2EX 宽带症候群",
+          "sourceType": "中文开发者论坛",
+          "originalTitle": "推荐一个无需公网访问家里 NAS 的方式",
+          "url": "https://www.v2ex.com/t/1233512",
+          "observedAt": "2026-08-10",
+          "metrics": {
+            "replies": 0.0
+          },
+          "strength": "中",
+          "boundary": "这是一个可复核的实战案例，不能据此推断市场已经验证。"
+        }
+      ]
+    },
+    {
+      "id": "entry-bc2fb01c6cc4",
+      "seriesId": "series-789ebac2b3e1",
+      "kind": "case",
+      "quality": "editorial",
+      "title": "用会话记录定位编程智能体在哪一步出错",
+      "plain": "这篇文章从会话记录和工具调用轨迹入手，排查 Claude Code 智能体的错误。",
+      "audience": "遇到智能体结果不对，却不知道问题出在理解、工具选择还是执行步骤的开发者。",
+      "pain": "最终结果只告诉你失败了，中间轨迹才可能暴露错误从哪里开始。机会是把会话、工具调用和文件修改放到同一条可检索时间线。",
+      "why": "方法落到两个明确证据入口，适合直接拿一条失败会话验证。",
+      "validation": "拿一次已知失败的会话复盘，标出第一个错误动作，再看仅靠现有记录能否在 10 分钟内定位。",
+      "risk": "DEV.to 当次 1 comment、1 reaction，没有效果数据；会话记录也可能过长、缺字段或包含敏感内容。",
+      "topics": [
+        "AI 编程",
+        "内容工作流",
+        "产品验证"
+      ],
+      "evidence": [
+        {
+          "source": "DEV.to #ai",
+          "sourceType": "开发者内容",
+          "originalTitle": "Debugging Claude Code Agents: Reading Transcripts, Tracing Tool Calls, and Finding Where Your Agent Goes Wrong",
+          "url": "https://dev.to/jsmanifest/debugging-claude-code-agents-reading-transcripts-tracing-tool-calls-and-finding-where-your-agent-dag",
+          "observedAt": "2026-08-10",
+          "metrics": {
+            "comments": 1.0,
+            "reactions": 1.0
+          },
+          "strength": "中",
+          "boundary": "这是一个可复核的实战案例，不能据此推断市场已经验证。"
+        }
+      ]
+    },
+    {
+      "id": "entry-9fbc7bc73883",
+      "seriesId": "series-63eb47904be6",
+      "kind": "opportunity",
+      "quality": "editorial",
+      "title": "覆盖苹果多设备的自托管音乐客户端",
+      "plain": "Lirro 宣称支持 Navidrome、Plex 和 Audiobookshelf，并覆盖 iPad、Apple TV、Mac 与 visionOS 等苹果设备。",
+      "audience": "已经搭建自托管音乐或有声书服务，希望在多台苹果设备上统一播放的人。",
+      "pain": "后端协议和设备形态分散，用户往往要换多个客户端。机会是统一连接、播放状态和设备体验。",
+      "why": "多后端与多设备支持是一条清楚的产品边界，可以直接做兼容性验收。",
+      "validation": "用一个测试媒体库连接两种后端和两台设备，检查登录、浏览、续播和元数据是否一致。",
+      "risk": "V2EX 推广帖当次 2 回复，证据主要是作者功能表，没有留存、付费和长期稳定性数据。",
+      "topics": [
+        "增长",
+        "产品验证"
+      ],
+      "evidence": [
+        {
+          "source": "V2EX 推广",
+          "sourceType": "中文开发者论坛",
+          "originalTitle": "（送码）我做的 iOS 面向自托管音乐的 App 新版过审啦，送一点 Lifetime 码给大家",
+          "url": "https://www.v2ex.com/t/1233508",
+          "observedAt": "2026-08-10",
+          "metrics": {
+            "replies": 2.0
+          },
+          "strength": "中",
+          "boundary": "证据支持具体需求方向，但不等于已经证明付费规模或长期留存。"
+        }
+      ]
+    },
+    {
+      "id": "entry-03a86ea9daff",
+      "seriesId": "series-914f249d45e0",
+      "kind": "case",
+      "quality": "editorial",
+      "title": "让定时任务心跳证明任务真的成功",
+      "plain": "一个夜间任务因 launchd 的 PATH 与交互 shell 不同，在首次计划执行时失败；错误被吞掉后，心跳仍显示正常。",
+      "audience": "在 Mac 或服务器上维护定时任务、自动化报表和无人值守脚本的人。",
+      "pain": "进程还活着不等于业务步骤成功。机会是让心跳同时带上最近一次真实执行、退出码和关键产物检查。",
+      "why": "失败条件和监控盲点都能复现，也贴近日常自动化最危险的假健康状态。",
+      "validation": "挑 3 个定时任务，分别制造路径缺失、命令失败和产物为空，确认监控能在下一轮前告警并给出原因。",
+      "risk": "DEV.to 当次 0 comments、2 reactions，是作者的单个案例；摘要称现有设计之后 55 晚都不会报告问题，但没有更广泛样本。",
+      "topics": [
+        "自动化",
+        "内容工作流"
+      ],
+      "evidence": [
+        {
+          "source": "DEV.to #automation",
+          "sourceType": "开发者内容",
+          "originalTitle": "The Scheduled Step Failed on Night One. The Heartbeat Stayed Green.",
+          "url": "https://dev.to/hexisteme/the-scheduled-step-failed-on-night-one-the-heartbeat-stayed-green-lca",
+          "observedAt": "2026-08-10",
+          "metrics": {
+            "comments": 0.0,
+            "reactions": 2.0
+          },
+          "strength": "中",
+          "boundary": "这是一个可复核的实战案例，不能据此推断市场已经验证。"
+        }
+      ]
+    },
+    {
+      "id": "entry-2e3532da9365",
+      "seriesId": "series-2e7d61a5b5c4",
+      "kind": "case",
+      "quality": "editorial",
+      "title": "让编程智能体安全修改 Godot 资源文件",
+      "plain": "这个 Godot 技能把场景、资源和复杂编辑动作交给脚本处理，避免智能体直接猜文件格式。",
+      "audience": "用 Claude Code 或 Codex 开发 Godot 项目，常要修改场景和资源的独立开发者、小团队。",
+      "pain": "`.tscn`、`.tres` 里的 UID 和资源引用很容易写坏，复杂资源也很难靠纯文本手改。机会是把修改、校验和回滚做成可复用技能。",
+      "why": "用户、失败点和解决手段都很具体，而且能用一个真实场景快速复现。",
+      "validation": "在一个测试项目里让智能体分别用手写文件和该技能修改同一场景，对比 Godot 打开后的报错、引用完整性和人工修复时间。",
+      "risk": "V2EX 当次只有 1 条回复，效果来自作者自述；Godot 版本和插件差异可能让规则失效，不能跳过编辑器验收。",
+      "topics": [
+        "AI 编程",
+        "安全与权限"
+      ],
+      "evidence": [
+        {
+          "source": "V2EX 游戏开发",
+          "sourceType": "中文开发者论坛",
+          "originalTitle": "分享一个开源项目 godot-skill：让 Claude Code / Codex 真正会写 Godot 项目",
+          "url": "https://www.v2ex.com/t/1233494",
+          "observedAt": "2026-08-10",
+          "metrics": {
+            "replies": 1.0
+          },
+          "strength": "中",
+          "boundary": "这是一个可复核的实战案例，不能据此推断市场已经验证。"
+        }
+      ]
+    }
+  ]
+}

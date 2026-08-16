@@ -1,0 +1,203 @@
+{
+  "schemaVersion": 1,
+  "qualityVersion": "2026-08-16.1",
+  "date": "2026-07-21",
+  "generatedAt": "2026-07-22 13:07:55 Asia/Shanghai",
+  "status": "published",
+  "counts": {
+    "collected": 87,
+    "oldAccepted": 11,
+    "published": 5,
+    "features": 1,
+    "editorial": 4,
+    "rejected": 82
+  },
+  "failedSources": [
+    {
+      "source": "Reddit r/SideProject",
+      "status": "failed_or_rate_limited",
+      "detail": "Reddit 公开 JSON/API 被 403 拦截；本次未取得可安全访问结果。"
+    },
+    {
+      "source": "Reddit r/somebodymakethis",
+      "status": "failed_or_rate_limited",
+      "detail": "Reddit 公开 JSON/API 被 403 拦截；本次未取得可安全访问结果。"
+    },
+    {
+      "source": "Reddit r/SaaS",
+      "status": "failed_or_rate_limited",
+      "detail": "Reddit 公开 JSON/API 被 403 拦截；本次未取得可安全访问结果。"
+    },
+    {
+      "source": "Reddit r/indiehackers",
+      "status": "failed_or_rate_limited",
+      "detail": "Reddit 公开 JSON/API 被 403 拦截；本次未取得可安全访问结果。"
+    },
+    {
+      "source": "Stack Exchange",
+      "status": "empty_for_date",
+      "detail": "No matching questions found in the target date window."
+    },
+    {
+      "source": "Product Hunt API",
+      "status": "not_configured",
+      "detail": "未配置 Product Hunt 官方 API 凭证；已跳过，不抓取容易 403 的公开页。"
+    },
+    {
+      "source": "小红书",
+      "status": "failed_or_rate_limited",
+      "detail": "本地社媒采集脚本启动后未返回可用结果；通常是登录态、平台风控或脚本适配问题。"
+    },
+    {
+      "source": "微博",
+      "status": "failed_or_rate_limited",
+      "detail": "本地社媒采集脚本启动后未返回可用结果；通常是登录态、平台风控或脚本适配问题。"
+    }
+  ],
+  "entries": [
+    {
+      "id": "entry-e93c20811ca5",
+      "seriesId": "series-425e743f47af",
+      "kind": "opportunity",
+      "quality": "feature",
+      "title": "AI 编程助手的跨会话记忆层",
+      "plain": "使用 Claude Code 或 Codex 时，新会话容易忘记之前定下的架构决策。CogniKernel 想把这些决定跨会话保留下来。",
+      "audience": "长期用 AI 编程、需要跨多次对话维护一致架构的开发者。",
+      "pain": "每次开新会话都要重新交代背景和架构决定，目前常靠手动维护 Claude.md 或多份 Markdown 文件弥补。",
+      "why": "作者给出了具体失败场景和现有替代方式，适合先验证记忆层是否真能减少重复说明；当前证据不能证明普遍需求或付费意愿。",
+      "validation": "找 3 个受跨会话失忆困扰的开发者，记录他们现在如何保存架构决定；再用一个只读记忆层跑同类任务，比较重复说明和误改次数。",
+      "risk": "帖子当日互动很少，需求强度未经验证；记忆如果过期或写错，也可能把错误决定持续带进后续会话。",
+      "topics": [
+        "AI 编程",
+        "本地工具",
+        "产品验证"
+      ],
+      "evidence": [
+        {
+          "source": "Hacker News",
+          "sourceType": "需求信号",
+          "originalTitle": "Show HN: Cognikernel- Local Memory for AI Coding Assistants",
+          "url": "https://github.com/KanishkNoir/cognikernel",
+          "observedAt": "2026-07-21",
+          "metrics": {},
+          "strength": "强",
+          "boundary": "证据支持具体需求方向，但不等于已经证明付费规模或长期留存。"
+        }
+      ]
+    },
+    {
+      "id": "entry-9a80a4478fff",
+      "seriesId": "series-60934572f2ca",
+      "kind": "opportunity",
+      "quality": "editorial",
+      "title": "AI 编程任务的额度消耗与返工监控",
+      "plain": "有开发者说，一个人工几分钟到十几分钟能完成的接口修改，在 Qoder 里反复返工并消耗大量 credit，但他无法判断原因。",
+      "audience": "按 credit 付费使用 AI 编程平台、需要控制任务成本的开发者和小团队。",
+      "pain": "任务复杂度、返工次数和额度消耗没有清楚对应关系，用户难以区分模型波动、提示问题和平台计费问题。",
+      "why": "成本不透明和返工都有可记录指标，适合先做个人监控工具；现有讨论太少，只能放观察池。",
+      "validation": "连续记录 30 个同类任务的人工基线、智能体耗时、返工次数和 credit 消耗，先找出异常任务，再访谈用户愿不愿意看成本周报。",
+      "risk": "证据只是单个用户体验和主观怀疑，不能证明平台按余额改变质量；不同模型与任务也很难完全控制变量。",
+      "topics": [
+        "AI 编程",
+        "产品验证"
+      ],
+      "evidence": [
+        {
+          "source": "V2EX 程序员",
+          "sourceType": "中文开发者论坛",
+          "originalTitle": "严重怀疑 qoder 看账户余额 credit 下菜",
+          "url": "https://www.v2ex.com/t/1229025",
+          "observedAt": "2026-07-21",
+          "metrics": {},
+          "strength": "中",
+          "boundary": "证据支持具体需求方向，但不等于已经证明付费规模或长期留存。"
+        }
+      ]
+    },
+    {
+      "id": "entry-7f431e4cf3ff",
+      "seriesId": "series-85f47c4ea873",
+      "kind": "opportunity",
+      "quality": "editorial",
+      "title": "不把输入发到服务器的离线开发者工具箱",
+      "plain": "有人用 Tauri 做了一个本地桌面工具箱，内置 62 个开发者常用工具，所有输入都留在本机。",
+      "audience": "对数据隐私敏感、经常使用格式化、转换和生成类小工具的开发者。",
+      "pain": "很多在线开发者工具会把输入发到服务器；处理敏感代码片段或配置时，用户很难确认数据去了哪里。",
+      "why": "本地处理和隐私边界都很明确，适合验证开发者是否愿意为离线工具箱改变习惯；目前只有作者自述和少量讨论。",
+      "validation": "选 5 个高频开发者小工具做离线原型，让 5 名开发者对比在线版本，记录使用频率、速度和他们是否愿意安装桌面端。",
+      "risk": "当日讨论量有限，不代表付费意愿；62 个工具也可能每个都不够深，桌面安装成本会削弱便利性。",
+      "topics": [
+        "本地工具",
+        "产品验证"
+      ],
+      "evidence": [
+        {
+          "source": "Hacker News",
+          "sourceType": "需求信号",
+          "originalTitle": "Show HN: QuiverKit – 62 developer tools that run offline",
+          "url": "https://quiverkit.dev",
+          "observedAt": "2026-07-21",
+          "metrics": {},
+          "strength": "中",
+          "boundary": "证据支持具体需求方向，但不等于已经证明付费规模或长期留存。"
+        }
+      ]
+    },
+    {
+      "id": "entry-8961c8d50116",
+      "seriesId": "series-85a77a8aff1b",
+      "kind": "opportunity",
+      "quality": "editorial",
+      "title": "独立开发者注册经营主体的决策清单",
+      "plain": "有独立开发者为了接入支付和应用上架想办营业执照，却担心影响失业金，也不确定能否使用家人现成的个体户执照。",
+      "audience": "准备把副业项目商业化、需要合法收款和上架的国内独立开发者。",
+      "pain": "注册主体同时牵涉工商、税务、社保和平台规则；个人情况不同，网上零散答案很难直接套用。",
+      "why": "帖子列出了两个非常具体的决策障碍，也有少量讨论；它更适合验证咨询入口或清单服务，暂时不足以证明规模。",
+      "validation": "访谈 5 名正在准备商业化的独立开发者，收集他们最卡的 10 个问题；再由合格专业人士制作地区化答疑样本，测试是否有人愿意付费咨询。",
+      "risk": "法律、税务和平台规则随地区与个人情况变化，任何工具或清单都不能替代专业意见；错误回答的后果较重。",
+      "topics": [
+        "产品验证"
+      ],
+      "evidence": [
+        {
+          "source": "V2EX 独立开发者 👨‍💻",
+          "sourceType": "中文开发者论坛",
+          "originalTitle": "注册公司太麻烦了。😳",
+          "url": "https://www.v2ex.com/t/1229026",
+          "observedAt": "2026-07-21",
+          "metrics": {},
+          "strength": "中",
+          "boundary": "证据支持具体需求方向，但不等于已经证明付费规模或长期留存。"
+        }
+      ]
+    },
+    {
+      "id": "entry-9a526da86658",
+      "seriesId": "series-bd7b162a593f",
+      "kind": "case",
+      "quality": "editorial",
+      "title": "给运维智能体补资源关系图和变更时间线",
+      "plain": "一篇基准测试称，同一个智能体处理同一批 Kubernetes 故障时，拿到资源关系图和变更时间线后，工具调用减少 76%，完成时间减半。",
+      "audience": "用 AI 智能体排查 Kubernetes 集群故障的平台与运维工程师。",
+      "pain": "智能体只靠 kubectl 逐步摸索资源关系，会反复查相同对象，既慢又耗上下文；变更原因也容易丢失。",
+      "why": "证据给出了明确对照和可复现指标，比泛泛的工具自述更有价值；仍不能直接推广到所有 Kubernetes 场景。",
+      "validation": "在测试集群注入 10 个已知故障，分别让智能体使用纯 kubectl 和资源图方案，比较完成时间、调用次数、正确率和漏诊。",
+      "risk": "数字来自单篇作者基准，需要在不同集群规模和故障类型下复现；资源图如果过期，也可能误导排障。",
+      "topics": [
+        "内容工作流"
+      ],
+      "evidence": [
+        {
+          "source": "DEV.to #ai",
+          "sourceType": "开发者内容",
+          "originalTitle": "We benchmarked an AI agent on 52 broken clusters: kubectl vs a Kubernetes MCP server",
+          "url": "https://dev.to/dovzhikova/we-benchmarked-an-ai-agent-on-52-broken-clusters-kubectl-vs-a-kubernetes-mcp-server-2843",
+          "observedAt": "2026-07-21",
+          "metrics": {},
+          "strength": "中",
+          "boundary": "这是一个可复核的实战案例，不能据此推断市场已经验证。"
+        }
+      ]
+    }
+  ]
+}

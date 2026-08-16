@@ -1,0 +1,60 @@
+<section class="search-panel" data-search-root>
+  <label for="site-search">搜人群、痛点、工具或主题</label>
+  <div class="search-control">
+    <input id="site-search" name="q" type="search" placeholder="例如：浏览器、AI 编程、付费验证" autocomplete="off" />
+    <button type="button" data-search-button>搜索</button>
+  </div>
+  <p class="search-status" aria-live="polite" data-search-status>输入关键词后搜索全部精品。</p>
+  <div class="search-results" data-search-results></div>
+</section>
+
+<script is:inline type="module">
+  const root = document.querySelector('[data-search-root]');
+  const input = root?.querySelector('input');
+  const button = root?.querySelector('[data-search-button]');
+  const status = root?.querySelector('[data-search-status]');
+  const results = root?.querySelector('[data-search-results]');
+  const params = new URLSearchParams(window.location.search);
+  if (input instanceof HTMLInputElement && params.get('q')) input.value = params.get('q') || '';
+
+  async function runSearch() {
+    if (!(input instanceof HTMLInputElement) || !(results instanceof HTMLElement) || !(status instanceof HTMLElement)) return;
+    const query = input.value.trim();
+    if (!query) {
+      status.textContent = '输入关键词后搜索全部精品。';
+      results.replaceChildren();
+      return;
+    }
+    status.textContent = '正在搜索…';
+    try {
+      const pagefind = await import(/* @vite-ignore */ '/opportunity-gazette/pagefind/pagefind.js');
+      const search = await pagefind.search(query);
+      const items = await Promise.all(search.results.slice(0, 30).map((item) => item.data()));
+      results.replaceChildren(...items.map((item) => {
+        const article = document.createElement('article');
+        article.className = 'search-result';
+        const link = document.createElement('a');
+        link.href = item.url.startsWith('/opportunity-gazette/')
+          ? item.url
+          : `/opportunity-gazette${item.url.startsWith('/') ? '' : '/'}${item.url}`;
+        const title = document.createElement('h2');
+        title.textContent = item.meta?.title || '机会条目';
+        const excerpt = document.createElement('p');
+        excerpt.innerHTML = item.excerpt;
+        link.append(title, excerpt);
+        article.append(link);
+        return article;
+      }));
+      status.textContent = `找到 ${search.results.length} 条结果。`;
+      history.replaceState({}, '', `?q=${encodeURIComponent(query)}`);
+    } catch {
+      status.textContent = '搜索索引只在构建后的正式网站可用。';
+    }
+  }
+
+  button?.addEventListener('click', runSearch);
+  input?.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter') runSearch();
+  });
+  if (input instanceof HTMLInputElement && input.value) runSearch();
+</script>

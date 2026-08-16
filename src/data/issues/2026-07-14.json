@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 1,
+  "qualityVersion": "2026-08-16.1",
+  "date": "2026-07-14",
+  "generatedAt": "2026-07-15 13:05:42 Asia/Shanghai",
+  "status": "published",
+  "counts": {
+    "collected": 82,
+    "oldAccepted": 2,
+    "published": 2,
+    "features": 0,
+    "editorial": 2,
+    "rejected": 80
+  },
+  "failedSources": [
+    {
+      "source": "Reddit r/SideProject",
+      "status": "failed_or_rate_limited",
+      "detail": "Reddit 公开 JSON/API 被 403 拦截；本次未取得可安全访问结果。"
+    },
+    {
+      "source": "Reddit r/somebodymakethis",
+      "status": "failed_or_rate_limited",
+      "detail": "Reddit 公开 JSON/API 被 403 拦截；本次未取得可安全访问结果。"
+    },
+    {
+      "source": "Reddit r/SaaS",
+      "status": "failed_or_rate_limited",
+      "detail": "Reddit 公开 JSON/API 被 403 拦截；本次未取得可安全访问结果。"
+    },
+    {
+      "source": "Reddit r/indiehackers",
+      "status": "failed_or_rate_limited",
+      "detail": "Reddit 公开 JSON/API 被 403 拦截；本次未取得可安全访问结果。"
+    },
+    {
+      "source": "Stack Exchange",
+      "status": "empty_for_date",
+      "detail": "No matching questions found in the target date window."
+    },
+    {
+      "source": "Product Hunt API",
+      "status": "not_configured",
+      "detail": "未配置 Product Hunt 官方 API 凭证；已跳过，不抓取容易 403 的公开页。"
+    },
+    {
+      "source": "小红书",
+      "status": "failed_or_rate_limited",
+      "detail": "本地社媒采集脚本启动后未返回可用结果；通常是登录态、平台风控或脚本适配问题。"
+    },
+    {
+      "source": "微博",
+      "status": "failed_or_rate_limited",
+      "detail": "本地社媒采集脚本启动后未返回可用结果；通常是登录态、平台风控或脚本适配问题。"
+    }
+  ],
+  "entries": [
+    {
+      "id": "entry-8432b0da4b5d",
+      "seriesId": "series-8237cb1a9f42",
+      "kind": "opportunity",
+      "quality": "editorial",
+      "title": "AI 编程助手的外联安全代理",
+      "plain": "开发者想让编程助手在本机少受限制地执行，同时拦住它误操作云服务、带着凭证访问陌生网站，或发出不该发的网络请求。",
+      "audience": "给本地编程助手较高权限的独立开发者、小团队和内部开发平台负责人。",
+      "pain": "本地沙箱只能隔离文件和进程，未必能约束助手拿现有云端凭证做什么。机会是加一层可审计的网络代理，按域名、请求方式和操作风险决定放行或拦截。",
+      "why": "问题具体且后果严重，适合小范围验证；但现有证据不足以判断有多少人需要或愿意付费，所以只放观察池。",
+      "validation": "做一个只读白名单实验：允许访问代码托管和文档站，拦截云资源写操作与陌生 POST 请求；用 10 条故意诱导越权的测试任务检查拦截率和误报。",
+      "risk": "当天只有 1 分、0 条评论，只有作者自述，市场需求证据很弱；安全代理一旦漏拦截，会给用户错误安全感。",
+      "topics": [
+        "AI 编程",
+        "本地工具",
+        "内容工作流",
+        "安全与权限"
+      ],
+      "evidence": [
+        {
+          "source": "Hacker News",
+          "sourceType": "需求信号",
+          "originalTitle": "Show HN: I built a smart proxy so your coding agent can run loose",
+          "url": "https://trollbridge.dev/",
+          "observedAt": "2026-07-14",
+          "metrics": {},
+          "strength": "中",
+          "boundary": "证据支持具体需求方向，但不等于已经证明付费规模或长期留存。"
+        }
+      ]
+    },
+    {
+      "id": "entry-2b02dfae629f",
+      "seriesId": "series-a27fea1fc0e8",
+      "kind": "opportunity",
+      "quality": "editorial",
+      "title": "多个 AI 编程终端的状态提醒",
+      "plain": "同时开着多个 Claude Code、Codex 任务时，普通终端看不出哪个还在跑、哪个正等人输入、哪个刚刚完成。Glint 把这些状态集中到一个 macOS 终端里。",
+      "audience": "同时运行多个本地编程助手的独立开发者、小团队技术负责人和自动化重度用户。",
+      "pain": "任务一多，人要反复切窗口确认状态，还可能漏掉等待确认或已经结束的任务。机会是把任务状态、等待提醒和完成记录放进现有终端工作流。",
+      "why": "它描述的人群、麻烦和使用场景都很具体，而且和 Oliver 的多任务工作流直接相关；现阶段只能当工具方向信号。",
+      "validation": "用 Glint 或一个轻量状态脚本同时跑 5 个真实任务，记录一天里少了多少次手动切窗，以及是否减少漏处理的等待和完成通知。",
+      "risk": "目前只有作者自述和 1 条回复，不能证明需求规模或付费意愿；产品也只支持 macOS 14 及以上。",
+      "topics": [
+        "AI 编程",
+        "自动化",
+        "本地工具",
+        "产品验证"
+      ],
+      "evidence": [
+        {
+          "source": "V2EX 分享创造",
+          "sourceType": "中文开发者论坛",
+          "originalTitle": "[分享开源项目] Glint：一个为 Claude Code / Codex 等 AI Agent 设计的 macOS 原生终端",
+          "url": "https://www.v2ex.com/t/1227414",
+          "observedAt": "2026-07-14",
+          "metrics": {},
+          "strength": "中",
+          "boundary": "证据支持具体需求方向，但不等于已经证明付费规模或长期留存。"
+        }
+      ]
+    }
+  ]
+}

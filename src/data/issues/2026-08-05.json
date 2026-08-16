@@ -1,0 +1,272 @@
+{
+  "schemaVersion": 1,
+  "qualityVersion": "2026-08-16.1",
+  "date": "2026-08-05",
+  "generatedAt": "2026-08-06 13:10:42 Asia/Shanghai",
+  "status": "published",
+  "counts": {
+    "collected": 81,
+    "oldAccepted": 30,
+    "published": 7,
+    "features": 2,
+    "editorial": 5,
+    "rejected": 74
+  },
+  "failedSources": [
+    {
+      "source": "Reddit r/SideProject",
+      "status": "failed_or_rate_limited",
+      "detail": "Reddit 公开 JSON/API 被 403 拦截；本次未取得可安全访问结果。"
+    },
+    {
+      "source": "Reddit r/somebodymakethis",
+      "status": "failed_or_rate_limited",
+      "detail": "Reddit 公开 JSON/API 被 403 拦截；本次未取得可安全访问结果。"
+    },
+    {
+      "source": "Reddit r/SaaS",
+      "status": "failed_or_rate_limited",
+      "detail": "Reddit 公开 JSON/API 被 403 拦截；本次未取得可安全访问结果。"
+    },
+    {
+      "source": "Reddit r/indiehackers",
+      "status": "failed_or_rate_limited",
+      "detail": "Reddit 公开 JSON/API 被 403 拦截；本次未取得可安全访问结果。"
+    },
+    {
+      "source": "Stack Exchange",
+      "status": "empty_for_date",
+      "detail": "目标日期窗口内没有找到匹配问题。"
+    },
+    {
+      "source": "Product Hunt API",
+      "status": "not_configured",
+      "detail": "未配置 Product Hunt 官方 API 凭证；已跳过，不抓取容易 403 的公开页。"
+    },
+    {
+      "source": "X public search",
+      "status": "empty",
+      "detail": "脚本运行成功，但没有解析到可用的公开候选结果。"
+    },
+    {
+      "source": "小红书",
+      "status": "failed_or_rate_limited",
+      "detail": "本地社媒采集脚本启动后未返回可用结果；通常是登录态、平台风控或脚本适配问题。"
+    },
+    {
+      "source": "微博",
+      "status": "failed_or_rate_limited",
+      "detail": "本地社媒采集脚本启动后未返回可用结果；通常是登录态、平台风控或脚本适配问题。"
+    }
+  ],
+  "entries": [
+    {
+      "id": "entry-2a8f23c18667",
+      "seriesId": "series-426f4b8a2fa1",
+      "kind": "opportunity",
+      "quality": "feature",
+      "title": "TestFlight 订阅测试状态的可视化排查工具",
+      "plain": "一名 macOS 开发者用真实 Apple ID 在 TestFlight 沙盒测试自动续订后，删 App 重装仍恢复订阅，订阅页也找不到对应记录，无法重新测首次购买。",
+      "audience": "使用 TestFlight 和 StoreKit 2 测试订阅、需要反复验证首次购买与恢复购买的 Apple 平台开发者。",
+      "pain": "测试账号类型、沙盒订阅状态和客户端恢复行为不透明，开发者不知道该等待、换账号还是重置环境。机会是做状态检查清单、时间线或测试账号隔离助手。",
+      "why": "首次购买流程无法重测是具体的开发阻塞，适合先把状态和复现步骤做清楚。",
+      "validation": "在独立测试项目和专用沙盒测试账号中记录购买、续订、过期、删装和恢复的时间线，确认哪些状态能安全重置，再整理成可重复验收步骤。",
+      "risk": "这是单个案例，不同账号、系统和 StoreKit 版本可能不同；不要为了复现继续污染真实开发者账号，最终做法要以 Apple 官方规则为准。",
+      "topics": [
+        "增长",
+        "安全与权限",
+        "产品验证"
+      ],
+      "evidence": [
+        {
+          "source": "V2EX Apple",
+          "sourceType": "中文开发者论坛",
+          "originalTitle": "TestFlight 沙盒订阅使用真实 Apple ID 测试后，如何解除订阅或重置购买状态？",
+          "url": "https://www.v2ex.com/t/1232446",
+          "observedAt": "2026-08-05",
+          "metrics": {},
+          "strength": "强",
+          "boundary": "证据支持具体需求方向，但不等于已经证明付费规模或长期留存。"
+        }
+      ]
+    },
+    {
+      "id": "entry-d321e12da6ee",
+      "seriesId": "series-38729cc39e5d",
+      "kind": "opportunity",
+      "quality": "feature",
+      "title": "让 AI 套餐的短周期限额和恢复时间可见",
+      "plain": "一名 V2EX 用户称 macOS 客户端只显示周限额；使用 Codex 一上午后遇到 429，却找不到 5 小时限额或恢复时间。",
+      "audience": "依赖 Codex 等 AI 工具连续工作的重度用户。",
+      "pain": "额度状态不可见时，用户无法安排长任务，也很难判断错误来自限额还是其他故障。机会是在不读取凭证的前提下记录公开提示、429 时间和预计恢复窗口。",
+      "why": "这是一个具体的工作中断点，也能先用本地时间记录验证是否值得做辅助工具。",
+      "validation": "连续一周只记录客户端可见提示、任务开始时间和 429 出现时间，核对是否存在稳定恢复规律；不要抓包、读取会话凭证或绕过限额。",
+      "risk": "只有单个用户报告，可能与客户端版本、灰度或账号状态有关；产品展示和限制规则也可能随时变化。",
+      "topics": [
+        "AI 编程",
+        "本地工具",
+        "增长",
+        "安全与权限"
+      ],
+      "evidence": [
+        {
+          "source": "V2EX 问与答",
+          "sourceType": "中文开发者论坛",
+          "originalTitle": "gpt 五小时限额在哪看",
+          "url": "https://www.v2ex.com/t/1232443",
+          "observedAt": "2026-08-05",
+          "metrics": {},
+          "strength": "强",
+          "boundary": "证据支持具体需求方向，但不等于已经证明付费规模或长期留存。"
+        }
+      ]
+    },
+    {
+      "id": "entry-32bea79e3138",
+      "seriesId": "series-ce5a0ba85159",
+      "kind": "opportunity",
+      "quality": "editorial",
+      "title": "实时换脸成本下降后出现首个付费信号",
+      "plain": "作者称实时换脸独立站出现第一个付费用户；接入另一模型后，单小时成本从几十美元降到 10 美元以下，免费体验也从 30 秒延长到 3 分钟。",
+      "audience": "只在取得明确肖像授权后制作虚拟形象、直播或视频效果的内容团队。",
+      "pain": "推理成本过高会让用户来不及体验就流失。机会是降低单次试用成本，同时把授权、标识和滥用拦截做成产品硬边界。",
+      "why": "首个付费与成本下降提供了商业化线索，但合规风险决定它只能作为受限观察项。",
+      "validation": "只用本人或已授权的测试素材，在隔离环境测 3 分钟延迟、稳定性、单位成本和授权记录；没有完整安全控制就不公开扩散。",
+      "risk": "收入和成本都是作者自报，不能独立核实；肖像冒用、欺诈、色情滥用、平台规则和地区法律风险很高。",
+      "topics": [
+        "内容工作流",
+        "安全与权限",
+        "产品验证"
+      ],
+      "evidence": [
+        {
+          "source": "V2EX 分享创造",
+          "sourceType": "中文开发者论坛",
+          "originalTitle": "做了个 AI 实时换脸的网站，终于有了第一个订单",
+          "url": "https://www.v2ex.com/t/1232425",
+          "observedAt": "2026-08-05",
+          "metrics": {},
+          "strength": "中",
+          "boundary": "证据支持具体需求方向，但不等于已经证明付费规模或长期留存。"
+        }
+      ]
+    },
+    {
+      "id": "entry-89440b089946",
+      "seriesId": "series-860bd6103208",
+      "kind": "opportunity",
+      "quality": "editorial",
+      "title": "按桌面和移动场景分别设计全平台 SSH 客户端",
+      "plain": "Termark 作者称产品已覆盖五个平台，并分别为桌面长期连接、多窗口操作和移动端临时运维、查看日志设计交互，自报日活 800+。",
+      "audience": "需要在电脑和手机间切换处理服务器的开发者、运维人员和小团队。",
+      "pain": "把桌面界面缩到手机上并不能解决临时排障。机会是按设备场景重做操作，同时安全同步必要配置。",
+      "why": "它给出了具体使用场景和初步采用信号，值得参考“同功能不同设备重新设计”的产品思路。",
+      "validation": "只连接一台隔离测试服务器，分别在桌面和手机完成登录、看日志和重启测试服务，记录步骤、断点、密钥存储和跨设备同步边界。",
+      "risk": "日活来自作者自报，未独立核对，也没有留存或付费数据；SSH 客户端涉及密钥与服务器权限，安全设计需要单独审查。",
+      "topics": [
+        "增长",
+        "安全与权限",
+        "产品验证"
+      ],
+      "evidence": [
+        {
+          "source": "V2EX 推广",
+          "sourceType": "中文开发者论坛",
+          "originalTitle": "再来宣传一下我写的全平台 SSH 客户端（送码）",
+          "url": "https://www.v2ex.com/t/1232428",
+          "observedAt": "2026-08-05",
+          "metrics": {},
+          "strength": "中",
+          "boundary": "证据支持具体需求方向，但不等于已经证明付费规模或长期留存。"
+        }
+      ]
+    },
+    {
+      "id": "entry-c45da0f8610d",
+      "seriesId": "series-10f4d11f218f",
+      "kind": "case",
+      "quality": "editorial",
+      "title": "用真实安装包检查 AI 写的 SDK 调用",
+      "plain": "SDKProof 的作者用已安装软件包的类型信息检查 AI 编程智能体是否写了当前版本能接受的 SDK 代码；标题称 Claude 拒绝了约三分之一的 Stripe 任务。",
+      "audience": "让 AI 编写 Stripe 等第三方 SDK 调用、经常遇到版本错配的开发者。",
+      "pain": "模型可能依据旧文档或相似接口生成当前包里不存在的类型和参数。机会是在执行前用真实依赖做确定性校验，并把失败反馈给智能体。",
+      "why": "它把 AI SDK 幻觉变成可以在本地包上复测的工程问题，验证成本低。",
+      "validation": "固定一个 Stripe SDK 版本，准备 20 个有已知答案的小任务，比较普通生成与加入类型检查后的可运行率、误报和人工修正时间。",
+      "risk": "数字来自作者标题和摘要，没有独立复现；“拒绝任务”也不等于生成了错误代码，工具能检查的语言和 SDK 范围未知。",
+      "topics": [
+        "AI 编程",
+        "本地工具",
+        "内容工作流",
+        "产品验证"
+      ],
+      "evidence": [
+        {
+          "source": "DEV.to #ai",
+          "sourceType": "开发者内容",
+          "originalTitle": "I type-check AI-generated SDK code against the real package. Claude refused a third of my Stripe tasks.",
+          "url": "https://dev.to/kalpitrathore/i-type-check-ai-generated-sdk-code-against-the-real-package-claude-refused-a-third-of-my-stripe-1afo",
+          "observedAt": "2026-08-05",
+          "metrics": {},
+          "strength": "中",
+          "boundary": "这是一个可复核的实战案例，不能据此推断市场已经验证。"
+        }
+      ]
+    },
+    {
+      "id": "entry-06b4e6e12fb3",
+      "seriesId": "series-be72de0efb07",
+      "kind": "case",
+      "quality": "editorial",
+      "title": "给大模型的装配建议加几何约束检查",
+      "plain": "一名用户做多部件 3D 打印产品时，即使用高推理档模型，仍在圆柱传感器装到杠铃套筒的空间关系上遇到错误建议。",
+      "audience": "用大模型辅助机械设计、3D 打印装配或空间布置的个人和小团队。",
+      "pain": "文字回答可能看起来合理，却违反尺寸、方向或碰撞约束。机会是让模型先读取结构化尺寸，再用几何检查或简单仿真验证建议。",
+      "why": "失败后果、使用人群和验证办法都很具体，适合做一个窄的辅助检查层。",
+      "validation": "挑 10 个已有正确答案的简单装配问题，比较纯文字回答与加入尺寸表、草图和碰撞检查后的可执行率，并由懂工程的人复核。",
+      "risk": "证据是单个具体案例，不能代表所有模型或空间任务；错误工程建议还可能损坏设备或导致受伤，不能跳过人工审查。",
+      "topics": [
+        "产品验证"
+      ],
+      "evidence": [
+        {
+          "source": "Hacker News",
+          "sourceType": "需求信号",
+          "originalTitle": "Ask HN: How do you correct spatial reasoning of LLMs?",
+          "url": "https://news.ycombinator.com/item?id=49181570",
+          "observedAt": "2026-08-05",
+          "metrics": {},
+          "strength": "中",
+          "boundary": "这是一个可复核的实战案例，不能据此推断市场已经验证。"
+        }
+      ]
+    },
+    {
+      "id": "entry-e0264b7312b8",
+      "seriesId": "series-d5df76fc19be",
+      "kind": "opportunity",
+      "quality": "editorial",
+      "title": "能回看过程并自动重算的数字草稿纸",
+      "plain": "作者在旅行预算、工资、房贷和日期计算时反复切换计算器与备忘录，于是做了可写变量和公式、修改后自动更新下游结果的 iOS 应用。",
+      "audience": "经常做预算、报价或日常推算，又想保留计算过程的个人和自由职业者。",
+      "pain": "传统计算器只留结果，备忘录不会重算，过后很难知道数字怎么来的。机会是保留自然书写感，同时让变量关系可追溯。",
+      "why": "用户给出了具体的来回切换动作和可运行方案，适合用简单场景直接复测。",
+      "validation": "找 5 名经常做预算的人，用同一个旅行费用场景分别操作现有方式和原型，比较步骤、改价后的重算错误和一周后的可理解度。",
+      "risk": "只有作者自述，没有留存、准确性或付费数据；公式解析出错会直接导致错误金额，必须让用户看见计算规则。",
+      "topics": [
+        "产品验证"
+      ],
+      "evidence": [
+        {
+          "source": "V2EX 分享创造",
+          "sourceType": "中文开发者论坛",
+          "originalTitle": "[送兑换码] 我做了一个“会计算的草稿纸” iOS App，把计算器和备忘录合在一起",
+          "url": "https://www.v2ex.com/t/1232441",
+          "observedAt": "2026-08-05",
+          "metrics": {},
+          "strength": "中",
+          "boundary": "证据支持具体需求方向，但不等于已经证明付费规模或长期留存。"
+        }
+      ]
+    }
+  ]
+}

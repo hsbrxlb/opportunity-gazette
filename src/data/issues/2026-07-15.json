@@ -1,0 +1,113 @@
+{
+  "schemaVersion": 1,
+  "qualityVersion": "2026-08-16.1",
+  "date": "2026-07-15",
+  "generatedAt": "2026-07-16 13:08:09 Asia/Shanghai",
+  "status": "published",
+  "counts": {
+    "collected": 83,
+    "oldAccepted": 6,
+    "published": 2,
+    "features": 0,
+    "editorial": 2,
+    "rejected": 81
+  },
+  "failedSources": [
+    {
+      "source": "Reddit r/SideProject",
+      "status": "failed_or_rate_limited",
+      "detail": "Reddit 公开 JSON/API 被 403 拦截；本次未取得可安全访问结果。"
+    },
+    {
+      "source": "Reddit r/somebodymakethis",
+      "status": "failed_or_rate_limited",
+      "detail": "Reddit 公开 JSON/API 被 403 拦截；本次未取得可安全访问结果。"
+    },
+    {
+      "source": "Reddit r/SaaS",
+      "status": "failed_or_rate_limited",
+      "detail": "Reddit 公开 JSON/API 被 403 拦截；本次未取得可安全访问结果。"
+    },
+    {
+      "source": "Reddit r/indiehackers",
+      "status": "failed_or_rate_limited",
+      "detail": "Reddit 公开 JSON/API 被 403 拦截；本次未取得可安全访问结果。"
+    },
+    {
+      "source": "Product Hunt API",
+      "status": "not_configured",
+      "detail": "未配置 Product Hunt 官方 API 凭证；已跳过，不抓取容易 403 的公开页。"
+    },
+    {
+      "source": "小红书",
+      "status": "failed_or_rate_limited",
+      "detail": "本地社媒采集脚本启动后未返回可用结果；通常是登录态、平台风控或脚本适配问题。"
+    },
+    {
+      "source": "微博",
+      "status": "failed_or_rate_limited",
+      "detail": "本地社媒采集脚本启动后未返回可用结果；通常是登录态、平台风控或脚本适配问题。"
+    }
+  ],
+  "entries": [
+    {
+      "id": "entry-c49530ce2992",
+      "seriesId": "series-4abdd7fd9a7a",
+      "kind": "opportunity",
+      "quality": "editorial",
+      "title": "从智能体对话里提取失败信号",
+      "plain": "聊天或语音智能体经常被用户纠正、反复要求重说，团队却很难从大量生产对话里及时发现这些失败。Agnost AI 的做法是自动找出这类行为信号。",
+      "audience": "正在维护面向用户的聊天或语音智能体的团队，尤其是产品经理、客服负责人和对话设计人员。",
+      "pain": "用户通常不会单独提交故障报告，只会反复改写、纠正智能体或表达不满。这些行为散在大量对话里，人工抽查容易漏掉。",
+      "why": "HN 当天有 84 分、48 条评论，讨论强度足以把它列为重点验证方向；这些数字仍不能直接证明付费意愿。",
+      "validation": "拿一批脱敏的真实失败对话，人工标注“重复表达、纠正智能体、明显不满”三类信号，再做一份周报原型，看团队能否据此找到至少三个可修问题。",
+      "risk": "对话数据涉及隐私和合规；不同业务对“失败”的定义不同，用户反复表达也可能来自需求本身不清楚。",
+      "topics": [
+        "产品验证"
+      ],
+      "evidence": [
+        {
+          "source": "Hacker News",
+          "sourceType": "需求信号",
+          "originalTitle": "Launch HN: Agnost AI (YC S26) – Extract user feedback from agent conversations",
+          "url": "https://agnost.ai",
+          "observedAt": "2026-07-15",
+          "metrics": {},
+          "strength": "中",
+          "boundary": "证据支持具体需求方向，但不等于已经证明付费规模或长期留存。"
+        }
+      ]
+    },
+    {
+      "id": "entry-a68dcecadfda",
+      "seriesId": "series-cbe0e89eb529",
+      "kind": "opportunity",
+      "quality": "editorial",
+      "title": "给 AI 邮件噪声加发件人成本门槛",
+      "plain": "生成式 AI 让批量写推销邮件的成本很低。Captchainbox 的思路是让陌生发件人先完成一个小验证，再允许邮件进入收件箱。",
+      "audience": "被大量 AI 推销邮件、协作请求淹没的人，以及做邮件客户端或反垃圾产品的团队。",
+      "pain": "传统过滤器主要猜一封邮件像不像垃圾邮件；生成式 AI 让垃圾内容更像真人写作。给发件人增加一点成本，可能筛掉大量广撒网邮件。",
+      "why": "HN 当天有 41 分、67 条评论，说明这个解决思路引起了较强讨论，但争议和讨论不等于产品需求成立。",
+      "validation": "先在个人收件箱里对非白名单发件人启用简单挑战，记录完成率、放弃率、误伤的重要邮件，以及发件人能否用自动化轻易绕过。",
+      "risk": "可能误伤客户询价和合作邀请；还要处理无障碍、自动绕过、邮件协议兼容等问题。",
+      "topics": [
+        "自动化",
+        "增长",
+        "内容工作流",
+        "产品验证"
+      ],
+      "evidence": [
+        {
+          "source": "Hacker News",
+          "sourceType": "需求信号",
+          "originalTitle": "Show HN: Make senders work to get into your inbox",
+          "url": "https://www.captchainbox.com",
+          "observedAt": "2026-07-15",
+          "metrics": {},
+          "strength": "中",
+          "boundary": "证据支持具体需求方向，但不等于已经证明付费规模或长期留存。"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import EntryStory from '../../components/EntryStory.astro';
+import { getCatalog, getEntryMap, formatDate } from '../../lib/data';
+import type { Series } from '../../lib/data';
+
+export async function getStaticPaths() {
+  const catalog = await getCatalog();
+  return catalog.series.map((series) => ({ params: { id: series.id }, props: { series } }));
+}
+
+const { series } = Astro.props as { series: Series };
+const entryMap = getEntryMap();
+const timeline = series.entryIds.map((id) => entryMap.get(id)).filter(Boolean);
+---
+
+<BaseLayout title={`${series.title}｜机会画报专题`} description={`查看“${series.title}”的证据时间线。`} canonicalPath={`/topics/${series.id}/`} pageClass="topic-page">
+  <header class="page-intro topic-intro">
+    <p class="section-kicker">EVIDENCE THREAD</p>
+    <h1>{series.title}</h1>
+    <p>{series.kind === 'opportunity' ? '机会' : '实战案例'} · {series.topics.join(' · ')} · {series.dates.length} 次有效更新</p>
+  </header>
+  <section class="timeline" aria-label="专题时间线">
+    {timeline.map((item, index) => item && (
+      <div class="timeline-item">
+        <time datetime={item.issue.date}>{formatDate(item.issue.date)}</time>
+        <EntryStory entry={item.entry} index={index + 1} featured={item.entry.quality === 'feature'} />
+      </div>
+    ))}
+  </section>
+</BaseLayout>

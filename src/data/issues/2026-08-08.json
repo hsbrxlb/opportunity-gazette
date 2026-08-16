@@ -1,0 +1,237 @@
+{
+  "schemaVersion": 1,
+  "qualityVersion": "2026-08-16.1",
+  "date": "2026-08-08",
+  "generatedAt": "2026-08-09 10:19:40 Asia/Shanghai",
+  "status": "published",
+  "counts": {
+    "collected": 80,
+    "oldAccepted": 16,
+    "published": 6,
+    "features": 1,
+    "editorial": 5,
+    "rejected": 74
+  },
+  "failedSources": [
+    {
+      "source": "Reddit r/SideProject",
+      "status": "failed_or_rate_limited",
+      "detail": "Reddit 公开 JSON/API 被 403 拦截；本次未取得可安全访问结果。"
+    },
+    {
+      "source": "Reddit r/somebodymakethis",
+      "status": "failed_or_rate_limited",
+      "detail": "Reddit 公开 JSON/API 被 403 拦截；本次未取得可安全访问结果。"
+    },
+    {
+      "source": "Reddit r/SaaS",
+      "status": "failed_or_rate_limited",
+      "detail": "Reddit 公开 JSON/API 被 403 拦截；本次未取得可安全访问结果。"
+    },
+    {
+      "source": "Reddit r/indiehackers",
+      "status": "failed_or_rate_limited",
+      "detail": "Reddit 公开 JSON/API 被 403 拦截；本次未取得可安全访问结果。"
+    },
+    {
+      "source": "Stack Exchange",
+      "status": "empty_for_date",
+      "detail": "目标日期窗口内没有找到匹配问题。"
+    },
+    {
+      "source": "Product Hunt API",
+      "status": "not_configured",
+      "detail": "未配置 Product Hunt 官方 API 凭证；已跳过，不抓取容易 403 的公开页。"
+    },
+    {
+      "source": "X public search",
+      "status": "empty",
+      "detail": "脚本运行成功，但没有解析到可用的公开候选结果。"
+    },
+    {
+      "source": "小红书",
+      "status": "failed_or_rate_limited",
+      "detail": "本地社媒采集脚本启动后未返回可用结果；通常是登录态、平台风控或脚本适配问题。"
+    },
+    {
+      "source": "微博",
+      "status": "failed_or_rate_limited",
+      "detail": "本地社媒采集脚本启动后未返回可用结果；通常是登录态、平台风控或脚本适配问题。"
+    }
+  ],
+  "entries": [
+    {
+      "id": "entry-430929bc9222",
+      "seriesId": "series-a0df96d70d65",
+      "kind": "opportunity",
+      "quality": "feature",
+      "title": "多 DNS、多运营商的解析和可达性证据工具",
+      "plain": "同时从不同 DNS 和网络出口解析同一域名，再测试返回节点能否连接，生成双方都能复核的时间线。",
+      "audience": "排查跨地区、跨运营商访问异常的运维人员、网站开发者和云服务客户。",
+      "pain": "同一域名可能被解析到不同运营商节点，单机测试很难说明是本地 DNS、CDN 调度还是节点故障。机会是把解析结果、网络出口和连接失败放进一份证据。",
+      "why": "用户给出了具体域名类型、解析偏差和连接后果，适合先做一份可复核证据而非继续猜原因。",
+      "validation": "选 5 个获准测试的域名，从至少 3 个公开 DNS 和 3 个自有或合规测试出口定时解析与连通，记录 IP、时间、成功率和路由差异。",
+      "risk": "这是单个用户案例、2 回复，尚无广泛独立复核；跨运营商测试必须使用自有或获准节点，不能把一次故障扩大成服务商长期问题。",
+      "topics": [
+        "本地工具",
+        "增长"
+      ],
+      "evidence": [
+        {
+          "source": "V2EX 宽带症候群",
+          "sourceType": "中文开发者论坛",
+          "originalTitle": "最近阿里系所属云服务经常被解析到鹏博士、东方有线之类的无法访问的 ip 地址上",
+          "url": "https://www.v2ex.com/t/1232984",
+          "observedAt": "2026-08-08",
+          "metrics": {},
+          "strength": "强",
+          "boundary": "证据支持具体需求方向，但不等于已经证明付费规模或长期留存。"
+        }
+      ]
+    },
+    {
+      "id": "entry-d34ba4e8eb66",
+      "seriesId": "series-75748f1ddb3c",
+      "kind": "case",
+      "quality": "editorial",
+      "title": "可复现的编程智能体对比测试",
+      "plain": "用同一批调试任务比较不同编程智能体的成功率和用量，并把执行方式与提示词等变量分开记录。",
+      "audience": "正在 Codex、Claude Code 和轻量编程智能体之间选型，关心成本与完成率的开发者和小团队。",
+      "pain": "现有选型常靠体感，模型、执行器和提示词的影响混在一起。机会是提供固定任务、可回放步骤和逐项成本，让结果能够复测。",
+      "why": "它给出了具体指标和消融思路，能直接变成一组复测动作，对 AI 编程选型很实用。",
+      "validation": "从作者测试集中选 5 个任务，用完全相同的代码版本、模型档位和验收命令分别运行两套工具，保存用量、成功率和失败类型。",
+      "risk": "原帖数据全是作者自测且只有 1 回复；约 50% 用量差和 15% 成功率差对应完整工具对比，而只改执行方式时作者称约为 16% 和 11%，不能混为一谈。",
+      "topics": [
+        "AI 编程"
+      ],
+      "evidence": [
+        {
+          "source": "V2EX 程序员",
+          "sourceType": "中文开发者论坛",
+          "originalTitle": "有人真的用过 mini swe agent 来 debug 或是开发吗",
+          "url": "https://www.v2ex.com/t/1232985",
+          "observedAt": "2026-08-08",
+          "metrics": {},
+          "strength": "中",
+          "boundary": "这是一个可复核的实战案例，不能据此推断市场已经验证。"
+        }
+      ]
+    },
+    {
+      "id": "entry-b87a3ba1a2d4",
+      "seriesId": "series-5b9b891ed719",
+      "kind": "opportunity",
+      "quality": "editorial",
+      "title": "应用商店截图的批量生成和提交前检查",
+      "plain": "App 做完后，把真实截图、机型外框和文案批量排成商店宣传图，并在导出前检查尺寸、错字和多屏衔接。",
+      "audience": "没有专职设计师、需要自己完成 App Store 或 Google Play 上架素材的独立开发者和小团队。",
+      "pain": "请设计师成本高，自己用设计软件调尺寸和机模又耗时；直接用生成式 AI 还可能产生错字和不可信细节。机会是把模板化生成与确定性检查放在一起。",
+      "why": "用户、上架节点和返工原因都很具体，验证成本低，也适合做成窄工具而非完整设计平台。",
+      "validation": "找 3 名最近上架过 App 的开发者，收集他们上一套截图耗时、返工点和花费，再用同一套素材做一个三屏连贯模板对比。",
+      "risk": "证据来自 0 回复的作者自荐，没有独立用户效果或付费数据；不同商店和设备的素材规范也会持续变化。",
+      "topics": [
+        "产品验证"
+      ],
+      "evidence": [
+        {
+          "source": "V2EX 分享创造",
+          "sourceType": "中文开发者论坛",
+          "originalTitle": "Store Gallery 一键生成满意的 App Store 预览图",
+          "url": "https://www.v2ex.com/t/1233002",
+          "observedAt": "2026-08-08",
+          "metrics": {},
+          "strength": "中",
+          "boundary": "证据支持具体需求方向，但不等于已经证明付费规模或长期留存。"
+        }
+      ]
+    },
+    {
+      "id": "entry-786c7c92ef74",
+      "seriesId": "series-474d919b1228",
+      "kind": "case",
+      "quality": "editorial",
+      "title": "把生产内存泄漏排查整理成可复查证据包",
+      "plain": "让 AI 协助查看内存趋势、代码改动和异常线索，同时保存每个判断依据，方便工程师复核和复现。",
+      "audience": "负责生产服务稳定性的后端开发者和站点可靠性工程师。",
+      "pain": "慢性内存泄漏可能在凌晨拖垮服务，排查又容易被大量日志和猜测带偏。机会是把时间线、假设、验证命令和修复前后指标串起来。",
+      "why": "生产故障后果明确，真正有用的产品点不在聊天建议，而在能否留下可复查的诊断链。",
+      "validation": "拿一次已知原因的历史泄漏案例，在隔离环境让 AI 重新排查，比较它提出的假设、证据和最终结论是否与已知结果一致。",
+      "risk": "文章有 3 评论、3 反应，但摘要没有具体修复步骤或对照结果；AI 的诊断不能直接用于生产改动，仍需工程师和监控证据确认。",
+      "topics": [
+        "AI 编程",
+        "内容工作流",
+        "产品验证"
+      ],
+      "evidence": [
+        {
+          "source": "DEV.to #ai",
+          "sourceType": "开发者内容",
+          "originalTitle": "How I Used Claude Code to Hunt Down a Memory Leak That Took Down Prod",
+          "url": "https://dev.to/yureki_lab/how-i-used-claude-code-to-hunt-down-a-memory-leak-that-took-down-prod-2cpf",
+          "observedAt": "2026-08-08",
+          "metrics": {},
+          "strength": "中",
+          "boundary": "这是一个可复核的实战案例，不能据此推断市场已经验证。"
+        }
+      ]
+    },
+    {
+      "id": "entry-8d0fba543101",
+      "seriesId": "series-10e227205619",
+      "kind": "case",
+      "quality": "editorial",
+      "title": "给智能体工作流做复盘的控制台",
+      "plain": "智能体跑完一串任务后，可以回看它怎样决策、调用了什么工具、在哪里等过人工批准，并整理可复用的做法。",
+      "audience": "用智能体处理客服、数据、内容或开发流程，需要定位失败和比较不同方案的团队与个人。",
+      "pain": "流程一旦变长，出错时很难知道是哪一步判断、知识或工具边界出了问题。机会是把决策轨迹、审批点和可复用技能放进同一处检查。",
+      "why": "它把智能体复盘拆成几个明确部件，适合观察产品形态，但还不能证明有人愿意迁移现有流程。",
+      "validation": "拿一条真实但不含敏感数据的失败流程，记录目前定位问题所需步骤，再测试是否能靠统一轨迹在 10 分钟内找到错误节点。",
+      "risk": "这是 0 回复的 V2EX 自荐，只有产品说明，没有实际用户、完成度或复盘效果数据。",
+      "topics": [
+        "内容工作流"
+      ],
+      "evidence": [
+        {
+          "source": "V2EX 推广",
+          "sourceType": "中文开发者论坛",
+          "originalTitle": "Coachix：让 AI Agent 推理过程更容易复盘和改进",
+          "url": "https://www.v2ex.com/t/1232988",
+          "observedAt": "2026-08-08",
+          "metrics": {},
+          "strength": "中",
+          "boundary": "这是一个可复核的实战案例，不能据此推断市场已经验证。"
+        }
+      ]
+    },
+    {
+      "id": "entry-9b3bc5148ee0",
+      "seriesId": "series-684ac9fe74d8",
+      "kind": "case",
+      "quality": "editorial",
+      "title": "能跨长等待恢复的人工审批队列",
+      "plain": "智能体把内容准备好后可以安全停住，等人过一段时间批准，再从原状态继续发布。",
+      "audience": "用智能体做内容发布、广告操作或其他必须人工把关流程的团队。",
+      "pain": "人工不一定会在几分钟内回应，普通会话可能超时或退出。机会是保存待审批内容、运行状态和操作边界，让批准、拒绝和过期都能恢复或回滚。",
+      "why": "等待人工是自动化中的明确断点，适合用一个小型恢复测试确认流程能否跨长等待续跑。",
+      "validation": "在测试流程加入一个审批节点，分别等待 5 分钟和 30 分钟再批准，检查是否能恢复、是否重复执行，并核对未经批准绝不会发布。",
+      "risk": "0 评论、0 反应，只能确认作者遇到两分钟后流程停止；根因可能是工具、配置或会话环境，不能说成通用故障。",
+      "topics": [
+        "自动化",
+        "内容工作流",
+        "安全与权限"
+      ],
+      "evidence": [
+        {
+          "source": "DEV.to #automation",
+          "sourceType": "开发者内容",
+          "originalTitle": "\"I won't post without your approval\" — my dutiful AI died after two minutes",
+          "url": "https://dev.to/jun_uen0/i-wont-post-without-your-approval-my-dutiful-ai-died-after-two-minutes-2cbe",
+          "observedAt": "2026-08-08",
+          "metrics": {},
+          "strength": "中",
+          "boundary": "这是一个可复核的实战案例，不能据此推断市场已经验证。"
+        }
+      ]
+    }
+  ]
+}

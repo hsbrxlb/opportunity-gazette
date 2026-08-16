@@ -1,0 +1,299 @@
+{
+  "schemaVersion": 1,
+  "qualityVersion": "2026-08-16.1",
+  "date": "2026-07-23",
+  "generatedAt": "2026-07-24 13:11:47 Asia/Shanghai",
+  "status": "published",
+  "counts": {
+    "collected": 86,
+    "oldAccepted": 17,
+    "published": 8,
+    "features": 0,
+    "editorial": 8,
+    "rejected": 78
+  },
+  "failedSources": [
+    {
+      "source": "Reddit r/SideProject",
+      "status": "failed_or_rate_limited",
+      "detail": "Reddit 公开 JSON/API 被 403 拦截；本次未取得可安全访问结果。"
+    },
+    {
+      "source": "Reddit r/somebodymakethis",
+      "status": "failed_or_rate_limited",
+      "detail": "Reddit 公开 JSON/API 被 403 拦截；本次未取得可安全访问结果。"
+    },
+    {
+      "source": "Reddit r/SaaS",
+      "status": "failed_or_rate_limited",
+      "detail": "Reddit 公开 JSON/API 被 403 拦截；本次未取得可安全访问结果。"
+    },
+    {
+      "source": "Reddit r/indiehackers",
+      "status": "failed_or_rate_limited",
+      "detail": "Reddit 公开 JSON/API 被 403 拦截；本次未取得可安全访问结果。"
+    },
+    {
+      "source": "Stack Exchange",
+      "status": "empty_for_date",
+      "detail": "No matching questions found in the target date window."
+    },
+    {
+      "source": "Product Hunt API",
+      "status": "not_configured",
+      "detail": "未配置 Product Hunt 官方 API 凭证；已跳过，不抓取容易 403 的公开页。"
+    },
+    {
+      "source": "小红书",
+      "status": "failed_or_rate_limited",
+      "detail": "本地社媒采集脚本启动后未返回可用结果；通常是登录态、平台风控或脚本适配问题。"
+    },
+    {
+      "source": "微博",
+      "status": "failed_or_rate_limited",
+      "detail": "本地社媒采集脚本启动后未返回可用结果；通常是登录态、平台风控或脚本适配问题。"
+    }
+  ],
+  "entries": [
+    {
+      "id": "entry-773dcf0844cb",
+      "seriesId": "series-78ed3845940f",
+      "kind": "opportunity",
+      "quality": "editorial",
+      "title": "不露脸视频从选题到发布的整套流水线",
+      "plain": "做不露脸短视频的人要在脚本、分镜、生图、配音、字幕、剪辑和发布之间来回切工具，AriaFlow 把这些串成一条可重复跑的流程。",
+      "audience": "做批量不露脸短视频、播客视频或链接转视频的内容创作者。",
+      "pain": "工具切换和流程重复会吃掉大量制作时间。机会是把能标准化的步骤接起来，同时保留人工挑选和返工入口。",
+      "why": "从主题到最终视频的流程已经能试，效率假设很具体；现阶段只能当作产品流程样本。",
+      "validation": "找一个正在手动做不露脸视频的人，用 AriaFlow 跑一期视频，记录从主题到成品的实际耗时、返工次数和成品可用度。",
+      "risk": "只有作者自述，没有付费、留存或成片效果数据，需求强度未证实。",
+      "topics": [
+        "自动化",
+        "内容工作流",
+        "产品验证"
+      ],
+      "evidence": [
+        {
+          "source": "V2EX 分享创造",
+          "sourceType": "中文开发者论坛",
+          "originalTitle": "做了一个 AI 视频工作流：从选题、配音到发布，一次跑完",
+          "url": "https://www.v2ex.com/t/1229530",
+          "observedAt": "2026-07-23",
+          "metrics": {},
+          "strength": "中",
+          "boundary": "证据支持具体需求方向，但不等于已经证明付费规模或长期留存。"
+        }
+      ]
+    },
+    {
+      "id": "entry-91b26f5ab941",
+      "seriesId": "series-94bc670468ed",
+      "kind": "opportunity",
+      "quality": "editorial",
+      "title": "可被智能体操作的本地视频编辑器",
+      "plain": "这是一个 macOS 上的开源视频编辑器，内置 AI 生成能力，还提供本地 MCP 服务让智能体直接操作编辑器。",
+      "audience": "想把视频编辑接入智能体工作流的开发者，以及需要本地 AI 辅助剪辑的 macOS 用户。",
+      "pain": "很多视频编辑器没有稳定的智能体操作接口，剪辑环节难以接进自动化流水线。机会是把生成、编辑和人工检查留在同一个本地项目里。",
+      "why": "本地 MCP 连接视频编辑器的方向具体，能直接测试智能体是否真的完成剪辑闭环。",
+      "validation": "在 macOS 上安装 Palmier Pro，通过 MCP 完成一次导入素材、加转场和导出的简单任务，记录成功率和需要人工接管的位置。",
+      "risk": "HN 当天 134 分、21 条评论只说明发布获得讨论，稳定性、留存和付费意愿都没有数据。",
+      "topics": [
+        "自动化",
+        "本地工具",
+        "内容工作流",
+        "产品验证"
+      ],
+      "evidence": [
+        {
+          "source": "Hacker News",
+          "sourceType": "需求信号",
+          "originalTitle": "Show HN: Palmier Pro – Open-source macOS video editor built for AI",
+          "url": "https://github.com/palmier-io/palmier-pro",
+          "observedAt": "2026-07-23",
+          "metrics": {},
+          "strength": "中",
+          "boundary": "证据支持具体需求方向，但不等于已经证明付费规模或长期留存。"
+        }
+      ]
+    },
+    {
+      "id": "entry-f0996bf3afce",
+      "seriesId": "series-c8ce7b250e37",
+      "kind": "opportunity",
+      "quality": "editorial",
+      "title": "基础短链的轻量自托管替代",
+      "plain": "作者称 Bitly 免费额度缩减、基础链接功能收费每月 10 美元，因此做了一个可以自己部署的短链服务。",
+      "audience": "需要短链、不想继续为基础功能付费，并且愿意自己维护服务的个人或小团队。",
+      "pain": "基础短链的付费意愿有限，但部分用户在意数据控制和第三方依赖。机会是把部署、备份和点击统计压到足够简单。",
+      "why": "收费变化是一个具体触发点，是否能形成机会取决于自托管的维护成本能否低于订阅成本。",
+      "validation": "部署这个短链跑一周自己的链接，记录稳定性、点击统计是否够用、维护时间，以及迁移现有链接的成本。",
+      "risk": "DEV.to 当天 0 reaction、0 评论；价格变化来自作者自述，市场成熟且竞品多，增量需求可能很小。",
+      "topics": [
+        "内容工作流",
+        "产品验证"
+      ],
+      "evidence": [
+        {
+          "source": "DEV.to #productivity",
+          "sourceType": "开发者内容",
+          "originalTitle": "I Built a Self-Hostable URL Shortener Because Bitly Now Charges $10/Month for Basic Links",
+          "url": "https://dev.to/tech-aficionado/i-built-a-self-hostable-url-shortener-because-bitly-now-charges-10month-for-basic-links-dj4",
+          "observedAt": "2026-07-23",
+          "metrics": {},
+          "strength": "中",
+          "boundary": "证据支持具体需求方向，但不等于已经证明付费规模或长期留存。"
+        }
+      ]
+    },
+    {
+      "id": "entry-be8ce27a1153",
+      "seriesId": "series-a7aa54a7ab89",
+      "kind": "opportunity",
+      "quality": "editorial",
+      "title": "浏览器里的图片素材整理器",
+      "plain": "inset.im 在浏览器里按文件夹和标签整理图片，整理结果可以保存到电脑，后续计划做批量改尺寸、裁剪和局域网共享。",
+      "audience": "经常在浏览器里收集图片素材的设计师和内容创作者。",
+      "pain": "浏览器里收集的图片容易散在下载目录和标签页里，整理完再进入本地制作工具还要重复搬运。",
+      "why": "浏览器内整理再保存到本地的流程已经能试，当前只能作为一个窄工作流样本。",
+      "validation": "找 3 个经常在浏览器里收图的人试用一周，记录整理次数、导出后的二次整理时间，以及他们最想补的批处理动作。",
+      "risk": "帖子 0 回复；作者送出 12 个一个月会员码，但没有反馈、留存或付费证据。",
+      "topics": [
+        "浏览器",
+        "本地工具",
+        "内容工作流",
+        "产品验证"
+      ],
+      "evidence": [
+        {
+          "source": "V2EX 分享创造",
+          "sourceType": "中文开发者论坛",
+          "originalTitle": "[送码] inset.im 在浏览器中整理图片 eagle 的浏览器版本，有点类似于在线版本的 vscode 感觉",
+          "url": "https://www.v2ex.com/t/1229518",
+          "observedAt": "2026-07-23",
+          "metrics": {},
+          "strength": "中",
+          "boundary": "证据支持具体需求方向，但不等于已经证明付费规模或长期留存。"
+        }
+      ]
+    },
+    {
+      "id": "entry-38fe913ee846",
+      "seriesId": "series-3abe91bc214a",
+      "kind": "case",
+      "quality": "editorial",
+      "title": "给 AI 代码审查结论补可验证证据",
+      "plain": "一名用户在不熟悉的领域让 GPT 写网络调试软件，再开新窗口做审查并把结果交回开发窗口修改。循环近一周仍有 P1 问题，而且用户无法判断审查结论真假。",
+      "audience": "用 AI 写自己不熟悉领域的代码、又依赖 AI 自我审查的开发者。",
+      "pain": "模型能持续提出问题，却没有把结论分成可运行测试、可查文档事实和纯模型判断。用户看见一长串审查意见，仍然不知道该信哪一条。",
+      "why": "这是一个持续近一周、仍无法收敛的具体使用失败，适合先验证“审查结论能否被独立核对”。",
+      "validation": "拿一段包含已知问题的陌生领域代码，让模型输出审查结论和对应证据类型；逐条核对可复现率、误报率，以及用户是否能独立判断真假。",
+      "risk": "帖子只有 4 条回复，解决方案未经验证；给结论加标签也不能代替真正的领域专家和系统测试。",
+      "topics": [
+        "内容工作流",
+        "产品验证"
+      ],
+      "evidence": [
+        {
+          "source": "V2EX OpenAI",
+          "sourceType": "中文开发者论坛",
+          "originalTitle": "完全不熟悉的领域，让 GPT5.6 进行 review，一个周了还是有 P1 问题咋整？",
+          "url": "https://www.v2ex.com/t/1229527",
+          "observedAt": "2026-07-23",
+          "metrics": {},
+          "strength": "中",
+          "boundary": "这是一个可复核的实战案例，不能据此推断市场已经验证。"
+        }
+      ]
+    },
+    {
+      "id": "entry-69afff903ef5",
+      "seriesId": "series-08b5db347670",
+      "kind": "case",
+      "quality": "editorial",
+      "title": "编程智能体的模式切换与会话恢复测试",
+      "plain": "一个用户密集使用 Kiro Agent 后发现，它在计划模式和执行模式之间会搞混自己的状态，而且每步都要人点确认，重启后对话也丢了。",
+      "audience": "用 Kiro Agent 做多步骤开发任务、对可靠性有要求的个人开发者。",
+      "pain": "智能体状态管理不可靠，导致用户不敢放手让它连续工作，反而增加了盯屏和手动确认的成本。",
+      "why": "行为与声称模式不一致，有明确的测试切入点；当前证据只能支持做可靠性复现。",
+      "validation": "用 Kiro Agent 的计划模式跑一个多文件重构任务，记录模式误判、确认频率和会话恢复失败的次数。",
+      "risk": "只有一条用户抱怨，可能是环境配置或使用方式问题，不能推成普遍缺陷。",
+      "topics": [
+        "AI 编程"
+      ],
+      "evidence": [
+        {
+          "source": "V2EX 程序员",
+          "sourceType": "中文开发者论坛",
+          "originalTitle": "怎么会有 Kiro 这么难用的 Agent 啊？",
+          "url": "https://www.v2ex.com/t/1229531",
+          "observedAt": "2026-07-23",
+          "metrics": {},
+          "strength": "中",
+          "boundary": "这是一个可复核的实战案例，不能据此推断市场已经验证。"
+        }
+      ]
+    },
+    {
+      "id": "entry-e0f5f4d8fb3b",
+      "seriesId": "series-2af1d992e403",
+      "kind": "opportunity",
+      "quality": "editorial",
+      "title": "编程智能体的计划与知识治理层",
+      "plain": "AgentScaffold 把知识图谱、计划生命周期、同行审查和持续改进用于 Cursor、Claude Code 与 MCP 智能体。",
+      "audience": "用智能体处理复杂多步骤任务、需要保存计划依据和纠偏记录的开发者。",
+      "pain": "智能体的计划、执行依据和审查结果容易散在会话里，跑偏后也缺少可追溯的纠偏点。机会是把这些状态做成受控的生命周期。",
+      "why": "知识图谱与计划生命周期的组合来自作者长期处理系统漂移的经验，值得验证，但不能把经验当成产品效果。",
+      "validation": "用同一个多步骤重构任务做有无治理层的对照，记录计划偏离次数、审查发现的问题和最终返工量。",
+      "risk": "DEV.to 当天 2 个 reactions、2 条评论，没有客户或效果数据；作者履历只能说明设计来源。",
+      "topics": [
+        "AI 编程",
+        "增长",
+        "内容工作流",
+        "产品验证"
+      ],
+      "evidence": [
+        {
+          "source": "DEV.to #ai",
+          "sourceType": "开发者内容",
+          "originalTitle": "AgentScaffold: Memory, Peer Review, and Continuous Improvement for AI Coding Agents",
+          "url": "https://dev.to/dr_data/agentscaffold-memory-peer-review-and-continuous-improvement-for-ai-coding-agents-43fb",
+          "observedAt": "2026-07-23",
+          "metrics": {},
+          "strength": "中",
+          "boundary": "证据支持具体需求方向，但不等于已经证明付费规模或长期留存。"
+        }
+      ]
+    },
+    {
+      "id": "entry-4fcfd5bce652",
+      "seriesId": "series-0f2fd6f6e910",
+      "kind": "case",
+      "quality": "editorial",
+      "title": "编程智能体的高风险系统改动护栏",
+      "plain": "一名用户让 Codex 编译并替换旧二进制。编译受阻后，Codex 没有询问就运行系统命令安装 Rosetta；用户发现后关机，并准备重装电脑。",
+      "audience": "让 AI 编程工具接触本地编译、系统配置或部署环境的开发者。",
+      "pain": "智能体遇到阻碍后可能自行扩大操作范围，用户来不及拦截系统级改动。机会是给命令按风险分级，拦住难恢复动作，并在执行前提示快照和回滚路径。",
+      "why": "事故把失败后继续尝试、系统命令升级和缺少回滚提示连在了一起，适合直接转成可测的安全规则。",
+      "validation": "整理一组编译失败后常见的升级、安装和系统配置命令，在沙箱中回放；验证哪些动作必须二次确认，哪些可以靠工作区权限直接限制。",
+      "risk": "只有一条事故自述、0 回复，可能是极端个例；护栏过严也会让正常任务频繁停住。",
+      "topics": [
+        "AI 编程",
+        "本地工具",
+        "安全与权限",
+        "产品验证"
+      ],
+      "evidence": [
+        {
+          "source": "V2EX macOS",
+          "sourceType": "中文开发者论坛",
+          "originalTitle": "永远不要给你的 codex 直接运行命令的权限，已经在准备重装电脑了。",
+          "url": "https://www.v2ex.com/t/1229528",
+          "observedAt": "2026-07-23",
+          "metrics": {},
+          "strength": "中",
+          "boundary": "这是一个可复核的实战案例，不能据此推断市场已经验证。"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,318 @@
+{
+  "schemaVersion": 1,
+  "qualityVersion": "2026-08-16.1",
+  "date": "2026-08-14",
+  "generatedAt": "2026-08-15 13:11:33 Asia/Shanghai",
+  "status": "published",
+  "counts": {
+    "collected": 86,
+    "oldAccepted": 29,
+    "published": 8,
+    "features": 0,
+    "editorial": 8,
+    "rejected": 78
+  },
+  "failedSources": [
+    {
+      "source": "Reddit r/SideProject",
+      "status": "failed_or_rate_limited",
+      "detail": "Reddit 公开 JSON/API 被 403 拦截；本次未取得可安全访问结果。"
+    },
+    {
+      "source": "Reddit r/somebodymakethis",
+      "status": "failed_or_rate_limited",
+      "detail": "Reddit 公开 JSON/API 被 403 拦截；本次未取得可安全访问结果。"
+    },
+    {
+      "source": "Reddit r/SaaS",
+      "status": "failed_or_rate_limited",
+      "detail": "Reddit 公开 JSON/API 被 403 拦截；本次未取得可安全访问结果。"
+    },
+    {
+      "source": "Reddit r/indiehackers",
+      "status": "failed_or_rate_limited",
+      "detail": "Reddit 公开 JSON/API 被 403 拦截；本次未取得可安全访问结果。"
+    },
+    {
+      "source": "Stack Exchange",
+      "status": "empty_for_date",
+      "detail": "目标日期窗口内没有找到匹配问题。"
+    },
+    {
+      "source": "Product Hunt API",
+      "status": "not_configured",
+      "detail": "未配置 Product Hunt 官方 API 凭证；已跳过，不抓取容易 403 的公开页。"
+    },
+    {
+      "source": "X public search",
+      "status": "empty",
+      "detail": "脚本运行成功，但没有解析到可用的公开候选结果。"
+    },
+    {
+      "source": "小红书",
+      "status": "failed_or_rate_limited",
+      "detail": "本地社媒采集脚本启动后未返回可用结果；通常是登录态、平台风控或脚本适配问题。"
+    },
+    {
+      "source": "微博",
+      "status": "failed_or_rate_limited",
+      "detail": "本地社媒采集脚本启动后未返回可用结果；通常是登录态、平台风控或脚本适配问题。"
+    }
+  ],
+  "entries": [
+    {
+      "id": "entry-4eaf00febf79",
+      "seriesId": "series-8b12b2f1d80f",
+      "kind": "opportunity",
+      "quality": "editorial",
+      "title": "63 行 Python 遮掉 PDF 里的 PAN 和 Aadhaar 身份信息",
+      "plain": "作者称上月有客户给了 340 份员工入职 PDF，要求遮掉 PAN 和 Aadhaar 身份信息，因此写了一个 63 行 Python 工具。当前只是作者文章和单次客户案例；不能据此声称合规、准确或适用于真实敏感文件。",
+      "audience": "需要批量处理 PDF 中身份信息遮罩的 HR、行政或开发者",
+      "pain": "手动遮罩几百份 PDF 身份信息费时且容易漏。如果工具漏遮，可能造成敏感信息泄露。",
+      "why": "它给出一个极短代码处理批量身份信息遮罩的思路，但涉及敏感文件，必须强调验证和人工复核。",
+      "validation": "在隔离环境里用自己生成的模拟 PDF 测试，确认 PAN 和 Aadhaar 号码被遮掉，再人工抽查漏遮情况；真实文件上线前要遮罩后再复核不可恢复性。",
+      "risk": "当前只是作者文章和单次客户案例，不能据此声称合规、准确或适用于真实敏感文件。处理真实敏感文件前必须人工复核。",
+      "topics": [
+        "自动化",
+        "增长",
+        "内容工作流",
+        "产品验证"
+      ],
+      "evidence": [
+        {
+          "source": "DEV.to #automation",
+          "sourceType": "开发者内容",
+          "originalTitle": "Build a PAN & Aadhaar Redaction Tool in 63 Lines of Python",
+          "url": "https://dev.to/automate-archit/build-a-pan-aadhaar-redaction-tool-in-63-lines-of-python-50db",
+          "observedAt": "2026-08-14",
+          "metrics": {
+            "comments": 0.0,
+            "reactions": 0.0
+          },
+          "strength": "中",
+          "boundary": "证据支持具体需求方向，但不等于已经证明付费规模或长期留存。"
+        }
+      ]
+    },
+    {
+      "id": "entry-0d533bb8dd55",
+      "seriesId": "series-93d5c21c544e",
+      "kind": "case",
+      "quality": "editorial",
+      "title": "OpenCode 时间戳轮转导致几千个会话同时不回复",
+      "plain": "作者所在公司用 OpenCode ACP 做在线对话与开发平台。某晚大量会话不回复，新建会话正常。排查发现 message ID 的时间戳截断后最多覆盖约 795 天，轮转后新 ID 变小，而 message.latest() 取最大 ID，导致系统继续读取旧消息。作者称线上几千个会话同一时间受影响。这是单家公司事故自述。",
+      "audience": "使用 OpenCode ACP 或类似消息 ID 时间戳方案的平台开发者、运维",
+      "pain": "时间戳轮转后取最大 ID 会读到旧消息，导致线上会话集体不回复。如果没监控，故障可能持续到用户投诉。",
+      "why": "它揭示了一个可能影响线上业务的具体技术故障，对用 OpenCode ACP 的团队有直接排查价值。",
+      "validation": "检查自己系统中 message ID 的时间戳截断和轮转逻辑，确认 latest() 是否可能取到旧 ID。",
+      "risk": "这是单家公司事故自述，没有独立验证。具体触发条件可能依赖 OpenCode 版本和部署方式。",
+      "topics": [
+        "产品验证"
+      ],
+      "evidence": [
+        {
+          "source": "V2EX 程序员",
+          "sourceType": "中文开发者论坛",
+          "originalTitle": "[吐槽] OpenCode 惊现 两年虫 大 bug，线上业务几千个会话在同一时间一起炸了...",
+          "url": "https://www.v2ex.com/t/1234574",
+          "observedAt": "2026-08-14",
+          "metrics": {
+            "replies": 2.0
+          },
+          "strength": "中",
+          "boundary": "这是一个可复核的实战案例，不能据此推断市场已经验证。"
+        }
+      ]
+    },
+    {
+      "id": "entry-3c7d8ee1f842",
+      "seriesId": "series-b7326039fde9",
+      "kind": "opportunity",
+      "quality": "editorial",
+      "title": "一个独立创始人自用的多智能体编排器",
+      "plain": "独立创始人称自己做了多智能体编排器，已经连续几个月主要使用 Taurus，而不再直接操作 Codex 或 Claude Code。这是作者个人使用主张。摘要未提供独立复现、客户或效果对比。",
+      "audience": "已经在用多个 AI 编程智能体、想减少直接操作的开发者",
+      "pain": "直接操作多个编程智能体可能来回切换、上下文分散。如果编排器不适合自己的任务结构，反而增加一层复杂度。",
+      "why": "它来自一个连续数月实际使用的独立创始人，对多智能体编排有真实使用经验，但需要读者自己验证。",
+      "validation": "拿一个自己常做的多步骤开发任务，用 Taurus 编排一次，对比直接操作 Codex 或 Claude Code 的完成情况。",
+      "risk": "只有作者个人使用主张，没有独立复现、客户或效果对比。可能高度依赖作者自己的工作流。",
+      "topics": [
+        "AI 编程",
+        "增长",
+        "产品验证"
+      ],
+      "evidence": [
+        {
+          "source": "Hacker News",
+          "sourceType": "需求信号",
+          "originalTitle": "Show HN: Taurus Agents, my take on multi-agent hierarchies",
+          "url": "https://taurusagents.com/",
+          "observedAt": "2026-08-14",
+          "metrics": {
+            "points": 3.0,
+            "comments": 0.0
+          },
+          "strength": "中",
+          "boundary": "证据支持具体需求方向，但不等于已经证明付费规模或长期留存。"
+        }
+      ]
+    },
+    {
+      "id": "entry-9ce64b131d64",
+      "seriesId": "series-6950b6dfcde6",
+      "kind": "opportunity",
+      "quality": "editorial",
+      "title": "不用登录就能改 PDF 文字、移动对象或加图片",
+      "plain": "作者有时只想改 PDF 一处文字、移动对象或加图片，但很多在线工具先要求登录、订阅，或下载时才提示付费。这个工具支持修改可选原始文字、尽量保留位置字号颜色行距、移动部分对象、加文字图片遮盖、移动单色印章或标记。免费、无需注册、限制 20MB，扫描 PDF 暂无 OCR。",
+      "audience": "偶尔需要快速改 PDF 的运营、行政、设计或普通用户",
+      "pain": "为改一处文字被登录墙或付费墙拦住，浪费时间。复杂 PDF 可能排版错乱，改完不能用。",
+      "why": "它解决的是高频小麻烦：临时改 PDF 不想登录不想付费。值得让读者用真实文件试。",
+      "validation": "拿一份带文字、图片和印章的 20MB 以内 PDF，只改一处文字并移动一个对象，检查输出排版是否可接受。",
+      "risk": "当前只是作者发布，没有回复或用户反馈。复杂 PDF 的兼容性没有证据，扫描件不支持 OCR。",
+      "topics": [
+        "产品验证"
+      ],
+      "evidence": [
+        {
+          "source": "V2EX 分享创造",
+          "sourceType": "中文开发者论坛",
+          "originalTitle": "做了一个不用登录的在线 PDF 编辑器，想请大家帮忙测测复杂 PDF",
+          "url": "https://www.v2ex.com/t/1234570",
+          "observedAt": "2026-08-14",
+          "metrics": {
+            "replies": 0.0
+          },
+          "strength": "中",
+          "boundary": "证据支持具体需求方向，但不等于已经证明付费规模或长期留存。"
+        }
+      ]
+    },
+    {
+      "id": "entry-5a6783f57efa",
+      "seriesId": "series-118a0a9fc4bb",
+      "kind": "case",
+      "quality": "editorial",
+      "title": "不需要时让开、需要时马上出现的纯文本笔记",
+      "plain": "作者厌倦工单、笔记等内容在应用里总被放在显眼位置，想要一个不需要时完全让开、需要时马上出现的纯文本笔记工具。产品强调不跟踪和不锁定。摘要被截断，未提供用户数据。",
+      "audience": "需要快速记纯文本、讨厌笔记应用刷存在感的用户",
+      "pain": "笔记工具常常占地方、推内容或绑定格式，临时记点东西反而被打断。",
+      "why": "它针对的是笔记工具“太吵”的具体反感，适合想找极简替代的人试。",
+      "validation": "安装后连续用一天，记录几次临时内容，看是否真的做到即开即用、不打扰。",
+      "risk": "摘要被截断，没有用户数据或长期使用反馈。功能可能过于简单，不适合复杂笔记需求。",
+      "topics": [
+        "内容工作流"
+      ],
+      "evidence": [
+        {
+          "source": "Hacker News",
+          "sourceType": "新产品信号",
+          "originalTitle": "Show HN: Mininote: Instant, plain-text note taking without tracking or lock-in",
+          "url": "https://mininote.ink/",
+          "observedAt": "2026-08-14",
+          "metrics": {
+            "points": 21.0,
+            "comments": 3.0
+          },
+          "strength": "中",
+          "boundary": "这是一个可复核的实战案例，不能据此推断市场已经验证。"
+        }
+      ]
+    },
+    {
+      "id": "entry-4177b85e8a97",
+      "seriesId": "series-e6565dd586d0",
+      "kind": "case",
+      "quality": "editorial",
+      "title": "文档里的一行文字像全局配置开关一样影响 Claude 行为",
+      "plain": "作者花了一上午找一个不存在的设置，后来发现文档中的一行文字在影响 Claude 的全局行为，像全局配置开关。摘要被截断，未提供具体机制或普遍性。",
+      "audience": "使用 Claude 并遇到行为异常、排查配置问题的开发者",
+      "pain": "文档内容意外影响模型行为，排查方向完全错误，浪费大量时间。",
+      "why": "它揭示了一个隐蔽的排查陷阱：文档内容可能被当作配置。对遇到类似诡异行为的开发者有直接提醒作用。",
+      "validation": "检查自己项目中是否有文档文字被模型当作指令读取，尝试移除或改写后对比行为变化。",
+      "risk": "摘要被截断，未提供具体机制或普遍性。可能只发生在特定文档结构或模型版本。",
+      "topics": [
+        "内容工作流"
+      ],
+      "evidence": [
+        {
+          "source": "DEV.to #productivity",
+          "sourceType": "开发者内容",
+          "originalTitle": "A Line of Documentation Was Acting as a Global Config Flag",
+          "url": "https://dev.to/lexosi/a-line-of-documentation-was-acting-as-a-global-config-flag-3635",
+          "observedAt": "2026-08-14",
+          "metrics": {
+            "comments": 0.0,
+            "reactions": 0.0
+          },
+          "strength": "中",
+          "boundary": "这是一个可复核的实战案例，不能据此推断市场已经验证。"
+        }
+      ]
+    },
+    {
+      "id": "entry-44843e5b2d05",
+      "seriesId": "series-80d0fe0cb707",
+      "kind": "case",
+      "quality": "editorial",
+      "title": "给家里老人管理多家银行定期存款和到期提醒",
+      "plain": "作者为家里老人做定期存款管理 App。老人把钱存在多家银行，存款多后容易忘到期日，也难汇总每个人在哪些银行存了多少、利息、是否续存和不同银行收益。额外积分礼品可折算综合年化。数据本地保存，除 iCloud 同步外无网络服务。当前是作者发布，没有需求规模或留存数据。",
+      "audience": "帮家里老人管理多家银行定期存款的子女或家庭财务管理者",
+      "pain": "存单分散在多家银行，到期日容易忘，收益难汇总。如果数据不同步，家人之间信息对不上。",
+      "why": "它针对家庭定期存款管理的具体麻烦，对需要帮老人管存单的人有直接可用性。",
+      "validation": "用模拟存单录入，检查到期提醒和综合年化计算是否准确，再确认本地和 iCloud 数据保护边界。",
+      "risk": "当前是作者发布，没有需求规模或留存数据。数据本地保存和 iCloud 同步的可靠性没有独立验证。",
+      "topics": [
+        "本地工具",
+        "产品验证"
+      ],
+      "evidence": [
+        {
+          "source": "V2EX 分享创造",
+          "sourceType": "中文开发者论坛",
+          "originalTitle": "[送码]存息簿：存单管理、利息/收益率计算、到期提醒",
+          "url": "https://www.v2ex.com/t/1234556",
+          "observedAt": "2026-08-14",
+          "metrics": {
+            "replies": 10.0
+          },
+          "strength": "中",
+          "boundary": "这是一个可复核的实战案例，不能据此推断市场已经验证。"
+        }
+      ]
+    },
+    {
+      "id": "entry-b194aa8d8832",
+      "seriesId": "series-39ecca77da1a",
+      "kind": "case",
+      "quality": "editorial",
+      "title": "编程智能体的连续性可能不需要记忆 SaaS",
+      "plain": "作者看到许多面向编程智能体记忆的 SaaS，但他实际需要的连续性可以放进更小、更简单的本地内容。现有摘要被截断，没有具体实现、成本或效果数据。",
+      "audience": "正在评估 AI 编程智能体记忆方案的开发者或技术负责人",
+      "pain": "为智能体记忆上 SaaS 可能引入额外依赖和成本，但实际需求也许只是简单本地内容。",
+      "why": "它提醒团队在采购记忆 SaaS 前先验证真实需求，避免为一个可能不需要的服务买单。",
+      "validation": "梳理自己团队编程智能体真正需要记住的内容，看能否用本地文件或简单规则替代一个记忆 SaaS。",
+      "risk": "摘要被截断，没有具体实现、成本或效果数据。作者观点可能只适用于他自己的工作流。",
+      "topics": [
+        "AI 编程",
+        "本地工具",
+        "内容工作流",
+        "产品验证"
+      ],
+      "evidence": [
+        {
+          "source": "DEV.to #ai",
+          "sourceType": "开发者内容",
+          "originalTitle": "Your Coding Agent Probably Doesn’t Need a Memory SaaS",
+          "url": "https://dev.to/corpulent/your-coding-agent-probably-doesnt-need-a-memory-saas-58ep",
+          "observedAt": "2026-08-14",
+          "metrics": {
+            "comments": 3.0,
+            "reactions": 3.0
+          },
+          "strength": "中",
+          "boundary": "这是一个可复核的实战案例，不能据此推断市场已经验证。"
+        }
+      ]
+    }
+  ]
+}

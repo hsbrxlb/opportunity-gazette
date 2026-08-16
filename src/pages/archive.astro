@@ -1,0 +1,37 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { formatDate, getIssues, issueHref } from '../lib/data';
+
+const issues = getIssues();
+const grouped = issues.reduce((months, issue) => {
+  const month = issue.date.slice(0, 7);
+  const current = months.get(month) ?? [];
+  current.push(issue);
+  months.set(month, current);
+  return months;
+}, new Map<string, typeof issues>());
+---
+
+<BaseLayout title="日期归档｜机会画报" description="按日期查看有精品、无精品和未运行状态。" canonicalPath="/archive/" pageClass="archive-page">
+  <header class="page-intro">
+    <p class="section-kicker">THE ARCHIVE</p>
+    <h1>日期归档</h1>
+    <p>“无精品”代表当天运行过，但没有条目过关；缺失日期代表当天没有报告。</p>
+  </header>
+  <div class="archive-months">
+    {[...grouped.entries()].map(([month, monthIssues]) => (
+      <section class="archive-month">
+        <h2>{month.replace('-', ' · ')}</h2>
+        <div class="archive-grid">
+          {monthIssues.map((issue) => (
+            <a class:list={['archive-day', issue.status === 'no精品' && 'is-empty']} href={issueHref(issue.date)}>
+              <time datetime={issue.date}>{formatDate(issue.date, false)}</time>
+              <strong>{issue.entries[0]?.title ?? '当天没有精品'}</strong>
+              <span>{issue.counts.published ? `${issue.counts.published} 条精品` : '宁缺毋滥'}</span>
+            </a>
+          ))}
+        </div>
+      </section>
+    ))}
+  </div>
+</BaseLayout>

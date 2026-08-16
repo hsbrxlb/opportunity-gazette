@@ -1,0 +1,24 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCatalog, topicHref } from '../../lib/data';
+
+const catalog = await getCatalog();
+---
+
+<BaseLayout title="专题时间线｜机会画报" description="把重复出现的机会方向合并成持续更新的证据时间线。" canonicalPath="/topics/" pageClass="topics-page">
+  <header class="page-intro">
+    <p class="section-kicker">EVIDENCE THREADS</p>
+    <h1>专题时间线</h1>
+    <p>同一个方向不会反复占版面。只有出现新来源、新数据或新验证方法，时间线才会更新。</p>
+  </header>
+  <div class="topic-index">
+    {catalog.series.length ? catalog.series.map((series, index) => (
+      <a class="topic-row" href={topicHref(series.id)}>
+        <span>{String(index + 1).padStart(2, '0')}</span>
+        <strong>{series.title}</strong>
+        <em>{series.dates.length} 次有效更新</em>
+        <small>{series.topics.join(' · ')}</small>
+      </a>
+    )) : <p class="empty-note">目前还没有出现两次以上、且带来新证据的精品方向。</p>}
+  </div>
+</BaseLayout>

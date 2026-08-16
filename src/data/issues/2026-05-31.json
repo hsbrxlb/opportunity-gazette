@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 1,
+  "qualityVersion": "2026-08-16.1",
+  "date": "2026-05-31",
+  "generatedAt": "2026-06-01 13:07:00 Asia/Shanghai",
+  "status": "published",
+  "counts": {
+    "collected": 86,
+    "oldAccepted": 10,
+    "published": 2,
+    "features": 0,
+    "editorial": 2,
+    "rejected": 84
+  },
+  "failedSources": [
+    {
+      "source": "Reddit r/SideProject",
+      "status": "failed_or_rate_limited",
+      "detail": "Reddit 公开 JSON/API 被 403 拦截；本次未取得可安全访问结果。"
+    },
+    {
+      "source": "Reddit r/somebodymakethis",
+      "status": "failed_or_rate_limited",
+      "detail": "Reddit 公开 JSON/API 被 403 拦截；本次未取得可安全访问结果。"
+    },
+    {
+      "source": "Reddit r/SaaS",
+      "status": "failed_or_rate_limited",
+      "detail": "Reddit 公开 JSON/API 被 403 拦截；本次未取得可安全访问结果。"
+    },
+    {
+      "source": "Reddit r/indiehackers",
+      "status": "failed_or_rate_limited",
+      "detail": "Reddit 公开 JSON/API 被 403 拦截；本次未取得可安全访问结果。"
+    },
+    {
+      "source": "Stack Exchange",
+      "status": "empty_for_date",
+      "detail": "No matching questions found in the target date window."
+    },
+    {
+      "source": "Product Hunt API",
+      "status": "not_configured",
+      "detail": "No PRODUCTHUNT_TOKEN configured; skipped instead of scraping the 403-prone public page."
+    },
+    {
+      "source": "小红书",
+      "status": "failed_or_rate_limited",
+      "detail": "本地社媒采集脚本启动后未返回可用结果；通常是登录态、平台风控或脚本适配问题。"
+    },
+    {
+      "source": "微博",
+      "status": "failed_or_rate_limited",
+      "detail": "本地社媒采集脚本启动后未返回可用结果；通常是登录态、平台风控或脚本适配问题。"
+    }
+  ],
+  "entries": [
+    {
+      "id": "entry-af1816056565",
+      "seriesId": "series-976cb1de6b13",
+      "kind": "opportunity",
+      "quality": "editorial",
+      "title": "容器化前端调试工作流",
+      "plain": "前端放进 Docker 后，本地热更新、端口、网络、浏览器调试和日志会一起变复杂，开发者容易在环境问题上耗时间。",
+      "audience": "React/Vue/Svelte 前端开发者、维护 Docker 开发环境的小团队、前端 QA。",
+      "pain": "痛点不是不会写前端，而是容器环境让报错位置变模糊。机会是做一套能自动检查端口、容器日志、浏览器 console 和网络请求的调试脚手架。",
+      "why": "这个信号能落到具体的人和具体流程，不只是泛 AI 热点；可以用很小的验证动作判断有没有需求。",
+      "validation": "选一个容器化前端项目，记录常见 5 类启动/调试失败；做一个命令自动收集容器日志、页面截图和 console，交给 agent 修一次。",
+      "risk": "不同项目的容器配置差异很大；如果不能从真实项目里抽出稳定检查项，很容易变成一次性教程。",
+      "topics": [
+        "自动化",
+        "浏览器",
+        "本地工具",
+        "内容工作流"
+      ],
+      "evidence": [
+        {
+          "source": "DEV.to #productivity",
+          "sourceType": "开发者内容",
+          "originalTitle": "Debugging a containerized frontend — my actual workflow",
+          "url": "https://dev.to/sohanaakbar7/debugging-a-containerized-frontend-my-actual-workflow-507c",
+          "observedAt": "2026-05-31",
+          "metrics": {},
+          "strength": "中",
+          "boundary": "证据支持具体需求方向，但不等于已经证明付费规模或长期留存。"
+        }
+      ]
+    },
+    {
+      "id": "entry-fb096df68e7b",
+      "seriesId": "series-862bb667a21f",
+      "kind": "opportunity",
+      "quality": "editorial",
+      "title": "终端上下文自动捕捉",
+      "plain": "有人把终端里的命令、错误和调试线索做成会随时间衰减的知识图谱，用来辅助 AI 调试。",
+      "audience": "命令行重度开发者、AI assisted debugging 用户、多任务开发者。",
+      "pain": "调试时关键线索常散在终端历史、错误输出和刚改过的文件里。机会是自动记录最近最相关的上下文，交给 agent 时不必人手动整理。",
+      "why": "这个信号能落到具体的人和具体流程，不只是泛 AI 热点；可以用很小的验证动作判断有没有需求。",
+      "validation": "选 3 个真实 bug，比较人工复制终端上下文和自动生成调试包；看 agent 是否更快定位问题。",
+      "risk": "终端历史可能包含密钥、路径和客户数据；默认必须本地处理、脱敏、可清除。",
+      "topics": [
+        "本地工具",
+        "增长",
+        "内容工作流",
+        "产品验证"
+      ],
+      "evidence": [
+        {
+          "source": "DEV.to #productivity",
+          "sourceType": "开发者内容",
+          "originalTitle": "I built a time-decaying knowledge graph for my terminal — here's how it works",
+          "url": "https://dev.to/prajwalx25/i-built-a-time-decaying-knowledge-graph-for-my-terminal-heres-how-it-works-44nk",
+          "observedAt": "2026-05-31",
+          "metrics": {},
+          "strength": "中",
+          "boundary": "证据支持具体需求方向，但不等于已经证明付费规模或长期留存。"
+        }
+      ]
+    }
+  ]
+}
