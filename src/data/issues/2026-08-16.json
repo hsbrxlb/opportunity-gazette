@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "qualityVersion": "2026-08-16.1",
+  "qualityVersion": "2026-08-17.1",
   "date": "2026-08-16",
-  "generatedAt": "2026-08-17 13:03:21 Asia/Shanghai",
+  "generatedAt": "2026-08-17 13:06:40 Asia/Shanghai",
   "status": "published",
   "counts": {
     "collected": 75,
@@ -84,7 +84,7 @@
           "url": "https://apps.apple.com/us/app/autonote-ai-voice-summary/id6756772503?uo=4",
           "observedAt": "2026-08-16",
           "metrics": {
-            "ratings": 5.0,
+            "ratings": 2.0,
             "rating": 5.0
           },
           "strength": "中",
@@ -116,7 +116,7 @@
           "url": "https://apps.apple.com/cn/app/%E9%97%AA%E5%BF%B5%E8%B4%9D%E5%A3%B3-ai-%E8%AF%AD%E9%9F%B3%E7%AC%94%E8%AE%B0-%E6%97%A5%E8%AE%B0-%E4%BC%9A%E8%AE%AE/id6476344403?uo=4",
           "observedAt": "2026-08-16",
           "metrics": {
-            "ratings": 4.0,
+            "ratings": 4529.0,
             "rating": 4.91212
           },
           "strength": "中",
