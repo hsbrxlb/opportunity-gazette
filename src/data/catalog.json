@@ -1,8 +1,23 @@
 {
   "schemaVersion": 1,
   "qualityVersion": "2026-08-16.1",
-  "generatedAt": "2026-08-17T00:04:05.540093+08:00",
+  "generatedAt": "2026-08-17T13:03:22.831287+08:00",
   "issues": [
+    {
+      "date": "2026-08-16",
+      "status": "published",
+      "counts": {
+        "collected": 75,
+        "oldAccepted": 4,
+        "published": 2,
+        "features": 0,
+        "editorial": 2,
+        "rejected": 73
+      },
+      "leadTitle": "一个把会议录音、YouTube 和网页文章统一转成笔记的 AI 应用",
+      "leadKind": "opportunity",
+      "hasCover": false
+    },
     {
       "date": "2026-08-15",
       "status": "published",
@@ -1206,6 +1221,40 @@
   ],
   "series": [
     {
+      "id": "series-3559bb8fc6ae",
+      "title": "一个把会议录音、YouTube 和网页文章统一转成笔记的 AI 应用",
+      "kind": "opportunity",
+      "topics": [
+        "内容工作流",
+        "产品验证"
+      ],
+      "dates": [
+        "2026-08-15",
+        "2026-08-16"
+      ],
+      "entryIds": [
+        "entry-c491af6e6e9e",
+        "entry-921fbdd2f7f3"
+      ]
+    },
+    {
+      "id": "series-968555e95eb2",
+      "title": "中文 AI 语音笔记应用，把录音直接转成可执行的行动项",
+      "kind": "opportunity",
+      "topics": [
+        "内容工作流",
+        "产品验证"
+      ],
+      "dates": [
+        "2026-08-15",
+        "2026-08-16"
+      ],
+      "entryIds": [
+        "entry-b6a30e4190ff",
+        "entry-ff39122731a7"
+      ]
+    },
+    {
       "id": "series-c518d551880a",
       "title": "跨线下和多种视频会议生成统一纪要",
       "kind": "opportunity",
@@ -1226,11 +1275,11 @@
     }
   ],
   "stats": {
-    "reportDays": 80,
+    "reportDays": 81,
     "historicalCandidates": 617,
-    "publishedEntries": 164,
+    "publishedEntries": 166,
     "featureEntries": 29,
-    "editorialEntries": 135,
-    "excludedEntries": 453
+    "editorialEntries": 137,
+    "excludedEntries": 451
   }
 }

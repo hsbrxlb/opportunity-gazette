@@ -1,0 +1,128 @@
+{
+  "schemaVersion": 1,
+  "qualityVersion": "2026-08-16.1",
+  "date": "2026-08-16",
+  "generatedAt": "2026-08-17 13:03:21 Asia/Shanghai",
+  "status": "published",
+  "counts": {
+    "collected": 75,
+    "oldAccepted": 4,
+    "published": 2,
+    "features": 0,
+    "editorial": 2,
+    "rejected": 73
+  },
+  "failedSources": [
+    {
+      "source": "Reddit r/SideProject",
+      "status": "failed_or_rate_limited",
+      "detail": "Reddit 公开 JSON/API 被 403 拦截；本次未取得可安全访问结果。"
+    },
+    {
+      "source": "Reddit r/somebodymakethis",
+      "status": "failed_or_rate_limited",
+      "detail": "Reddit 公开 JSON/API 被 403 拦截；本次未取得可安全访问结果。"
+    },
+    {
+      "source": "Reddit r/SaaS",
+      "status": "failed_or_rate_limited",
+      "detail": "Reddit 公开 JSON/API 被 403 拦截；本次未取得可安全访问结果。"
+    },
+    {
+      "source": "Reddit r/indiehackers",
+      "status": "failed_or_rate_limited",
+      "detail": "Reddit 公开 JSON/API 被 403 拦截；本次未取得可安全访问结果。"
+    },
+    {
+      "source": "Stack Exchange",
+      "status": "empty_for_date",
+      "detail": "目标日期窗口内没有找到匹配问题。"
+    },
+    {
+      "source": "Product Hunt API",
+      "status": "not_configured",
+      "detail": "未配置 Product Hunt 官方 API 凭证；已跳过，不抓取容易 403 的公开页。"
+    },
+    {
+      "source": "X public search",
+      "status": "empty",
+      "detail": "脚本运行成功，但没有解析到可用的公开候选结果。"
+    },
+    {
+      "source": "小红书",
+      "status": "failed_or_rate_limited",
+      "detail": "本地社媒采集脚本启动后未返回可用结果；通常是登录态、平台风控或脚本适配问题。"
+    },
+    {
+      "source": "微博",
+      "status": "failed_or_rate_limited",
+      "detail": "本地社媒采集脚本启动后未返回可用结果；通常是登录态、平台风控或脚本适配问题。"
+    }
+  ],
+  "entries": [
+    {
+      "id": "entry-921fbdd2f7f3",
+      "seriesId": "series-3559bb8fc6ae",
+      "kind": "opportunity",
+      "quality": "editorial",
+      "title": "一个把会议录音、YouTube 和网页文章统一转成笔记的 AI 应用",
+      "plain": "Autonote 主打从多个来源导入内容，再用 AI 生成结构化笔记。不只是录音转写，还支持导入音频文件和 YouTube 视频。",
+      "audience": "需要把零散音视频和文章集中整理成笔记的人。",
+      "pain": "多数转录应用只负责录音，导入和整理还得自己手动拼。",
+      "why": "它把录音、YouTube 和网页文章放进同一条整理链路，用一次导入就能判断是否真的减少内容搬运。",
+      "validation": "可执行验证：导入一段已知内容的 YouTube 视频或音频文件，对比生成笔记中的关键信息和原文是否一致，检查是否存在漏项或错误归纳。",
+      "risk": "当前只有作者自述、单一案例、低互动、摘要截断。",
+      "topics": [
+        "内容工作流",
+        "产品验证"
+      ],
+      "evidence": [
+        {
+          "source": "App Store Search US",
+          "sourceType": "应用市场信号",
+          "originalTitle": "Autonote: AI Voice & Summary",
+          "url": "https://apps.apple.com/us/app/autonote-ai-voice-summary/id6756772503?uo=4",
+          "observedAt": "2026-08-16",
+          "metrics": {
+            "ratings": 5.0,
+            "rating": 5.0
+          },
+          "strength": "中",
+          "boundary": "证据支持具体需求方向，但不等于已经证明付费规模或长期留存。"
+        }
+      ]
+    },
+    {
+      "id": "entry-ff39122731a7",
+      "seriesId": "series-968555e95eb2",
+      "kind": "opportunity",
+      "quality": "editorial",
+      "title": "中文 AI 语音笔记应用，把录音直接转成可执行的行动项",
+      "plain": "闪念贝壳做语音转文字、会议记录和灵感捕捉，强调 AI 自动去口头禅、生成标题摘要和标签。也提到 Apple Watch 快速记录入口。",
+      "audience": "主要用中文做语音记录、会议整理和碎片想法捕捉的人。",
+      "pain": "语音记完还得自己删废话、排版、想标题，整理成本高。",
+      "why": "当次 App Store 有较大的评分样本，中文语音记录需求并不陌生；更值得测的是从转写到标题、标签和行动项的完整链路。",
+      "validation": "可执行验证：用一段含口头禅和重复内容的中文会议录音测试，检查生成标题、摘要、标签和行动项是否准确，并对比原文是否存在遗漏。",
+      "risk": "当前只有作者自述、单一案例、低互动、摘要截断。",
+      "topics": [
+        "内容工作流",
+        "产品验证"
+      ],
+      "evidence": [
+        {
+          "source": "App Store Search CN",
+          "sourceType": "应用市场信号",
+          "originalTitle": "闪念贝壳 - AI 语音笔记、日记、会议",
+          "url": "https://apps.apple.com/cn/app/%E9%97%AA%E5%BF%B5%E8%B4%9D%E5%A3%B3-ai-%E8%AF%AD%E9%9F%B3%E7%AC%94%E8%AE%B0-%E6%97%A5%E8%AE%B0-%E4%BC%9A%E8%AE%AE/id6476344403?uo=4",
+          "observedAt": "2026-08-16",
+          "metrics": {
+            "ratings": 4.0,
+            "rating": 4.91212
+          },
+          "strength": "中",
+          "boundary": "证据支持具体需求方向，但不等于已经证明付费规模或长期留存。"
+        }
+      ]
+    }
+  ]
+}
