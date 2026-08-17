@@ -9,6 +9,11 @@ on:
         description: Optional Asia/Shanghai target date (YYYY-MM-DD)
         required: false
         type: string
+      force_sheet_bridge:
+        description: Read the public-safe Google Sheet bridge even when a reviewed file exists
+        required: false
+        default: false
+        type: boolean
 
 permissions:
   contents: write
@@ -49,15 +54,42 @@ jobs:
         id: reviewed
         env:
           TARGET_DATE: ${{ steps.target.outputs.date }}
+          FORCE_SHEET_BRIDGE: ${{ inputs.force_sheet_bridge }}
+          SHEET_CSV_URL: https://docs.google.com/spreadsheets/d/e/2PACX-1vSglodjhuWhLmsFwyIJegmWTSpiLJCXm7ekljv8CRdZCW3__xd0W09Wuo3MGtwjCXI8GNIB3ttKyP6N/pub?gid=1900000001&single=true&output=csv
         run: |
-          url="https://raw.githubusercontent.com/hsbrxlb/opportunity-gazette-pipeline/main/reviewed/${TARGET_DATE}.json"
-          status="$(curl -L -sS -o /tmp/reviewed.json -w '%{http_code}' "$url")"
-          if [ "$status" = "404" ]; then
-            echo "found=false" >> "$GITHUB_OUTPUT"
-            echo "No reviewed file for ${TARGET_DATE}; previous site remains live."
-            exit 0
+          found=false
+          if [ "$FORCE_SHEET_BRIDGE" != "true" ]; then
+            url="https://raw.githubusercontent.com/hsbrxlb/opportunity-gazette-pipeline/main/reviewed/${TARGET_DATE}.json"
+            status="$(curl -L -sS -o /tmp/reviewed.json -w '%{http_code}' "$url")"
+            if [ "$status" = "200" ]; then
+              found=true
+              echo "source=github" >> "$GITHUB_OUTPUT"
+            elif [ "$status" != "404" ]; then
+              echo "Unexpected reviewed file response: HTTP ${status}" >&2
+              exit 1
+            fi
           fi
-          test "$status" = "200"
+
+          if [ "$found" != "true" ]; then
+            set +e
+            python scripts/fetch-reviewed-sheet.py \
+              --url "$SHEET_CSV_URL" \
+              --target-date "$TARGET_DATE" \
+              --output /tmp/reviewed.json
+            sheet_status=$?
+            set -e
+            if [ "$sheet_status" = "0" ]; then
+              found=true
+              echo "source=sheet" >> "$GITHUB_OUTPUT"
+            elif [ "$sheet_status" = "3" ]; then
+              echo "found=false" >> "$GITHUB_OUTPUT"
+              echo "No reviewed data for ${TARGET_DATE}; previous site remains live."
+              exit 0
+            else
+              exit "$sheet_status"
+            fi
+          fi
+
           echo "found=true" >> "$GITHUB_OUTPUT"
       - name: Merge reviewed issue without deleting existing entries
         if: steps.reviewed.outputs.found == 'true'

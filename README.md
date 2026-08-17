@@ -19,6 +19,6 @@ npm run audit:secrets
 
 安全发布由本机的 `publish_opportunity_gazette` 入口负责：只提交通过审核的数据和封面，不强制推送；构建或推送失败时保留上一版网站。
 
-网页版迁移链路使用公开数据仓库 [`hsbrxlb/opportunity-gazette-pipeline`](https://github.com/hsbrxlb/opportunity-gazette-pipeline)：GitHub Actions 先收集候选，普通 ChatGPT 定时任务精审并写入 `reviewed/YYYY-MM-DD.json`，本仓库在 13:40 合并新条目、保留既有条目、校验并部署。没有 reviewed 文件时不会改变上一版网站。
+网页版迁移链路使用公开数据仓库 [`hsbrxlb/opportunity-gazette-pipeline`](https://github.com/hsbrxlb/opportunity-gazette-pipeline)：GitHub Actions 先收集候选，普通 ChatGPT 定时任务精审。任务优先写入 `reviewed/YYYY-MM-DD.json`；若 ChatGPT 的 GitHub 连接没有 Contents 写权限，则写入固定 Google Sheet 中单独公开、只含发布安全 JSON 的 `网站待发布JSON` 标签页。本仓库在 13:40 优先读取 reviewed 文件、缺失时读取 Sheet 桥，随后合并新条目、保留既有条目、校验并部署。两处都没有目标日期数据时不会改变上一版网站。
 
 历史审核账本保存在本机日报目录，不进入公共仓库。公开仓库只包含通过审核的结构化条目和安全统计。
