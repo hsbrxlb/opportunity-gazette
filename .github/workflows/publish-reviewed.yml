@@ -1,0 +1,83 @@
+name: Publish reviewed opportunity data
+
+on:
+  schedule:
+    - cron: "40 5 * * *"
+  workflow_dispatch:
+    inputs:
+      target_date:
+        description: Optional Asia/Shanghai target date (YYYY-MM-DD)
+        required: false
+        type: string
+
+permissions:
+  contents: write
+
+concurrency:
+  group: reviewed-opportunity-publish
+  cancel-in-progress: false
+
+jobs:
+  ingest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Resolve target date
+        id: target
+        env:
+          REQUESTED_DATE: ${{ inputs.target_date }}
+        run: |
+          if [ -n "$REQUESTED_DATE" ]; then
+            target_date="$REQUESTED_DATE"
+          else
+            target_date="$(TZ=Asia/Shanghai date -d 'yesterday' +%F)"
+          fi
+          echo "date=$target_date" >> "$GITHUB_OUTPUT"
+      - name: Fetch reviewed issue
+        id: reviewed
+        env:
+          TARGET_DATE: ${{ steps.target.outputs.date }}
+        run: |
+          url="https://raw.githubusercontent.com/hsbrxlb/opportunity-gazette-pipeline/main/reviewed/${TARGET_DATE}.json"
+          status="$(curl -L -sS -o /tmp/reviewed.json -w '%{http_code}' "$url")"
+          if [ "$status" = "404" ]; then
+            echo "found=false" >> "$GITHUB_OUTPUT"
+            echo "No reviewed file for ${TARGET_DATE}; previous site remains live."
+            exit 0
+          fi
+          test "$status" = "200"
+          echo "found=true" >> "$GITHUB_OUTPUT"
+      - name: Merge reviewed issue without deleting existing entries
+        if: steps.reviewed.outputs.found == 'true'
+        run: python scripts/ingest-reviewed.py --input /tmp/reviewed.json
+      - name: Verify website
+        if: steps.reviewed.outputs.found == 'true'
+        run: |
+          python -m unittest discover -s tests -p 'test_*.py' -v
+          npm ci
+          npm run check
+          npm run audit:content
+          npm run build
+          npm run audit:secrets
+      - name: Persist merged public data
+        if: steps.reviewed.outputs.found == 'true'
+        env:
+          TARGET_DATE: ${{ steps.target.outputs.date }}
+        run: |
+          git config user.name "opportunity-gazette-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/data
+          if git diff --cached --quiet; then
+            echo "Reviewed data is already published."
+            exit 0
+          fi
+          git commit -m "Publish reviewed opportunity issue ${TARGET_DATE}"
+          git push origin HEAD:main
