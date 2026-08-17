@@ -1,22 +1,22 @@
 {
   "schemaVersion": 1,
-  "qualityVersion": "2026-08-17.1",
-  "generatedAt": "2026-08-17T13:06:42.356863+08:00",
+  "qualityVersion": "2026-08-17.2",
+  "generatedAt": "2026-08-17T20:38:05+08:00",
   "issues": [
     {
       "date": "2026-08-16",
       "status": "published",
       "counts": {
-        "collected": 75,
+        "collected": 79,
         "oldAccepted": 4,
-        "published": 2,
-        "features": 0,
-        "editorial": 2,
-        "rejected": 73
+        "published": 4,
+        "features": 1,
+        "editorial": 3,
+        "rejected": 75
       },
-      "leadTitle": "一个把会议录音、YouTube 和网页文章统一转成笔记的 AI 应用",
-      "leadKind": "opportunity",
-      "hasCover": false
+      "leadTitle": "GitHub Actions 抓取成功却永远落不了库：受保护分支把自动化最后一步卡死",
+      "leadKind": "case",
+      "hasCover": true
     },
     {
       "date": "2026-08-15",
@@ -1229,12 +1229,12 @@
         "产品验证"
       ],
       "dates": [
-        "2026-08-15",
-        "2026-08-16"
+        "2026-08-16",
+        "2026-08-15"
       ],
       "entryIds": [
-        "entry-c491af6e6e9e",
-        "entry-921fbdd2f7f3"
+        "entry-921fbdd2f7f3",
+        "entry-c491af6e6e9e"
       ]
     },
     {
@@ -1246,12 +1246,12 @@
         "产品验证"
       ],
       "dates": [
-        "2026-08-15",
-        "2026-08-16"
+        "2026-08-16",
+        "2026-08-15"
       ],
       "entryIds": [
-        "entry-b6a30e4190ff",
-        "entry-ff39122731a7"
+        "entry-ff39122731a7",
+        "entry-b6a30e4190ff"
       ]
     },
     {
@@ -1265,21 +1265,21 @@
         "产品验证"
       ],
       "dates": [
-        "2026-08-12",
-        "2026-08-13"
+        "2026-08-13",
+        "2026-08-12"
       ],
       "entryIds": [
-        "entry-7dd0f10dc0f9",
-        "entry-f2afa4a164ad"
+        "entry-f2afa4a164ad",
+        "entry-7dd0f10dc0f9"
       ]
     }
   ],
   "stats": {
     "reportDays": 81,
     "historicalCandidates": 617,
-    "publishedEntries": 166,
-    "featureEntries": 29,
-    "editorialEntries": 137,
-    "excludedEntries": 451
+    "publishedEntries": 168,
+    "featureEntries": 30,
+    "editorialEntries": 138,
+    "excludedEntries": 449
   }
 }
