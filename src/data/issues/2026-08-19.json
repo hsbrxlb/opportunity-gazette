@@ -1,0 +1,169 @@
+{
+  "schemaVersion": 1,
+  "qualityVersion": "2026-08-17.2",
+  "date": "2026-08-19",
+  "generatedAt": "2026-08-20T14:54:47+08:00",
+  "status": "published",
+  "counts": {
+    "collected": 847,
+    "oldAccepted": 0,
+    "published": 3,
+    "features": 1,
+    "editorial": 2,
+    "rejected": 844
+  },
+  "failedSources": [
+    {
+      "source": "Product Hunt",
+      "status": "not_configured",
+      "detail": "上游候选收集未配置官方 API 凭据；本次不请求或补充任何 credential。"
+    },
+    {
+      "source": "Reddit",
+      "status": "rate_limited_or_blocked",
+      "detail": "上游候选收集记录为 HTTP 403；本次仅审核候选文件，没有登录、复用 Cookie 或绕过限制。"
+    },
+    {
+      "source": "X public search",
+      "status": "needs_manual_supplement",
+      "detail": "上游记录没有稳定的免凭据、按日期限定的公开入口；本次不登录、不请求 token。"
+    },
+    {
+      "source": "小红书",
+      "status": "needs_manual_supplement",
+      "detail": "上游收集器不使用浏览器会话或 Cookie；本次不绕过登录或风控。"
+    },
+    {
+      "source": "微博",
+      "status": "needs_manual_supplement",
+      "detail": "上游收集器不使用浏览器会话或 Cookie；本次不绕过登录或风控。"
+    }
+  ],
+  "entries": [
+    {
+      "id": "entry-281c4ce481eb",
+      "seriesId": "series-4505567ac22d",
+      "kind": "case",
+      "quality": "feature",
+      "title": "CI 监控重启后把几个月前的旧运行当成新消息：一次重放直接触发通知风暴",
+      "plain": "一个 GitHub CI 监控在没有新 push、主分支 SHA 也没变化的情况下，把 4 月、6 月、7 月的历史 workflow 结果突然当成 8 月 19 日的新事件重新发到 Discord；旧消息成批重放后还触发了 Discord 429 限流。",
+      "audience": "自己做 GitHub Actions 监控、CI 通知、Agent 事件总线或 Discord/Slack 自动告警的开发者和自动化团队。",
+      "pain": "监控进程重启、重新注册或游标恢复时，如果只看“当前拿到的结果”而没有持久化事件身份和基线，历史完成记录会被误判成新事件，造成假告警、通知风暴、限流，甚至掩盖真正的新故障。",
+      "why": "这类问题说明“拉到一条事件”不等于“它是新事件”。任何长期运行的机会雷达、CI 监听器或 Agent 事件管道，都需要把去重身份、游标和初始基线当成持久状态，而不是只放在进程内存里。",
+      "validation": "一天内做一个确定性回归夹具：准备 7 条历史已完成 workflow run 加 1 条当天新 run，分别模拟首次注册、进程重启和分页游标恢复；成功标准是历史重放数=0、新事件送达数=1，并确认去重账本/游标不会无限增长。",
+      "risk": "证据来自一个开源项目的真实运行记录；能证明该监控器确实发生历史事件重放和 Discord 429，但不能据此推断其他 GitHub 监控产品的发生率或商业损失。",
+      "topics": [
+        "GitHub Actions",
+        "事件去重",
+        "监控告警",
+        "状态持久化",
+        "自动化可靠性"
+      ],
+      "evidence": [
+        {
+          "source": "GitHub Issue — Yeachan-Heo/clawhip #317",
+          "sourceType": "生产故障记录",
+          "originalTitle": "fix(github): prevent historical workflow runs replaying as fresh CI events",
+          "url": "https://github.com/Yeachan-Heo/clawhip/issues/317",
+          "observedAt": "2026-08-19",
+          "metrics": {
+            "comments": 58,
+            "historical_runs_replayed": 7,
+            "current_run": 32205447861,
+            "discord_429_observed": true,
+            "no_new_push": true,
+            "main_head_unchanged": true
+          },
+          "strength": "强",
+          "boundary": "能证明 clawhip 0.6.12 在 2026-08-19 把多条历史 GitHub workflow 终态作为新事件发送，并伴随 Discord 429；不能证明跨产品普遍存在，也不能证明具体金钱损失。"
+        }
+      ]
+    },
+    {
+      "id": "entry-d23bebd47e6d",
+      "seriesId": "series-698b08a3622f",
+      "kind": "case",
+      "quality": "editorial",
+      "title": "Codex Desktop 同一天反复因不支持的缓存参数中断：模型升级后请求字段也要做兼容校验",
+      "plain": "一名 Codex Desktop 用户在官方 OpenAI provider 上使用 GPT-5.6 Sol 时，同一天多次遇到 `prompt_cache_retention is not supported on this model`，正常交互会直接中断；切换 high/xhigh 推理强度也没有解决。",
+      "audience": "维护 AI 桌面客户端、模型网关、多模型路由、长上下文 Agent 或内部模型平台的团队。",
+      "pain": "模型能力和请求 schema 更新后，如果客户端或后端仍向新模型发送旧字段，一个看似正常的模型切换就可能把付费交互直接变成 invalid_request_error，用户只能反复重试。",
+      "why": "多模型系统的可靠性不能只验证“模型名可用”，还要按模型家族校验请求字段。缓存、reasoning、tool 参数这类能力字段尤其容易在模型升级时出现兼容断层。",
+      "validation": "一天内做请求契约回归：对 GPT-5.6 Sol 分别跑 high/xhigh 和长上下文样例，抓取最终请求 shape，断言不出现不受支持的 `prompt_cache_retention`；若需要长缓存，只发送该模型支持的选项，并让不兼容字段在客户端发送前直接失败。",
+      "risk": "这是一个用户在官方 Codex 仓库提交的重复故障报告，Issue 尚未关闭，而且作者没有提供最小确定性复现；证据不能确定根因究竟在 Desktop 客户端、app-server 还是后端灰度。",
+      "topics": [
+        "Codex",
+        "模型兼容性",
+        "Prompt Cache",
+        "客户端可靠性",
+        "AI工作流"
+      ],
+      "evidence": [
+        {
+          "source": "GitHub Issue — openai/codex #39392",
+          "sourceType": "用户故障记录",
+          "originalTitle": "Codex App with gpt-5.6-sol aborts with unsupported prompt_cache_retention",
+          "url": "https://github.com/openai/codex/issues/39392",
+          "observedAt": "2026-08-19",
+          "metrics": {
+            "comments": 31,
+            "app_build": 6720,
+            "app_server": "0.148.0-alpha.15",
+            "previous_app_server": "0.148.0-alpha.9",
+            "same_day_failures_reported": 6,
+            "reasoning_efforts_reproduced": [
+              "high",
+              "xhigh"
+            ],
+            "error_param": "prompt_cache_retention",
+            "official_openai_provider": true
+          },
+          "strength": "中",
+          "boundary": "能证明一名官方 OpenAI provider 的 Codex Desktop 用户在 2026-08-19 多次遇到同一不支持参数错误并中断交互；Issue 尚未关闭，不能据此确定根因在客户端、app-server 还是后端灰度，也不能推断所有用户都受影响。"
+        }
+      ]
+    },
+    {
+      "id": "entry-c05e4ebce6cb",
+      "seriesId": "series-f4b2dfab047d",
+      "kind": "case",
+      "quality": "editorial",
+      "title": "n8n 社区节点发布后装不上：一个缺失的节点元数据把安装直接撞进 SQLite 约束",
+      "plain": "一个已经发布到 npm 的 n8n 社区节点 `0.1.3`，用户从 Community nodes 安装时直接报 `SQLITE_CONSTRAINT: NOT NULL constraint failed: installed_nodes.name`。后续团队在干净的 n8n 2.35.3 + SQLite 环境里复现，并把问题追到节点描述元数据/打包产物。",
+      "audience": "发布 n8n 社区节点、MCP/Agent 插件、CLI 扩展或任何需要“打包后给别人安装”的开发者工具团队。",
+      "pain": "源码能 build、单测能过，并不代表发布包真的能被宿主安装。缺一个宿主依赖的元数据字段，就可能让用户拿到的正式版本完全不可用，而维护者本地开发环境却看不出来。",
+      "why": "插件生态最容易漏掉的是“最终 artifact 的消费者视角”。把 clean install、包内容检查和宿主数据库/注册流程纳入发布门禁，比继续增加源码单测更能拦住这类上线后才暴露的问题。",
+      "validation": "一天内建立发布前安装门禁：对 `npm pack` 生成的真实 tarball，在全新 n8n 2.35.3 Docker + SQLite 实例执行安装；要求安装成功、节点能出现在 picker、关键资源文件存在，并把缺失 displayName/icon 等条件做成会失败的回归测试。",
+      "risk": "这是单一 n8n 社区节点案例；虽然 0.1.3 的故障被独立 QA 环境复现、修复候选最终 QA PASS，但不能推断所有插件系统都有同样的元数据约束，且不同 n8n 版本行为可能变化。",
+      "topics": [
+        "n8n",
+        "插件发布",
+        "包验证",
+        "社区节点",
+        "自动化可靠性"
+      ],
+      "evidence": [
+        {
+          "source": "GitHub Issue — GeniusReferrals/n8n-nodes-genius-referrals #38",
+          "sourceType": "用户故障与修复验证记录",
+          "originalTitle": "Fix n8n install failure for n8n-nodes-genius-referrals@0.1.3",
+          "url": "https://github.com/GeniusReferrals/n8n-nodes-genius-referrals/issues/38",
+          "observedAt": "2026-08-19",
+          "metrics": {
+            "comments": 31,
+            "n8n_version": "2.35.3",
+            "broken_package_version": "0.1.3",
+            "fix_candidate_version": "0.1.4",
+            "sqlite_error": "NOT NULL constraint failed: installed_nodes.name",
+            "tests_passed": "46/46",
+            "dev_validation_pass": true,
+            "sentinel_qa_pass": true,
+            "issue_closed_completed": true
+          },
+          "strength": "强",
+          "boundary": "能证明 0.1.3 在干净 n8n 2.35.3 + SQLite 环境中真实复现安装失败，并有后续开发验证和 Sentinel QA PASS；不能推断所有插件系统都有相同元数据约束，不同 n8n 版本行为也可能不同。"
+        }
+      ]
+    }
+  ]
+}

@@ -1,8 +1,23 @@
 {
   "schemaVersion": 1,
   "qualityVersion": "2026-08-17.2",
-  "generatedAt": "2026-08-17T20:38:05+08:00",
+  "generatedAt": "2026-08-20T14:54:47+08:00",
   "issues": [
+    {
+      "date": "2026-08-19",
+      "status": "published",
+      "counts": {
+        "collected": 847,
+        "oldAccepted": 0,
+        "published": 3,
+        "features": 1,
+        "editorial": 2,
+        "rejected": 844
+      },
+      "leadTitle": "CI 监控重启后把几个月前的旧运行当成新消息：一次重放直接触发通知风暴",
+      "leadKind": "case",
+      "hasCover": true
+    },
     {
       "date": "2026-08-16",
       "status": "published",
@@ -1275,11 +1290,11 @@
     }
   ],
   "stats": {
-    "reportDays": 81,
+    "reportDays": 82,
     "historicalCandidates": 617,
-    "publishedEntries": 168,
-    "featureEntries": 30,
-    "editorialEntries": 138,
-    "excludedEntries": 449
+    "publishedEntries": 171,
+    "featureEntries": 31,
+    "editorialEntries": 140,
+    "excludedEntries": 446
   }
 }
